@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.admin.service" name="OrganizationService">
+    <doc>
+
+ 组织服务
+</doc>
+    <meta>
+        <version>1.0.0</version>
+        <timeout>30000</timeout>
+    </meta>
+    <methods>
+        <method name="getId">
+            <request name="getId_args">
+                <fields>
+                    <field tag="1" name="name" optional="false" privacy="false">
+                        <dataType>
+                            <kind>STRING</kind>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="getId_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>INTEGER</kind>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+        <method name="findAllOrganizations">
+            <request name="findAllOrganizations_args">
+                <fields/>
+            </request>
+            <response name="findAllOrganizations_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>LIST</kind>
+                            <valueType>
+<kind>STRUCT</kind>
+<ref>com.isuwang.soa.admin.domain.TOrganization</ref>
+                            </valueType>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+        <method name="addOrganization">
+            <doc>
+
+### 添加组织信息
+
+####  业务描述
+    1. 添加组织信息
+
+####  接口依赖
+    1. 无
+
+####  边界异常说明
+    1. 无
+
+####  输入
+    1. admin_domain.TOrganizationCreateRequest
+
+####  前置检查
+    1. 无
+
+####  权限检查
+    1. 无
+
+####  逻辑处理
+    1. 添加组织信息
+
+####  事务处理
+    1. 无
+
+####  输出
+    1. 无
+</doc>
+            <request name="addOrganization_args">
+                <fields>
+                    <field tag="1" name="request" optional="false" privacy="false">
+                        <dataType>
+                            <kind>STRUCT</kind>
+                            <ref>com.isuwang.soa.admin.domain.TOrganizationCreateRequest</ref>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="addOrganization_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>VOID</kind>
+                        </dataType>
+                        <doc>
+
+### 添加组织信息
+
+####  业务描述
+    1. 添加组织信息
+
+####  接口依赖
+    1. 无
+
+####  边界异常说明
+    1. 无
+
+####  输入
+    1. admin_domain.TOrganizationCreateRequest
+
+####  前置检查
+    1. 无
+
+####  权限检查
+    1. 无
+
+####  逻辑处理
+    1. 添加组织信息
+
+####  事务处理
+    1. 无
+
+####  输出
+    1. 无
+</doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+        <method name="modifyOrganization">
+            <doc>
+
+### 添加组织信息
+
+####  业务描述
+    1. 添加组织信息
+
+####  接口依赖
+    1. 无
+
+####  边界异常说明
+    1. 无
+
+####  输入
+    1. admin_domain.TOrganizationCreateRequest
+
+####  前置检查
+    1. 无
+
+####  权限检查
+    1. 无
+
+####  逻辑处理
+    1. 修改组织信息
+
+####  事务处理
+    1. 无
+
+####  输出
+    1. 无
+</doc>
+            <request name="modifyOrganization_args">
+                <fields>
+                    <field tag="1" name="request" optional="false" privacy="false">
+                        <dataType>
+                            <kind>STRUCT</kind>
+                            <ref>com.isuwang.soa.admin.domain.TOrganizationModifyRequest</ref>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="modifyOrganization_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>VOID</kind>
+                        </dataType>
+                        <doc>
+
+### 添加组织信息
+
+####  业务描述
+    1. 添加组织信息
+
+####  接口依赖
+    1. 无
+
+####  边界异常说明
+    1. 无
+
+####  输入
+    1. admin_domain.TOrganizationCreateRequest
+
+####  前置检查
+    1. 无
+
+####  权限检查
+    1. 无
+
+####  逻辑处理
+    1. 修改组织信息
+
+####  事务处理
+    1. 无
+
+####  输出
+    1. 无
+</doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+        <method name="findOrganizations">
+            <doc>
+
+### 根据条件查找部门信息
+
+####  业务描述
+    1. 添加组织信息
+
+####  接口依赖
+    1. 无
+
+####  边界异常说明
+    1. 无
+
+####  输入
+    1. admin_domain.TOrganizationCreateRequest
+
+####  前置检查
+    1. 无
+
+####  权限检查
+    1. 无
+
+####  逻辑处理
+    1. 查找组织信息
+
+####  事务处理
+    1. 无
+
+####  输出
+    1. 无
+</doc>
+            <request name="findOrganizations_args">
+                <fields>
+                    <field tag="1" name="request" optional="false" privacy="false">
+                        <dataType>
+                            <kind>STRUCT</kind>
+                            <ref>com.isuwang.soa.admin.domain.TFindOrganizationsRequest</ref>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="findOrganizations_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>LIST</kind>
+                            <valueType>
+<kind>STRUCT</kind>
+<ref>com.isuwang.soa.admin.domain.TOrganization</ref>
+                            </valueType>
+                        </dataType>
+                        <doc>
+
+### 根据条件查找部门信息
+
+####  业务描述
+    1. 添加组织信息
+
+####  接口依赖
+    1. 无
+
+####  边界异常说明
+    1. 无
+
+####  输入
+    1. admin_domain.TOrganizationCreateRequest
+
+####  前置检查
+    1. 无
+
+####  权限检查
+    1. 无
+
+####  逻辑处理
+    1. 查找组织信息
+
+####  事务处理
+    1. 无
+
+####  输出
+    1. 无
+</doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+        <method name="findOrganizationById">
+            <doc>
+
+### 根据条件查找部门信息
+
+####  业务描述
+    1. 添加组织信息
+
+####  接口依赖
+    1. 无
+
+####  边界异常说明
+    1. 无
+
+####  输入
+    1. admin_domain.TOrganizationCreateRequest
+
+####  前置检查
+    1. 无
+
+####  权限检查
+    1. 无
+
+####  逻辑处理
+    1. 查找组织信息
+
+####  事务处理
+    1. 无
+
+####  输出
+    1. 无
+</doc>
+            <request name="findOrganizationById_args">
+                <fields>
+                    <field tag="1" name="id" optional="false" privacy="false">
+                        <dataType>
+                            <kind>INTEGER</kind>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="findOrganizationById_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>STRUCT</kind>
+                            <ref>com.isuwang.soa.admin.domain.TOrganization</ref>
+                        </dataType>
+                        <doc>
+
+### 根据条件查找部门信息
+
+####  业务描述
+    1. 添加组织信息
+
+####  接口依赖
+    1. 无
+
+####  边界异常说明
+    1. 无
+
+####  输入
+    1. admin_domain.TOrganizationCreateRequest
+
+####  前置检查
+    1. 无
+
+####  权限检查
+    1. 无
+
+####  逻辑处理
+    1. 查找组织信息
+
+####  事务处理
+    1. 无
+
+####  输出
+    1. 无
+</doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+    </methods>
+    <structs>
+        <struct namespace="com.isuwang.soa.admin.domain" name="TOrganization">
+            <fields>
+                <field tag="1" name="id" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>id</doc>
+                </field>
+                <field tag="2" name="parentId" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>父组织id</doc>
+                </field>
+                <field tag="3" name="name" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>组织名称</doc>
+                </field>
+                <field tag="4" name="code" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>代码(无用)</doc>
+                </field>
+                <field tag="5" name="type" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>组织类型(无用)</doc>
+                </field>
+                <field tag="6" name="disable" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>状态 0：正常 1：禁用</doc>
+                </field>
+                <field tag="7" name="isProfitCenter" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>是否为利润中心 0:未定义 1: 是 2：否</doc>
+                </field>
+                <field tag="8" name="profitCenterId" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>所属利润中心，当为利润中心时，则是自身id，否则为对应组织id</doc>
+                </field>
+                <field tag="9" name="region" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>区域  0:未定义 1：华南 2：华东</doc>
+                </field>
+            </fields>
+        </struct>
+        <struct namespace="com.isuwang.soa.admin.domain" name="TOrganizationCreateRequest">
+            <fields>
+                <field tag="2" name="parentId" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>父组织id</doc>
+                </field>
+                <field tag="3" name="name" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>组织名称</doc>
+                </field>
+                <field tag="7" name="isProfitCenter" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>是否为利润中心 1: 是 2：否</doc>
+                </field>
+                <field tag="8" name="profitCenterId" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>所属利润中心，当为利润中心时，则是自身id，否则为对应组织id</doc>
+                </field>
+                <field tag="9" name="region" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>区域 1：华南 2：华东</doc>
+                </field>
+            </fields>
+        </struct>
+        <struct namespace="com.isuwang.soa.admin.domain" name="TOrganizationModifyRequest">
+            <fields>
+                <field tag="1" name="id" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                </field>
+                <field tag="3" name="name" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>组织名称</doc>
+                </field>
+                <field tag="7" name="isProfitCenter" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>是否为利润中心 1: 是 2：否</doc>
+                </field>
+                <field tag="8" name="profitCenterId" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>所属利润中心，当为利润中心时，则是自身id，否则为对应组织id</doc>
+                </field>
+                <field tag="9" name="region" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>区域 1：华南 2：华东</doc>
+                </field>
+                <field tag="6" name="disable" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>状态 0：正常 1：禁用</doc>
+                </field>
+            </fields>
+        </struct>
+        <struct namespace="com.isuwang.soa.admin.domain" name="TFindOrganizationsRequest">
+            <fields>
+                <field tag="1" name="id" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                </field>
+                <field tag="2" name="parentId" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>父组织id</doc>
+                </field>
+                <field tag="3" name="name" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>组织名称</doc>
+                </field>
+                <field tag="7" name="isProfitCenter" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>是否为利润中心 1: 是 2：否</doc>
+                </field>
+                <field tag="8" name="profitCenterId" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>所属利润中心，当为利润中心时，则是自身id，否则为对应组织id</doc>
+                </field>
+                <field tag="9" name="region" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>区域 1：华南 2：华东</doc>
+                </field>
+                <field tag="6" name="disable" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>状态 0：正常 1：禁用</doc>
+                </field>
+                <field tag="10" name="ids" optional="false" privacy="false">
+                    <dataType>
+                        <kind>LIST</kind>
+                        <valueType>
+                            <kind>INTEGER</kind>
+                        </valueType>
+                    </dataType>
+                    <doc>组织ids</doc>
+                </field>
+            </fields>
+        </struct>
+    </structs>
+    <enums/>
+</service>

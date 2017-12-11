@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.admin.service" name="DataPermissionService">
+    <doc>
+
+ 数据权限服务
+</doc>
+    <meta>
+        <version>1.0.0</version>
+        <timeout>30000</timeout>
+    </meta>
+    <methods>
+        <method name="cal">
+            <request name="cal_args">
+                <fields>
+                    <field tag="1" name="staffId" optional="false" privacy="false">
+                        <dataType>
+                            <kind>INTEGER</kind>
+                        </dataType>
+                        <doc>员工ID</doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="cal_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>STRUCT</kind>
+                            <ref>com.isuwang.soa.admin.domain.TDataPermissionResponse</ref>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+    </methods>
+    <structs>
+        <struct namespace="com.isuwang.soa.admin.domain" name="TDataPermissionResponse">
+            <fields>
+                <field tag="1" name="organizationIds" optional="false" privacy="false">
+                    <dataType>
+                        <kind>SET</kind>
+                        <valueType>
+                            <kind>INTEGER</kind>
+                        </valueType>
+                    </dataType>
+                    <doc>
+
+ 机构代码ID列表
+</doc>
+                </field>
+                <field tag="2" name="staffIds" optional="false" privacy="false">
+                    <dataType>
+                        <kind>SET</kind>
+                        <valueType>
+                            <kind>INTEGER</kind>
+                        </valueType>
+                    </dataType>
+                    <doc>
+
+ 员工ID列表
+</doc>
+                </field>
+                <field tag="3" name="districts" optional="false" privacy="false">
+                    <dataType>
+                        <kind>SET</kind>
+                        <valueType>
+                            <kind>STRING</kind>
+                        </valueType>
+                    </dataType>
+                    <doc>
+
+ 区域列表
+</doc>
+                </field>
+                <field tag="4" name="purchaseCategoryGroups" optional="false" privacy="false">
+                    <dataType>
+                        <kind>SET</kind>
+                        <valueType>
+                            <kind>STRING</kind>
+                        </valueType>
+                    </dataType>
+                    <doc>
+
+ 采购的品种大类列表
+</doc>
+                </field>
+                <field tag="5" name="sellCategoryGroups" optional="false" privacy="false">
+                    <dataType>
+                        <kind>SET</kind>
+                        <valueType>
+                            <kind>STRING</kind>
+                        </valueType>
+                    </dataType>
+                    <doc>
+
+ 销售的品种大类列表
+</doc>
+                </field>
+            </fields>
+        </struct>
+    </structs>
+    <enums/>
+</service>

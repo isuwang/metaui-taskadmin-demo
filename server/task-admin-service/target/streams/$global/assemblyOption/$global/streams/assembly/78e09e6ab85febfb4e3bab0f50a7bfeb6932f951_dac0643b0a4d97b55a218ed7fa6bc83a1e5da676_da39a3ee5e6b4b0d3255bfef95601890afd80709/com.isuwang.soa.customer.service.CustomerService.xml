@@ -1,0 +1,951 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.customer.service" name="CustomerService">
+    <doc>
+
+ Customer服务
+</doc>
+    <meta>
+        <version>1.0.0</version>
+        <timeout>30000</timeout>
+    </meta>
+    <methods>
+        <method name="findCustomerById">
+            <doc>
+
+ 根据ID查询客户
+</doc>
+            <request name="findCustomerById_args">
+                <fields>
+                    <field tag="1" name="id" optional="false" privacy="false">
+                        <dataType>
+                            <kind>INTEGER</kind>
+                        </dataType>
+                        <doc>客户id</doc>
+                    </field>
+                    <field tag="2" name="customerType" optional="false" privacy="false">
+                        <dataType>
+                            <kind>ENUM</kind>
+                            <ref>com.isuwang.soa.customer.enums.CustomerType</ref>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="findCustomerById_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>STRUCT</kind>
+                            <ref>com.isuwang.soa.customer.domain.TSoaCustomer</ref>
+                        </dataType>
+                        <doc>
+
+ 根据ID查询客户
+</doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+        <method name="findTCustomerPropertyById">
+            <doc>
+
+ 根据customerId查询客户属性
+</doc>
+            <request name="findTCustomerPropertyById_args">
+                <fields>
+                    <field tag="1" name="customerId" optional="false" privacy="false">
+                        <dataType>
+                            <kind>INTEGER</kind>
+                        </dataType>
+                        <doc>客户id</doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="findTCustomerPropertyById_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>STRUCT</kind>
+                            <ref>com.isuwang.soa.customer.domain.TCustomerProperty</ref>
+                        </dataType>
+                        <doc>
+
+ 根据customerId查询客户属性
+</doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+        <method name="updatePushMsgFlag">
+            <doc>
+
+ 客户推送消息设置修改
+</doc>
+            <request name="updatePushMsgFlag_args">
+                <fields>
+                    <field tag="1" name="customerId" optional="false" privacy="false">
+                        <dataType>
+                            <kind>INTEGER</kind>
+                        </dataType>
+                        <doc>客户id</doc>
+                    </field>
+                    <field tag="2" name="pushMsgFlag" optional="false" privacy="false">
+                        <dataType>
+                            <kind>INTEGER</kind>
+                        </dataType>
+                        <doc>消息推送设置总开关</doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="updatePushMsgFlag_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>VOID</kind>
+                        </dataType>
+                        <doc>
+
+ 客户推送消息设置修改
+</doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+        <method name="updatePushXhtMsgFlag">
+            <doc>
+
+ 客户xht自选消息推送设置修改
+</doc>
+            <request name="updatePushXhtMsgFlag_args">
+                <fields>
+                    <field tag="1" name="customerId" optional="false" privacy="false">
+                        <dataType>
+                            <kind>INTEGER</kind>
+                        </dataType>
+                        <doc>客户id</doc>
+                    </field>
+                    <field tag="2" name="pushXhtMsgFlag" optional="false" privacy="false">
+                        <dataType>
+                            <kind>INTEGER</kind>
+                        </dataType>
+                        <doc>现货通自选消息推送设置开关</doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="updatePushXhtMsgFlag_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>VOID</kind>
+                        </dataType>
+                        <doc>
+
+ 客户xht自选消息推送设置修改
+</doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+        <method name="findCustomerPropertiesByIds">
+            <doc>
+
+ 根据id集合查询多个客户属性
+</doc>
+            <request name="findCustomerPropertiesByIds_args">
+                <fields>
+                    <field tag="1" name="customerId" optional="false" privacy="false">
+                        <dataType>
+                            <kind>LIST</kind>
+                            <valueType>
+<kind>INTEGER</kind>
+                            </valueType>
+                        </dataType>
+                        <doc>客户id</doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="findCustomerPropertiesByIds_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>LIST</kind>
+                            <valueType>
+<kind>STRUCT</kind>
+<ref>com.isuwang.soa.customer.domain.TCustomerProperty</ref>
+                            </valueType>
+                        </dataType>
+                        <doc>
+
+ 根据id集合查询多个客户属性
+</doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+        <method name="getAuctionCustomerByCompanyId">
+            <doc>
+
+ 根据公司id得到有竞拍资格的客户
+</doc>
+            <request name="getAuctionCustomerByCompanyId_args">
+                <fields>
+                    <field tag="1" name="companyId" optional="false" privacy="false">
+                        <dataType>
+                            <kind>INTEGER</kind>
+                        </dataType>
+                        <doc>公司ID</doc>
+                    </field>
+                    <field tag="2" name="customerType" optional="false" privacy="false">
+                        <dataType>
+                            <kind>INTEGER</kind>
+                        </dataType>
+                        <doc>客户类型，1：买家，2：卖家</doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="getAuctionCustomerByCompanyId_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>STRUCT</kind>
+                            <ref>com.isuwang.soa.customer.domain.TSoaCustomer</ref>
+                        </dataType>
+                        <doc>
+
+ 根据公司id得到有竞拍资格的客户
+</doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+        <method name="getCustomerBySupplierId">
+            <doc>
+
+ 根据供应商ID查询客户，提供给监听orderdb的binlog事件调用，避免跨库调用，用于发送对应的企业QQ信息(PersonalCenter迁移)
+</doc>
+            <request name="getCustomerBySupplierId_args">
+                <fields>
+                    <field tag="1" name="supplierId" optional="false" privacy="false">
+                        <dataType>
+                            <kind>INTEGER</kind>
+                        </dataType>
+                        <doc>供应商ID</doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="getCustomerBySupplierId_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>STRUCT</kind>
+                            <ref>com.isuwang.soa.customer.domain.TBinlogCustomer</ref>
+                        </dataType>
+                        <doc>
+
+ 根据供应商ID查询客户，提供给监听orderdb的binlog事件调用，避免跨库调用，用于发送对应的企业QQ信息(PersonalCenter迁移)
+</doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+        <method name="getById">
+            <doc>
+
+ 根据客户ID，公司ID查询公司名称以及客户名字，客户电话
+ 用于返回给监听orderdb的事件，避免跨库调用
+</doc>
+            <request name="getById_args">
+                <fields>
+                    <field tag="1" name="customerId" optional="false" privacy="false">
+                        <dataType>
+                            <kind>INTEGER</kind>
+                        </dataType>
+                        <doc>客户ID</doc>
+                    </field>
+                    <field tag="2" name="companyId" optional="false" privacy="false">
+                        <dataType>
+                            <kind>INTEGER</kind>
+                        </dataType>
+                        <doc>公司ID</doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="getById_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>STRUCT</kind>
+                            <ref>com.isuwang.soa.customer.domain.TBinlogCompanyAndCustomer</ref>
+                        </dataType>
+                        <doc>
+
+ 根据客户ID，公司ID查询公司名称以及客户名字，客户电话
+ 用于返回给监听orderdb的事件，避免跨库调用
+</doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+        <method name="findTransOperator">
+            <request name="findTransOperator_args">
+                <fields>
+                    <field tag="1" name="customerId" optional="false" privacy="false">
+                        <dataType>
+                            <kind>INTEGER</kind>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                    <field tag="2" name="category" optional="false" privacy="false">
+                        <dataType>
+                            <kind>STRING</kind>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                    <field tag="3" name="cityCode" optional="false" privacy="false">
+                        <dataType>
+                            <kind>STRING</kind>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="findTransOperator_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>INTEGER</kind>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+    </methods>
+    <structs>
+        <struct namespace="com.isuwang.soa.customer.domain" name="TBinlogCustomer">
+            <doc>
+
+ BinlogCustomer 客户属性
+ 用于返回给监听orderdb的事件，避免跨库调用
+</doc>
+            <fields>
+                <field tag="1" name="name" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>客户名称</doc>
+                </field>
+                <field tag="2" name="phone" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>客户手机号码</doc>
+                </field>
+                <field tag="3" name="companyName" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>公司名称</doc>
+                </field>
+                <field tag="4" name="city" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>城市</doc>
+                </field>
+            </fields>
+        </struct>
+        <struct namespace="com.isuwang.soa.customer.domain" name="TBinlogCompanyAndCustomer">
+            <doc>
+
+ 混合实体，用于返回给监听orderdb的事件，避免跨库调用
+</doc>
+            <fields>
+                <field tag="1" name="customerName" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>客户名称</doc>
+                </field>
+                <field tag="2" name="customerPhone" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>客户手机号码</doc>
+                </field>
+                <field tag="3" name="companyName" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>公司名称</doc>
+                </field>
+            </fields>
+        </struct>
+        <struct namespace="com.isuwang.soa.customer.domain" name="TSoaCustomer">
+            <fields>
+                <field tag="1" name="id" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+
+</doc>
+                </field>
+                <field tag="2" name="companyId" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+公司ID
+</doc>
+                </field>
+                <field tag="3" name="type" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+类型，1：买家；2：买家和卖家
+</doc>
+                </field>
+                <field tag="4" name="disable" optional="false" privacy="false">
+                    <dataType>
+                        <kind>BOOLEAN</kind>
+                    </dataType>
+                    <doc>
+
+是否禁用，0：否；1：是
+</doc>
+                </field>
+                <field tag="5" name="loginName" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+登录名称，手机号码
+</doc>
+                </field>
+                <field tag="6" name="name" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+客户姓名
+</doc>
+                </field>
+                <field tag="7" name="password" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+密码，md5
+</doc>
+                </field>
+                <field tag="8" name="lastLoginTime" optional="true" privacy="false">
+                    <dataType>
+                        <kind>LONG</kind>
+                    </dataType>
+                    <doc>
+
+最后登录时间
+</doc>
+                </field>
+                <field tag="9" name="phone" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+联系电话
+</doc>
+                </field>
+                <field tag="10" name="phoneVerified" optional="false" privacy="false">
+                    <dataType>
+                        <kind>BOOLEAN</kind>
+                    </dataType>
+                    <doc>
+
+电话是否已验证，0：否；1：是
+</doc>
+                </field>
+                <field tag="11" name="email" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+邮箱
+</doc>
+                </field>
+                <field tag="12" name="emailVerified" optional="false" privacy="false">
+                    <dataType>
+                        <kind>BOOLEAN</kind>
+                    </dataType>
+                    <doc>
+
+邮箱是否已验证，0：否；1：是
+</doc>
+                </field>
+                <field tag="13" name="qq" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+qq号码
+</doc>
+                </field>
+                <field tag="14" name="wechat" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+微信
+</doc>
+                </field>
+                <field tag="15" name="fax" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+传真
+</doc>
+                </field>
+                <field tag="16" name="city" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+所在城市代码
+</doc>
+                </field>
+                <field tag="17" name="qqKey" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+qq登录key
+</doc>
+                </field>
+                <field tag="18" name="weiboKey" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+微博登录key
+</doc>
+                </field>
+                <field tag="19" name="wechatKey" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+微信登录key
+</doc>
+                </field>
+                <field tag="20" name="createdAt" optional="false" privacy="false">
+                    <dataType>
+                        <kind>LONG</kind>
+                    </dataType>
+                    <doc>
+
+注册时间
+</doc>
+                </field>
+                <field tag="21" name="updatedAt" optional="false" privacy="false">
+                    <dataType>
+                        <kind>LONG</kind>
+                    </dataType>
+                    <doc>
+
+修改时间
+</doc>
+                </field>
+                <field tag="22" name="createdBy" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+创建者
+</doc>
+                </field>
+                <field tag="23" name="updatedBy" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+修改者
+</doc>
+                </field>
+                <field tag="24" name="status" optional="false" privacy="false">
+                    <dataType>
+                        <kind>SHORT</kind>
+                    </dataType>
+                    <doc>
+
+客户身份状态，1：待审核；2：审核已通过；3：审核未通过；4：禁用
+</doc>
+                </field>
+                <field tag="25" name="level" optional="false" privacy="false">
+                    <dataType>
+                        <kind>SHORT</kind>
+                    </dataType>
+                    <doc>
+
+客户等级，1：普通会员；2：铜牌会员；3：银牌会员；4：金牌会员
+</doc>
+                </field>
+                <field tag="26" name="categoryGroups" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+关注买入的品种大类列表，英文逗号分割，category_groups的group_code
+</doc>
+                </field>
+                <field tag="27" name="deposit" optional="false" privacy="false">
+                    <dataType>
+                        <kind>DOUBLE</kind>
+                    </dataType>
+                    <doc>
+
+客户保证金
+</doc>
+                </field>
+                <field tag="28" name="integral" optional="false" privacy="false">
+                    <dataType>
+                        <kind>DOUBLE</kind>
+                    </dataType>
+                    <doc>
+
+客户积分
+</doc>
+                </field>
+                <field tag="29" name="business" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+需求业务
+</doc>
+                </field>
+                <field tag="30" name="checkedAt" optional="true" privacy="false">
+                    <dataType>
+                        <kind>LONG</kind>
+                    </dataType>
+                    <doc>
+
+审核通过时间，审核通过时，才赋值
+</doc>
+                </field>
+                <field tag="31" name="checkedBy" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+审核人
+</doc>
+                </field>
+                <field tag="32" name="checkedRemark" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+审核备注
+</doc>
+                </field>
+                <field tag="33" name="districts" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 销售的区域，英文逗号分隔，存储区域表district的ID
+</doc>
+                </field>
+                <field tag="34" name="districtName" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 区域名称
+</doc>
+                </field>
+                <field tag="35" name="checkedByName" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+审核人
+</doc>
+                </field>
+                <field tag="36" name="createdByName" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+创建者
+</doc>
+                </field>
+                <field tag="37" name="updatedByName" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+修改者
+</doc>
+                </field>
+                <field tag="38" name="isSyncAccount" optional="true" privacy="false">
+                    <dataType>
+                        <kind>BOOLEAN</kind>
+                    </dataType>
+                    <doc>
+
+ 是否同步登陆账号
+</doc>
+                </field>
+                <field tag="39" name="staffIds" optional="true" privacy="false">
+                    <dataType>
+                        <kind>LIST</kind>
+                        <valueType>
+                            <kind>INTEGER</kind>
+                        </valueType>
+                    </dataType>
+                    <doc>
+
+ 交易员/采购员 ID
+</doc>
+                </field>
+                <field tag="40" name="staffNames" optional="true" privacy="false">
+                    <dataType>
+                        <kind>LIST</kind>
+                        <valueType>
+                            <kind>STRING</kind>
+                        </valueType>
+                    </dataType>
+                    <doc>
+
+ 交易员/采购员名称
+</doc>
+                </field>
+                <field tag="41" name="customerType" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+  客户类型， 1：潜在卖家，2：成交卖家
+</doc>
+                </field>
+                <field tag="42" name="productlines" optional="false" privacy="false">
+                    <dataType>
+                        <kind>LIST</kind>
+                        <valueType>
+                            <kind>MAP</kind>
+                            <keyType>
+<kind>STRING</kind>
+                            </keyType>
+                            <valueType>
+<kind>STRING</kind>
+                            </valueType>
+                        </valueType>
+                    </dataType>
+                    <doc>
+
+ 可以领用的产品线
+</doc>
+                </field>
+                <field tag="43" name="companyName" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+公司名称
+</doc>
+                </field>
+                <field tag="44" name="salesOperatorNames" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+交易员名称
+</doc>
+                </field>
+                <field tag="45" name="transOperatorNames" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+采购员名称
+</doc>
+                </field>
+                <field tag="46" name="visitRecords" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+访谈记录
+</doc>
+                </field>
+                <field tag="47" name="bidFlag" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+竞拍资格状态（采购商）1：未申请；2：待审核；3：审核通过；4：审核未通过；99：禁用；
+</doc>
+                </field>
+                <field tag="48" name="auctionFlag" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+拍卖资格状态（供应商），1：未申请；2：待审核；3：审核通过；4：审核未通过；99：禁用；
+</doc>
+                </field>
+                <field tag="49" name="companyAuctionFlag" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 公司拍卖资格状态（供应商），1：未申请；2：待审核；3：审核通过；4：审核未通过；99：禁用；
+</doc>
+                </field>
+                <field tag="50" name="companyBidFlag" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 公司竞拍资格状态（采购商），1：未申请；2：待审核；3：审核通过；4：审核未通过；99：禁用；
+</doc>
+                </field>
+                <field tag="51" name="verified" optional="false" privacy="false">
+                    <dataType>
+                        <kind>BOOLEAN</kind>
+                    </dataType>
+                    <doc>
+
+ 公司是否已验证有竞拍/拍卖资格，0：否；1：是；
+</doc>
+                </field>
+                <field tag="52" name="virtualized" optional="false" privacy="false">
+                    <dataType>
+                        <kind>SHORT</kind>
+                    </dataType>
+                    <doc>
+
+ 是否是内部(虚拟)客户 0：否；1：是；
+</doc>
+                </field>
+                <field tag="53" name="tel" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc> 电话 </doc>
+                </field>
+                <field tag="54" name="source" optional="false" privacy="false">
+                    <dataType>
+                        <kind>SHORT</kind>
+                    </dataType>
+                    <doc> 用户来源，1：线上注册；2：线下渠道；3：线上咨询 </doc>
+                </field>
+                <field tag="55" name="defaultAddressId" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc> 用户默认地址 </doc>
+                </field>
+                <field tag="56" name="position" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 职位,1:老板(boss);2:采购负责人(purchaser);3:销售负责人(salesman);99:其他(other)
+</doc>
+                </field>
+            </fields>
+        </struct>
+        <struct namespace="com.isuwang.soa.customer.domain" name="TCustomerProperty">
+            <doc>
+
+ 客户属性
+</doc>
+            <fields>
+                <field tag="1" name="customerId" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                </field>
+                <field tag="2" name="pushMsgFlag" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>消息推送设置总开关,0:不推送;1:推送;</doc>
+                </field>
+                <field tag="3" name="xhtPushMsgFlag" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>现货通自选消息推送设置开关,0:不推送;1:推送;</doc>
+                </field>
+            </fields>
+        </struct>
+    </structs>
+    <enums>
+        <tenum namespace="com.isuwang.soa.customer.enums" name="CustomerType">
+            <items>
+                <item>
+                    <label>buyer</label>
+                    <value>1</value>
+                </item>
+                <item>
+                    <label>seller</label>
+                    <value>2</value>
+                </item>
+                <item>
+                    <label>biz</label>
+                    <value>3</value>
+                </item>
+            </items>
+        </tenum>
+    </enums>
+</service>

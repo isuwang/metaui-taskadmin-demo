@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.task.service" name="TaskBusinessTypeService">
+    <meta>
+        <version>1.0.0</version>
+        <timeout>30000</timeout>
+    </meta>
+    <methods>
+        <method name="findBusinessTypes">
+            <request name="findBusinessTypes_args">
+                <fields>
+                    <field tag="1" name="request" optional="false" privacy="false">
+                        <dataType>
+                            <kind>STRUCT</kind>
+                            <ref>com.isuwang.soa.task.domain.TBusinessTypeRequest</ref>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="findBusinessTypes_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>STRUCT</kind>
+                            <ref>com.isuwang.soa.task.domain.TBusinessTypeResponse</ref>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </response>
+            <annotations>
+                <annotation key="m.form.url" value="/task/taskadmin/findBusinessTypes.do"/>
+            </annotations>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+        <method name="createBusinessType">
+            <request name="createBusinessType_args">
+                <fields>
+                    <field tag="1" name="request" optional="false" privacy="false">
+                        <dataType>
+                            <kind>STRUCT</kind>
+                            <ref>com.isuwang.soa.task.domain.TSaveBusinessType</ref>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="createBusinessType_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>VOID</kind>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </response>
+            <annotations>
+                <annotation key="m.form.url" value="/task/taskadmin/createBusinessType.do"/>
+                <annotation key="m.id" value="business_add"/>
+                <annotation key="m.operType" value="2"/>
+                <annotation key="m.type" value="domain-action"/>
+                <annotation key="m.form.title" value="新增业务类型"/>
+                <annotation key="m.name" value="新增业务类型"/>
+            </annotations>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+        <method name="updateBusinessType">
+            <request name="updateBusinessType_args">
+                <fields>
+                    <field tag="1" name="request" optional="false" privacy="false">
+                        <dataType>
+                            <kind>STRUCT</kind>
+                            <ref>com.isuwang.soa.task.domain.TSaveBusinessType</ref>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="updateBusinessType_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>VOID</kind>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </response>
+            <annotations>
+                <annotation key="m.form.url" value="/task/taskadmin/updateBusinessType.do"/>
+                <annotation key="m.id" value="business_edit"/>
+                <annotation key="m.operType" value="2"/>
+                <annotation key="m.type" value="entity-action"/>
+                <annotation key="m.form.title" value="编辑业务类型"/>
+                <annotation key="m.name" value="编辑"/>
+            </annotations>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+        <method name="deleteBusinessType">
+            <request name="deleteBusinessType_args">
+                <fields>
+                    <field tag="1" name="id" optional="false" privacy="false">
+                        <dataType>
+                            <kind>INTEGER</kind>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="deleteBusinessType_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>VOID</kind>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </response>
+            <annotations>
+                <annotation key="m.form.url" value="/task/taskadmin/deleteBusinessType.do"/>
+                <annotation key="m.id" value="business_delete"/>
+                <annotation key="m.operType" value="1"/>
+                <annotation key="m.form.sendAsSearchParams" value="true"/>
+                <annotation key="m.type" value="entity-action"/>
+                <annotation key="m.form.title" value="删除"/>
+                <annotation key="m.form.confirm" value="确定删除"/>
+                <annotation key="m.name" value="删除"/>
+            </annotations>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+        <method name="findAllBusinessTypes4Picker">
+            <request name="findAllBusinessTypes4Picker_args">
+                <fields/>
+            </request>
+            <response name="findAllBusinessTypes4Picker_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>LIST</kind>
+                            <valueType>
+<kind>STRUCT</kind>
+<ref>com.isuwang.soa.task.domain.TTaskPickerContainer</ref>
+                            </valueType>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+    </methods>
+    <structs>
+        <struct namespace="com.isuwang.soa.task.domain" name="TBusinessTypeResponse">
+            <fields>
+                <field tag="1" name="pageResponse" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRUCT</kind>
+                        <ref>com.isuwang.soa.common.util.TPageResponse</ref>
+                    </dataType>
+                </field>
+                <field tag="2" name="rows" optional="false" privacy="false">
+                    <dataType>
+                        <kind>LIST</kind>
+                        <valueType>
+                            <kind>STRUCT</kind>
+                            <ref>com.isuwang.soa.task.domain.TBusinessType</ref>
+                        </valueType>
+                    </dataType>
+                </field>
+            </fields>
+        </struct>
+        <struct namespace="com.isuwang.soa.task.domain" name="TSaveBusinessType">
+            <fields>
+                <field tag="1" name="id" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                </field>
+                <field tag="2" name="typeName" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 业务类型
+</doc>
+                </field>
+                <field tag="3" name="suggestionContent" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 指导意见
+</doc>
+                </field>
+                <field tag="4" name="questions" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 问题， 逗号分隔的suggestions id
+</doc>
+                </field>
+                <field tag="5" name="improvements" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 改进措施， 逗号分隔的suggestions id
+</doc>
+                </field>
+            </fields>
+        </struct>
+        <struct namespace="com.isuwang.soa.task.domain" name="TBusinessType">
+            <fields>
+                <field tag="1" name="id" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                </field>
+                <field tag="2" name="typeName" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 业务类型
+</doc>
+                </field>
+                <field tag="3" name="suggestionContent" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 指导意见
+</doc>
+                </field>
+                <field tag="4" name="questions" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 问题， 逗号分隔的suggestions id
+</doc>
+                </field>
+                <field tag="5" name="questions2Str" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                </field>
+                <field tag="6" name="improvements" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 改进措施， 逗号分隔的suggestions id
+</doc>
+                </field>
+                <field tag="7" name="improvements2Str" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                </field>
+                <field tag="8" name="createdAt" optional="false" privacy="false">
+                    <dataType>
+                        <kind>LONG</kind>
+                    </dataType>
+                    <doc>
+
+
+</doc>
+                </field>
+                <field tag="9" name="creator" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                </field>
+                <field tag="10" name="createdBy" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+
+</doc>
+                </field>
+                <field tag="11" name="updatedAt" optional="false" privacy="false">
+                    <dataType>
+                        <kind>LONG</kind>
+                    </dataType>
+                    <doc>
+
+
+</doc>
+                </field>
+                <field tag="12" name="updatedBy" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+
+</doc>
+                </field>
+                <field tag="13" name="updater" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                </field>
+            </fields>
+        </struct>
+        <struct namespace="com.isuwang.soa.common.util" name="TPageResponse">
+            <fields>
+                <field tag="1" name="start" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 查询的开始序号（序号从零开始）
+</doc>
+                </field>
+                <field tag="2" name="limit" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 最大返回的记录数
+</doc>
+                </field>
+                <field tag="3" name="results" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 结果记录数
+</doc>
+                </field>
+            </fields>
+        </struct>
+        <struct namespace="com.isuwang.soa.common.util" name="TPageRequest">
+            <doc>
+
+ 分页查询请求包
+</doc>
+            <fields>
+                <field tag="1" name="start" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 查询的开始序号（序号从零开始）
+</doc>
+                </field>
+                <field tag="2" name="limit" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 返回记录数
+</doc>
+                </field>
+                <field tag="3" name="sortFields" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 排序的字段
+</doc>
+                </field>
+            </fields>
+        </struct>
+        <struct namespace="com.isuwang.soa.task.domain" name="TBusinessTypeRequest">
+            <fields>
+                <field tag="1" name="pageRequest" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRUCT</kind>
+                        <ref>com.isuwang.soa.common.util.TPageRequest</ref>
+                    </dataType>
+                </field>
+                <field tag="2" name="businessTypeId" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 业务类型id
+</doc>
+                </field>
+                <field tag="3" name="updateAtStart" optional="true" privacy="false">
+                    <dataType>
+                        <kind>LONG</kind>
+                    </dataType>
+                    <doc>
+
+ 更新日期（起始）
+</doc>
+                </field>
+                <field tag="4" name="updateAtEnd" optional="true" privacy="false">
+                    <dataType>
+                        <kind>LONG</kind>
+                    </dataType>
+                    <doc>
+
+ 更新日期（结束）
+</doc>
+                </field>
+            </fields>
+        </struct>
+        <struct namespace="com.isuwang.soa.task.domain" name="TTaskPickerContainer">
+            <fields>
+                <field tag="1" name="id" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                </field>
+                <field tag="2" name="label" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                </field>
+            </fields>
+        </struct>
+    </structs>
+    <enums/>
+</service>

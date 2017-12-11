@@ -1,0 +1,15 @@
+show managedClasspath
+show libraryDependencies
+show fullClasspath
+inspect fullClasspath
+show compile:fullClasspath
+update
+show fullClasspath
+project reload
+project return
+project 
+project task-admin
+console
+compile
+clean
+compile

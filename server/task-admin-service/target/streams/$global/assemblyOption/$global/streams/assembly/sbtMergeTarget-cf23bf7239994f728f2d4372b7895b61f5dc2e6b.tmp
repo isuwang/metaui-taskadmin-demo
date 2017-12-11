@@ -1,0 +1,4 @@
+com.mysql.jdbc.Driver
+com.mysql.fabric.jdbc.FabricMySQLDriver
+com.alibaba.druid.proxy.DruidDriver
+com.alibaba.druid.mock.MockDriver

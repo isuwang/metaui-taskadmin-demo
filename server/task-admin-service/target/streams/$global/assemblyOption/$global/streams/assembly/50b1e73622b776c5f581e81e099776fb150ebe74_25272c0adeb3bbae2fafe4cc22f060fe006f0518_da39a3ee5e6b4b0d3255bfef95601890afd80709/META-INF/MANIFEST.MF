@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: scala-sql
+Implementation-Version: 2.0.1
+Specification-Vendor: com.github.wangzaixiang
+Specification-Title: scala-sql
+Implementation-Vendor-Id: com.github.wangzaixiang
+Specification-Version: 2.0.1
+Implementation-Vendor: com.github.wangzaixiang
+

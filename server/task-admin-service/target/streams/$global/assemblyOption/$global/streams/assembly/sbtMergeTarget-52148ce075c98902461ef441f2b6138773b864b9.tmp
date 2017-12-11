@@ -1,0 +1,3 @@
+com.isuwang.dapeng.remoting.filter.SoaTransactionalProcessFilter
+com.isuwang.dapeng.remoting.filter.NetworkLogFilter
+com.isuwang.dapeng.remoting.filter.LoadBalanceFilter

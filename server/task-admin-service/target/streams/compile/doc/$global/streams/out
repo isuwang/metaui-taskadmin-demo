@@ -1,0 +1,160 @@
+[0m[[0m[0minfo[0m] [0m[0mMain Scala API documentation to /Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/target/scala-2.12/api...[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.0.0:compile for Scala 2.12.4[0m
+[0m[[0m[0mdebug[0m] [0m[0mCalling Scaladoc with arguments:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-d[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/target/scala-2.12/api[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/classes:/Users/wahsonleung/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.4.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/target/scala-2.12/classes:/Users/wahsonleung/.ivy2/cache/com.isuwang/dapeng-remoting-api/jars/dapeng-remoting-api-1.2.2.jar:/Users/wahsonleung/.m2/repository/com/isuwang/dapeng-core/1.2.2/dapeng-core-1.2.2.jar:/Users/wahsonleung/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.13.jar:/Users/wahsonleung/.ivy2/cache/com.isuwang/dapeng-registry-api/jars/dapeng-registry-api-1.2.2.jar:/Users/wahsonleung/.ivy2/cache/com.isuwang/dapeng-route-impl/jars/dapeng-route-impl-1.2.2.jar:/Users/wahsonleung/.ivy2/cache/com.isuwang/dapeng-route-api/jars/dapeng-route-api-1.2.2.jar:/Users/wahsonleung/.ivy2/cache/com.isuwang/dapeng-transaction-api/jars/dapeng-transaction-api-1.2.2.jar:/Users/wahsonleung/.ivy2/cache/com.google.code.gson/gson/jars/gson-2.3.1.jar:/Users/wahsonleung/.ivy2/cache/com.isuwang/dapeng-remoting-netty/jars/dapeng-remoting-netty-1.2.2.jar:/Users/wahsonleung/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.6.2.jar:/Users/wahsonleung/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.6.0.jar:/Users/wahsonleung/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.6.2.jar:/Users/wahsonleung/.ivy2/cache/io.netty/netty-all/jars/netty-all-4.1.6.Final.jar:/Users/wahsonleung/.ivy2/cache/com.isuwang/dapeng-spring/jars/dapeng-spring-1.2.2.jar:/Users/wahsonleung/.ivy2/cache/org.springframework/spring-context/jars/spring-context-4.2.4.RELEASE.jar:/Users/wahsonleung/.ivy2/cache/org.springframework/spring-aop/jars/spring-aop-4.2.4.RELEASE.jar:/Users/wahsonleung/.ivy2/cache/aopalliance/aopalliance/jars/aopalliance-1.0.jar:/Users/wahsonleung/.ivy2/cache/org.springframework/spring-beans/jars/spring-beans-4.2.4.RELEASE.jar:/Users/wahsonleung/.ivy2/cache/org.springframework/spring-core/jars/spring-core-4.2.4.RELEASE.jar:/Users/wahsonleung/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.2.jar:/Users/wahsonleung/.ivy2/cache/org.springframework/spring-expression/jars/spring-expression-4.2.4.RELEASE.jar:/Users/wahsonleung/.ivy2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.1.jar:/Users/wahsonleung/.ivy2/cache/com.github.wangzaixiang/scala-sql_2.12/jars/scala-sql_2.12-2.0.2.jar:/Users/wahsonleung/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.12.4.jar:/Users/wahsonleung/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.1.3.jar:/Users/wahsonleung/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.1.3.jar:/Users/wahsonleung/.ivy2/cache/org.codehaus.janino/janino/jars/janino-2.7.8.jar:/Users/wahsonleung/.ivy2/cache/org.codehaus.janino/commons-compiler/jars/commons-compiler-2.7.8.jar:/Users/wahsonleung/.ivy2/cache/mysql/mysql-connector-java/jars/mysql-connector-java-5.1.36.jar:/Users/wahsonleung/.ivy2/cache/com.isuwang/dapeng-registry-zookeeper/jars/dapeng-registry-zookeeper-1.2.2.jar:/Users/wahsonleung/.ivy2/cache/org.apache.zookeeper/zookeeper/jars/zookeeper-3.4.7.jar:/Users/wahsonleung/.ivy2/cache/jline/jline/jars/jline-0.9.94.jar:/Users/wahsonleung/.ivy2/cache/com.alibaba/druid/jars/druid-1.0.17.jar:/Users/wahsonleung/.ivy2/cache/com.isuwang/dapeng-message-api/jars/dapeng-message-api-1.2.2.jar:/Users/wahsonleung/.ivy2/cache/com.isuwang/company-api/jars/company-api-1.2.2.jar:/Users/wahsonleung/.ivy2/cache/com.isuwang/user-api/jars/user-api-1.2.1.jar:/Users/wahsonleung/.ivy2/cache/com.isuwang/customer-api/jars/customer-api-1.2.1.jar:/Users/wahsonleung/.ivy2/cache/com.isuwang/admin-api/jars/admin-api-1.2.1.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceImpl.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceImpl.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/TaskSuggestionServiceImpl.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/action/FindTasksAction.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/action/TaskAdminOnBinlogAction.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/db/DBResource.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/db/TaskDb.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/db/entity/BusinessType.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/db/entity/Suggestion.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/db/entity/Task.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/db/entity/TaskAttachment.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/db/entity/TaskItem.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/db/entity/TaskLog.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/db/entity/TaskRemark.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/db/enum/SuggestionType.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/db/enum/TaskCommunicationStyle.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/db/enum/TaskPriority.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/db/enum/TaskStatus.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/db/enum/TaskType.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/tmp/MemcacheProcessor.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/util/EnumUtil.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/util/MyImplicit.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/util/TimestampUtil.scala[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceImpl.scala:218:7: SQL grammar erorr Communications link failure[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.[0m
+[0m[[0m[31merror[0m] [0m[0m      SQL"""[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceImpl.scala:288:7: SQL grammar erorr Communications link failure[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.[0m
+[0m[[0m[31merror[0m] [0m[0m      SQL"""[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceImpl.scala:476:30: SQL grammar erorr Communications link failure[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.[0m
+[0m[[0m[31merror[0m] [0m[0m    dataSource.executeUpdate(SQL"UPDATE `task` SET parent_task_id = null WHERE id = ${subTaskId}")[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceImpl.scala:504:7: SQL grammar erorr Communications link failure[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.[0m
+[0m[[0m[31merror[0m] [0m[0m      SQL"""[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceImpl.scala:523:43: SQL grammar erorr Communications link failure[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.[0m
+[0m[[0m[31merror[0m] [0m[0m    val result = dataSource.executeUpdate(SQL"DELETE FROM `task_remark` WHERE id = ${id}")[0m
+[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceImpl.scala:534:7: SQL grammar erorr Communications link failure[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.[0m
+[0m[[0m[31merror[0m] [0m[0m      SQL"""[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceImpl.scala:554:7: SQL grammar erorr Communications link failure[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.[0m
+[0m[[0m[31merror[0m] [0m[0m      SQL"""[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceImpl.scala:572:43: SQL grammar erorr Communications link failure[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.[0m
+[0m[[0m[31merror[0m] [0m[0m    val result = dataSource.executeUpdate(SQL"DELETE FROM `task_attachment` WHERE id = ${id}")[0m
+[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceImpl.scala:71:7: SQL grammar erorr Communications link failure[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.[0m
+[0m[[0m[31merror[0m] [0m[0m      SQL"""[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceImpl.scala:91:7: SQL grammar erorr Communications link failure[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.[0m
+[0m[[0m[31merror[0m] [0m[0m      SQL"""[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceImpl.scala:110:30: SQL grammar erorr Communications link failure[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.[0m
+[0m[[0m[31merror[0m] [0m[0m    dataSource.executeUpdate(SQL"DELETE FROM `business_type` WHERE id = ${id} AND created_by = ${operator}")[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/TaskSuggestionServiceImpl.scala:62:7: SQL grammar erorr Communications link failure[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.[0m
+[0m[[0m[31merror[0m] [0m[0m      SQL"""[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/TaskSuggestionServiceImpl.scala:82:7: SQL grammar erorr Communications link failure[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.[0m
+[0m[[0m[31merror[0m] [0m[0m      SQL"""[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/TaskSuggestionServiceImpl.scala:100:30: SQL grammar erorr Communications link failure[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.[0m
+[0m[[0m[31merror[0m] [0m[0m    dataSource.executeUpdate(SQL"DELETE FROM `suggestion` WHERE id = ${id} AND created_by = ${operator}")[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/db/TaskDb.scala:15:31: SQL grammar erorr Communications link failure[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.[0m
+[0m[[0m[31merror[0m] [0m[0m    dataSource.rows[TaskItem](SQL" SELECT * FROM `task_item` WHERE task_id = ${taskId}")[0m
+[0m[[0m[31merror[0m] [0m[0m                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/db/TaskDb.scala:68:30: SQL grammar erorr Communications link failure[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.[0m
+[0m[[0m[31merror[0m] [0m[0m    dataSource.rows[TaskLog](SQL" SELECT * FROM `task_log` WHERE task_id = ${taskId} ORDER BY updated_at DESC")[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/db/TaskDb.scala:77:37: SQL grammar erorr Communications link failure[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.[0m
+[0m[[0m[31merror[0m] [0m[0m    dataSource.rows[TaskAttachment](SQL" SELECT * FROM `task_attachment` WHERE task_id = ${taskId}")[0m
+[0m[[0m[31merror[0m] [0m[0m                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/db/TaskDb.scala:87:33: SQL grammar erorr Communications link failure[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.[0m
+[0m[[0m[31merror[0m] [0m[0m    dataSource.rows[TaskRemark](SQL" SELECT * FROM `task_remark` WHERE task_id = ${taskId}")[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/db/TaskDb.scala:101:7: SQL grammar erorr Communications link failure[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.[0m
+[0m[[0m[31merror[0m] [0m[0m      SQL"""[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/db/TaskDb.scala:112:30: SQL grammar erorr Communications link failure[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.[0m
+[0m[[0m[31merror[0m] [0m[0m    dataSource.executeUpdate(SQL"DELETE FROM `task_item` WHERE task_id = ${taskId} AND suggestion_type = ${suggestionType}")[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/db/TaskDb.scala:125:7: SQL grammar erorr Communications link failure[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.[0m
+[0m[[0m[31merror[0m] [0m[0m      SQL"""[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/db/TaskDb.scala:137:42: SQL grammar erorr Communications link failure[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.[0m
+[0m[[0m[31merror[0m] [0m[0m    val recordOpt = dataSource.row[Task](SQL" SELECT * FROM `task` WHERE id = ${id}")[0m
+[0m[[0m[31merror[0m] [0m[0m                                         ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/db/TaskDb.scala:143:48: SQL grammar erorr Communications link failure[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.[0m
+[0m[[0m[31merror[0m] [0m[0m    val recordOpt = dataSource.row[TaskRemark](SQL" SELECT * FROM `task_remark` WHERE id = ${id}")[0m
+[0m[[0m[31merror[0m] [0m[0m                                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/db/TaskDb.scala:149:52: SQL grammar erorr Communications link failure[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.[0m
+[0m[[0m[31merror[0m] [0m[0m    val recordOpt = dataSource.row[TaskAttachment](SQL" SELECT * FROM `task_attachment` WHERE id = ${id}")[0m
+[0m[[0m[31merror[0m] [0m[0m                                                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/scala/com/isuwang/soa/scala/task/db/TaskDb.scala:155:50: SQL grammar erorr Communications link failure[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.[0m
+[0m[[0m[31merror[0m] [0m[0m    val recordOpt = dataSource.row[BusinessType](SQL" SELECT * FROM business_type WHERE id = ${id}")[0m
+[0m[[0m[31merror[0m] [0m[0m                                                 ^[0m
+[0m[[0m[0minfo[0m] [0m[0mNo documentation generated with unsuccessful compiler run[0m
+[0m[[0m[31merror[0m] [0m[0m25 errors found[0m
+[0m[[0m[31merror[0m] [0m[0m(task_admin_service/compile:[31mdoc[0m) Scaladoc generation failed[0m

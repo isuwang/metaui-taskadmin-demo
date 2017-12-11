@@ -1,0 +1,6 @@
+[0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/resources/config_task-admin.properties,/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/target/scala-2.12/classes/config_task-admin.properties)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/resources/logback.xml,/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/target/scala-2.12/classes/logback.xml)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/resources/META-INF,/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/target/scala-2.12/classes/META-INF)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/resources/META-INF/spring,/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/target/scala-2.12/classes/META-INF/spring)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/src/main/resources/META-INF/spring/services.xml,/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-service/target/scala-2.12/classes/META-INF/spring/services.xml)[0m

@@ -1,0 +1,10 @@
+name
+version
+show libraryDependencies
+publishLocal
+project ..
+project 
+project return
+project task_admin
+project `task-admin`
+project task-admin

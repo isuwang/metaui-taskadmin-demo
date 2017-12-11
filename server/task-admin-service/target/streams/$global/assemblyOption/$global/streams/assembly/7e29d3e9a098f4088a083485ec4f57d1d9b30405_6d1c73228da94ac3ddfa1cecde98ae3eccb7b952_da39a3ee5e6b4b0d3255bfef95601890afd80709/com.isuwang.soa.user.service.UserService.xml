@@ -1,0 +1,955 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.user.service" name="UserService">
+    <doc>
+
+ Customer和Company服务
+</doc>
+    <meta>
+        <version>1.0.0</version>
+        <timeout>30000</timeout>
+    </meta>
+    <methods>
+        <method name="findCustomerById">
+            <doc>
+
+  根据id获取Customer记录
+</doc>
+            <request name="findCustomerById_args">
+                <fields>
+                    <field tag="1" name="customerId" optional="false" privacy="false">
+                        <dataType>
+                            <kind>INTEGER</kind>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                    <field tag="2" name="customerType" optional="false" privacy="false">
+                        <dataType>
+                            <kind>ENUM</kind>
+                            <ref>com.isuwang.soa.user.enums.TCustomerType</ref>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="findCustomerById_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>STRUCT</kind>
+                            <ref>com.isuwang.soa.user.domain.TCustomer</ref>
+                        </dataType>
+                        <doc>
+
+  根据id获取Customer记录
+</doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+        <method name="findCustomerExById">
+            <doc>
+
+  根据id获取Customer记录
+</doc>
+            <request name="findCustomerExById_args">
+                <fields>
+                    <field tag="1" name="customerId" optional="false" privacy="false">
+                        <dataType>
+                            <kind>INTEGER</kind>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                    <field tag="2" name="customerType" optional="false" privacy="false">
+                        <dataType>
+                            <kind>ENUM</kind>
+                            <ref>com.isuwang.soa.user.enums.TCustomerType</ref>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="findCustomerExById_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>STRUCT</kind>
+                            <ref>com.isuwang.soa.user.domain.TCustomerEx</ref>
+                        </dataType>
+                        <doc>
+
+  根据id获取Customer记录
+</doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+        <method name="findCompanyById">
+            <doc>
+
+ 根据id获取Company记录
+</doc>
+            <request name="findCompanyById_args">
+                <fields>
+                    <field tag="1" name="companyId" optional="false" privacy="false">
+                        <dataType>
+                            <kind>INTEGER</kind>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="findCompanyById_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>STRUCT</kind>
+                            <ref>com.isuwang.soa.user.domain.TCompany</ref>
+                        </dataType>
+                        <doc>
+
+ 根据id获取Company记录
+</doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+        <method name="findCompanysByCustomerIds">
+            <request name="findCompanysByCustomerIds_args">
+                <fields>
+                    <field tag="1" name="ids" optional="false" privacy="false">
+                        <dataType>
+                            <kind>LIST</kind>
+                            <valueType>
+<kind>STRING</kind>
+                            </valueType>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="findCompanysByCustomerIds_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>LIST</kind>
+                            <valueType>
+<kind>STRUCT</kind>
+<ref>com.isuwang.soa.user.domain.TCompany</ref>
+                            </valueType>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+    </methods>
+    <structs>
+        <struct namespace="com.isuwang.soa.user.domain" name="TCustomer">
+            <doc>
+
+ 客户
+</doc>
+            <fields>
+                <field tag="1" name="id" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ id
+</doc>
+                </field>
+                <field tag="2" name="companyId" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+公司ID
+</doc>
+                </field>
+                <field tag="3" name="name" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+
+
+客户姓名
+</doc>
+                </field>
+                <field tag="4" name="phone" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+联系电话
+</doc>
+                </field>
+                <field tag="5" name="bidFlag" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+竞拍资格状态（采购商）1：未申请；2：待审核；3：审核通过；4：审核未通过；99：禁用；
+</doc>
+                </field>
+                <field tag="6" name="auctionFlag" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                </field>
+            </fields>
+        </struct>
+        <struct namespace="com.isuwang.soa.user.domain" name="TCompany">
+            <doc>
+
+ 公司实体类
+</doc>
+            <fields>
+                <field tag="1" name="id" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+
+</doc>
+                </field>
+                <field tag="2" name="ownerCustomerId" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 创建该公司实体的客户ID
+</doc>
+                </field>
+                <field tag="3" name="name" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 公司名称
+</doc>
+                </field>
+                <field tag="4" name="abName" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 公司名称缩写
+</doc>
+                </field>
+                <field tag="5" name="phone" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 联系电话
+</doc>
+                </field>
+                <field tag="6" name="address" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 联系地址
+</doc>
+                </field>
+                <field tag="7" name="city" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 城市代码
+</doc>
+                </field>
+                <field tag="8" name="website" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 公司网址
+</doc>
+                </field>
+                <field tag="9" name="orgLicense" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 营业执照注册号
+</doc>
+                </field>
+                <field tag="10" name="orgTax" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 税务登记证税字号
+</doc>
+                </field>
+                <field tag="11" name="orgCode" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 组织机构代码
+</doc>
+                </field>
+                <field tag="12" name="orgColligateCode" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 3合1证件编号
+</doc>
+                </field>
+                <field tag="13" name="type" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 公司类型，1：采购商；2：供应商；
+</doc>
+                </field>
+                <field tag="14" name="attachmentId" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 附件id
+</doc>
+                </field>
+                <field tag="15" name="orgLicenseAid" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 营业执照附件
+</doc>
+                </field>
+                <field tag="16" name="orgTaxAid" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 税务登记证附件
+</doc>
+                </field>
+                <field tag="17" name="orgCodeAid" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 组织机构代码证附件
+</doc>
+                </field>
+                <field tag="18" name="orgColligateAid" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 3合1附件id
+</doc>
+                </field>
+                <field tag="19" name="status" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 公司状态，1：待审核；2：审核已通过；3：审核未通过；
+</doc>
+                </field>
+                <field tag="20" name="orgLicenseStatus" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 营业执照审核状态，1：待审核；2：已通过；3：未通过；
+</doc>
+                </field>
+                <field tag="21" name="orgTaxStatus" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 税务登记证审核状态，1：待审核；2：已通过；3：未通过；
+</doc>
+                </field>
+                <field tag="22" name="orgCodeStatus" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 组织机构代码审核状态，1：待审核；2：已通过；3：未通过；
+</doc>
+                </field>
+                <field tag="23" name="orgColligateStatus" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 3合1证审核状态，1：待审核；2：已通过；3：未通过；
+</doc>
+                </field>
+                <field tag="24" name="verified" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 公司是否已验证，0：否；1：是；
+</doc>
+                </field>
+                <field tag="25" name="deleted" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 公司是否已删除，0：否；1：是；
+</doc>
+                </field>
+                <field tag="26" name="purchaserTraded" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 是否为成交采购商,1:成交
+</doc>
+                </field>
+                <field tag="27" name="supplierTraded" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 是否为成交供应商,1:成交
+</doc>
+                </field>
+                <field tag="28" name="buyerCategoryGroups" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 关注买入的品种大类列表，英文逗号分割，category_groups的group_code
+</doc>
+                </field>
+                <field tag="29" name="sellerCategoryGroups" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 可销售的品种大类列表，英文逗号分割，category_groups的group_code
+</doc>
+                </field>
+                <field tag="30" name="sellerDistricts" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 可销售的区域，英文逗号分隔，存储区域表district的ID
+</doc>
+                </field>
+                <field tag="31" name="business" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 主营业务
+</doc>
+                </field>
+                <field tag="32" name="defaultAddressId" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 默认收货地址信息
+</doc>
+                </field>
+                <field tag="33" name="defaultBankId" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 默认银行信息
+</doc>
+                </field>
+                <field tag="34" name="buyerLevel" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 采购商等级，1：普通会员；2：铜牌会员；3：银牌会员；4：金牌会员
+</doc>
+                </field>
+                <field tag="35" name="sellerLevel" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 供应商等级，1：普通会员；2：铜牌会员；3：银牌会员；4：金牌会员；
+</doc>
+                </field>
+                <field tag="36" name="purchaserType" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 采购商类型,1:贸易商(trafficker);2:次终端(secondTerminal);3:终端(terminal)
+</doc>
+                </field>
+                <field tag="37" name="supplierType" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 采购商类型，1：上游生厂商，2:一级代理商
+</doc>
+                </field>
+                <field tag="38" name="defaultInvoiceId" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 默认开票信息
+</doc>
+                </field>
+                <field tag="39" name="kuaisuSupplierFlag" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 快塑供应商类型，0：非快塑供应商；1：快塑供应商；2:黑名单
+</doc>
+                </field>
+                <field tag="40" name="kuaisuSupplierLevel" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 快塑供应商级别:A,B,C,D...
+</doc>
+                </field>
+                <field tag="41" name="kuaisuSupplierLimit" optional="true" privacy="false">
+                    <dataType>
+                        <kind>DOUBLE</kind>
+                    </dataType>
+                    <doc>
+
+ 快塑供应商额度，吨数
+</doc>
+                </field>
+                <field tag="42" name="taosuContractSupplierFlag" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 是否淘塑协议供应商，0：否；1：是；
+</doc>
+                </field>
+                <field tag="43" name="taosuContractSupplierLevel" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 淘塑协议供应商级别:A,B,C,D...
+</doc>
+                </field>
+                <field tag="44" name="auctionFlag" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 拍卖资格状态（供应商），1：未申请；2：待审核；3：审核通过；4：审核未通过；99：禁用；
+</doc>
+                </field>
+                <field tag="45" name="bidFlag" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 竞拍资格状态（采购商），1：未申请；2：待审核；3：审核通过；4：审核未通过；99：禁用；
+</doc>
+                </field>
+                <field tag="46" name="registeredCapital" optional="true" privacy="false">
+                    <dataType>
+                        <kind>DOUBLE</kind>
+                    </dataType>
+                    <doc>
+
+ 注册资金
+</doc>
+                </field>
+                <field tag="47" name="orgCodeAuditBy" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 组织机构代码审核人
+</doc>
+                </field>
+                <field tag="48" name="orgLicenseAuditBy" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 营业执照审核人
+</doc>
+                </field>
+                <field tag="49" name="orgColligateAuditBy" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 三合一证件审核人
+</doc>
+                </field>
+                <field tag="50" name="orgCodeAuditAt" optional="true" privacy="false">
+                    <dataType>
+                        <kind>LONG</kind>
+                    </dataType>
+                    <doc>
+
+ 组织机构代码审核时间
+</doc>
+                </field>
+                <field tag="51" name="orgLicenseAuditAt" optional="true" privacy="false">
+                    <dataType>
+                        <kind>LONG</kind>
+                    </dataType>
+                    <doc>
+
+ 营业执照审核时间
+</doc>
+                </field>
+                <field tag="52" name="orgTaxAuditAt" optional="true" privacy="false">
+                    <dataType>
+                        <kind>LONG</kind>
+                    </dataType>
+                    <doc>
+
+ 税务登记审核时间
+</doc>
+                </field>
+                <field tag="53" name="orgColligateAuditAt" optional="true" privacy="false">
+                    <dataType>
+                        <kind>LONG</kind>
+                    </dataType>
+                    <doc>
+
+ 三合一证件审核时间
+</doc>
+                </field>
+                <field tag="54" name="orgTaxAuditBy" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 税务登记审核人
+</doc>
+                </field>
+                <field tag="55" name="creditLimit" optional="true" privacy="false">
+                    <dataType>
+                        <kind>DOUBLE</kind>
+                    </dataType>
+                    <doc>
+
+ 客户授信额度
+</doc>
+                </field>
+                <field tag="56" name="creditTerm" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 客户授信期限
+</doc>
+                </field>
+                <field tag="57" name="property" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 企业性质,1:国有非上市企业(nonStateOwnedEnterprises);2:国有上市企业(stateOwnedEnterprises);3:民营非上市企业(privateNonListedCompany);4:民营上市企业(privateListedCompany);5:中外合资(非港澳台)企业(jointVentures);6:港澳台合资企业(HKMacaoAndTaiwanJointVenture);
+</doc>
+                </field>
+                <field tag="58" name="employNum" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 员工人数
+</doc>
+                </field>
+                <field tag="59" name="foundedAt" optional="true" privacy="false">
+                    <dataType>
+                        <kind>LONG</kind>
+                    </dataType>
+                    <doc>
+
+ 成立日期
+</doc>
+                </field>
+                <field tag="60" name="suggestBy" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 推荐人
+</doc>
+                </field>
+                <field tag="61" name="yearTrade" optional="true" privacy="false">
+                    <dataType>
+                        <kind>DOUBLE</kind>
+                    </dataType>
+                    <doc>
+
+ 年交易额,单位:万元
+</doc>
+                </field>
+                <field tag="62" name="kuaisuSupplierIsMaster" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 是否主公司,0:否(not);1:是(yes)
+</doc>
+                </field>
+                <field tag="63" name="kuaisuSupplierMasterCompanyId" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 关联的主公司id
+</doc>
+                </field>
+                <field tag="64" name="kuaisuSupplierPaymentType" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 快塑供应商付款方式,1:先货后款(cargoFirset);2:先款后货(moneyFirst)
+</doc>
+                </field>
+                <field tag="65" name="kuaisuSupplierCreditLimit" optional="true" privacy="false">
+                    <dataType>
+                        <kind>DOUBLE</kind>
+                    </dataType>
+                    <doc>
+
+ 快塑供应商额度限制
+</doc>
+                </field>
+                <field tag="66" name="remark" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 备注
+</doc>
+                </field>
+                <field tag="67" name="createdAt" optional="true" privacy="false">
+                    <dataType>
+                        <kind>LONG</kind>
+                    </dataType>
+                    <doc>
+
+ 创建时间
+</doc>
+                </field>
+                <field tag="68" name="updatedAt" optional="true" privacy="false">
+                    <dataType>
+                        <kind>LONG</kind>
+                    </dataType>
+                    <doc>
+
+ 修改时间
+</doc>
+                </field>
+                <field tag="69" name="createdBy" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 创建者，staff_id，后台创建时才有值
+</doc>
+                </field>
+                <field tag="70" name="updatedBy" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 修改者，staff_id，后台编辑时才有值
+</doc>
+                </field>
+                <field tag="71" name="purchaseBlacked" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>是否为黑名单采购商，0：否；1：是；</doc>
+                </field>
+            </fields>
+        </struct>
+        <struct namespace="com.isuwang.soa.user.domain" name="TCustomerEx">
+            <doc>
+
+ 客户
+</doc>
+            <fields>
+                <field tag="1" name="id" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ id
+</doc>
+                </field>
+                <field tag="2" name="companyId" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+公司ID
+</doc>
+                </field>
+                <field tag="3" name="name" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+
+
+客户姓名
+</doc>
+                </field>
+                <field tag="4" name="phone" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+联系电话
+</doc>
+                </field>
+                <field tag="5" name="bidFlag" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+竞拍资格状态（采购商）1：未申请；2：待审核；3：审核通过；4：审核未通过；99：禁用；
+</doc>
+                </field>
+                <field tag="6" name="auctionFlag" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+竞拍资格状态（采购商）1：未申请；2：待审核；3：审核通过；4：审核未通过；99：禁用；
+
+</doc>
+                </field>
+            </fields>
+        </struct>
+    </structs>
+    <enums>
+        <tenum namespace="com.isuwang.soa.user.enums" name="TCustomerType">
+            <doc>
+
+ 客户类型
+</doc>
+            <items>
+                <item>
+                    <label>BUYER</label>
+                    <value>1</value>
+                    <doc>
+
+ 买家（采购商）
+</doc>
+                </item>
+                <item>
+                    <label>SELLER</label>
+                    <value>2</value>
+                    <doc>
+
+ 卖家(供应商)
+</doc>
+                </item>
+                <item>
+                    <label>BIZ</label>
+                    <value>3</value>
+                    <doc>
+
+ 商务
+</doc>
+                </item>
+            </items>
+        </tenum>
+    </enums>
+</service>

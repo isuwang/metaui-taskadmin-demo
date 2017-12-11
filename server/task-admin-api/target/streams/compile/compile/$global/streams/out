@@ -1,0 +1,301 @@
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/common/util/CallerFrom.scala:34:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m            , "[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/common/util/CallerFrom.scala:36:13: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m            ")[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/common/util/CallerFrom.scala:44:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m            , "[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/common/util/CallerFrom.scala:46:13: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m            ")[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/common/util/CallerFrom.scala:54:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m            , "[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/common/util/CallerFrom.scala:56:13: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m            ")[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/common/util/CallerFrom.scala:64:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m            , "[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/common/util/CallerFrom.scala:66:13: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m            ")[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/common/util/CallerFrom.scala:74:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m            , "[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/common/util/CallerFrom.scala:76:13: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m            ")[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/common/util/CallerFrom.scala:84:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m            , "[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/common/util/CallerFrom.scala:86:13: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m            ")[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/common/util/CallerFrom.scala:94:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m            , "[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/common/util/CallerFrom.scala:96:13: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m            ")[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/common/util/CallerFrom.scala:7:14: expected start of definition[0m
+[0m[[0m[31merror[0m] [0m[0m      private(val id: Int, val name: String) extends com.isuwang.dapeng.core.enums.TEnum(id,name)[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/common/util/CallerFrom.scala:8:7: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0m      {[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/common/util/CallerFrom.scala:148:5: ')' expected but '}' found.[0m
+[0m[[0m[31merror[0m] [0m[0m    }[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceAsyncClient.scala:22:53: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m        AsyncClient extends BaseCommonServiceClient("[0m
+[0m[[0m[31merror[0m] [0m[0m                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceAsyncClient.scala:28:9: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m        ")[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceAsyncClient.scala:59:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceAsyncClient.scala:61:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceAsyncClient.scala:135:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceAsyncClient.scala:137:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceAsyncClient.scala:211:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceAsyncClient.scala:213:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceAsyncClient.scala:285:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceAsyncClient.scala:287:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceAsyncClient.scala:357:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceAsyncClient.scala:359:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceAsyncClient.scala:431:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceAsyncClient.scala:433:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceAsyncClient.scala:505:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceAsyncClient.scala:507:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceAsyncClient.scala:577:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceAsyncClient.scala:579:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceAsyncClient.scala:651:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceAsyncClient.scala:653:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceAsyncClient.scala:725:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceAsyncClient.scala:727:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceAsyncClient.scala:797:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceAsyncClient.scala:799:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceAsyncClient.scala:869:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceAsyncClient.scala:871:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceAsyncClient.scala:22:9: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0m        AsyncClient extends BaseCommonServiceClient("[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceClient.scala:19:48: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m        Client extends BaseCommonServiceClient("[0m
+[0m[[0m[31merror[0m] [0m[0m                                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceClient.scala:25:9: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m        ")[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceClient.scala:57:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceClient.scala:59:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceClient.scala:109:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceClient.scala:111:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceClient.scala:161:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceClient.scala:163:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceClient.scala:213:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceClient.scala:215:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceClient.scala:263:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceClient.scala:265:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceClient.scala:315:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceClient.scala:317:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceClient.scala:367:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceClient.scala:369:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceClient.scala:417:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceClient.scala:419:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceClient.scala:469:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceClient.scala:471:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceClient.scala:521:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceClient.scala:523:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceClient.scala:571:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceClient.scala:573:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceClient.scala:621:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceClient.scala:623:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceClient.scala:19:9: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0m        Client extends BaseCommonServiceClient("[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceAsyncClient.scala:22:53: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m        AsyncClient extends BaseCommonServiceClient("[0m
+[0m[[0m[31merror[0m] [0m[0m                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceAsyncClient.scala:28:9: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m        ")[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceAsyncClient.scala:59:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceAsyncClient.scala:61:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceAsyncClient.scala:135:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceAsyncClient.scala:137:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceAsyncClient.scala:209:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceAsyncClient.scala:211:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceAsyncClient.scala:281:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceAsyncClient.scala:283:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceAsyncClient.scala:353:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceAsyncClient.scala:355:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceAsyncClient.scala:22:9: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0m        AsyncClient extends BaseCommonServiceClient("[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceClient.scala:19:48: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m        Client extends BaseCommonServiceClient("[0m
+[0m[[0m[31merror[0m] [0m[0m                                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceClient.scala:25:9: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m        ")[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceClient.scala:57:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceClient.scala:59:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceClient.scala:109:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceClient.scala:111:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceClient.scala:161:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceClient.scala:163:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceClient.scala:211:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceClient.scala:213:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceClient.scala:261:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceClient.scala:263:15: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              ");[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceClient.scala:19:9: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0m        Client extends BaseCommonServiceClient("[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskSuggestionServiceAsyncClient.scala:22:53: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m        AsyncClient extends BaseCommonServiceClient("[0m
+[0m[[0m[31merror[0m] [0m[0m                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskSuggestionServiceAsyncClient.scala:28:9: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m        ")[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskSuggestionServiceAsyncClient.scala:59:27: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m              initContext("[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m189 errors found[0m

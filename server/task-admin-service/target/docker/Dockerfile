@@ -1,0 +1,7 @@
+FROM docker.oa.isuwang.com:5000/system/dapeng-container:1.2.1
+RUN ["mkdir", "-p", "\/dapeng-container"]
+COPY 0/task-admin_service_2.12-1.0.0.jar 1/task-admin-api_2.12-1.0.0.jar 2/scala-library-2.12.4.jar 3/dapeng-remoting-api-1.2.2.jar 4/dapeng-core-1.2.2.jar 5/slf4j-api-1.7.13.jar 6/dapeng-registry-api-1.2.2.jar 7/dapeng-route-impl-1.2.2.jar 8/dapeng-route-api-1.2.2.jar 9/dapeng-transaction-api-1.2.2.jar 10/gson-2.3.1.jar 11/dapeng-remoting-netty-1.2.2.jar 12/jackson-databind-2.6.2.jar 13/jackson-annotations-2.6.0.jar 14/jackson-core-2.6.2.jar 15/netty-all-4.1.6.Final.jar 16/dapeng-spring-1.2.2.jar 17/spring-context-4.2.4.RELEASE.jar 18/spring-aop-4.2.4.RELEASE.jar 19/aopalliance-1.0.jar 20/spring-beans-4.2.4.RELEASE.jar 21/spring-core-4.2.4.RELEASE.jar 22/commons-logging-1.2.jar 23/spring-expression-4.2.4.RELEASE.jar 24/commons-lang3-3.1.jar 25/scala-sql_2.12-2.0.2.jar 26/scala-reflect-2.12.4.jar 27/logback-classic-1.1.3.jar 28/logback-core-1.1.3.jar 29/janino-2.7.8.jar 30/commons-compiler-2.7.8.jar 31/mysql-connector-java-5.1.36.jar 32/dapeng-registry-zookeeper-1.2.2.jar 33/zookeeper-3.4.7.jar 34/jline-0.9.94.jar 35/druid-1.0.17.jar 36/dapeng-message-api-1.2.2.jar 37/company-api-1.2.2.jar 38/user-api-1.2.1.jar 39/customer-api-1.2.1.jar 40/admin-api-1.2.1.jar /dapeng-container/apps/
+COPY 41/startup.sh /dapeng-container/bin/
+RUN ["chmod", "+x", "\/dapeng-container\/bin\/startup.sh"]
+WORKDIR /dapeng-container/bin
+CMD ["\/bin\/sh", "-c", "\/dapeng-container\/bin\/startup.sh && tail -F \/dapeng-container\/bin\/startup.sh"]

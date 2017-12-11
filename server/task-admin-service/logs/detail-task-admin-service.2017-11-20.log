@@ -1,0 +1,1432 @@
+11-20 10:01:01 347 Thread-8 INFO - {dataSource-1} inited
+11-20 10:01:14 394 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 10:01:14 397 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 10:01:14 409 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(46421)
+11-20 10:01:14 409 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(46421)
+11-20 10:01:14 600 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 10:01:14 600 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 10:01:14 602 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 10:01:14 602 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 10:01:14 612 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 10:01:14 612 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 10:01:14 614 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(14123)
+11-20 10:01:14 614 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(14123)
+11-20 10:08:49 799 trans-pool-1-thread-4 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional.empty operatorName:Optional.empty request body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),None,None,None,None,None,None,None,None,None,None))
+11-20 10:08:49 802 trans-pool-1-thread-4 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional.empty request header:Optional.empty body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),None,None,None,None,None,None,None,None,None,None))
+11-20 10:08:49 951 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `task`  WHERE 1=1 AND created_by = ? AND updated_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 10:08:49.892))
+11-20 10:08:50 160 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `task`  WHERE 1=1 AND created_by = ? AND updated_at BETWEEN ? AND ? order by updated_at desc limit ?, ? args: List(JdbcValue(0), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 10:08:49.892), JdbcValue(0), JdbcValue(10))
+11-20 10:08:50 204 trans-pool-1-thread-4 DEBUG - SQL result: 9
+11-20 10:08:50 209 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `task_log` WHERE task_id in (2,9,7,8,6,5,4,3,1) args: List()
+11-20 10:08:50 214 trans-pool-1-thread-4 DEBUG - SQL result: 9
+11-20 10:08:50 246 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `task_attachment` WHERE task_id in (2,9,7,8,6,5,4,3,1) args: List()
+11-20 10:08:50 248 trans-pool-1-thread-4 DEBUG - SQL result: 0
+11-20 10:08:50 254 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `task_remark` WHERE task_id in(2,9,7,8,6,5,4,3,1) args: List()
+11-20 10:08:50 258 trans-pool-1-thread-4 DEBUG - SQL result: 0
+11-20 10:08:50 261 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `task_item` WHERE task_id in (2,9,7,8,6,5,4,3,1) args: List()
+11-20 10:08:50 264 trans-pool-1-thread-4 DEBUG - SQL result: 4
+11-20 10:08:50 277 trans-pool-1-thread-4 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional[0] operatorName:Optional[0] response body:findTasks_result(TTaskResponse(TPageResponse(0,10,9),List(TTask(2,KT2017,sdafda,2,2,2,1,1510797563000,1510989261000,List(),List(...(2243)
+11-20 10:08:50 278 trans-pool-1-thread-4 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional[0] response header:Optional[0] body:findTasks_result(TTaskResponse(TPageResponse(0,10,9),List(TTask(2,KT2017,sdafda,2,2,2,1,1510797563000,1510989261000,List(),List(...(2243)
+11-20 10:10:03 752 trans-pool-1-thread-5 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional.empty operatorName:Optional.empty request body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),None,Some(2),Some(2),None,None,None,None,None,None,None))
+11-20 10:10:03 753 trans-pool-1-thread-5 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional.empty request header:Optional.empty body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),None,Some(2),Some(2),None,None,None,None,None,None,None))
+11-20 10:10:03 754 trans-pool-1-thread-5 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `task`  WHERE 1=1 AND created_by = ? AND company_id= ? AND updated_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(Some(2)), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 10:10:03.753))
+11-20 10:10:03 756 trans-pool-1-thread-5 DEBUG - SQL Preparing:  SELECT * FROM `task`  WHERE 1=1 AND created_by = ? AND company_id= ? AND updated_at BETWEEN ? AND ? order by updated_at desc limit ?, ? args: List(JdbcValue(0), JdbcValue(Some(2)), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 10:10:03.753), JdbcValue(0), JdbcValue(10))
+11-20 10:10:03 758 trans-pool-1-thread-5 DEBUG - SQL result: 0
+11-20 10:10:03 758 trans-pool-1-thread-5 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional[0] operatorName:Optional[0] response body:findTasks_result(TTaskResponse(TPageResponse(0,10,0),List()))
+11-20 10:10:03 758 trans-pool-1-thread-5 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional[0] response header:Optional[0] body:findTasks_result(TTaskResponse(TPageResponse(0,10,0),List()))
+11-20 10:10:12 461 trans-pool-1-thread-6 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional.empty operatorName:Optional.empty request body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),None,Some(2),None,None,None,None,None,None,None,None))
+11-20 10:10:12 461 trans-pool-1-thread-6 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional.empty request header:Optional.empty body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),None,Some(2),None,None,None,None,None,None,None,None))
+11-20 10:10:12 462 trans-pool-1-thread-6 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `task`  WHERE 1=1 AND created_by = ? AND company_id= ? AND updated_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(Some(2)), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 10:10:12.461))
+11-20 10:10:12 464 trans-pool-1-thread-6 DEBUG - SQL Preparing:  SELECT * FROM `task`  WHERE 1=1 AND created_by = ? AND company_id= ? AND updated_at BETWEEN ? AND ? order by updated_at desc limit ?, ? args: List(JdbcValue(0), JdbcValue(Some(2)), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 10:10:12.461), JdbcValue(0), JdbcValue(10))
+11-20 10:10:12 466 trans-pool-1-thread-6 DEBUG - SQL result: 0
+11-20 10:10:12 466 trans-pool-1-thread-6 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional[0] operatorName:Optional[0] response body:findTasks_result(TTaskResponse(TPageResponse(0,10,0),List()))
+11-20 10:10:12 467 trans-pool-1-thread-6 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional[0] response header:Optional[0] body:findTasks_result(TTaskResponse(TPageResponse(0,10,0),List()))
+11-20 10:10:23 690 trans-pool-1-thread-7 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional.empty operatorName:Optional.empty request body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),None,None,Some(2),None,None,None,None,None,None,None))
+11-20 10:10:23 691 trans-pool-1-thread-7 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional.empty request header:Optional.empty body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),None,None,Some(2),None,None,None,None,None,None,None))
+11-20 10:10:23 692 trans-pool-1-thread-7 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `task`  WHERE 1=1 AND created_by = ? AND updated_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 10:10:23.691))
+11-20 10:10:23 694 trans-pool-1-thread-7 DEBUG - SQL Preparing:  SELECT * FROM `task`  WHERE 1=1 AND created_by = ? AND updated_at BETWEEN ? AND ? order by updated_at desc limit ?, ? args: List(JdbcValue(0), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 10:10:23.691), JdbcValue(0), JdbcValue(10))
+11-20 10:10:23 701 trans-pool-1-thread-7 DEBUG - SQL result: 9
+11-20 10:10:23 702 trans-pool-1-thread-7 DEBUG - SQL Preparing:  SELECT * FROM `task_log` WHERE task_id in (2,9,7,8,6,5,4,3,1) args: List()
+11-20 10:10:23 705 trans-pool-1-thread-7 DEBUG - SQL result: 9
+11-20 10:10:23 706 trans-pool-1-thread-7 DEBUG - SQL Preparing:  SELECT * FROM `task_attachment` WHERE task_id in (2,9,7,8,6,5,4,3,1) args: List()
+11-20 10:10:23 707 trans-pool-1-thread-7 DEBUG - SQL result: 0
+11-20 10:10:23 708 trans-pool-1-thread-7 DEBUG - SQL Preparing:  SELECT * FROM `task_remark` WHERE task_id in(2,9,7,8,6,5,4,3,1) args: List()
+11-20 10:10:23 709 trans-pool-1-thread-7 DEBUG - SQL result: 0
+11-20 10:10:23 710 trans-pool-1-thread-7 DEBUG - SQL Preparing:  SELECT * FROM `task_item` WHERE task_id in (2,9,7,8,6,5,4,3,1) args: List()
+11-20 10:10:23 711 trans-pool-1-thread-7 DEBUG - SQL result: 4
+11-20 10:10:23 712 trans-pool-1-thread-7 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional[0] operatorName:Optional[0] response body:findTasks_result(TTaskResponse(TPageResponse(0,10,9),List(TTask(2,KT2017,sdafda,2,2,2,1,1510797563000,1510989261000,List(),List(...(2243)
+11-20 10:10:23 713 trans-pool-1-thread-7 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional[0] response header:Optional[0] body:findTasks_result(TTaskResponse(TPageResponse(0,10,9),List(TTask(2,KT2017,sdafda,2,2,2,1,1510797563000,1510989261000,List(),List(...(2243)
+11-20 10:24:45 429 Thread-8 INFO - {dataSource-1} inited
+11-20 10:24:59 622 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 10:24:59 624 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 10:24:59 637 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(46421)
+11-20 10:24:59 637 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(46421)
+11-20 10:24:59 771 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 10:24:59 771 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 10:24:59 773 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 10:24:59 773 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 10:24:59 782 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 10:24:59 782 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 10:24:59 783 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(14123)
+11-20 10:24:59 783 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(14123)
+11-20 10:29:13 666 trans-pool-1-thread-4 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 createTask operatorId:Optional.empty operatorName:Optional.empty request body:createTask_args(TCreateTaskRequest(1,1,1,1,asdfas,List(TTaskItemRequest(1,1,None,Some(asdf))),List(TTaskItemRequest(2,2,None,Som...(233)
+11-20 10:29:13 667 trans-pool-1-thread-4 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 createTask Optional.empty request header:Optional.empty body:createTask_args(TCreateTaskRequest(1,1,1,1,asdfas,List(TTaskItemRequest(1,1,None,Some(asdf))),List(TTaskItemRequest(2,2,None,Som...(233)
+11-20 10:29:14 002 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `task` WHERE id = ? args: WrappedArray(JdbcValue(2))
+11-20 10:29:14 154 trans-pool-1-thread-4 DEBUG - SQL result: 0
+11-20 10:29:14 170 trans-pool-1-thread-4 ERROR - assertion failed: 子任务不允许继续创建子任务
+java.lang.AssertionError: assertion failed: 子任务不允许继续创建子任务
+	at scala.Predef$.assert(Predef.scala:219) ~[scala-library.jar:1.0.1]
+	at com.isuwang.soa.scala.task.TaskAdminServiceImpl.createTask(TaskAdminServiceImpl.scala:121) ~[classes/:na]
+	at com.isuwang.soa.scala.task.TaskAdminServiceCodec$createTask.getResult(TaskAdminServiceCodec.scala:311) ~[classes/:na]
+	at com.isuwang.soa.scala.task.TaskAdminServiceCodec$createTask.getResult(TaskAdminServiceCodec.scala:301) ~[classes/:na]
+	at com.isuwang.dapeng.core.SoaCommonBaseProcessor.lambda$process$0(SoaCommonBaseProcessor.java:84) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.core.SoaCommonBaseProcessor$$Lambda$3695/530410059.doAction(Unknown Source) ~[na:na]
+	at com.isuwang.dapeng.core.filter.container.DispatchFilter.doFilter(DispatchFilter.java:27) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.core.filter.container.ContainerFilterChain.doFilter(ContainerFilterChain.java:35) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.container.filter.SlowTimeServiceFilter.doFilter(SlowTimeServiceFilter.java:29) ~[na:na]
+	at com.isuwang.dapeng.core.filter.container.ContainerFilterChain.doFilter(ContainerFilterChain.java:35) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.container.filter.ProviderTimesFilter.doFilter(ProviderTimesFilter.java:29) ~[na:na]
+	at com.isuwang.dapeng.core.filter.container.ContainerFilterChain.doFilter(ContainerFilterChain.java:35) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.container.filter.SoaGlobalTransactionalFilter.doFilter(SoaGlobalTransactionalFilter.java:50) ~[na:na]
+	at com.isuwang.dapeng.core.filter.container.ContainerFilterChain.doFilter(ContainerFilterChain.java:35) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.core.SoaCommonBaseProcessor.process(SoaCommonBaseProcessor.java:103) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.container.netty.SoaServerHandler.processRequest(SoaServerHandler.java:299) ~[na:na]
+	at com.isuwang.dapeng.container.netty.SoaServerHandler.lambda$readRequestHeader$8(SoaServerHandler.java:130) ~[na:na]
+	at com.isuwang.dapeng.container.netty.SoaServerHandler$$Lambda$3694/1926433225.run(Unknown Source) ~[na:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) ~[na:1.8.0_31]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) ~[na:1.8.0_31]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_31]
+11-20 10:30:00 541 trans-pool-1-thread-5 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 createTask operatorId:Optional.empty operatorName:Optional.empty request body:createTask_args(TCreateTaskRequest(1,1,1,1,asdfas,List(TTaskItemRequest(1,1,None,Some(asdf))),List(TTaskItemRequest(2,2,None,Som...(233)
+11-20 10:30:00 542 trans-pool-1-thread-5 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 createTask Optional.empty request header:Optional.empty body:createTask_args(TCreateTaskRequest(1,1,1,1,asdfas,List(TTaskItemRequest(1,1,None,Some(asdf))),List(TTaskItemRequest(2,2,None,Som...(233)
+11-20 10:30:00 545 trans-pool-1-thread-5 DEBUG - SQL Preparing:  SELECT * FROM `task` WHERE id = ? args: WrappedArray(JdbcValue(3))
+11-20 10:30:00 551 trans-pool-1-thread-5 DEBUG - SQL result: 0
+11-20 10:30:00 558 trans-pool-1-thread-5 DEBUG - SQL Preparing: 
+        INSERT INTO `task_log` SET
+         task_id = ?,
+         operation = ?,
+         oper_field = ?,
+         old_value = ?,
+         new_value = ?,
+         created_by = ?,
+         updated_by = ?
+       args: WrappedArray(JdbcValue(3), JdbcValue(创建子任务), JdbcValue(None), JdbcValue(None), JdbcValue(None), JdbcValue(0), JdbcValue(0))
+11-20 10:30:00 576 trans-pool-1-thread-5 DEBUG - SQL result: 1
+11-20 10:30:00 580 trans-pool-1-thread-5 DEBUG - SQL Preparing: 
+         INSERT INTO `task` SET
+          parent_task_id = ?,
+          task_no = ?,
+          company_id = ?,
+          task_subject = ?,
+          status = ?,
+          task_type = ?,
+          business_type_id = ?,
+          priority = ?,
+          plan_at = ?,
+          communication_style = ?,
+          handler_id = ?,
+          problem_desc = ?,
+          result_desc = ?,
+          created_by = ?,
+          updated_by = ?
+        args: WrappedArray(JdbcValue(Some(3)), JdbcValue(RW20171120103000), JdbcValue(None), JdbcValue(asdfas), JdbcValue(1), JdbcValue(1), JdbcValue(1), JdbcValue(1), JdbcValue(Mon Nov 20 10:12:37 CST 2017), JdbcValue(None), JdbcValue(Some(1)), JdbcValue(Some(asdfadadfasd)), JdbcValue(None), JdbcValue(0), JdbcValue(0))
+11-20 10:30:00 595 trans-pool-1-thread-5 DEBUG - SQL result: 1
+11-20 10:30:00 596 trans-pool-1-thread-5 DEBUG - SQL Preparing: 
+        INSERT INTO `task_item` SET
+          task_id = ?,
+          suggestion_id = ?,
+          suggestion_type = ?,
+          suggestion_remark = ?
+         args: WrappedArray(JdbcValue(10), JdbcValue(2), JdbcValue(2), JdbcValue(Some(zxvxc)))
+11-20 10:30:00 610 trans-pool-1-thread-5 DEBUG - SQL result: 1
+11-20 10:30:00 611 trans-pool-1-thread-5 DEBUG - SQL Preparing: 
+        INSERT INTO `task_item` SET
+          task_id = ?,
+          suggestion_id = ?,
+          suggestion_type = ?,
+          suggestion_remark = ?
+         args: WrappedArray(JdbcValue(10), JdbcValue(1), JdbcValue(1), JdbcValue(Some(asdf)))
+11-20 10:30:00 639 trans-pool-1-thread-5 DEBUG - SQL result: 1
+11-20 10:30:14 273 trans-pool-1-thread-5 DEBUG - SQL Preparing: 
+        INSERT INTO `task_remark` SET
+          task_id = ?,
+          content = ?,
+          created_by = ?,
+          updated_by = ?
+         args: WrappedArray(JdbcValue(10), JdbcValue(aszxcvzasds), JdbcValue(0), JdbcValue(0))
+11-20 10:30:14 315 trans-pool-1-thread-5 DEBUG - SQL result: 1
+11-20 10:30:14 380 trans-pool-1-thread-5 DEBUG - SQL Preparing: 
+        INSERT INTO `task_log` SET
+         task_id = ?,
+         operation = ?,
+         oper_field = ?,
+         old_value = ?,
+         new_value = ?,
+         created_by = ?,
+         updated_by = ?
+       args: WrappedArray(JdbcValue(10), JdbcValue(添加备注), JdbcValue(None), JdbcValue(None), JdbcValue(None), JdbcValue(0), JdbcValue(0))
+11-20 10:30:14 420 trans-pool-1-thread-5 DEBUG - SQL result: 1
+11-20 10:30:17 703 trans-pool-1-thread-5 DEBUG - SQL Preparing: 
+        INSERT INTO `task_log` SET
+         task_id = ?,
+         operation = ?,
+         oper_field = ?,
+         old_value = ?,
+         new_value = ?,
+         created_by = ?,
+         updated_by = ?
+       args: WrappedArray(JdbcValue(10), JdbcValue(创建), JdbcValue(None), JdbcValue(None), JdbcValue(None), JdbcValue(0), JdbcValue(0))
+11-20 10:30:17 716 trans-pool-1-thread-5 DEBUG - SQL result: 1
+11-20 10:30:17 719 trans-pool-1-thread-5 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 createTask operatorId:Optional[0] operatorName:Optional[0] response body:createTask_result()
+11-20 10:30:17 720 trans-pool-1-thread-5 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 createTask Optional[0] response header:Optional[0] body:createTask_result()
+11-20 10:33:34 563 trans-pool-1-thread-6 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional.empty operatorName:Optional.empty request body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),Some(RW20171120103000),None,None,None,None,None,None,None,None,None))
+11-20 10:33:34 563 trans-pool-1-thread-6 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional.empty request header:Optional.empty body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),Some(RW20171120103000),None,None,None,None,None,None,None,None,None))
+11-20 10:33:34 567 trans-pool-1-thread-6 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `task`  WHERE 1=1 AND created_by = ? AND task_no= ? AND updated_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(Some(RW20171120103000)), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 10:33:34.563))
+11-20 10:33:34 575 trans-pool-1-thread-6 DEBUG - SQL Preparing:  SELECT * FROM `task`  WHERE 1=1 AND created_by = ? AND task_no= ? AND updated_at BETWEEN ? AND ? order by updated_at desc limit ?, ? args: List(JdbcValue(0), JdbcValue(Some(RW20171120103000)), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 10:33:34.563), JdbcValue(0), JdbcValue(10))
+11-20 10:33:34 580 trans-pool-1-thread-6 DEBUG - SQL result: 1
+11-20 10:33:34 583 trans-pool-1-thread-6 DEBUG - SQL Preparing:  SELECT * FROM `task_log` WHERE task_id in (10) args: List()
+11-20 10:33:34 587 trans-pool-1-thread-6 DEBUG - SQL result: 2
+11-20 10:33:34 604 trans-pool-1-thread-6 DEBUG - SQL Preparing:  SELECT * FROM `task_attachment` WHERE task_id in (10) args: List()
+11-20 10:33:34 605 trans-pool-1-thread-6 DEBUG - SQL result: 0
+11-20 10:33:34 609 trans-pool-1-thread-6 DEBUG - SQL Preparing:  SELECT * FROM `task_remark` WHERE task_id in(10) args: List()
+11-20 10:33:34 611 trans-pool-1-thread-6 DEBUG - SQL result: 1
+11-20 10:33:34 614 trans-pool-1-thread-6 DEBUG - SQL Preparing:  SELECT * FROM `task_item` WHERE task_id in (10) args: List()
+11-20 10:33:34 616 trans-pool-1-thread-6 DEBUG - SQL result: 2
+11-20 10:33:34 627 trans-pool-1-thread-6 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional[0] operatorName:Optional[0] response body:findTasks_result(TTaskResponse(TPageResponse(0,10,1),List(TTask(10,RW20171120103000,asdfas,1,1,1,1,1511094299000,1511094299000,L...(548)
+11-20 10:33:34 627 trans-pool-1-thread-6 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional[0] response header:Optional[0] body:findTasks_result(TTaskResponse(TPageResponse(0,10,1),List(TTask(10,RW20171120103000,asdfas,1,1,1,1,1511094299000,1511094299000,L...(548)
+11-20 10:36:28 650 trans-pool-1-thread-7 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 unbindSubTask operatorId:Optional.empty operatorName:Optional.empty request body:unbindSubTask_args(10)
+11-20 10:36:28 650 trans-pool-1-thread-7 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 unbindSubTask Optional.empty request header:Optional.empty body:unbindSubTask_args(10)
+11-20 10:36:28 652 trans-pool-1-thread-7 DEBUG - SQL Preparing:  SELECT * FROM `task` WHERE id = ? args: WrappedArray(JdbcValue(10))
+11-20 10:36:28 654 trans-pool-1-thread-7 DEBUG - SQL result: 0
+11-20 10:36:28 655 trans-pool-1-thread-7 DEBUG - SQL Preparing: UPDATE `task` SET parent_task_id = null WHERE id = ? args: WrappedArray(JdbcValue(10))
+11-20 10:36:28 677 trans-pool-1-thread-7 DEBUG - SQL result: 1
+11-20 10:36:28 678 trans-pool-1-thread-7 DEBUG - SQL Preparing: 
+        INSERT INTO `task_log` SET
+         task_id = ?,
+         operation = ?,
+         oper_field = ?,
+         old_value = ?,
+         new_value = ?,
+         created_by = ?,
+         updated_by = ?
+       args: WrappedArray(JdbcValue(10), JdbcValue(从父任务解绑), JdbcValue(None), JdbcValue(None), JdbcValue(None), JdbcValue(0), JdbcValue(0))
+11-20 10:36:28 690 trans-pool-1-thread-7 DEBUG - SQL result: 1
+11-20 10:36:28 691 trans-pool-1-thread-7 DEBUG - SQL Preparing: 
+        INSERT INTO `task_log` SET
+         task_id = ?,
+         operation = ?,
+         oper_field = ?,
+         old_value = ?,
+         new_value = ?,
+         created_by = ?,
+         updated_by = ?
+       args: WrappedArray(JdbcValue(3), JdbcValue(子任务解绑), JdbcValue(None), JdbcValue(None), JdbcValue(None), JdbcValue(0), JdbcValue(0))
+11-20 10:36:28 706 trans-pool-1-thread-7 DEBUG - SQL result: 1
+11-20 10:36:28 708 trans-pool-1-thread-7 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 unbindSubTask operatorId:Optional[0] operatorName:Optional[0] response body:unbindSubTask_result()
+11-20 10:36:28 708 trans-pool-1-thread-7 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 unbindSubTask Optional[0] response header:Optional[0] body:unbindSubTask_result()
+11-20 10:37:22 099 trans-pool-1-thread-8 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 updateTaskRemark operatorId:Optional.empty operatorName:Optional.empty request body:updateTaskRemark_args(TSaveTaskRemark(10,sdfsdsdf sdf阿道夫,None))
+11-20 10:37:22 099 trans-pool-1-thread-8 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 updateTaskRemark Optional.empty request header:Optional.empty body:updateTaskRemark_args(TSaveTaskRemark(10,sdfsdsdf sdf阿道夫,None))
+11-20 10:37:22 099 trans-pool-1-thread-8 DEBUG - SQL Preparing: 
+        UPDATE `task_remark` SET
+         task_id = ?,
+         content = ?,
+         updated_by = ?
+         args: WrappedArray(JdbcValue(10), JdbcValue(sdfsdsdf sdf阿道夫), JdbcValue(0))
+11-20 10:37:22 113 trans-pool-1-thread-8 DEBUG - SQL result: 1
+11-20 10:37:22 114 trans-pool-1-thread-8 DEBUG - SQL Preparing: 
+        INSERT INTO `task_log` SET
+         task_id = ?,
+         operation = ?,
+         oper_field = ?,
+         old_value = ?,
+         new_value = ?,
+         created_by = ?,
+         updated_by = ?
+       args: WrappedArray(JdbcValue(10), JdbcValue(修改备注), JdbcValue(None), JdbcValue(None), JdbcValue(None), JdbcValue(0), JdbcValue(0))
+11-20 10:37:22 126 trans-pool-1-thread-8 DEBUG - SQL result: 1
+11-20 10:37:22 127 trans-pool-1-thread-8 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 updateTaskRemark operatorId:Optional[0] operatorName:Optional[0] response body:updateTaskRemark_result()
+11-20 10:37:22 128 trans-pool-1-thread-8 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 updateTaskRemark Optional[0] response header:Optional[0] body:updateTaskRemark_result()
+11-20 10:37:32 896 trans-pool-1-thread-9 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 updateTaskRemark operatorId:Optional.empty operatorName:Optional.empty request body:updateTaskRemark_args(TSaveTaskRemark(10,阿道夫,None))
+11-20 10:37:32 897 trans-pool-1-thread-9 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 updateTaskRemark Optional.empty request header:Optional.empty body:updateTaskRemark_args(TSaveTaskRemark(10,阿道夫,None))
+11-20 10:37:32 898 trans-pool-1-thread-9 DEBUG - SQL Preparing: 
+        UPDATE `task_remark` SET
+         task_id = ?,
+         content = ?,
+         updated_by = ?
+         args: WrappedArray(JdbcValue(10), JdbcValue(阿道夫), JdbcValue(0))
+11-20 10:37:32 912 trans-pool-1-thread-9 DEBUG - SQL result: 1
+11-20 10:37:32 913 trans-pool-1-thread-9 DEBUG - SQL Preparing: 
+        INSERT INTO `task_log` SET
+         task_id = ?,
+         operation = ?,
+         oper_field = ?,
+         old_value = ?,
+         new_value = ?,
+         created_by = ?,
+         updated_by = ?
+       args: WrappedArray(JdbcValue(10), JdbcValue(修改备注), JdbcValue(None), JdbcValue(None), JdbcValue(None), JdbcValue(0), JdbcValue(0))
+11-20 10:37:32 924 trans-pool-1-thread-9 DEBUG - SQL result: 1
+11-20 10:37:32 925 trans-pool-1-thread-9 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 updateTaskRemark operatorId:Optional[0] operatorName:Optional[0] response body:updateTaskRemark_result()
+11-20 10:37:32 925 trans-pool-1-thread-9 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 updateTaskRemark Optional[0] response header:Optional[0] body:updateTaskRemark_result()
+11-20 10:40:19 335 Thread-8 INFO - {dataSource-1} inited
+11-20 10:50:25 117 Thread-8 INFO - {dataSource-1} inited
+11-20 10:50:37 925 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 10:50:37 928 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 10:50:37 938 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(46421)
+11-20 10:50:37 939 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(46421)
+11-20 10:50:38 068 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 10:50:38 069 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 10:50:38 071 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 10:50:38 071 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 10:50:38 081 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 10:50:38 081 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 10:50:38 083 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(14123)
+11-20 10:50:38 083 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(14123)
+11-20 10:51:32 098 trans-pool-1-thread-4 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 unbindSubTask operatorId:Optional.empty operatorName:Optional.empty request body:unbindSubTask_args(10)
+11-20 10:51:32 099 trans-pool-1-thread-4 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 unbindSubTask Optional.empty request header:Optional.empty body:unbindSubTask_args(10)
+11-20 10:51:32 686 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `task` WHERE id = ? args: WrappedArray(JdbcValue(10))
+11-20 10:51:32 799 trans-pool-1-thread-4 DEBUG - SQL result: 0
+11-20 10:51:32 810 trans-pool-1-thread-4 ERROR - assertion failed: 解绑失败，因为没有绑定任何父任务
+java.lang.AssertionError: assertion failed: 解绑失败，因为没有绑定任何父任务
+	at scala.Predef$.assert(Predef.scala:219) ~[scala-library.jar:1.0.1]
+	at com.isuwang.soa.scala.task.TaskAdminServiceImpl.unbindSubTask(TaskAdminServiceImpl.scala:180) ~[classes/:na]
+	at com.isuwang.soa.scala.task.TaskAdminServiceCodec$unbindSubTask.getResult(TaskAdminServiceCodec.scala:591) ~[classes/:na]
+	at com.isuwang.soa.scala.task.TaskAdminServiceCodec$unbindSubTask.getResult(TaskAdminServiceCodec.scala:581) ~[classes/:na]
+	at com.isuwang.dapeng.core.SoaCommonBaseProcessor.lambda$process$0(SoaCommonBaseProcessor.java:84) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.core.SoaCommonBaseProcessor$$Lambda$2893/1040140135.doAction(Unknown Source) ~[na:na]
+	at com.isuwang.dapeng.core.filter.container.DispatchFilter.doFilter(DispatchFilter.java:27) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.core.filter.container.ContainerFilterChain.doFilter(ContainerFilterChain.java:35) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.container.filter.SlowTimeServiceFilter.doFilter(SlowTimeServiceFilter.java:29) ~[na:na]
+	at com.isuwang.dapeng.core.filter.container.ContainerFilterChain.doFilter(ContainerFilterChain.java:35) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.container.filter.ProviderTimesFilter.doFilter(ProviderTimesFilter.java:29) ~[na:na]
+	at com.isuwang.dapeng.core.filter.container.ContainerFilterChain.doFilter(ContainerFilterChain.java:35) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.container.filter.SoaGlobalTransactionalFilter.doFilter(SoaGlobalTransactionalFilter.java:50) ~[na:na]
+	at com.isuwang.dapeng.core.filter.container.ContainerFilterChain.doFilter(ContainerFilterChain.java:35) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.core.SoaCommonBaseProcessor.process(SoaCommonBaseProcessor.java:103) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.container.netty.SoaServerHandler.processRequest(SoaServerHandler.java:299) ~[na:na]
+	at com.isuwang.dapeng.container.netty.SoaServerHandler.lambda$readRequestHeader$8(SoaServerHandler.java:130) ~[na:na]
+	at com.isuwang.dapeng.container.netty.SoaServerHandler$$Lambda$2892/1857442943.run(Unknown Source) ~[na:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) ~[na:1.8.0_31]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) ~[na:1.8.0_31]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_31]
+11-20 10:51:53 318 trans-pool-1-thread-5 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 updateTaskRemark operatorId:Optional.empty operatorName:Optional.empty request body:updateTaskRemark_args(TSaveTaskRemark(10,阿道夫l,None))
+11-20 10:51:53 318 trans-pool-1-thread-5 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 updateTaskRemark Optional.empty request header:Optional.empty body:updateTaskRemark_args(TSaveTaskRemark(10,阿道夫l,None))
+11-20 10:51:53 321 trans-pool-1-thread-5 DEBUG - SQL Preparing: 
+        UPDATE `task_remark` SET
+         task_id = ?,
+         content = ?,
+         updated_by = ?,
+         updated_at = now()
+         args: WrappedArray(JdbcValue(10), JdbcValue(阿道夫l), JdbcValue(0))
+11-20 10:51:53 337 trans-pool-1-thread-5 DEBUG - SQL result: 1
+11-20 10:51:53 339 trans-pool-1-thread-5 DEBUG - SQL Preparing: 
+        INSERT INTO `task_log` SET
+         task_id = ?,
+         operation = ?,
+         oper_field = ?,
+         old_value = ?,
+         new_value = ?,
+         created_by = ?,
+         updated_by = ?
+       args: WrappedArray(JdbcValue(10), JdbcValue(修改备注), JdbcValue(None), JdbcValue(None), JdbcValue(None), JdbcValue(0), JdbcValue(0))
+11-20 10:51:53 355 trans-pool-1-thread-5 DEBUG - SQL result: 1
+11-20 10:51:53 355 trans-pool-1-thread-5 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 updateTaskRemark operatorId:Optional[0] operatorName:Optional[0] response body:updateTaskRemark_result()
+11-20 10:51:53 355 trans-pool-1-thread-5 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 updateTaskRemark Optional[0] response header:Optional[0] body:updateTaskRemark_result()
+11-20 10:54:53 845 trans-pool-1-thread-6 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 createTask operatorId:Optional.empty operatorName:Optional.empty request body:createTask_args(TCreateTaskRequest(1,2,1,1,dfds,List(TTaskItemRequest(1,1,None,None)),List(TTaskItemRequest(2,2,None,None)),Some...(183)
+11-20 10:54:53 845 trans-pool-1-thread-6 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 createTask Optional.empty request header:Optional.empty body:createTask_args(TCreateTaskRequest(1,2,1,1,dfds,List(TTaskItemRequest(1,1,None,None)),List(TTaskItemRequest(2,2,None,None)),Some...(183)
+11-20 10:54:53 850 trans-pool-1-thread-6 DEBUG - SQL Preparing:  SELECT * FROM `task` WHERE id = ? args: WrappedArray(JdbcValue(10))
+11-20 10:54:53 853 trans-pool-1-thread-6 DEBUG - SQL result: 0
+11-20 10:54:53 856 trans-pool-1-thread-6 DEBUG - SQL Preparing: 
+        INSERT INTO `task_log` SET
+         task_id = ?,
+         operation = ?,
+         oper_field = ?,
+         old_value = ?,
+         new_value = ?,
+         created_by = ?,
+         updated_by = ?
+       args: WrappedArray(JdbcValue(10), JdbcValue(创建子任务), JdbcValue(None), JdbcValue(None), JdbcValue(None), JdbcValue(0), JdbcValue(0))
+11-20 10:54:53 875 trans-pool-1-thread-6 DEBUG - SQL result: 1
+11-20 10:54:53 878 trans-pool-1-thread-6 DEBUG - SQL Preparing: 
+         INSERT INTO `task` SET
+          parent_task_id = ?,
+          task_no = ?,
+          company_id = ?,
+          task_subject = ?,
+          status = ?,
+          task_type = ?,
+          business_type_id = ?,
+          priority = ?,
+          plan_at = ?,
+          communication_style = ?,
+          handler_id = ?,
+          problem_desc = ?,
+          result_desc = ?,
+          created_by = ?,
+          updated_by = ?
+        args: WrappedArray(JdbcValue(Some(10)), JdbcValue(RW20171120105453), JdbcValue(None), JdbcValue(dfds), JdbcValue(2), JdbcValue(1), JdbcValue(1), JdbcValue(1), JdbcValue(None), JdbcValue(None), JdbcValue(None), JdbcValue(None), JdbcValue(None), JdbcValue(0), JdbcValue(0))
+11-20 10:54:53 898 trans-pool-1-thread-6 DEBUG - SQL result: 1
+11-20 10:54:53 900 trans-pool-1-thread-6 DEBUG - SQL Preparing: 
+        INSERT INTO `task_item` SET
+          task_id = ?,
+          suggestion_id = ?,
+          suggestion_type = ?,
+          suggestion_remark = ?
+         args: WrappedArray(JdbcValue(11), JdbcValue(2), JdbcValue(2), JdbcValue(None))
+11-20 10:54:53 932 trans-pool-1-thread-6 DEBUG - SQL result: 1
+11-20 10:54:53 934 trans-pool-1-thread-6 DEBUG - SQL Preparing: 
+        INSERT INTO `task_item` SET
+          task_id = ?,
+          suggestion_id = ?,
+          suggestion_type = ?,
+          suggestion_remark = ?
+         args: WrappedArray(JdbcValue(11), JdbcValue(1), JdbcValue(1), JdbcValue(None))
+11-20 10:54:53 964 trans-pool-1-thread-6 DEBUG - SQL result: 1
+11-20 10:54:53 966 trans-pool-1-thread-6 DEBUG - SQL Preparing: 
+        INSERT INTO `task_remark` SET
+          task_id = ?,
+          content = ?,
+          created_by = ?,
+          updated_by = ?
+         args: WrappedArray(JdbcValue(11), JdbcValue(asdfasd), JdbcValue(0), JdbcValue(0))
+11-20 10:54:53 990 trans-pool-1-thread-6 DEBUG - SQL result: 1
+11-20 10:54:53 991 trans-pool-1-thread-6 DEBUG - SQL Preparing: 
+        INSERT INTO `task_log` SET
+         task_id = ?,
+         operation = ?,
+         oper_field = ?,
+         old_value = ?,
+         new_value = ?,
+         created_by = ?,
+         updated_by = ?
+       args: WrappedArray(JdbcValue(11), JdbcValue(创建), JdbcValue(None), JdbcValue(None), JdbcValue(None), JdbcValue(0), JdbcValue(0))
+11-20 10:54:54 019 trans-pool-1-thread-6 DEBUG - SQL result: 1
+11-20 10:54:54 020 trans-pool-1-thread-6 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 createTask operatorId:Optional[0] operatorName:Optional[0] response body:createTask_result()
+11-20 10:54:54 020 trans-pool-1-thread-6 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 createTask Optional[0] response header:Optional[0] body:createTask_result()
+11-20 10:57:41 744 trans-pool-1-thread-7 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 createTask operatorId:Optional.empty operatorName:Optional.empty request body:createTask_args(TCreateTaskRequest(1,2,1,1,dfds,List(TTaskItemRequest(1,1,None,None)),List(TTaskItemRequest(2,2,None,None)),Some...(183)
+11-20 10:57:41 744 trans-pool-1-thread-7 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 createTask Optional.empty request header:Optional.empty body:createTask_args(TCreateTaskRequest(1,2,1,1,dfds,List(TTaskItemRequest(1,1,None,None)),List(TTaskItemRequest(2,2,None,None)),Some...(183)
+11-20 10:57:41 746 trans-pool-1-thread-7 DEBUG - SQL Preparing:  SELECT * FROM `task` WHERE id = ? args: WrappedArray(JdbcValue(10))
+11-20 10:57:41 748 trans-pool-1-thread-7 DEBUG - SQL result: 0
+11-20 10:57:41 749 trans-pool-1-thread-7 DEBUG - SQL Preparing: 
+        INSERT INTO `task_log` SET
+         task_id = ?,
+         operation = ?,
+         oper_field = ?,
+         old_value = ?,
+         new_value = ?,
+         created_by = ?,
+         updated_by = ?
+       args: WrappedArray(JdbcValue(10), JdbcValue(创建子任务), JdbcValue(None), JdbcValue(None), JdbcValue(None), JdbcValue(0), JdbcValue(0))
+11-20 10:57:41 763 trans-pool-1-thread-7 DEBUG - SQL result: 1
+11-20 10:57:41 764 trans-pool-1-thread-7 DEBUG - SQL Preparing: 
+         INSERT INTO `task` SET
+          parent_task_id = ?,
+          task_no = ?,
+          company_id = ?,
+          task_subject = ?,
+          status = ?,
+          task_type = ?,
+          business_type_id = ?,
+          priority = ?,
+          plan_at = ?,
+          communication_style = ?,
+          handler_id = ?,
+          problem_desc = ?,
+          result_desc = ?,
+          created_by = ?,
+          updated_by = ?
+        args: WrappedArray(JdbcValue(Some(10)), JdbcValue(RW20171120105741), JdbcValue(None), JdbcValue(dfds), JdbcValue(2), JdbcValue(1), JdbcValue(1), JdbcValue(1), JdbcValue(None), JdbcValue(None), JdbcValue(None), JdbcValue(None), JdbcValue(None), JdbcValue(0), JdbcValue(0))
+11-20 10:57:41 775 trans-pool-1-thread-7 DEBUG - SQL result: 1
+11-20 10:57:41 776 trans-pool-1-thread-7 DEBUG - SQL Preparing: 
+        INSERT INTO `task_item` SET
+          task_id = ?,
+          suggestion_id = ?,
+          suggestion_type = ?,
+          suggestion_remark = ?
+         args: WrappedArray(JdbcValue(12), JdbcValue(2), JdbcValue(2), JdbcValue(None))
+11-20 10:57:41 790 trans-pool-1-thread-7 DEBUG - SQL result: 1
+11-20 10:57:41 792 trans-pool-1-thread-7 DEBUG - SQL Preparing: 
+        INSERT INTO `task_item` SET
+          task_id = ?,
+          suggestion_id = ?,
+          suggestion_type = ?,
+          suggestion_remark = ?
+         args: WrappedArray(JdbcValue(12), JdbcValue(1), JdbcValue(1), JdbcValue(None))
+11-20 10:57:41 807 trans-pool-1-thread-7 DEBUG - SQL result: 1
+11-20 10:57:41 808 trans-pool-1-thread-7 DEBUG - SQL Preparing: 
+        INSERT INTO `task_remark` SET
+          task_id = ?,
+          content = ?,
+          created_by = ?,
+          updated_by = ?
+         args: WrappedArray(JdbcValue(12), JdbcValue(asdfasd), JdbcValue(0), JdbcValue(0))
+11-20 10:57:41 824 trans-pool-1-thread-7 DEBUG - SQL result: 1
+11-20 10:57:41 825 trans-pool-1-thread-7 DEBUG - SQL Preparing: 
+        INSERT INTO `task_log` SET
+         task_id = ?,
+         operation = ?,
+         oper_field = ?,
+         old_value = ?,
+         new_value = ?,
+         created_by = ?,
+         updated_by = ?
+       args: WrappedArray(JdbcValue(12), JdbcValue(创建), JdbcValue(None), JdbcValue(None), JdbcValue(None), JdbcValue(0), JdbcValue(0))
+11-20 10:57:41 840 trans-pool-1-thread-7 DEBUG - SQL result: 1
+11-20 10:57:41 840 trans-pool-1-thread-7 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 createTask operatorId:Optional[0] operatorName:Optional[0] response body:createTask_result()
+11-20 10:57:41 840 trans-pool-1-thread-7 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 createTask Optional[0] response header:Optional[0] body:createTask_result()
+11-20 10:59:27 970 trans-pool-1-thread-8 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 deleteTaskRemark operatorId:Optional.empty operatorName:Optional.empty request body:deleteTaskRemark_args(3)
+11-20 10:59:27 970 trans-pool-1-thread-8 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 deleteTaskRemark Optional.empty request header:Optional.empty body:deleteTaskRemark_args(3)
+11-20 10:59:27 973 trans-pool-1-thread-8 DEBUG - SQL Preparing:  SELECT * FROM `task_remark` WHERE id = ? args: WrappedArray(JdbcValue(3))
+11-20 10:59:27 975 trans-pool-1-thread-8 DEBUG - SQL result: 0
+11-20 10:59:27 976 trans-pool-1-thread-8 DEBUG - SQL Preparing: DELETE FROM `task_remark` WHERE id = ? args: WrappedArray(JdbcValue(3))
+11-20 10:59:27 989 trans-pool-1-thread-8 DEBUG - SQL result: 1
+11-20 10:59:27 990 trans-pool-1-thread-8 DEBUG - SQL Preparing: 
+        INSERT INTO `task_log` SET
+         task_id = ?,
+         operation = ?,
+         oper_field = ?,
+         old_value = ?,
+         new_value = ?,
+         created_by = ?,
+         updated_by = ?
+       args: WrappedArray(JdbcValue(12), JdbcValue(删除备注), JdbcValue(None), JdbcValue(None), JdbcValue(None), JdbcValue(0), JdbcValue(0))
+11-20 10:59:28 011 trans-pool-1-thread-8 DEBUG - SQL result: 1
+11-20 10:59:28 013 trans-pool-1-thread-8 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 deleteTaskRemark operatorId:Optional[0] operatorName:Optional[0] response body:deleteTaskRemark_result()
+11-20 10:59:28 013 trans-pool-1-thread-8 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 deleteTaskRemark Optional[0] response header:Optional[0] body:deleteTaskRemark_result()
+11-20 11:00:06 137 trans-pool-1-thread-9 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 createTaskAttachment operatorId:Optional.empty operatorName:Optional.empty request body:createTaskAttachment_args(TCreateTaskAttachment(10,11111,sasdasd.png))
+11-20 11:00:06 137 trans-pool-1-thread-9 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 createTaskAttachment Optional.empty request header:Optional.empty body:createTaskAttachment_args(TCreateTaskAttachment(10,11111,sasdasd.png))
+11-20 11:00:06 138 trans-pool-1-thread-9 DEBUG - SQL Preparing: 
+        INSERT INTO `task_attachment` SET
+          task_id = ?,
+          attachment_id = ?,
+          attachment_name = ?,
+          created_by = ?,
+          updated_by = ?
+         args: WrappedArray(JdbcValue(10), JdbcValue(11111), JdbcValue(sasdasd.png), JdbcValue(0), JdbcValue(0))
+11-20 11:00:06 149 trans-pool-1-thread-9 DEBUG - SQL result: 1
+11-20 11:00:06 150 trans-pool-1-thread-9 DEBUG - SQL Preparing: 
+        INSERT INTO `task_log` SET
+         task_id = ?,
+         operation = ?,
+         oper_field = ?,
+         old_value = ?,
+         new_value = ?,
+         created_by = ?,
+         updated_by = ?
+       args: WrappedArray(JdbcValue(10), JdbcValue(新增附件), JdbcValue(None), JdbcValue(None), JdbcValue(None), JdbcValue(0), JdbcValue(0))
+11-20 11:00:06 165 trans-pool-1-thread-9 DEBUG - SQL result: 1
+11-20 11:00:06 166 trans-pool-1-thread-9 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 createTaskAttachment operatorId:Optional[0] operatorName:Optional[0] response body:createTaskAttachment_result()
+11-20 11:00:06 167 trans-pool-1-thread-9 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 createTaskAttachment Optional[0] response header:Optional[0] body:createTaskAttachment_result()
+11-20 11:00:23 717 trans-pool-1-thread-10 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 deleteTaskAttachment operatorId:Optional.empty operatorName:Optional.empty request body:deleteTaskAttachment_args(1)
+11-20 11:00:23 718 trans-pool-1-thread-10 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 deleteTaskAttachment Optional.empty request header:Optional.empty body:deleteTaskAttachment_args(1)
+11-20 11:00:23 720 trans-pool-1-thread-10 DEBUG - SQL Preparing:  SELECT * FROM `task_attachment` WHERE id = ? args: WrappedArray(JdbcValue(1))
+11-20 11:00:23 722 trans-pool-1-thread-10 DEBUG - SQL result: 0
+11-20 11:00:23 723 trans-pool-1-thread-10 DEBUG - SQL Preparing: DELETE FROM `task_attachment` WHERE id = ? args: WrappedArray(JdbcValue(1))
+11-20 11:00:23 740 trans-pool-1-thread-10 DEBUG - SQL result: 1
+11-20 11:00:23 741 trans-pool-1-thread-10 DEBUG - SQL Preparing: 
+        INSERT INTO `task_log` SET
+         task_id = ?,
+         operation = ?,
+         oper_field = ?,
+         old_value = ?,
+         new_value = ?,
+         created_by = ?,
+         updated_by = ?
+       args: WrappedArray(JdbcValue(10), JdbcValue(删除附件), JdbcValue(None), JdbcValue(None), JdbcValue(None), JdbcValue(0), JdbcValue(0))
+11-20 11:00:23 761 trans-pool-1-thread-10 DEBUG - SQL result: 1
+11-20 11:00:23 762 trans-pool-1-thread-10 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 deleteTaskAttachment operatorId:Optional[0] operatorName:Optional[0] response body:deleteTaskAttachment_result()
+11-20 11:00:23 762 trans-pool-1-thread-10 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 deleteTaskAttachment Optional[0] response header:Optional[0] body:deleteTaskAttachment_result()
+11-20 11:00:49 918 trans-pool-1-thread-11 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 createTaskAttachment operatorId:Optional.empty operatorName:Optional.empty request body:createTaskAttachment_args(TCreateTaskAttachment(12,11212,asdfads.png))
+11-20 11:00:49 918 trans-pool-1-thread-11 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 createTaskAttachment Optional.empty request header:Optional.empty body:createTaskAttachment_args(TCreateTaskAttachment(12,11212,asdfads.png))
+11-20 11:00:49 919 trans-pool-1-thread-11 DEBUG - SQL Preparing: 
+        INSERT INTO `task_attachment` SET
+          task_id = ?,
+          attachment_id = ?,
+          attachment_name = ?,
+          created_by = ?,
+          updated_by = ?
+         args: WrappedArray(JdbcValue(12), JdbcValue(11212), JdbcValue(asdfads.png), JdbcValue(0), JdbcValue(0))
+11-20 11:00:49 934 trans-pool-1-thread-11 DEBUG - SQL result: 1
+11-20 11:00:49 934 trans-pool-1-thread-11 DEBUG - SQL Preparing: 
+        INSERT INTO `task_log` SET
+         task_id = ?,
+         operation = ?,
+         oper_field = ?,
+         old_value = ?,
+         new_value = ?,
+         created_by = ?,
+         updated_by = ?
+       args: WrappedArray(JdbcValue(12), JdbcValue(新增附件), JdbcValue(None), JdbcValue(None), JdbcValue(None), JdbcValue(0), JdbcValue(0))
+11-20 11:00:49 947 trans-pool-1-thread-11 DEBUG - SQL result: 1
+11-20 11:00:49 948 trans-pool-1-thread-11 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 createTaskAttachment operatorId:Optional[0] operatorName:Optional[0] response body:createTaskAttachment_result()
+11-20 11:00:49 948 trans-pool-1-thread-11 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 createTaskAttachment Optional[0] response header:Optional[0] body:createTaskAttachment_result()
+11-20 11:01:19 307 trans-pool-1-thread-12 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional.empty operatorName:Optional.empty request body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),Some(RW20171120105741),None,None,None,None,None,None,None,None,None))
+11-20 11:01:19 308 trans-pool-1-thread-12 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional.empty request header:Optional.empty body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),Some(RW20171120105741),None,None,None,None,None,None,None,None,None))
+11-20 11:01:19 313 trans-pool-1-thread-12 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `task`  WHERE 1=1 AND created_by = ? AND task_no= ? AND updated_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(Some(RW20171120105741)), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 11:01:19.308))
+11-20 11:01:19 320 trans-pool-1-thread-12 DEBUG - SQL Preparing:  SELECT * FROM `task`  WHERE 1=1 AND created_by = ? AND task_no= ? AND updated_at BETWEEN ? AND ? order by updated_at desc limit ?, ? args: List(JdbcValue(0), JdbcValue(Some(RW20171120105741)), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 11:01:19.308), JdbcValue(0), JdbcValue(10))
+11-20 11:01:19 324 trans-pool-1-thread-12 DEBUG - SQL result: 1
+11-20 11:01:19 327 trans-pool-1-thread-12 DEBUG - SQL Preparing:  SELECT * FROM `task_log` WHERE task_id in (12) args: List()
+11-20 11:01:19 330 trans-pool-1-thread-12 DEBUG - SQL result: 3
+11-20 11:01:19 343 trans-pool-1-thread-12 DEBUG - SQL Preparing:  SELECT * FROM `task_attachment` WHERE task_id in (12) args: List()
+11-20 11:01:19 344 trans-pool-1-thread-12 DEBUG - SQL result: 1
+11-20 11:01:19 347 trans-pool-1-thread-12 DEBUG - SQL Preparing:  SELECT * FROM `task_remark` WHERE task_id in(12) args: List()
+11-20 11:01:19 348 trans-pool-1-thread-12 DEBUG - SQL result: 0
+11-20 11:01:19 350 trans-pool-1-thread-12 DEBUG - SQL Preparing:  SELECT * FROM `task_item` WHERE task_id in (12) args: List()
+11-20 11:01:19 351 trans-pool-1-thread-12 DEBUG - SQL result: 2
+11-20 11:01:19 359 trans-pool-1-thread-12 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional[0] operatorName:Optional[0] response body:findTasks_result(TTaskResponse(TPageResponse(0,10,1),List(TTask(12,RW20171120105741,dfds,2,1,1,1,1511095961000,1511095961000,Lis...(594)
+11-20 11:01:19 360 trans-pool-1-thread-12 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional[0] response header:Optional[0] body:findTasks_result(TTaskResponse(TPageResponse(0,10,1),List(TTask(12,RW20171120105741,dfds,2,1,1,1,1511095961000,1511095961000,Lis...(594)
+11-20 11:04:08 912 trans-pool-1-thread-13 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 createBusinessType operatorId:Optional.empty operatorName:Optional.empty request body:createBusinessType_args(TSaveBusinessType(的,None,Some(阿斯顿发),Some(1,2,3),Some(4,5,6)))
+11-20 11:04:08 912 trans-pool-1-thread-13 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 createBusinessType Optional.empty request header:Optional.empty body:createBusinessType_args(TSaveBusinessType(的,None,Some(阿斯顿发),Some(1,2,3),Some(4,5,6)))
+11-20 11:04:08 913 trans-pool-1-thread-13 DEBUG - SQL Preparing: 
+        INSERT INTO `business_type` SET
+          type_name = ?,
+          suggestion_content = ?,
+          questions = ?,
+          improvements = ?,
+          created_by = ?,
+          updated_by = ?
+         args: WrappedArray(JdbcValue(的), JdbcValue(Some(阿斯顿发)), JdbcValue(Some(1,2,3)), JdbcValue(Some(4,5,6)), JdbcValue(0), JdbcValue(0))
+11-20 11:04:08 930 trans-pool-1-thread-13 DEBUG - SQL result: 1
+11-20 11:04:08 931 trans-pool-1-thread-13 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 createBusinessType operatorId:Optional[0] operatorName:Optional[0] response body:createBusinessType_result()
+11-20 11:04:08 931 trans-pool-1-thread-13 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 createBusinessType Optional[0] response header:Optional[0] body:createBusinessType_result()
+11-20 11:12:22 956 trans-pool-1-thread-14 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 updateBusinessType operatorId:Optional.empty operatorName:Optional.empty request body:updateBusinessType_args(TSaveBusinessType(SDF,Some(1),None,None,None))
+11-20 11:12:22 957 trans-pool-1-thread-14 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 updateBusinessType Optional.empty request header:Optional.empty body:updateBusinessType_args(TSaveBusinessType(SDF,Some(1),None,None,None))
+11-20 11:12:22 958 trans-pool-1-thread-14 DEBUG - SQL Preparing: 
+        UPDATE `business_type` SET
+          type_name = ?,
+          suggestion_content = ?,
+          questions = ?,
+          improvements = ?,
+          updated_by = ?
+        WHERE id = ?
+         args: WrappedArray(JdbcValue(SDF), JdbcValue(None), JdbcValue(None), JdbcValue(None), JdbcValue(0), JdbcValue(Some(1)))
+11-20 11:12:22 974 trans-pool-1-thread-14 DEBUG - SQL result: 1
+11-20 11:12:22 975 trans-pool-1-thread-14 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 updateBusinessType operatorId:Optional[0] operatorName:Optional[0] response body:updateBusinessType_result()
+11-20 11:12:22 975 trans-pool-1-thread-14 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 updateBusinessType Optional[0] response header:Optional[0] body:updateBusinessType_result()
+11-20 11:16:15 934 trans-pool-1-thread-15 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 deleteBusinessType operatorId:Optional.empty operatorName:Optional.empty request body:deleteBusinessType_args(1)
+11-20 11:16:15 934 trans-pool-1-thread-15 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 deleteBusinessType Optional.empty request header:Optional.empty body:deleteBusinessType_args(1)
+11-20 11:16:15 936 trans-pool-1-thread-15 DEBUG - SQL Preparing: DELETE FROM `business_type` WHERE id = ? args: WrappedArray(JdbcValue(1))
+11-20 11:16:15 948 trans-pool-1-thread-15 DEBUG - SQL result: 1
+11-20 11:16:15 949 trans-pool-1-thread-15 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 deleteBusinessType operatorId:Optional.empty operatorName:Optional.empty response body:deleteBusinessType_result()
+11-20 11:16:15 949 trans-pool-1-thread-15 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 deleteBusinessType Optional.empty response header:Optional.empty body:deleteBusinessType_result()
+11-20 11:30:07 365 trans-pool-1-thread-16 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional.empty operatorName:Optional.empty request body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),None,None,None,None,None,None,None,None,None,None))
+11-20 11:30:07 366 trans-pool-1-thread-16 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional.empty request header:Optional.empty body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),None,None,None,None,None,None,None,None,None,None))
+11-20 11:33:02 366 trans-pool-1-thread-16 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `task`  WHERE 1=1 AND created_by = ? AND updated_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 11:30:07.366))
+11-20 11:33:02 372 trans-pool-1-thread-16 DEBUG - SQL Preparing:  SELECT * FROM `task`  WHERE 1=1 AND created_by = ? AND updated_at BETWEEN ? AND ? order by updated_at desc limit ?, ? args: List(JdbcValue(0), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 11:30:07.366), JdbcValue(0), JdbcValue(10))
+11-20 11:33:02 386 trans-pool-1-thread-16 DEBUG - SQL result: 10
+11-20 11:33:02 387 trans-pool-1-thread-16 DEBUG - SQL Preparing:  SELECT * FROM `task_log` WHERE task_id in (12,11,10,2,9,7,8,6,5,4) args: List()
+11-20 11:33:02 394 trans-pool-1-thread-16 DEBUG - SQL result: 19
+11-20 11:33:02 408 trans-pool-1-thread-16 DEBUG - SQL Preparing:  SELECT * FROM `task_attachment` WHERE task_id in (12,11,10,2,9,7,8,6,5,4) args: List()
+11-20 11:33:02 410 trans-pool-1-thread-16 DEBUG - SQL result: 1
+11-20 11:33:02 410 trans-pool-1-thread-16 DEBUG - SQL Preparing:  SELECT * FROM `task_remark` WHERE task_id in(12,11,10,2,9,7,8,6,5,4) args: List()
+11-20 11:33:02 414 trans-pool-1-thread-16 DEBUG - SQL result: 2
+11-20 11:33:02 419 trans-pool-1-thread-16 DEBUG - SQL Preparing:  SELECT * FROM `task_item` WHERE task_id in (12,11,10,2,9,7,8,6,5,4) args: List()
+11-20 11:33:02 423 trans-pool-1-thread-16 DEBUG - SQL result: 10
+11-20 11:33:02 425 trans-pool-1-thread-16 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional[0] operatorName:Optional[0] response body:findTasks_result(TTaskResponse(TPageResponse(0,10,12),List(TTask(12,RW20171120105741,dfds,2,1,1,1,1511095961000,1511095961000,Li...(3609)
+11-20 11:33:02 425 trans-pool-1-thread-16 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional[0] response header:Optional[0] body:findTasks_result(TTaskResponse(TPageResponse(0,10,12),List(TTask(12,RW20171120105741,dfds,2,1,1,1,1511095961000,1511095961000,Li...(3609)
+11-20 11:40:05 118 Thread-8 INFO - {dataSource-1} inited
+11-20 11:40:18 186 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 11:40:18 189 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 11:40:18 198 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(46421)
+11-20 11:40:18 198 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(46421)
+11-20 11:40:18 317 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 11:40:18 318 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 11:40:18 319 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 11:40:18 320 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 11:40:18 328 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 11:40:18 328 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 11:40:18 330 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(14123)
+11-20 11:40:18 330 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(14123)
+11-20 11:41:14 286 trans-pool-1-thread-4 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 findBusinessTypes operatorId:Optional.empty operatorName:Optional.empty request body:findBusinessTypes_args(TBusinessTypeRequest(TPageRequest(0,10,None),None,None,None))
+11-20 11:41:14 287 trans-pool-1-thread-4 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 findBusinessTypes Optional.empty request header:Optional.empty body:findBusinessTypes_args(TBusinessTypeRequest(TPageRequest(0,10,None),None,None,None))
+11-20 11:41:14 435 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `task`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 11:41:14.375))
+11-20 11:41:14 575 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `task`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 11:41:14.375))
+11-20 11:41:14 617 trans-pool-1-thread-4 ERROR - The ResultSet have no field typeName but it is required
+java.lang.RuntimeException: The ResultSet have no field typeName but it is required
+	at wangzx.scala_commons.sql.package$CaseClassResultSetMapper$Field.apply(package.scala:75) ~[scala-sql_2.12.jar:2.0.1]
+	at com.isuwang.soa.scala.task.TaskBusinessServiceImpl$$anon$1.from(TaskBusinessServiceImpl.scala:34) ~[classes/:na]
+	at com.isuwang.soa.scala.task.TaskBusinessServiceImpl$$anon$1.from(TaskBusinessServiceImpl.scala:34) ~[classes/:na]
+	at wangzx.scala_commons.sql.RichConnection.$anonfun$rows$1(RichConnection.scala:122) ~[scala-sql_2.12.jar:2.0.1]
+	at wangzx.scala_commons.sql.RichConnection$$Lambda$2898/21399873.apply(Unknown Source) ~[na:na]
+	at wangzx.scala_commons.sql.RichConnection.withPreparedStatement(RichConnection.scala:32) ~[scala-sql_2.12.jar:2.0.1]
+	at wangzx.scala_commons.sql.RichConnection.rows(RichConnection.scala:112) ~[scala-sql_2.12.jar:2.0.1]
+	at wangzx.scala_commons.sql.RichDataSource.$anonfun$rows$1(RichDataSource.scala:36) ~[scala-sql_2.12.jar:2.0.1]
+	at wangzx.scala_commons.sql.RichDataSource$$Lambda$2897/391007638.apply(Unknown Source) ~[na:na]
+	at wangzx.scala_commons.sql.RichDataSource.withConnection(RichDataSource.scala:12) ~[scala-sql_2.12.jar:2.0.1]
+	at wangzx.scala_commons.sql.RichDataSource.rows(RichDataSource.scala:36) ~[scala-sql_2.12.jar:2.0.1]
+	at com.isuwang.soa.scala.task.TaskBusinessServiceImpl.findBusinessTypes(TaskBusinessServiceImpl.scala:34) ~[classes/:na]
+	at com.isuwang.soa.scala.task.TaskBusinessServiceCodec$findBusinessTypes.getResult(TaskBusinessServiceCodec.scala:168) ~[classes/:na]
+	at com.isuwang.soa.scala.task.TaskBusinessServiceCodec$findBusinessTypes.getResult(TaskBusinessServiceCodec.scala:158) ~[classes/:na]
+	at com.isuwang.dapeng.core.SoaCommonBaseProcessor.lambda$process$0(SoaCommonBaseProcessor.java:84) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.core.SoaCommonBaseProcessor$$Lambda$2877/1897356055.doAction(Unknown Source) ~[na:na]
+	at com.isuwang.dapeng.core.filter.container.DispatchFilter.doFilter(DispatchFilter.java:27) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.core.filter.container.ContainerFilterChain.doFilter(ContainerFilterChain.java:35) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.container.filter.SlowTimeServiceFilter.doFilter(SlowTimeServiceFilter.java:29) ~[na:na]
+	at com.isuwang.dapeng.core.filter.container.ContainerFilterChain.doFilter(ContainerFilterChain.java:35) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.container.filter.ProviderTimesFilter.doFilter(ProviderTimesFilter.java:29) ~[na:na]
+	at com.isuwang.dapeng.core.filter.container.ContainerFilterChain.doFilter(ContainerFilterChain.java:35) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.container.filter.SoaGlobalTransactionalFilter.doFilter(SoaGlobalTransactionalFilter.java:50) ~[na:na]
+	at com.isuwang.dapeng.core.filter.container.ContainerFilterChain.doFilter(ContainerFilterChain.java:35) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.core.SoaCommonBaseProcessor.process(SoaCommonBaseProcessor.java:103) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.container.netty.SoaServerHandler.processRequest(SoaServerHandler.java:299) ~[na:na]
+	at com.isuwang.dapeng.container.netty.SoaServerHandler.lambda$readRequestHeader$8(SoaServerHandler.java:130) ~[na:na]
+	at com.isuwang.dapeng.container.netty.SoaServerHandler$$Lambda$2876/521375884.run(Unknown Source) ~[na:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) ~[na:1.8.0_31]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) ~[na:1.8.0_31]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_31]
+11-20 11:42:33 603 trans-pool-1-thread-5 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 findBusinessTypes operatorId:Optional.empty operatorName:Optional.empty request body:findBusinessTypes_args(TBusinessTypeRequest(TPageRequest(0,10,None),None,None,None))
+11-20 11:42:33 603 trans-pool-1-thread-5 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 findBusinessTypes Optional.empty request header:Optional.empty body:findBusinessTypes_args(TBusinessTypeRequest(TPageRequest(0,10,None),None,None,None))
+11-20 11:42:33 605 trans-pool-1-thread-5 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `task`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 11:42:33.603))
+11-20 11:42:33 607 trans-pool-1-thread-5 DEBUG - SQL Preparing:  SELECT * FROM `task`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 11:42:33.603))
+11-20 11:42:33 616 trans-pool-1-thread-5 ERROR - The ResultSet have no field typeName but it is required
+java.lang.RuntimeException: The ResultSet have no field typeName but it is required
+	at wangzx.scala_commons.sql.package$CaseClassResultSetMapper$Field.apply(package.scala:75) ~[scala-sql_2.12.jar:2.0.1]
+	at com.isuwang.soa.scala.task.TaskBusinessServiceImpl$$anon$1.from(TaskBusinessServiceImpl.scala:34) ~[classes/:na]
+	at com.isuwang.soa.scala.task.TaskBusinessServiceImpl$$anon$1.from(TaskBusinessServiceImpl.scala:34) ~[classes/:na]
+	at wangzx.scala_commons.sql.RichConnection.$anonfun$rows$1(RichConnection.scala:122) ~[scala-sql_2.12.jar:2.0.1]
+	at wangzx.scala_commons.sql.RichConnection$$Lambda$2898/21399873.apply(Unknown Source) ~[na:na]
+	at wangzx.scala_commons.sql.RichConnection.withPreparedStatement(RichConnection.scala:32) ~[scala-sql_2.12.jar:2.0.1]
+	at wangzx.scala_commons.sql.RichConnection.rows(RichConnection.scala:112) ~[scala-sql_2.12.jar:2.0.1]
+	at wangzx.scala_commons.sql.RichDataSource.$anonfun$rows$1(RichDataSource.scala:36) ~[scala-sql_2.12.jar:2.0.1]
+	at wangzx.scala_commons.sql.RichDataSource$$Lambda$2897/391007638.apply(Unknown Source) ~[na:na]
+	at wangzx.scala_commons.sql.RichDataSource.withConnection(RichDataSource.scala:12) ~[scala-sql_2.12.jar:2.0.1]
+	at wangzx.scala_commons.sql.RichDataSource.rows(RichDataSource.scala:36) ~[scala-sql_2.12.jar:2.0.1]
+	at com.isuwang.soa.scala.task.TaskBusinessServiceImpl.findBusinessTypes(TaskBusinessServiceImpl.scala:34) ~[classes/:na]
+	at com.isuwang.soa.scala.task.TaskBusinessServiceCodec$findBusinessTypes.getResult(TaskBusinessServiceCodec.scala:168) ~[classes/:na]
+	at com.isuwang.soa.scala.task.TaskBusinessServiceCodec$findBusinessTypes.getResult(TaskBusinessServiceCodec.scala:158) ~[classes/:na]
+	at com.isuwang.dapeng.core.SoaCommonBaseProcessor.lambda$process$0(SoaCommonBaseProcessor.java:84) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.core.SoaCommonBaseProcessor$$Lambda$2877/1897356055.doAction(Unknown Source) ~[na:na]
+	at com.isuwang.dapeng.core.filter.container.DispatchFilter.doFilter(DispatchFilter.java:27) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.core.filter.container.ContainerFilterChain.doFilter(ContainerFilterChain.java:35) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.container.filter.SlowTimeServiceFilter.doFilter(SlowTimeServiceFilter.java:29) ~[na:na]
+	at com.isuwang.dapeng.core.filter.container.ContainerFilterChain.doFilter(ContainerFilterChain.java:35) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.container.filter.ProviderTimesFilter.doFilter(ProviderTimesFilter.java:29) ~[na:na]
+	at com.isuwang.dapeng.core.filter.container.ContainerFilterChain.doFilter(ContainerFilterChain.java:35) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.container.filter.SoaGlobalTransactionalFilter.doFilter(SoaGlobalTransactionalFilter.java:50) ~[na:na]
+	at com.isuwang.dapeng.core.filter.container.ContainerFilterChain.doFilter(ContainerFilterChain.java:35) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.core.SoaCommonBaseProcessor.process(SoaCommonBaseProcessor.java:103) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.container.netty.SoaServerHandler.processRequest(SoaServerHandler.java:299) ~[na:na]
+	at com.isuwang.dapeng.container.netty.SoaServerHandler.lambda$readRequestHeader$8(SoaServerHandler.java:130) ~[na:na]
+	at com.isuwang.dapeng.container.netty.SoaServerHandler$$Lambda$2876/521375884.run(Unknown Source) ~[na:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) ~[na:1.8.0_31]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) ~[na:1.8.0_31]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_31]
+11-20 11:43:44 272 Thread-8 INFO - {dataSource-1} inited
+11-20 11:44:36 417 Thread-8 INFO - {dataSource-1} inited
+11-20 11:44:49 211 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 11:44:49 214 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 11:44:49 226 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(46421)
+11-20 11:44:49 227 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(46421)
+11-20 11:44:49 368 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 11:44:49 369 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 11:44:49 370 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 11:44:49 371 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 11:44:49 380 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 11:44:49 381 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 11:44:49 382 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(14123)
+11-20 11:44:49 383 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(14123)
+11-20 11:50:00 543 Thread-8 INFO - {dataSource-1} inited
+11-20 11:50:13 189 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 11:50:13 192 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 11:50:13 203 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(46421)
+11-20 11:50:13 203 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(46421)
+11-20 11:50:13 326 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 11:50:13 327 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 11:50:13 328 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 11:50:13 330 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 11:50:13 338 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 11:50:13 339 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 11:50:13 340 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(14123)
+11-20 11:50:13 340 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(14123)
+11-20 11:50:20 038 trans-pool-1-thread-4 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 findBusinessTypes operatorId:Optional.empty operatorName:Optional.empty request body:findBusinessTypes_args(TBusinessTypeRequest(TPageRequest(0,10,None),None,None,None))
+11-20 11:50:20 039 trans-pool-1-thread-4 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 findBusinessTypes Optional.empty request header:Optional.empty body:findBusinessTypes_args(TBusinessTypeRequest(TPageRequest(0,10,None),None,None,None))
+11-20 11:50:20 486 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `business_type`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 11:50:20.427))
+11-20 11:50:20 631 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `business_type`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 11:50:20.427))
+11-20 11:50:20 635 trans-pool-1-thread-4 DEBUG - SQL result: 0
+11-20 11:50:20 637 trans-pool-1-thread-4 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 findBusinessTypes operatorId:Optional[0] operatorName:Optional[0] response body:findBusinessTypes_result(TBusinessTypeResponse(TPageResponse(0,10,0),List()))
+11-20 11:50:20 637 trans-pool-1-thread-4 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 findBusinessTypes Optional[0] response header:Optional[0] body:findBusinessTypes_result(TBusinessTypeResponse(TPageResponse(0,10,0),List()))
+11-20 11:51:14 725 trans-pool-1-thread-5 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 createBusinessType operatorId:Optional.empty operatorName:Optional.empty request body:createBusinessType_args(TSaveBusinessType(1,None,None,None,None))
+11-20 11:51:14 725 trans-pool-1-thread-5 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 createBusinessType Optional.empty request header:Optional.empty body:createBusinessType_args(TSaveBusinessType(1,None,None,None,None))
+11-20 11:51:14 748 trans-pool-1-thread-5 DEBUG - SQL Preparing: 
+        INSERT INTO `business_type` SET
+          type_name = ?,
+          suggestion_content = ?,
+          questions = ?,
+          improvements = ?,
+          created_by = ?,
+          updated_by = ?
+         args: WrappedArray(JdbcValue(1), JdbcValue(None), JdbcValue(None), JdbcValue(None), JdbcValue(0), JdbcValue(0))
+11-20 11:51:14 763 trans-pool-1-thread-5 DEBUG - SQL result: 1
+11-20 11:51:14 764 trans-pool-1-thread-5 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 createBusinessType operatorId:Optional[0] operatorName:Optional[0] response body:createBusinessType_result()
+11-20 11:51:14 764 trans-pool-1-thread-5 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 createBusinessType Optional[0] response header:Optional[0] body:createBusinessType_result()
+11-20 11:51:24 528 trans-pool-1-thread-6 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 findBusinessTypes operatorId:Optional.empty operatorName:Optional.empty request body:findBusinessTypes_args(TBusinessTypeRequest(TPageRequest(0,10,None),None,None,None))
+11-20 11:51:24 528 trans-pool-1-thread-6 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 findBusinessTypes Optional.empty request header:Optional.empty body:findBusinessTypes_args(TBusinessTypeRequest(TPageRequest(0,10,None),None,None,None))
+11-20 11:51:24 529 trans-pool-1-thread-6 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `business_type`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 11:51:24.528))
+11-20 11:51:24 531 trans-pool-1-thread-6 DEBUG - SQL Preparing:  SELECT * FROM `business_type`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 11:51:24.528))
+11-20 11:51:24 558 trans-pool-1-thread-6 DEBUG - SQL result: 1
+11-20 11:51:24 561 trans-pool-1-thread-6 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 findBusinessTypes operatorId:Optional[0] operatorName:Optional[0] response body:findBusinessTypes_result(TBusinessTypeResponse(TPageResponse(0,10,1),List(TBusinessType(2,1,1511099179000,1511099179000,None,Non...(154)
+11-20 11:51:24 561 trans-pool-1-thread-6 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 findBusinessTypes Optional[0] response header:Optional[0] body:findBusinessTypes_result(TBusinessTypeResponse(TPageResponse(0,10,1),List(TBusinessType(2,1,1511099179000,1511099179000,None,Non...(154)
+11-20 12:06:42 454 Thread-8 INFO - {dataSource-1} inited
+11-20 12:06:55 287 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 12:06:55 289 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 12:06:55 298 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(46421)
+11-20 12:06:55 298 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(46421)
+11-20 12:06:55 427 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 12:06:55 428 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 12:06:55 429 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 12:06:55 430 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 12:06:55 439 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 12:06:55 439 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 12:06:55 440 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(14121)
+11-20 12:06:55 441 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(14121)
+11-20 12:08:53 225 Thread-8 INFO - {dataSource-1} inited
+11-20 12:09:06 230 trans-pool-1-thread-4 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 12:09:06 230 trans-pool-1-thread-4 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 12:09:06 232 trans-pool-1-thread-4 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(46421)
+11-20 12:09:06 232 trans-pool-1-thread-4 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(46421)
+11-20 12:09:06 371 trans-pool-1-thread-5 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 12:09:06 371 trans-pool-1-thread-5 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 12:09:06 372 trans-pool-1-thread-5 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 12:09:06 372 trans-pool-1-thread-5 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 12:09:06 380 trans-pool-1-thread-6 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 12:09:06 380 trans-pool-1-thread-6 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 12:09:06 381 trans-pool-1-thread-6 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(14121)
+11-20 12:09:06 381 trans-pool-1-thread-6 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(14121)
+11-20 14:09:03 681 Thread-8 INFO - {dataSource-1} inited
+11-20 14:09:16 553 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 14:09:16 555 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 14:09:16 566 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(46421)
+11-20 14:09:16 566 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(46421)
+11-20 14:09:16 693 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 14:09:16 693 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 14:09:16 694 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 14:09:16 695 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 14:09:16 703 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 14:09:16 703 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 14:09:16 705 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(14121)
+11-20 14:09:16 705 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(14121)
+11-20 14:11:39 008 trans-pool-1-thread-4 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 findBusinessTypes operatorId:Optional.empty operatorName:Optional.empty request body:findBusinessTypes_args(TBusinessTypeRequest(TPageRequest(0,10,None),None,None,None))
+11-20 14:11:39 009 trans-pool-1-thread-4 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 findBusinessTypes Optional.empty request header:Optional.empty body:findBusinessTypes_args(TBusinessTypeRequest(TPageRequest(0,10,None),None,None,None))
+11-20 14:11:39 451 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `business_type`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 14:11:39.373))
+11-20 14:11:39 591 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `business_type`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 14:11:39.373))
+11-20 14:11:39 623 trans-pool-1-thread-4 DEBUG - SQL result: 1
+11-20 14:11:39 629 trans-pool-1-thread-4 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 findBusinessTypes operatorId:Optional[0] operatorName:Optional[0] response body:findBusinessTypes_result(TBusinessTypeResponse(TPageResponse(0,10,1),List(TBusinessType(2,1,1511099179000,1511099179000,None,Non...(154)
+11-20 14:11:39 630 trans-pool-1-thread-4 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 findBusinessTypes Optional[0] response header:Optional[0] body:findBusinessTypes_result(TBusinessTypeResponse(TPageResponse(0,10,1),List(TBusinessType(2,1,1511099179000,1511099179000,None,Non...(154)
+11-20 14:12:01 507 trans-pool-1-thread-5 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions operatorId:Optional.empty operatorName:Optional.empty request body:findSuggestions_args(TSuggestionRequest(TPageRequest(0,10,None),None,None,None,None))
+11-20 14:12:01 507 trans-pool-1-thread-5 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions Optional.empty request header:Optional.empty body:findSuggestions_args(TSuggestionRequest(TPageRequest(0,10,None),None,None,None,None))
+11-20 14:12:01 508 trans-pool-1-thread-5 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `suggestion`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 14:12:01.507))
+11-20 14:12:01 514 trans-pool-1-thread-5 DEBUG - SQL Preparing:  SELECT * FROM `suggestion`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 14:12:01.507))
+11-20 14:12:01 515 trans-pool-1-thread-5 DEBUG - SQL result: 0
+11-20 14:12:01 517 trans-pool-1-thread-5 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions operatorId:Optional[0] operatorName:Optional[0] response body:findSuggestions_result(TSuggestionResponse(TPageResponse(0,10,0),List()))
+11-20 14:12:01 518 trans-pool-1-thread-5 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions Optional[0] response header:Optional[0] body:findSuggestions_result(TSuggestionResponse(TPageResponse(0,10,0),List()))
+11-20 14:12:33 625 trans-pool-1-thread-6 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 createSuggestion operatorId:Optional.empty operatorName:Optional.empty request body:createSuggestion_args(TSaveSuggestion(1,需,23稍等,None,None))
+11-20 14:12:33 626 trans-pool-1-thread-6 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 createSuggestion Optional.empty request header:Optional.empty body:createSuggestion_args(TSaveSuggestion(1,需,23稍等,None,None))
+11-20 14:12:33 652 trans-pool-1-thread-6 DEBUG - SQL Preparing: 
+        INSERT INTO `suggestion` SET
+          `type` = ?,
+          content = ?,
+          labels = ?,
+          assistance = ?,
+          created_by = ?,
+          updated_by = ?
+         args: WrappedArray(JdbcValue(1), JdbcValue(需), JdbcValue(23稍等), JdbcValue(None), JdbcValue(0), JdbcValue(0))
+11-20 14:12:33 678 trans-pool-1-thread-6 DEBUG - SQL result: 1
+11-20 14:12:33 680 trans-pool-1-thread-6 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 createSuggestion operatorId:Optional[0] operatorName:Optional[0] response body:createSuggestion_result()
+11-20 14:12:33 681 trans-pool-1-thread-6 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 createSuggestion Optional[0] response header:Optional[0] body:createSuggestion_result()
+11-20 14:16:12 792 trans-pool-1-thread-7 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions operatorId:Optional.empty operatorName:Optional.empty request body:findSuggestions_args(TSuggestionRequest(TPageRequest(0,10,None),None,None,None,None))
+11-20 14:16:12 792 trans-pool-1-thread-7 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions Optional.empty request header:Optional.empty body:findSuggestions_args(TSuggestionRequest(TPageRequest(0,10,None),None,None,None,None))
+11-20 14:16:12 793 trans-pool-1-thread-7 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `suggestion`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 14:16:12.792))
+11-20 14:16:12 795 trans-pool-1-thread-7 DEBUG - SQL Preparing:  SELECT * FROM `suggestion`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 14:16:12.792))
+11-20 14:16:12 810 trans-pool-1-thread-7 ERROR - The ResultSet have no field typeName but it is required
+java.lang.RuntimeException: The ResultSet have no field typeName but it is required
+	at wangzx.scala_commons.sql.package$CaseClassResultSetMapper$Field.apply(package.scala:75) ~[scala-sql_2.12.jar:2.0.1]
+	at com.isuwang.soa.scala.task.TaskSuggestionServiceImpl$$anon$1.from(TaskSuggestionServiceImpl.scala:34) ~[classes/:na]
+	at com.isuwang.soa.scala.task.TaskSuggestionServiceImpl$$anon$1.from(TaskSuggestionServiceImpl.scala:34) ~[classes/:na]
+	at wangzx.scala_commons.sql.RichConnection.$anonfun$rows$1(RichConnection.scala:122) ~[scala-sql_2.12.jar:2.0.1]
+	at wangzx.scala_commons.sql.RichConnection$$Lambda$2886/1631872373.apply(Unknown Source) ~[na:na]
+	at wangzx.scala_commons.sql.RichConnection.withPreparedStatement(RichConnection.scala:32) ~[scala-sql_2.12.jar:2.0.1]
+	at wangzx.scala_commons.sql.RichConnection.rows(RichConnection.scala:112) ~[scala-sql_2.12.jar:2.0.1]
+	at wangzx.scala_commons.sql.RichDataSource.$anonfun$rows$1(RichDataSource.scala:36) ~[scala-sql_2.12.jar:2.0.1]
+	at wangzx.scala_commons.sql.RichDataSource$$Lambda$2885/1680277919.apply(Unknown Source) ~[na:na]
+	at wangzx.scala_commons.sql.RichDataSource.withConnection(RichDataSource.scala:12) ~[scala-sql_2.12.jar:2.0.1]
+	at wangzx.scala_commons.sql.RichDataSource.rows(RichDataSource.scala:36) ~[scala-sql_2.12.jar:2.0.1]
+	at com.isuwang.soa.scala.task.TaskSuggestionServiceImpl.findSuggestions(TaskSuggestionServiceImpl.scala:34) ~[classes/:na]
+	at com.isuwang.soa.scala.task.TaskSuggestionServiceCodec$findSuggestions.getResult(TaskSuggestionServiceCodec.scala:168) ~[classes/:na]
+	at com.isuwang.soa.scala.task.TaskSuggestionServiceCodec$findSuggestions.getResult(TaskSuggestionServiceCodec.scala:158) ~[classes/:na]
+	at com.isuwang.dapeng.core.SoaCommonBaseProcessor.lambda$process$0(SoaCommonBaseProcessor.java:84) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.core.SoaCommonBaseProcessor$$Lambda$2866/1363576780.doAction(Unknown Source) ~[na:na]
+	at com.isuwang.dapeng.core.filter.container.DispatchFilter.doFilter(DispatchFilter.java:27) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.core.filter.container.ContainerFilterChain.doFilter(ContainerFilterChain.java:35) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.container.filter.SlowTimeServiceFilter.doFilter(SlowTimeServiceFilter.java:29) ~[na:na]
+	at com.isuwang.dapeng.core.filter.container.ContainerFilterChain.doFilter(ContainerFilterChain.java:35) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.container.filter.ProviderTimesFilter.doFilter(ProviderTimesFilter.java:29) ~[na:na]
+	at com.isuwang.dapeng.core.filter.container.ContainerFilterChain.doFilter(ContainerFilterChain.java:35) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.container.filter.SoaGlobalTransactionalFilter.doFilter(SoaGlobalTransactionalFilter.java:50) ~[na:na]
+	at com.isuwang.dapeng.core.filter.container.ContainerFilterChain.doFilter(ContainerFilterChain.java:35) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.core.SoaCommonBaseProcessor.process(SoaCommonBaseProcessor.java:103) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.container.netty.SoaServerHandler.processRequest(SoaServerHandler.java:299) ~[na:na]
+	at com.isuwang.dapeng.container.netty.SoaServerHandler.lambda$readRequestHeader$8(SoaServerHandler.java:130) ~[na:na]
+	at com.isuwang.dapeng.container.netty.SoaServerHandler$$Lambda$2865/2074363131.run(Unknown Source) ~[na:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) ~[na:1.8.0_31]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) ~[na:1.8.0_31]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_31]
+11-20 14:17:07 684 trans-pool-1-thread-8 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions operatorId:Optional.empty operatorName:Optional.empty request body:findSuggestions_args(TSuggestionRequest(TPageRequest(0,10,None),None,None,None,None))
+11-20 14:17:07 684 trans-pool-1-thread-8 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions Optional.empty request header:Optional.empty body:findSuggestions_args(TSuggestionRequest(TPageRequest(0,10,None),None,None,None,None))
+11-20 14:17:31 187 trans-pool-1-thread-8 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `suggestion`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 14:17:07.684))
+11-20 14:18:46 607 trans-pool-1-thread-8 DEBUG - SQL Preparing:  SELECT * FROM `suggestion`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 14:17:07.684))
+11-20 14:18:46 616 trans-pool-1-thread-8 ERROR - The ResultSet have no field typeName but it is required
+java.lang.RuntimeException: The ResultSet have no field typeName but it is required
+	at wangzx.scala_commons.sql.package$CaseClassResultSetMapper$Field.apply(package.scala:75) ~[scala-sql_2.12.jar:2.0.1]
+	at com.isuwang.soa.scala.task.TaskSuggestionServiceImpl$$anon$1.from(TaskSuggestionServiceImpl.scala:34) ~[classes/:na]
+	at com.isuwang.soa.scala.task.TaskSuggestionServiceImpl$$anon$1.from(TaskSuggestionServiceImpl.scala:34) ~[classes/:na]
+	at wangzx.scala_commons.sql.RichConnection.$anonfun$rows$1(RichConnection.scala:122) ~[scala-sql_2.12.jar:2.0.1]
+	at wangzx.scala_commons.sql.RichConnection$$Lambda$2886/1631872373.apply(Unknown Source) ~[na:na]
+	at wangzx.scala_commons.sql.RichConnection.withPreparedStatement(RichConnection.scala:32) ~[scala-sql_2.12.jar:2.0.1]
+	at wangzx.scala_commons.sql.RichConnection.rows(RichConnection.scala:112) ~[scala-sql_2.12.jar:2.0.1]
+	at wangzx.scala_commons.sql.RichDataSource.$anonfun$rows$1(RichDataSource.scala:36) ~[scala-sql_2.12.jar:2.0.1]
+	at wangzx.scala_commons.sql.RichDataSource$$Lambda$2885/1680277919.apply(Unknown Source) ~[na:na]
+	at wangzx.scala_commons.sql.RichDataSource.withConnection(RichDataSource.scala:12) ~[scala-sql_2.12.jar:2.0.1]
+	at wangzx.scala_commons.sql.RichDataSource.rows(RichDataSource.scala:36) ~[scala-sql_2.12.jar:2.0.1]
+	at com.isuwang.soa.scala.task.TaskSuggestionServiceImpl.findSuggestions(TaskSuggestionServiceImpl.scala:34) ~[classes/:na]
+	at com.isuwang.soa.scala.task.TaskSuggestionServiceCodec$findSuggestions.getResult(TaskSuggestionServiceCodec.scala:168) ~[classes/:na]
+	at com.isuwang.soa.scala.task.TaskSuggestionServiceCodec$findSuggestions.getResult(TaskSuggestionServiceCodec.scala:158) ~[classes/:na]
+	at com.isuwang.dapeng.core.SoaCommonBaseProcessor.lambda$process$0(SoaCommonBaseProcessor.java:84) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.core.SoaCommonBaseProcessor$$Lambda$2866/1363576780.doAction(Unknown Source) ~[na:na]
+	at com.isuwang.dapeng.core.filter.container.DispatchFilter.doFilter(DispatchFilter.java:27) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.core.filter.container.ContainerFilterChain.doFilter(ContainerFilterChain.java:35) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.container.filter.SlowTimeServiceFilter.doFilter(SlowTimeServiceFilter.java:29) ~[na:na]
+	at com.isuwang.dapeng.core.filter.container.ContainerFilterChain.doFilter(ContainerFilterChain.java:35) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.container.filter.ProviderTimesFilter.doFilter(ProviderTimesFilter.java:29) ~[na:na]
+	at com.isuwang.dapeng.core.filter.container.ContainerFilterChain.doFilter(ContainerFilterChain.java:35) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.container.filter.SoaGlobalTransactionalFilter.doFilter(SoaGlobalTransactionalFilter.java:50) ~[na:na]
+	at com.isuwang.dapeng.core.filter.container.ContainerFilterChain.doFilter(ContainerFilterChain.java:35) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.core.SoaCommonBaseProcessor.process(SoaCommonBaseProcessor.java:103) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.container.netty.SoaServerHandler.processRequest(SoaServerHandler.java:299) ~[na:na]
+	at com.isuwang.dapeng.container.netty.SoaServerHandler.lambda$readRequestHeader$8(SoaServerHandler.java:130) ~[na:na]
+	at com.isuwang.dapeng.container.netty.SoaServerHandler$$Lambda$2865/2074363131.run(Unknown Source) ~[na:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) ~[na:1.8.0_31]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) ~[na:1.8.0_31]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_31]
+11-20 14:41:02 610 Thread-8 INFO - {dataSource-1} inited
+11-20 14:41:15 384 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 14:41:15 387 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 14:41:15 397 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(46421)
+11-20 14:41:15 397 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(46421)
+11-20 14:41:15 520 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 14:41:15 520 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 14:41:15 522 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 14:41:15 522 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 14:41:15 530 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 14:41:15 531 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 14:41:15 533 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(14121)
+11-20 14:41:15 533 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(14121)
+11-20 14:42:06 030 trans-pool-1-thread-4 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions operatorId:Optional.empty operatorName:Optional.empty request body:findSuggestions_args(TSuggestionRequest(TPageRequest(0,10,None),None,None,None,None))
+11-20 14:42:06 030 trans-pool-1-thread-4 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions Optional.empty request header:Optional.empty body:findSuggestions_args(TSuggestionRequest(TPageRequest(0,10,None),None,None,None,None))
+11-20 14:42:06 462 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `suggestion`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 14:42:06.403))
+11-20 14:42:06 601 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `suggestion`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 14:42:06.403))
+11-20 14:42:06 630 trans-pool-1-thread-4 DEBUG - SQL result: 1
+11-20 14:42:06 632 trans-pool-1-thread-4 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions operatorId:Optional[0] operatorName:Optional[0] response body:findSuggestions_result(TSuggestionResponse(TPageResponse(0,10,1),List(TSuggestion(1,1,,需,23稍等,2017,2017,None,Some(0),Some(0)))))
+11-20 14:42:06 633 trans-pool-1-thread-4 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions Optional[0] response header:Optional[0] body:findSuggestions_result(TSuggestionResponse(TPageResponse(0,10,1),List(TSuggestion(1,1,,需,23稍等,2017,2017,None,Some(0),Some(0)))))
+11-20 14:52:32 192 trans-pool-1-thread-5 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions operatorId:Optional.empty operatorName:Optional.empty request body:findSuggestions_args(TSuggestionRequest(TPageRequest(0,10,None),None,None,None,None))
+11-20 14:52:32 193 trans-pool-1-thread-5 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions Optional.empty request header:Optional.empty body:findSuggestions_args(TSuggestionRequest(TPageRequest(0,10,None),None,None,None,None))
+11-20 14:52:32 195 trans-pool-1-thread-5 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `suggestion`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 14:52:32.193))
+11-20 14:52:32 197 trans-pool-1-thread-5 DEBUG - SQL Preparing:  SELECT * FROM `suggestion`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 14:52:32.193))
+11-20 14:52:32 199 trans-pool-1-thread-5 DEBUG - SQL result: 1
+11-20 14:52:32 199 trans-pool-1-thread-5 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions operatorId:Optional[0] operatorName:Optional[0] response body:findSuggestions_result(TSuggestionResponse(TPageResponse(0,10,1),List(TSuggestion(1,1,,需,23稍等,2017,2017,None,Some(0),Some(0)))))
+11-20 14:52:32 200 trans-pool-1-thread-5 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions Optional[0] response header:Optional[0] body:findSuggestions_result(TSuggestionResponse(TPageResponse(0,10,1),List(TSuggestion(1,1,,需,23稍等,2017,2017,None,Some(0),Some(0)))))
+11-20 14:52:35 232 trans-pool-1-thread-6 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions operatorId:Optional.empty operatorName:Optional.empty request body:findSuggestions_args(TSuggestionRequest(TPageRequest(0,10,None),None,None,None,None))
+11-20 14:52:35 232 trans-pool-1-thread-6 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions Optional.empty request header:Optional.empty body:findSuggestions_args(TSuggestionRequest(TPageRequest(0,10,None),None,None,None,None))
+11-20 14:52:35 233 trans-pool-1-thread-6 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `suggestion`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 14:52:35.232))
+11-20 14:52:35 236 trans-pool-1-thread-6 DEBUG - SQL Preparing:  SELECT * FROM `suggestion`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 14:52:35.232))
+11-20 14:52:35 238 trans-pool-1-thread-6 DEBUG - SQL result: 1
+11-20 14:52:35 238 trans-pool-1-thread-6 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions operatorId:Optional[0] operatorName:Optional[0] response body:findSuggestions_result(TSuggestionResponse(TPageResponse(0,10,1),List(TSuggestion(1,1,,需,23稍等,2017,2017,None,Some(0),Some(0)))))
+11-20 14:52:35 238 trans-pool-1-thread-6 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions Optional[0] response header:Optional[0] body:findSuggestions_result(TSuggestionResponse(TPageResponse(0,10,1),List(TSuggestion(1,1,,需,23稍等,2017,2017,None,Some(0),Some(0)))))
+11-20 14:52:35 988 trans-pool-1-thread-7 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions operatorId:Optional.empty operatorName:Optional.empty request body:findSuggestions_args(TSuggestionRequest(TPageRequest(0,10,None),None,None,None,None))
+11-20 14:52:35 988 trans-pool-1-thread-7 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions Optional.empty request header:Optional.empty body:findSuggestions_args(TSuggestionRequest(TPageRequest(0,10,None),None,None,None,None))
+11-20 14:52:35 988 trans-pool-1-thread-7 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `suggestion`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 14:52:35.988))
+11-20 14:52:35 991 trans-pool-1-thread-7 DEBUG - SQL Preparing:  SELECT * FROM `suggestion`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 14:52:35.988))
+11-20 14:52:35 993 trans-pool-1-thread-7 DEBUG - SQL result: 1
+11-20 14:52:35 993 trans-pool-1-thread-7 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions operatorId:Optional[0] operatorName:Optional[0] response body:findSuggestions_result(TSuggestionResponse(TPageResponse(0,10,1),List(TSuggestion(1,1,,需,23稍等,2017,2017,None,Some(0),Some(0)))))
+11-20 14:52:35 993 trans-pool-1-thread-7 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions Optional[0] response header:Optional[0] body:findSuggestions_result(TSuggestionResponse(TPageResponse(0,10,1),List(TSuggestion(1,1,,需,23稍等,2017,2017,None,Some(0),Some(0)))))
+11-20 14:52:36 211 trans-pool-1-thread-8 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions operatorId:Optional.empty operatorName:Optional.empty request body:findSuggestions_args(TSuggestionRequest(TPageRequest(0,10,None),None,None,None,None))
+11-20 14:52:36 212 trans-pool-1-thread-8 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions Optional.empty request header:Optional.empty body:findSuggestions_args(TSuggestionRequest(TPageRequest(0,10,None),None,None,None,None))
+11-20 14:52:36 212 trans-pool-1-thread-8 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `suggestion`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 14:52:36.212))
+11-20 14:52:36 215 trans-pool-1-thread-8 DEBUG - SQL Preparing:  SELECT * FROM `suggestion`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 14:52:36.212))
+11-20 14:52:36 216 trans-pool-1-thread-8 DEBUG - SQL result: 1
+11-20 14:52:36 217 trans-pool-1-thread-8 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions operatorId:Optional[0] operatorName:Optional[0] response body:findSuggestions_result(TSuggestionResponse(TPageResponse(0,10,1),List(TSuggestion(1,1,,需,23稍等,2017,2017,None,Some(0),Some(0)))))
+11-20 14:52:36 217 trans-pool-1-thread-8 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions Optional[0] response header:Optional[0] body:findSuggestions_result(TSuggestionResponse(TPageResponse(0,10,1),List(TSuggestion(1,1,,需,23稍等,2017,2017,None,Some(0),Some(0)))))
+11-20 14:56:23 467 Thread-8 INFO - {dataSource-1} inited
+11-20 14:56:36 794 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 14:56:36 797 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 14:56:36 808 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(46421)
+11-20 14:56:36 809 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(46421)
+11-20 14:56:36 995 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 14:56:36 996 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 14:56:36 998 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 14:56:36 998 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 14:56:37 008 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 14:56:37 009 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 14:56:37 012 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(14121)
+11-20 14:56:37 012 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(14121)
+11-20 14:56:39 394 trans-pool-1-thread-4 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions operatorId:Optional.empty operatorName:Optional.empty request body:findSuggestions_args(TSuggestionRequest(TPageRequest(0,10,None),None,None,None,None))
+11-20 14:56:39 398 trans-pool-1-thread-4 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions Optional.empty request header:Optional.empty body:findSuggestions_args(TSuggestionRequest(TPageRequest(0,10,None),None,None,None,None))
+11-20 14:56:39 535 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `suggestion`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 14:56:39.48))
+11-20 14:56:39 662 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `suggestion`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 14:56:39.48))
+11-20 14:56:39 691 trans-pool-1-thread-4 DEBUG - SQL result: 1
+11-20 14:56:39 694 trans-pool-1-thread-4 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions operatorId:Optional[0] operatorName:Optional[0] response body:findSuggestions_result(TSuggestionResponse(TPageResponse(0,10,1),List(TSuggestion(1,1,,需,23稍等,2017,2017,None,Some(0),Some(0)))))
+11-20 14:56:39 695 trans-pool-1-thread-4 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions Optional[0] response header:Optional[0] body:findSuggestions_result(TSuggestionResponse(TPageResponse(0,10,1),List(TSuggestion(1,1,,需,23稍等,2017,2017,None,Some(0),Some(0)))))
+11-20 14:57:34 426 Thread-8 INFO - {dataSource-1} inited
+11-20 14:57:47 169 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 14:57:47 172 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 14:57:47 186 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(46421)
+11-20 14:57:47 187 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(46421)
+11-20 14:57:47 313 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 14:57:47 313 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 14:57:47 315 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 14:57:47 315 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 14:57:47 325 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 14:57:47 325 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 14:57:47 326 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(14121)
+11-20 14:57:47 327 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(14121)
+11-20 15:15:02 162 Thread-8 INFO - {dataSource-1} inited
+11-20 15:15:14 946 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 15:15:14 950 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 15:15:14 961 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(46421)
+11-20 15:15:14 961 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(46421)
+11-20 15:15:15 087 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 15:15:15 087 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 15:15:15 089 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 15:15:15 089 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 15:15:15 097 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 15:15:15 097 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 15:15:15 099 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(14121)
+11-20 15:15:15 135 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(14121)
+11-20 15:15:21 287 trans-pool-1-thread-4 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions operatorId:Optional.empty operatorName:Optional.empty request body:findSuggestions_args(TSuggestionRequest(TPageRequest(0,10,None),None,None,None,None))
+11-20 15:15:21 288 trans-pool-1-thread-4 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions Optional.empty request header:Optional.empty body:findSuggestions_args(TSuggestionRequest(TPageRequest(0,10,None),None,None,None,None))
+11-20 15:15:21 435 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `suggestion`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 15:15:21.376))
+11-20 15:15:21 581 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `suggestion`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 15:15:21.376))
+11-20 15:15:21 609 trans-pool-1-thread-4 DEBUG - SQL result: 1
+11-20 15:15:21 613 trans-pool-1-thread-4 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions operatorId:Optional[0] operatorName:Optional[0] response body:findSuggestions_result(TSuggestionResponse(TPageResponse(0,10,1),List(TSuggestion(1,1,,需,23稍等,2017,2017,None,Some(0),Some(0)))))
+11-20 15:15:21 613 trans-pool-1-thread-4 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions Optional[0] response header:Optional[0] body:findSuggestions_result(TSuggestionResponse(TPageResponse(0,10,1),List(TSuggestion(1,1,,需,23稍等,2017,2017,None,Some(0),Some(0)))))
+11-20 15:15:39 398 trans-pool-1-thread-5 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions operatorId:Optional.empty operatorName:Optional.empty request body:findSuggestions_args(TSuggestionRequest(TPageRequest(0,10,None),None,None,None,None))
+11-20 15:15:39 399 trans-pool-1-thread-5 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions Optional.empty request header:Optional.empty body:findSuggestions_args(TSuggestionRequest(TPageRequest(0,10,None),None,None,None,None))
+11-20 15:15:39 399 trans-pool-1-thread-5 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `suggestion`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 15:15:39.399))
+11-20 15:15:39 401 trans-pool-1-thread-5 DEBUG - SQL Preparing:  SELECT * FROM `suggestion`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 15:15:39.399))
+11-20 15:15:39 403 trans-pool-1-thread-5 DEBUG - SQL result: 1
+11-20 15:22:01 807 Thread-8 INFO - {dataSource-1} inited
+11-20 15:22:14 428 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 15:22:14 431 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 15:22:14 443 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(46421)
+11-20 15:22:14 443 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(46421)
+11-20 15:22:14 561 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 15:22:14 561 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 15:22:14 563 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 15:22:14 563 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 15:22:14 571 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 15:22:14 571 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 15:22:14 573 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13865)
+11-20 15:22:14 573 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13865)
+11-20 15:25:25 211 trans-pool-1-thread-4 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions operatorId:Optional.empty operatorName:Optional.empty request body:findSuggestions_args(TSuggestionRequest(TPageRequest(0,10,None),None,None,None,None))
+11-20 15:25:25 211 trans-pool-1-thread-4 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions Optional.empty request header:Optional.empty body:findSuggestions_args(TSuggestionRequest(TPageRequest(0,10,None),None,None,None,None))
+11-20 15:25:25 671 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `suggestion`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 15:25:25.606))
+11-20 15:25:25 854 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `suggestion`  WHERE 1=1 AND updated_at BETWEEN ? AND ? args: List(JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 15:25:25.606))
+11-20 15:25:25 886 trans-pool-1-thread-4 DEBUG - SQL result: 1
+11-20 15:25:25 889 trans-pool-1-thread-4 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions operatorId:Optional[0] operatorName:Optional[0] response body:findSuggestions_result(TSuggestionResponse(TPageResponse(0,10,1),List(TSuggestion(1,1,需,23稍等,2017,2017,None,Some(0),Some(0)))))
+11-20 15:25:25 889 trans-pool-1-thread-4 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 findSuggestions Optional[0] response header:Optional[0] body:findSuggestions_result(TSuggestionResponse(TPageResponse(0,10,1),List(TSuggestion(1,1,需,23稍等,2017,2017,None,Some(0),Some(0)))))
+11-20 16:08:15 910 Thread-8 INFO - {dataSource-1} inited
+11-20 16:08:28 769 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 16:08:28 772 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 16:08:28 783 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(48390)
+11-20 16:08:28 783 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(48390)
+11-20 16:08:28 906 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 16:08:28 906 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 16:08:28 908 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 16:08:28 908 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 16:08:28 918 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 16:08:28 918 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 16:08:28 919 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13865)
+11-20 16:08:28 920 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13865)
+11-20 16:08:56 539 trans-pool-1-thread-4 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional.empty operatorName:Optional.empty request body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),None,None,None,None,None,None,None,None,None,None))
+11-20 16:08:56 540 trans-pool-1-thread-4 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional.empty request header:Optional.empty body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),None,None,None,None,None,None,None,None,None,None))
+11-20 16:08:56 691 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `task`  WHERE 1=1 AND created_by = ? AND updated_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 16:08:56.627))
+11-20 16:08:56 838 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `task`  WHERE 1=1 AND created_by = ? AND updated_at BETWEEN ? AND ? order by updated_at desc limit ?, ? args: List(JdbcValue(0), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 16:08:56.627), JdbcValue(0), JdbcValue(10))
+11-20 16:08:56 882 trans-pool-1-thread-4 DEBUG - SQL result: 10
+11-20 16:08:56 888 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `task_log` WHERE task_id in (7,4,5,3,12,11,10,2,9,8) args: List()
+11-20 16:08:56 899 trans-pool-1-thread-4 DEBUG - SQL result: 20
+11-20 16:08:56 934 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `task_attachment` WHERE task_id in (7,4,5,3,12,11,10,2,9,8) args: List()
+11-20 16:08:56 936 trans-pool-1-thread-4 DEBUG - SQL result: 1
+11-20 16:08:56 940 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `task_remark` WHERE task_id in(7,4,5,3,12,11,10,2,9,8) args: List()
+11-20 16:08:56 942 trans-pool-1-thread-4 DEBUG - SQL result: 2
+11-20 16:08:56 946 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `task_item` WHERE task_id in (7,4,5,3,12,11,10,2,9,8) args: List()
+11-20 16:08:56 948 trans-pool-1-thread-4 DEBUG - SQL result: 10
+11-20 16:08:56 959 trans-pool-1-thread-4 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  args: List()
+11-20 16:08:56 961 trans-pool-1-thread-4 DEBUG - SQL result: 0
+11-20 16:08:56 964 trans-pool-1-thread-4 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional[0] operatorName:Optional[0] response body:findTasks_result(TTaskResponse(TPageResponse(0,10,12),List(TTask(7,KT2017,1,2,1,1,1,1510813689000,1511164610000,List(TTaskItem(1...(3802)
+11-20 16:08:56 965 trans-pool-1-thread-4 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional[0] response header:Optional[0] body:findTasks_result(TTaskResponse(TPageResponse(0,10,12),List(TTask(7,KT2017,1,2,1,1,1,1510813689000,1511164610000,List(TTaskItem(1...(3802)
+11-20 16:08:56 989 trans-pool-1-thread-4 ERROR - Err-Core-001:expiredTodo字段不允许为空
+com.isuwang.dapeng.core.SoaException: Err-Core-001:expiredTodo字段不允许为空
+	at com.isuwang.soa.scala.task.domain.serializer.TTaskResponseSerializer.validate(TTaskResponseSerializer.scala:167) ~[classes/:na]
+	at com.isuwang.soa.scala.task.TaskAdminServiceCodec$FindTasks_resultSerializer.validate(TaskAdminServiceCodec.scala:150) ~[classes/:na]
+	at com.isuwang.soa.scala.task.TaskAdminServiceCodec$FindTasks_resultSerializer.write(TaskAdminServiceCodec.scala:127) ~[classes/:na]
+	at com.isuwang.soa.scala.task.TaskAdminServiceCodec$FindTasks_resultSerializer.write(TaskAdminServiceCodec.scala:90) ~[classes/:na]
+	at com.isuwang.dapeng.core.SoaCommonBaseProcessor.lambda$process$0(SoaCommonBaseProcessor.java:98) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.core.SoaCommonBaseProcessor$$Lambda$2885/424656543.doAction(Unknown Source) ~[na:na]
+	at com.isuwang.dapeng.core.filter.container.DispatchFilter.doFilter(DispatchFilter.java:27) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.core.filter.container.ContainerFilterChain.doFilter(ContainerFilterChain.java:35) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.container.filter.SlowTimeServiceFilter.doFilter(SlowTimeServiceFilter.java:29) ~[na:na]
+	at com.isuwang.dapeng.core.filter.container.ContainerFilterChain.doFilter(ContainerFilterChain.java:35) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.container.filter.ProviderTimesFilter.doFilter(ProviderTimesFilter.java:29) ~[na:na]
+	at com.isuwang.dapeng.core.filter.container.ContainerFilterChain.doFilter(ContainerFilterChain.java:35) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.container.filter.SoaGlobalTransactionalFilter.doFilter(SoaGlobalTransactionalFilter.java:50) ~[na:na]
+	at com.isuwang.dapeng.core.filter.container.ContainerFilterChain.doFilter(ContainerFilterChain.java:35) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.core.SoaCommonBaseProcessor.process(SoaCommonBaseProcessor.java:103) ~[dapeng-core-1.2.1.jar:na]
+	at com.isuwang.dapeng.container.netty.SoaServerHandler.processRequest(SoaServerHandler.java:299) ~[na:na]
+	at com.isuwang.dapeng.container.netty.SoaServerHandler.lambda$readRequestHeader$8(SoaServerHandler.java:130) ~[na:na]
+	at com.isuwang.dapeng.container.netty.SoaServerHandler$$Lambda$2884/1500879837.run(Unknown Source) ~[na:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) ~[na:1.8.0_31]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) ~[na:1.8.0_31]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_31]
+11-20 16:09:52 003 trans-pool-1-thread-5 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional.empty operatorName:Optional.empty request body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),None,None,None,None,None,None,None,None,None,None))
+11-20 16:09:52 004 trans-pool-1-thread-5 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional.empty request header:Optional.empty body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),None,None,None,None,None,None,None,None,None,None))
+11-20 16:09:52 005 trans-pool-1-thread-5 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `task`  WHERE 1=1 AND created_by = ? AND updated_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 16:09:52.004))
+11-20 16:09:52 007 trans-pool-1-thread-5 DEBUG - SQL Preparing:  SELECT * FROM `task`  WHERE 1=1 AND created_by = ? AND updated_at BETWEEN ? AND ? order by updated_at desc limit ?, ? args: List(JdbcValue(0), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 16:09:52.004), JdbcValue(0), JdbcValue(10))
+11-20 16:09:52 012 trans-pool-1-thread-5 DEBUG - SQL result: 10
+11-20 16:09:52 013 trans-pool-1-thread-5 DEBUG - SQL Preparing:  SELECT * FROM `task_log` WHERE task_id in (7,4,5,3,12,11,10,2,9,8) args: List()
+11-20 16:09:52 019 trans-pool-1-thread-5 DEBUG - SQL result: 20
+11-20 16:09:52 020 trans-pool-1-thread-5 DEBUG - SQL Preparing:  SELECT * FROM `task_attachment` WHERE task_id in (7,4,5,3,12,11,10,2,9,8) args: List()
+11-20 16:09:52 021 trans-pool-1-thread-5 DEBUG - SQL result: 1
+11-20 16:09:52 022 trans-pool-1-thread-5 DEBUG - SQL Preparing:  SELECT * FROM `task_remark` WHERE task_id in(7,4,5,3,12,11,10,2,9,8) args: List()
+11-20 16:09:52 023 trans-pool-1-thread-5 DEBUG - SQL result: 2
+11-20 16:09:52 024 trans-pool-1-thread-5 DEBUG - SQL Preparing:  SELECT * FROM `task_item` WHERE task_id in (7,4,5,3,12,11,10,2,9,8) args: List()
+11-20 16:09:52 027 trans-pool-1-thread-5 DEBUG - SQL result: 10
+11-20 16:09:56 065 trans-pool-1-thread-5 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  args: List()
+11-20 16:09:56 069 trans-pool-1-thread-5 DEBUG - SQL result: 0
+11-20 17:50:48 150 Thread-8 INFO - {dataSource-1} inited
+11-20 17:51:00 807 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 17:51:00 810 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 17:51:00 822 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(48390)
+11-20 17:51:00 822 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(48390)
+11-20 17:51:00 959 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 17:51:00 959 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 17:51:00 962 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 17:51:00 962 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 17:51:00 972 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 17:51:00 972 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 17:51:00 974 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13865)
+11-20 17:51:00 974 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13865)
+11-20 17:51:08 553 trans-pool-1-thread-4 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional.empty operatorName:Optional.empty request body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),None,None,None,None,None,None,None,None,None,None))
+11-20 17:51:08 553 trans-pool-1-thread-4 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional.empty request header:Optional.empty body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),None,None,None,None,None,None,None,None,None,None))
+11-20 17:51:08 972 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `task`  WHERE 1=1 AND created_by = ? AND updated_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 17:51:08.907))
+11-20 17:51:09 133 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `task`  WHERE 1=1 AND created_by = ? AND updated_at BETWEEN ? AND ? order by updated_at desc limit ?, ? args: List(JdbcValue(0), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 17:51:08.907), JdbcValue(0), JdbcValue(10))
+11-20 17:51:09 177 trans-pool-1-thread-4 DEBUG - SQL result: 10
+11-20 17:51:09 184 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `task_log` WHERE task_id in (7,4,5,3,12,11,10,2,9,8) args: List()
+11-20 17:51:09 198 trans-pool-1-thread-4 DEBUG - SQL result: 20
+11-20 17:51:09 229 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `task_attachment` WHERE task_id in (7,4,5,3,12,11,10,2,9,8) args: List()
+11-20 17:51:09 232 trans-pool-1-thread-4 DEBUG - SQL result: 1
+11-20 17:51:09 237 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `task_remark` WHERE task_id in(7,4,5,3,12,11,10,2,9,8) args: List()
+11-20 17:51:09 240 trans-pool-1-thread-4 DEBUG - SQL result: 2
+11-20 17:51:09 243 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `task_item` WHERE task_id in (7,4,5,3,12,11,10,2,9,8) args: List()
+11-20 17:51:09 246 trans-pool-1-thread-4 DEBUG - SQL result: 10
+11-20 17:51:09 279 trans-pool-1-thread-4 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  WHERE created_by = ? AND status= ? AND plan_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(1), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(1970-01-01 08:00:00.0))
+11-20 17:51:09 284 trans-pool-1-thread-4 DEBUG - SQL result: 0
+11-20 17:51:09 286 trans-pool-1-thread-4 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  WHERE created_by = ? AND status= ? AND plan_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(1), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 17:51:09.285))
+11-20 17:51:09 288 trans-pool-1-thread-4 DEBUG - SQL result: 0
+11-20 17:51:09 290 trans-pool-1-thread-4 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  WHERE created_by = ? AND status= ? AND task_type= ? args: List(JdbcValue(0), JdbcValue(1), JdbcValue(Some(2)))
+11-20 17:51:09 291 trans-pool-1-thread-4 DEBUG - SQL result: 0
+11-20 17:51:09 292 trans-pool-1-thread-4 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  WHERE created_by = ? AND status= ? AND task_type= ? args: List(JdbcValue(0), JdbcValue(2), JdbcValue(Some(2)))
+11-20 17:51:09 293 trans-pool-1-thread-4 DEBUG - SQL result: 0
+11-20 17:51:09 296 trans-pool-1-thread-4 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional[0] operatorName:Optional[0] response body:findTasks_result(TTaskResponse(TPageResponse(0,10,12),List(TTask(7,KT2017,1,2,1,1,1,1510813689000,1511164610000,List(TTaskItem(1...(3852)
+11-20 17:51:09 298 trans-pool-1-thread-4 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional[0] response header:Optional[0] body:findTasks_result(TTaskResponse(TPageResponse(0,10,12),List(TTask(7,KT2017,1,2,1,1,1,1510813689000,1511164610000,List(TTaskItem(1...(3852)
+11-20 17:53:14 365 trans-pool-1-thread-5 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional.empty operatorName:Optional.empty request body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),None,None,None,None,None,None,None,None,None,None))
+11-20 17:53:14 366 trans-pool-1-thread-5 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional.empty request header:Optional.empty body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),None,None,None,None,None,None,None,None,None,None))
+11-20 17:53:14 367 trans-pool-1-thread-5 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `task`  WHERE 1=1 AND created_by = ? AND updated_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 17:53:14.366))
+11-20 17:53:14 369 trans-pool-1-thread-5 DEBUG - SQL Preparing:  SELECT * FROM `task`  WHERE 1=1 AND created_by = ? AND updated_at BETWEEN ? AND ? order by updated_at desc limit ?, ? args: List(JdbcValue(0), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 17:53:14.366), JdbcValue(0), JdbcValue(10))
+11-20 17:53:14 374 trans-pool-1-thread-5 DEBUG - SQL result: 10
+11-20 17:53:14 375 trans-pool-1-thread-5 DEBUG - SQL Preparing:  SELECT * FROM `task_log` WHERE task_id in (7,8,4,5,3,12,11,10,2,9) args: List()
+11-20 17:53:14 383 trans-pool-1-thread-5 DEBUG - SQL result: 20
+11-20 17:53:14 385 trans-pool-1-thread-5 DEBUG - SQL Preparing:  SELECT * FROM `task_attachment` WHERE task_id in (7,8,4,5,3,12,11,10,2,9) args: List()
+11-20 17:53:14 387 trans-pool-1-thread-5 DEBUG - SQL result: 1
+11-20 17:53:14 388 trans-pool-1-thread-5 DEBUG - SQL Preparing:  SELECT * FROM `task_remark` WHERE task_id in(7,8,4,5,3,12,11,10,2,9) args: List()
+11-20 17:53:14 390 trans-pool-1-thread-5 DEBUG - SQL result: 2
+11-20 17:53:14 391 trans-pool-1-thread-5 DEBUG - SQL Preparing:  SELECT * FROM `task_item` WHERE task_id in (7,8,4,5,3,12,11,10,2,9) args: List()
+11-20 17:53:14 393 trans-pool-1-thread-5 DEBUG - SQL result: 10
+11-20 17:53:14 394 trans-pool-1-thread-5 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  WHERE created_by = ? AND status= ? AND plan_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(1), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(1970-01-01 08:00:00.0))
+11-20 17:53:14 395 trans-pool-1-thread-5 DEBUG - SQL result: 0
+11-20 17:53:14 396 trans-pool-1-thread-5 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  WHERE created_by = ? AND status= ? AND plan_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(1), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 17:53:14.396))
+11-20 17:53:14 398 trans-pool-1-thread-5 DEBUG - SQL result: 0
+11-20 17:53:14 399 trans-pool-1-thread-5 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  WHERE created_by = ? AND status= ? AND task_type= ? args: List(JdbcValue(0), JdbcValue(1), JdbcValue(Some(2)))
+11-20 17:53:14 400 trans-pool-1-thread-5 DEBUG - SQL result: 0
+11-20 17:53:14 400 trans-pool-1-thread-5 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  WHERE created_by = ? AND status= ? AND task_type= ? args: List(JdbcValue(0), JdbcValue(2), JdbcValue(Some(2)))
+11-20 17:53:14 402 trans-pool-1-thread-5 DEBUG - SQL result: 0
+11-20 17:53:14 402 trans-pool-1-thread-5 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional[0] operatorName:Optional[0] response body:findTasks_result(TTaskResponse(TPageResponse(0,10,12),List(TTask(7,KT2017,1,1,1,1,1,1510813689000,1511171588000,List(TTaskItem(1...(3852)
+11-20 17:53:14 403 trans-pool-1-thread-5 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional[0] response header:Optional[0] body:findTasks_result(TTaskResponse(TPageResponse(0,10,12),List(TTask(7,KT2017,1,1,1,1,1,1510813689000,1511171588000,List(TTaskItem(1...(3852)
+11-20 17:54:29 871 trans-pool-1-thread-6 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional.empty operatorName:Optional.empty request body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),None,None,None,None,None,None,None,None,None,None))
+11-20 17:54:29 872 trans-pool-1-thread-6 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional.empty request header:Optional.empty body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),None,None,None,None,None,None,None,None,None,None))
+11-20 17:54:29 874 trans-pool-1-thread-6 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `task`  WHERE 1=1 AND created_by = ? AND updated_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 17:54:29.872))
+11-20 17:54:29 876 trans-pool-1-thread-6 DEBUG - SQL Preparing:  SELECT * FROM `task`  WHERE 1=1 AND created_by = ? AND updated_at BETWEEN ? AND ? order by updated_at desc limit ?, ? args: List(JdbcValue(0), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 17:54:29.872), JdbcValue(0), JdbcValue(10))
+11-20 17:54:29 880 trans-pool-1-thread-6 DEBUG - SQL result: 10
+11-20 17:54:29 880 trans-pool-1-thread-6 DEBUG - SQL Preparing:  SELECT * FROM `task_log` WHERE task_id in (8,7,4,5,3,12,11,10,2,9) args: List()
+11-20 17:54:29 885 trans-pool-1-thread-6 DEBUG - SQL result: 20
+11-20 17:54:29 886 trans-pool-1-thread-6 DEBUG - SQL Preparing:  SELECT * FROM `task_attachment` WHERE task_id in (8,7,4,5,3,12,11,10,2,9) args: List()
+11-20 17:54:29 888 trans-pool-1-thread-6 DEBUG - SQL result: 1
+11-20 17:54:29 888 trans-pool-1-thread-6 DEBUG - SQL Preparing:  SELECT * FROM `task_remark` WHERE task_id in(8,7,4,5,3,12,11,10,2,9) args: List()
+11-20 17:54:29 890 trans-pool-1-thread-6 DEBUG - SQL result: 2
+11-20 17:54:29 890 trans-pool-1-thread-6 DEBUG - SQL Preparing:  SELECT * FROM `task_item` WHERE task_id in (8,7,4,5,3,12,11,10,2,9) args: List()
+11-20 17:54:29 892 trans-pool-1-thread-6 DEBUG - SQL result: 10
+11-20 17:54:29 894 trans-pool-1-thread-6 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  WHERE created_by = ? AND status= ? AND plan_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(1), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(1970-01-01 08:00:00.0))
+11-20 17:54:29 896 trans-pool-1-thread-6 DEBUG - SQL result: 0
+11-20 17:54:29 896 trans-pool-1-thread-6 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  WHERE created_by = ? AND status= ? AND plan_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(1), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 17:54:29.896))
+11-20 17:54:29 897 trans-pool-1-thread-6 DEBUG - SQL result: 0
+11-20 17:54:29 898 trans-pool-1-thread-6 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  WHERE created_by = ? AND status= ? AND task_type= ? args: List(JdbcValue(0), JdbcValue(1), JdbcValue(Some(2)))
+11-20 17:54:29 899 trans-pool-1-thread-6 DEBUG - SQL result: 0
+11-20 17:54:29 899 trans-pool-1-thread-6 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  WHERE created_by = ? AND status= ? AND task_type= ? args: List(JdbcValue(0), JdbcValue(2), JdbcValue(Some(2)))
+11-20 17:54:29 900 trans-pool-1-thread-6 DEBUG - SQL result: 0
+11-20 17:54:29 901 trans-pool-1-thread-6 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional[0] operatorName:Optional[0] response body:findTasks_result(TTaskResponse(TPageResponse(0,10,12),List(TTask(8,KT2017,1,3,2,1,1,1510813689000,1511171667000,List(TTaskItem(2...(3852)
+11-20 17:54:29 901 trans-pool-1-thread-6 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional[0] response header:Optional[0] body:findTasks_result(TTaskResponse(TPageResponse(0,10,12),List(TTask(8,KT2017,1,3,2,1,1,1510813689000,1511171667000,List(TTaskItem(2...(3852)
+11-20 17:54:33 523 trans-pool-1-thread-7 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional.empty operatorName:Optional.empty request body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),None,None,None,None,None,None,None,None,None,None))
+11-20 17:54:33 524 trans-pool-1-thread-7 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional.empty request header:Optional.empty body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),None,None,None,None,None,None,None,None,None,None))
+11-20 17:54:33 524 trans-pool-1-thread-7 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `task`  WHERE 1=1 AND created_by = ? AND updated_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 17:54:33.524))
+11-20 17:54:33 527 trans-pool-1-thread-7 DEBUG - SQL Preparing:  SELECT * FROM `task`  WHERE 1=1 AND created_by = ? AND updated_at BETWEEN ? AND ? order by updated_at desc limit ?, ? args: List(JdbcValue(0), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 17:54:33.524), JdbcValue(0), JdbcValue(10))
+11-20 17:54:33 531 trans-pool-1-thread-7 DEBUG - SQL result: 10
+11-20 17:54:33 531 trans-pool-1-thread-7 DEBUG - SQL Preparing:  SELECT * FROM `task_log` WHERE task_id in (8,7,4,5,3,12,11,10,2,9) args: List()
+11-20 17:54:33 535 trans-pool-1-thread-7 DEBUG - SQL result: 20
+11-20 17:54:33 535 trans-pool-1-thread-7 DEBUG - SQL Preparing:  SELECT * FROM `task_attachment` WHERE task_id in (8,7,4,5,3,12,11,10,2,9) args: List()
+11-20 17:54:33 537 trans-pool-1-thread-7 DEBUG - SQL result: 1
+11-20 17:54:33 537 trans-pool-1-thread-7 DEBUG - SQL Preparing:  SELECT * FROM `task_remark` WHERE task_id in(8,7,4,5,3,12,11,10,2,9) args: List()
+11-20 17:54:33 538 trans-pool-1-thread-7 DEBUG - SQL result: 2
+11-20 17:54:33 539 trans-pool-1-thread-7 DEBUG - SQL Preparing:  SELECT * FROM `task_item` WHERE task_id in (8,7,4,5,3,12,11,10,2,9) args: List()
+11-20 17:54:33 540 trans-pool-1-thread-7 DEBUG - SQL result: 10
+11-20 17:54:33 542 trans-pool-1-thread-7 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  WHERE created_by = ? AND status= ? AND plan_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(1), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(1970-01-01 08:00:00.0))
+11-20 17:54:33 543 trans-pool-1-thread-7 DEBUG - SQL result: 0
+11-20 17:54:33 544 trans-pool-1-thread-7 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  WHERE created_by = ? AND status= ? AND plan_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(1), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 17:54:33.543))
+11-20 17:54:33 545 trans-pool-1-thread-7 DEBUG - SQL result: 0
+11-20 17:54:33 545 trans-pool-1-thread-7 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  WHERE created_by = ? AND status= ? AND task_type= ? args: List(JdbcValue(0), JdbcValue(1), JdbcValue(Some(2)))
+11-20 17:54:33 547 trans-pool-1-thread-7 DEBUG - SQL result: 0
+11-20 17:54:33 547 trans-pool-1-thread-7 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  WHERE created_by = ? AND status= ? AND task_type= ? args: List(JdbcValue(0), JdbcValue(2), JdbcValue(Some(2)))
+11-20 17:54:33 550 trans-pool-1-thread-7 DEBUG - SQL result: 0
+11-20 17:54:33 551 trans-pool-1-thread-7 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional[0] operatorName:Optional[0] response body:findTasks_result(TTaskResponse(TPageResponse(0,10,12),List(TTask(8,KT2017,1,3,2,1,1,1510813689000,1511171667000,List(TTaskItem(2...(3852)
+11-20 17:54:33 552 trans-pool-1-thread-7 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional[0] response header:Optional[0] body:findTasks_result(TTaskResponse(TPageResponse(0,10,12),List(TTask(8,KT2017,1,3,2,1,1,1510813689000,1511171667000,List(TTaskItem(2...(3852)
+11-20 17:55:47 576 trans-pool-1-thread-8 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional.empty operatorName:Optional.empty request body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),None,None,None,None,None,None,None,None,None,None))
+11-20 17:55:47 577 trans-pool-1-thread-8 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional.empty request header:Optional.empty body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),None,None,None,None,None,None,None,None,None,None))
+11-20 17:55:47 578 trans-pool-1-thread-8 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `task`  WHERE 1=1 AND created_by = ? AND updated_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 17:55:47.577))
+11-20 17:55:47 580 trans-pool-1-thread-8 DEBUG - SQL Preparing:  SELECT * FROM `task`  WHERE 1=1 AND created_by = ? AND updated_at BETWEEN ? AND ? order by updated_at desc limit ?, ? args: List(JdbcValue(0), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 17:55:47.577), JdbcValue(0), JdbcValue(10))
+11-20 17:55:47 584 trans-pool-1-thread-8 DEBUG - SQL result: 10
+11-20 17:55:47 584 trans-pool-1-thread-8 DEBUG - SQL Preparing:  SELECT * FROM `task_log` WHERE task_id in (10,8,7,4,5,3,12,11,2,9) args: List()
+11-20 17:55:47 588 trans-pool-1-thread-8 DEBUG - SQL result: 20
+11-20 17:55:47 589 trans-pool-1-thread-8 DEBUG - SQL Preparing:  SELECT * FROM `task_attachment` WHERE task_id in (10,8,7,4,5,3,12,11,2,9) args: List()
+11-20 17:55:47 591 trans-pool-1-thread-8 DEBUG - SQL result: 1
+11-20 17:55:47 591 trans-pool-1-thread-8 DEBUG - SQL Preparing:  SELECT * FROM `task_remark` WHERE task_id in(10,8,7,4,5,3,12,11,2,9) args: List()
+11-20 17:55:47 592 trans-pool-1-thread-8 DEBUG - SQL result: 2
+11-20 17:55:47 593 trans-pool-1-thread-8 DEBUG - SQL Preparing:  SELECT * FROM `task_item` WHERE task_id in (10,8,7,4,5,3,12,11,2,9) args: List()
+11-20 17:55:47 595 trans-pool-1-thread-8 DEBUG - SQL result: 10
+11-20 17:55:47 596 trans-pool-1-thread-8 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  WHERE created_by = ? AND status= ? AND plan_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(1), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(1970-01-01 08:00:00.0))
+11-20 17:55:47 598 trans-pool-1-thread-8 DEBUG - SQL result: 0
+11-20 17:55:47 599 trans-pool-1-thread-8 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  WHERE created_by = ? AND status= ? AND plan_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(1), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 17:55:47.599))
+11-20 17:55:47 600 trans-pool-1-thread-8 DEBUG - SQL result: 0
+11-20 17:55:47 601 trans-pool-1-thread-8 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  WHERE created_by = ? AND status= ? AND task_type= ? args: List(JdbcValue(0), JdbcValue(1), JdbcValue(Some(2)))
+11-20 17:55:47 602 trans-pool-1-thread-8 DEBUG - SQL result: 0
+11-20 17:55:47 602 trans-pool-1-thread-8 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  WHERE created_by = ? AND status= ? AND task_type= ? args: List(JdbcValue(0), JdbcValue(2), JdbcValue(Some(2)))
+11-20 17:55:47 603 trans-pool-1-thread-8 DEBUG - SQL result: 0
+11-20 17:55:47 604 trans-pool-1-thread-8 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional[0] operatorName:Optional[0] response body:findTasks_result(TTaskResponse(TPageResponse(0,10,12),List(TTask(10,RW20171120103000,asdfas,1,2,1,1,1511094299000,1511171745000,...(3855)
+11-20 17:55:47 605 trans-pool-1-thread-8 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional[0] response header:Optional[0] body:findTasks_result(TTaskResponse(TPageResponse(0,10,12),List(TTask(10,RW20171120103000,asdfas,1,2,1,1,1511094299000,1511171745000,...(3855)
+11-20 17:57:03 292 trans-pool-1-thread-9 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional.empty operatorName:Optional.empty request body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),None,None,None,None,None,None,None,None,None,None))
+11-20 17:57:03 293 trans-pool-1-thread-9 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional.empty request header:Optional.empty body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),None,None,None,None,None,None,None,None,None,None))
+11-20 17:57:03 295 trans-pool-1-thread-9 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `task`  WHERE 1=1 AND created_by = ? AND updated_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 17:57:03.293))
+11-20 17:57:03 297 trans-pool-1-thread-9 DEBUG - SQL Preparing:  SELECT * FROM `task`  WHERE 1=1 AND created_by = ? AND updated_at BETWEEN ? AND ? order by updated_at desc limit ?, ? args: List(JdbcValue(0), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 17:57:03.293), JdbcValue(0), JdbcValue(10))
+11-20 17:57:03 300 trans-pool-1-thread-9 DEBUG - SQL result: 10
+11-20 17:57:03 301 trans-pool-1-thread-9 DEBUG - SQL Preparing:  SELECT * FROM `task_log` WHERE task_id in (10,8,7,4,5,3,12,11,2,9) args: List()
+11-20 17:57:03 304 trans-pool-1-thread-9 DEBUG - SQL result: 20
+11-20 17:57:03 305 trans-pool-1-thread-9 DEBUG - SQL Preparing:  SELECT * FROM `task_attachment` WHERE task_id in (10,8,7,4,5,3,12,11,2,9) args: List()
+11-20 17:57:03 306 trans-pool-1-thread-9 DEBUG - SQL result: 1
+11-20 17:57:03 306 trans-pool-1-thread-9 DEBUG - SQL Preparing:  SELECT * FROM `task_remark` WHERE task_id in(10,8,7,4,5,3,12,11,2,9) args: List()
+11-20 17:57:03 307 trans-pool-1-thread-9 DEBUG - SQL result: 2
+11-20 17:57:03 308 trans-pool-1-thread-9 DEBUG - SQL Preparing:  SELECT * FROM `task_item` WHERE task_id in (10,8,7,4,5,3,12,11,2,9) args: List()
+11-20 17:57:03 309 trans-pool-1-thread-9 DEBUG - SQL result: 10
+11-20 17:57:03 310 trans-pool-1-thread-9 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  WHERE created_by = ? AND status= ? AND plan_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(1), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(1970-01-01 08:00:00.0))
+11-20 17:57:03 311 trans-pool-1-thread-9 DEBUG - SQL result: 0
+11-20 17:57:03 312 trans-pool-1-thread-9 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  WHERE created_by = ? AND status= ? AND plan_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(1), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 17:57:03.311))
+11-20 17:57:03 313 trans-pool-1-thread-9 DEBUG - SQL result: 0
+11-20 17:57:03 314 trans-pool-1-thread-9 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  WHERE created_by = ? AND status= ? AND task_type= ? args: List(JdbcValue(0), JdbcValue(1), JdbcValue(Some(2)))
+11-20 17:57:03 315 trans-pool-1-thread-9 DEBUG - SQL result: 0
+11-20 17:57:03 316 trans-pool-1-thread-9 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  WHERE created_by = ? AND status= ? AND task_type= ? args: List(JdbcValue(0), JdbcValue(2), JdbcValue(Some(2)))
+11-20 17:57:03 317 trans-pool-1-thread-9 DEBUG - SQL result: 0
+11-20 17:57:03 318 trans-pool-1-thread-9 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional[0] operatorName:Optional[0] response body:findTasks_result(TTaskResponse(TPageResponse(0,10,12),List(TTask(10,RW20171120103000,asdfas,1,2,1,1,1511094299000,1511171820000,...(3858)
+11-20 17:57:03 318 trans-pool-1-thread-9 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional[0] response header:Optional[0] body:findTasks_result(TTaskResponse(TPageResponse(0,10,12),List(TTask(10,RW20171120103000,asdfas,1,2,1,1,1511094299000,1511171820000,...(3858)
+11-20 18:03:53 749 Thread-8 INFO - {dataSource-1} inited
+11-20 18:04:06 554 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 18:04:06 556 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 18:04:06 568 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(48390)
+11-20 18:04:06 568 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(48390)
+11-20 18:04:06 693 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 18:04:06 693 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 18:04:06 695 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 18:04:06 695 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 18:04:06 706 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 18:04:06 706 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 18:04:06 709 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13865)
+11-20 18:04:06 709 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13865)
+11-20 18:04:26 463 trans-pool-1-thread-4 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional.empty operatorName:Optional.empty request body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),None,None,None,None,None,None,None,None,None,None))
+11-20 18:04:26 464 trans-pool-1-thread-4 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional.empty request header:Optional.empty body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),None,None,None,None,None,None,None,None,None,None))
+11-20 18:04:26 905 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `task`  WHERE 1=1 AND created_by = ? AND updated_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 18:04:26.845))
+11-20 18:04:27 047 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `task`  WHERE 1=1 AND created_by = ? AND updated_at BETWEEN ? AND ? order by updated_at desc limit ?, ? args: List(JdbcValue(0), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 18:04:26.845), JdbcValue(0), JdbcValue(10))
+11-20 18:04:27 095 trans-pool-1-thread-4 DEBUG - SQL result: 10
+11-20 18:04:27 104 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `task_log` WHERE task_id in (10,8,7,4,5,3,12,11,2,9) args: List()
+11-20 18:04:27 119 trans-pool-1-thread-4 DEBUG - SQL result: 20
+11-20 18:04:27 164 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `task_attachment` WHERE task_id in (10,8,7,4,5,3,12,11,2,9) args: List()
+11-20 18:04:27 167 trans-pool-1-thread-4 DEBUG - SQL result: 1
+11-20 18:04:27 172 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `task_remark` WHERE task_id in(10,8,7,4,5,3,12,11,2,9) args: List()
+11-20 18:04:27 174 trans-pool-1-thread-4 DEBUG - SQL result: 2
+11-20 18:04:27 183 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `task_item` WHERE task_id in (10,8,7,4,5,3,12,11,2,9) args: List()
+11-20 18:04:27 188 trans-pool-1-thread-4 DEBUG - SQL result: 10
+11-20 18:04:27 226 trans-pool-1-thread-4 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  WHERE created_by = ? AND status= ? AND plan_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(1), JdbcValue(2017-11-20 00:00:00.204), JdbcValue(2017-11-20 23:59:59.204))
+11-20 18:04:27 230 trans-pool-1-thread-4 DEBUG - SQL result: 0
+11-20 18:04:27 231 trans-pool-1-thread-4 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  WHERE created_by = ? AND status= ? AND plan_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(1), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 18:04:27.23))
+11-20 18:04:27 233 trans-pool-1-thread-4 DEBUG - SQL result: 0
+11-20 18:04:27 234 trans-pool-1-thread-4 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  WHERE created_by = ? AND status= ? AND task_type= ? args: List(JdbcValue(0), JdbcValue(1), JdbcValue(Some(2)))
+11-20 18:04:27 235 trans-pool-1-thread-4 DEBUG - SQL result: 0
+11-20 18:04:27 236 trans-pool-1-thread-4 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  WHERE created_by = ? AND status= ? AND task_type= ? args: List(JdbcValue(0), JdbcValue(2), JdbcValue(Some(2)))
+11-20 18:04:27 238 trans-pool-1-thread-4 DEBUG - SQL result: 0
+11-20 18:04:27 241 trans-pool-1-thread-4 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional[0] operatorName:Optional[0] response body:findTasks_result(TTaskResponse(TPageResponse(0,10,12),List(TTask(10,RW20171120103000,asdfas,1,2,1,1,1511094299000,1511171820000,...(3858)
+11-20 18:04:27 242 trans-pool-1-thread-4 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional[0] response header:Optional[0] body:findTasks_result(TTaskResponse(TPageResponse(0,10,12),List(TTask(10,RW20171120103000,asdfas,1,2,1,1,1511094299000,1511171820000,...(3858)
+11-20 18:11:30 480 Thread-8 INFO - {dataSource-1} inited
+11-20 18:11:43 159 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 18:11:43 161 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 18:11:43 172 trans-pool-1-thread-1 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(48390)
+11-20 18:11:43 172 trans-pool-1-thread-1 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(48390)
+11-20 18:11:43 321 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 18:11:43 321 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 18:11:43 323 trans-pool-1-thread-2 INFO - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 18:11:43 323 trans-pool-1-thread-2 DEBUG - com.isuwang.soa.scala.task.service.TaskBusinessService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13728)
+11-20 18:11:43 335 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty request body:getServiceMetadata_args()
+11-20 18:11:43 335 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty request header:Optional.empty body:getServiceMetadata_args()
+11-20 18:11:43 337 trans-pool-1-thread-3 INFO - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata operatorId:Optional.empty operatorName:Optional.empty response body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13865)
+11-20 18:11:43 337 trans-pool-1-thread-3 DEBUG - com.isuwang.soa.scala.task.service.TaskSuggestionService 1.0.0 getServiceMetadata Optional.empty response header:Optional.empty body:getServiceMetadata_result(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.scala.task...(13865)
+11-20 18:11:51 825 trans-pool-1-thread-4 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional.empty operatorName:Optional.empty request body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),None,None,None,None,None,None,None,None,None,None))
+11-20 18:11:51 825 trans-pool-1-thread-4 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional.empty request header:Optional.empty body:findTasks_args(TTaskRequest(TPageRequest(0,10,None),None,None,None,None,None,None,None,None,None,None))
+11-20 18:11:52 249 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT COUNT(*) FROM `task`  WHERE 1=1 AND created_by = ? AND updated_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 18:11:52.185))
+11-20 18:11:52 371 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `task`  WHERE 1=1 AND created_by = ? AND updated_at BETWEEN ? AND ? order by updated_at desc limit ?, ? args: List(JdbcValue(0), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 18:11:52.185), JdbcValue(0), JdbcValue(10))
+11-20 18:11:52 414 trans-pool-1-thread-4 DEBUG - SQL result: 10
+11-20 18:11:52 419 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `task_log` WHERE task_id in (10,8,7,4,5,3,12,11,2,9) args: List()
+11-20 18:11:52 432 trans-pool-1-thread-4 DEBUG - SQL result: 20
+11-20 18:11:52 461 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `task_attachment` WHERE task_id in (10,8,7,4,5,3,12,11,2,9) args: List()
+11-20 18:11:52 464 trans-pool-1-thread-4 DEBUG - SQL result: 1
+11-20 18:11:52 469 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `task_remark` WHERE task_id in(10,8,7,4,5,3,12,11,2,9) args: List()
+11-20 18:11:52 471 trans-pool-1-thread-4 DEBUG - SQL result: 2
+11-20 18:11:52 474 trans-pool-1-thread-4 DEBUG - SQL Preparing:  SELECT * FROM `task_item` WHERE task_id in (10,8,7,4,5,3,12,11,2,9) args: List()
+11-20 18:11:52 478 trans-pool-1-thread-4 DEBUG - SQL result: 10
+11-20 18:11:52 514 trans-pool-1-thread-4 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  WHERE created_by = ? AND status= ? AND plan_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(1), JdbcValue(2017-11-20 00:00:00.0), JdbcValue(2017-11-20 23:59:59.999))
+11-20 18:11:52 518 trans-pool-1-thread-4 DEBUG - SQL result: 0
+11-20 18:11:52 520 trans-pool-1-thread-4 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  WHERE created_by = ? AND status= ? AND plan_at BETWEEN ? AND ? args: List(JdbcValue(0), JdbcValue(1), JdbcValue(1970-01-01 08:00:00.0), JdbcValue(2017-11-20 18:11:52.52))
+11-20 18:11:52 522 trans-pool-1-thread-4 DEBUG - SQL result: 0
+11-20 18:11:52 523 trans-pool-1-thread-4 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  WHERE created_by = ? AND status= ? AND task_type= ? args: List(JdbcValue(0), JdbcValue(1), JdbcValue(Some(2)))
+11-20 18:11:52 524 trans-pool-1-thread-4 DEBUG - SQL result: 0
+11-20 18:11:52 525 trans-pool-1-thread-4 DEBUG - SQL Preparing: SELECT count(DISTINCT company_id) AS company_count, count(*) AS task_count FROM task  WHERE created_by = ? AND status= ? AND task_type= ? args: List(JdbcValue(0), JdbcValue(2), JdbcValue(Some(2)))
+11-20 18:11:52 526 trans-pool-1-thread-4 DEBUG - SQL result: 0
+11-20 18:11:52 529 trans-pool-1-thread-4 INFO - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks operatorId:Optional[0] operatorName:Optional[0] response body:findTasks_result(TTaskResponse(TPageResponse(0,10,12),List(TTask(10,RW20171120103000,asdfas,1,2,1,1,1511094299000,1511171820000,...(3858)
+11-20 18:11:52 530 trans-pool-1-thread-4 DEBUG - com.isuwang.soa.scala.task.service.TaskAdminService 1.0.0 findTasks Optional[0] response header:Optional[0] body:findTasks_result(TTaskResponse(TPageResponse(0,10,12),List(TTask(10,RW20171120103000,asdfas,1,2,1,1,1511094299000,1511171820000,...(3858)

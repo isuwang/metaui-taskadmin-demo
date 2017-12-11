@@ -1,0 +1,947 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.admin.service" name="StaffService">
+    <doc>
+
+ Staff Service
+</doc>
+    <meta>
+        <version>1.0.0</version>
+        <timeout>30000</timeout>
+    </meta>
+    <methods>
+        <method name="getById">
+            <doc>
+
+ 根据Id查询员工
+</doc>
+            <request name="getById_args">
+                <fields>
+                    <field tag="1" name="id" optional="false" privacy="false">
+                        <dataType>
+                            <kind>INTEGER</kind>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="getById_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>STRUCT</kind>
+                            <ref>com.isuwang.soa.admin.domain.TStaffEx</ref>
+                        </dataType>
+                        <doc>
+
+ 根据Id查询员工
+</doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+        <method name="staffHasPermission">
+            <doc>
+
+ 根据员工ID判断是否具有指定权限
+</doc>
+            <request name="staffHasPermission_args">
+                <fields>
+                    <field tag="1" name="staffId" optional="false" privacy="false">
+                        <dataType>
+                            <kind>INTEGER</kind>
+                        </dataType>
+                        <doc>员工ID</doc>
+                    </field>
+                    <field tag="2" name="permissionCode" optional="false" privacy="false">
+                        <dataType>
+                            <kind>STRING</kind>
+                        </dataType>
+                        <doc>权限编码</doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="staffHasPermission_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>BOOLEAN</kind>
+                        </dataType>
+                        <doc>
+
+ 根据员工ID判断是否具有指定权限
+</doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+        <method name="staffIsRole">
+            <doc>
+
+ 根据员工ID判断是否具有指定角色
+</doc>
+            <request name="staffIsRole_args">
+                <fields>
+                    <field tag="1" name="staffId" optional="false" privacy="false">
+                        <dataType>
+                            <kind>INTEGER</kind>
+                        </dataType>
+                        <doc>员工ID</doc>
+                    </field>
+                    <field tag="2" name="roleId" optional="false" privacy="false">
+                        <dataType>
+                            <kind>INTEGER</kind>
+                        </dataType>
+                        <doc>角色ID</doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="staffIsRole_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>BOOLEAN</kind>
+                        </dataType>
+                        <doc>
+
+ 根据员工ID判断是否具有指定角色
+</doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+        <method name="findStaffs">
+            <request name="findStaffs_args">
+                <fields>
+                    <field tag="1" name="staffIds" optional="false" privacy="false">
+                        <dataType>
+                            <kind>LIST</kind>
+                            <valueType>
+<kind>INTEGER</kind>
+                            </valueType>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="findStaffs_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>LIST</kind>
+                            <valueType>
+<kind>STRUCT</kind>
+<ref>com.isuwang.soa.admin.domain.TStaff</ref>
+                            </valueType>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+        <method name="getByName">
+            <request name="getByName_args">
+                <fields>
+                    <field tag="1" name="name" optional="false" privacy="false">
+                        <dataType>
+                            <kind>STRING</kind>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="getByName_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>INTEGER</kind>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+        <method name="getStaffNamesByRoleId">
+            <doc>
+
+ 为了避免在订单模块跨库sql查询，在这里添加一个接口，用作监听orderdb的binlog事件
+ SELECT DISTINCT(name) FROM staffs WHERE id IN (SELECT staff_id FROM staff_roles WHERE role_id = 11) OR name IN ('银明华','梁丹','张培燕','谢植')
+</doc>
+            <request name="getStaffNamesByRoleId_args">
+                <fields/>
+            </request>
+            <response name="getStaffNamesByRoleId_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>LIST</kind>
+                            <valueType>
+<kind>STRING</kind>
+                            </valueType>
+                        </dataType>
+                        <doc>
+
+ 为了避免在订单模块跨库sql查询，在这里添加一个接口，用作监听orderdb的binlog事件
+ SELECT DISTINCT(name) FROM staffs WHERE id IN (SELECT staff_id FROM staff_roles WHERE role_id = 11) OR name IN ('银明华','梁丹','张培燕','谢植')
+</doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+        <method name="getStaffIdsByAttache">
+            <doc>
+
+ 为了避免在订单模块跨库sql查询，在这里添加一个接口，用作监听orderdb的binlog事件
+ 查询角色为客服专员的员工ID
+ SELECT staff_id FROM admindb.staff_roles WHERE role_id = (SELECT id FROM admindb.roles WHERE name = '客服专员')
+</doc>
+            <request name="getStaffIdsByAttache_args">
+                <fields/>
+            </request>
+            <response name="getStaffIdsByAttache_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>LIST</kind>
+                            <valueType>
+<kind>INTEGER</kind>
+                            </valueType>
+                        </dataType>
+                        <doc>
+
+ 为了避免在订单模块跨库sql查询，在这里添加一个接口，用作监听orderdb的binlog事件
+ 查询角色为客服专员的员工ID
+ SELECT staff_id FROM admindb.staff_roles WHERE role_id = (SELECT id FROM admindb.roles WHERE name = '客服专员')
+</doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+        <method name="getRoleByStaffId">
+            <doc>
+
+ 根据员工查询其角色
+</doc>
+            <request name="getRoleByStaffId_args">
+                <fields>
+                    <field tag="1" name="staffId" optional="false" privacy="false">
+                        <dataType>
+                            <kind>INTEGER</kind>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="getRoleByStaffId_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>LIST</kind>
+                            <valueType>
+<kind>STRUCT</kind>
+<ref>com.isuwang.soa.admin.domain.TRole</ref>
+                            </valueType>
+                        </dataType>
+                        <doc>
+
+ 根据员工查询其角色
+</doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+        <method name="getStaffsByIds">
+            <doc>
+
+ 根据员工ids查询员工
+</doc>
+            <request name="getStaffsByIds_args">
+                <fields>
+                    <field tag="1" name="ids" optional="false" privacy="false">
+                        <dataType>
+                            <kind>LIST</kind>
+                            <valueType>
+<kind>INTEGER</kind>
+                            </valueType>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="getStaffsByIds_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>MAP</kind>
+                            <keyType>
+<kind>INTEGER</kind>
+                            </keyType>
+                            <valueType>
+<kind>STRUCT</kind>
+<ref>com.isuwang.soa.admin.domain.TStaff</ref>
+                            </valueType>
+                        </dataType>
+                        <doc>
+
+ 根据员工ids查询员工
+</doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+        <method name="getStaffByRegion">
+            <doc>
+
+ 根据区域查找员工
+</doc>
+            <request name="getStaffByRegion_args">
+                <fields>
+                    <field tag="1" name="organizationRegion" optional="false" privacy="false">
+                        <dataType>
+                            <kind>ENUM</kind>
+                            <ref>com.isuwang.soa.admin.enums.OrganizationRegion</ref>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="getStaffByRegion_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>MAP</kind>
+                            <keyType>
+<kind>INTEGER</kind>
+                            </keyType>
+                            <valueType>
+<kind>STRUCT</kind>
+<ref>com.isuwang.soa.admin.domain.TStaff</ref>
+                            </valueType>
+                        </dataType>
+                        <doc>
+
+ 根据区域查找员工
+</doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+        <method name="getStaffRegion">
+            <doc>
+
+ 根据员工id返回区域
+</doc>
+            <request name="getStaffRegion_args">
+                <fields>
+                    <field tag="1" name="staffId" optional="false" privacy="false">
+                        <dataType>
+                            <kind>INTEGER</kind>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="getStaffRegion_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>ENUM</kind>
+                            <ref>com.isuwang.soa.admin.enums.OrganizationRegion</ref>
+                        </dataType>
+                        <doc>
+
+ 根据员工id返回区域
+</doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+    </methods>
+    <structs>
+        <struct namespace="com.isuwang.soa.admin.domain" name="TRole">
+            <fields>
+                <field tag="1" name="id" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                </field>
+                <field tag="2" name="name" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                </field>
+                <field tag="3" name="code" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                </field>
+                <field tag="4" name="menu" optional="false" privacy="false">
+                    <dataType>
+                        <kind>BOOLEAN</kind>
+                    </dataType>
+                </field>
+                <field tag="5" name="subSys" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                </field>
+                <field tag="6" name="dataAreas" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                </field>
+                <field tag="7" name="createdAt" optional="false" privacy="false">
+                    <dataType>
+                        <kind>LONG</kind>
+                    </dataType>
+                </field>
+                <field tag="8" name="updatedAt" optional="false" privacy="false">
+                    <dataType>
+                        <kind>LONG</kind>
+                    </dataType>
+                </field>
+                <field tag="9" name="createdBy" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                </field>
+                <field tag="10" name="updatedBy" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                </field>
+                <field tag="11" name="bindPermissions" optional="false" privacy="false">
+                    <dataType>
+                        <kind>LIST</kind>
+                        <valueType>
+                            <kind>STRUCT</kind>
+                            <ref>com.isuwang.soa.admin.domain.TPermission</ref>
+                        </valueType>
+                    </dataType>
+                </field>
+                <field tag="12" name="createdByName" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                </field>
+                <field tag="13" name="updatedByName" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                </field>
+                <field tag="14" name="remark" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                </field>
+            </fields>
+        </struct>
+        <struct namespace="com.isuwang.soa.admin.domain" name="TPermission">
+            <fields>
+                <field tag="1" name="id" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                </field>
+                <field tag="2" name="name" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                </field>
+                <field tag="3" name="code" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                </field>
+                <field tag="4" name="remark" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                </field>
+                <field tag="5" name="subSys" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                </field>
+                <field tag="6" name="subModule" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                </field>
+            </fields>
+        </struct>
+        <struct namespace="com.isuwang.soa.admin.domain" name="TStaff">
+            <fields>
+                <field tag="1" name="id" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+
+</doc>
+                </field>
+                <field tag="2" name="orgId" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 组织机构ID
+</doc>
+                </field>
+                <field tag="3" name="loginName" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 登录用户名
+</doc>
+                </field>
+                <field tag="4" name="password" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 密码，md5
+</doc>
+                </field>
+                <field tag="5" name="name" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 姓名
+</doc>
+                </field>
+                <field tag="6" name="englishName" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 英文名
+</doc>
+                </field>
+                <field tag="7" name="gender" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 性别，1：男；2：女；
+</doc>
+                </field>
+                <field tag="8" name="disable" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 是否禁用，0：否；1：是；
+</doc>
+                </field>
+                <field tag="9" name="email" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+
+</doc>
+                </field>
+                <field tag="10" name="phone" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+
+</doc>
+                </field>
+                <field tag="11" name="wechat" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+
+</doc>
+                </field>
+                <field tag="12" name="qq" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+
+</doc>
+                </field>
+                <field tag="13" name="manager" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 是否管理者，0：否；1：是；
+ 如果是管理者，自动继承所在部门的数据权限
+</doc>
+                </field>
+                <field tag="14" name="districts" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 负责的业务的区域范围，英文逗号分割，区域表district的district_code
+</doc>
+                </field>
+                <field tag="15" name="lastLoginTime" optional="true" privacy="false">
+                    <dataType>
+                        <kind>DATE</kind>
+                    </dataType>
+                    <doc>
+
+ @datatype(name="date")
+</doc>
+                </field>
+                <field tag="16" name="remark" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+
+</doc>
+                </field>
+                <field tag="17" name="purchaseCategoryGroups" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 负责采购的品种大类列表，英文逗号分隔，category_groups的group_code
+</doc>
+                </field>
+                <field tag="18" name="sellCategoryGroups" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 负责销售的品种大类列表，英文逗号分隔，category_groups的group_code
+</doc>
+                </field>
+                <field tag="19" name="createdAt" optional="false" privacy="false">
+                    <dataType>
+                        <kind>LONG</kind>
+                    </dataType>
+                    <doc>
+
+
+</doc>
+                </field>
+                <field tag="20" name="updatedAt" optional="false" privacy="false">
+                    <dataType>
+                        <kind>LONG</kind>
+                    </dataType>
+                    <doc>
+
+ 修改时间
+</doc>
+                </field>
+                <field tag="21" name="createdBy" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 创建者staff_id
+</doc>
+                </field>
+                <field tag="22" name="updatedBy" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 修改者staff_id
+</doc>
+                </field>
+            </fields>
+        </struct>
+        <struct namespace="com.isuwang.soa.admin.domain" name="TStaffEx">
+            <fields>
+                <field tag="1" name="id" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+
+</doc>
+                </field>
+                <field tag="2" name="orgId" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 组织机构ID
+</doc>
+                </field>
+                <field tag="3" name="loginName" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 登录用户名
+</doc>
+                </field>
+                <field tag="4" name="password" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 密码，md5
+</doc>
+                </field>
+                <field tag="5" name="name" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 姓名
+</doc>
+                </field>
+                <field tag="6" name="englishName" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 英文名
+</doc>
+                </field>
+                <field tag="7" name="gender" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 性别，1：男；2：女；
+</doc>
+                </field>
+                <field tag="8" name="disable" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 是否禁用，0：否；1：是；
+</doc>
+                </field>
+                <field tag="9" name="email" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+
+</doc>
+                </field>
+                <field tag="10" name="phone" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+
+</doc>
+                </field>
+                <field tag="11" name="wechat" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+
+</doc>
+                </field>
+                <field tag="12" name="qq" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+
+</doc>
+                </field>
+                <field tag="13" name="manager" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 是否管理者，0：否；1：是；
+ 如果是管理者，自动继承所在部门的数据权限
+</doc>
+                </field>
+                <field tag="14" name="districts" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 负责的业务的区域范围，英文逗号分割，区域表district的district_code
+</doc>
+                </field>
+                <field tag="15" name="lastLoginTime" optional="true" privacy="false">
+                    <dataType>
+                        <kind>DATE</kind>
+                    </dataType>
+                    <doc>
+
+ @datatype(name="date")
+</doc>
+                </field>
+                <field tag="16" name="remark" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+
+</doc>
+                </field>
+                <field tag="17" name="purchaseCategoryGroups" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 负责采购的品种大类列表，英文逗号分隔，category_groups的group_code
+</doc>
+                </field>
+                <field tag="18" name="sellCategoryGroups" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 负责销售的品种大类列表，英文逗号分隔，category_groups的group_code
+</doc>
+                </field>
+                <field tag="19" name="createdAt" optional="false" privacy="false">
+                    <dataType>
+                        <kind>LONG</kind>
+                    </dataType>
+                    <doc>
+
+
+</doc>
+                </field>
+                <field tag="20" name="updatedAt" optional="false" privacy="false">
+                    <dataType>
+                        <kind>LONG</kind>
+                    </dataType>
+                    <doc>
+
+ 修改时间
+</doc>
+                </field>
+                <field tag="21" name="createdBy" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 创建者staff_id
+</doc>
+                </field>
+                <field tag="22" name="updatedBy" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 修改者staff_id
+</doc>
+                </field>
+                <field tag="23" name="bindRoles" optional="true" privacy="false">
+                    <dataType>
+                        <kind>LIST</kind>
+                        <valueType>
+                            <kind>STRUCT</kind>
+                            <ref>com.isuwang.soa.admin.domain.TRole</ref>
+                        </valueType>
+                    </dataType>
+                    <doc>角色集合</doc>
+                </field>
+                <field tag="24" name="orgName" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>部门名称</doc>
+                </field>
+                <field tag="25" name="roleNames" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                </field>
+                <field tag="26" name="roleIds" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                </field>
+                <field tag="27" name="keyword" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                </field>
+                <field tag="28" name="useAuth" optional="true" privacy="false">
+                    <dataType>
+                        <kind>BOOLEAN</kind>
+                    </dataType>
+                </field>
+            </fields>
+        </struct>
+    </structs>
+    <enums>
+        <tenum namespace="com.isuwang.soa.admin.enums" name="OrganizationRegion">
+            <items>
+                <item>
+                    <label>ALL</label>
+                    <value>0</value>
+                    <doc>*未定义</doc>
+                </item>
+                <item>
+                    <label>SOUTHERN_CHINA</label>
+                    <value>1</value>
+                    <doc>*华南</doc>
+                </item>
+                <item>
+                    <label>EAST_CHINA</label>
+                    <value>2</value>
+                    <doc>*华东</doc>
+                </item>
+            </items>
+        </tenum>
+    </enums>
+</service>

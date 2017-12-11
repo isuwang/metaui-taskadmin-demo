@@ -1,0 +1,624 @@
+[0m[[0m[0minfo[0m] [0m[0mMain Scala API documentation to /Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/target/scala-2.12/api...[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.0.0:compile for Scala 2.12.4[0m
+[0m[[0m[0mdebug[0m] [0m[0mCalling Scaladoc with arguments:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-d[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/target/scala-2.12/api[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/classes:/Users/wahsonleung/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.4.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/.ivy2/cache/com.isuwang/dapeng-remoting-api/jars/dapeng-remoting-api-1.2.2.jar:/Users/wahsonleung/.m2/repository/com/isuwang/dapeng-core/1.2.2/dapeng-core-1.2.2.jar:/Users/wahsonleung/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.13.jar:/Users/wahsonleung/.ivy2/cache/com.isuwang/dapeng-registry-api/jars/dapeng-registry-api-1.2.2.jar:/Users/wahsonleung/.ivy2/cache/com.isuwang/dapeng-route-impl/jars/dapeng-route-impl-1.2.2.jar:/Users/wahsonleung/.ivy2/cache/com.isuwang/dapeng-route-api/jars/dapeng-route-api-1.2.2.jar:/Users/wahsonleung/.ivy2/cache/com.isuwang/dapeng-transaction-api/jars/dapeng-transaction-api-1.2.2.jar:/Users/wahsonleung/.ivy2/cache/com.google.code.gson/gson/jars/gson-2.3.1.jar:/Users/wahsonleung/.ivy2/cache/com.isuwang/dapeng-remoting-netty/jars/dapeng-remoting-netty-1.2.2.jar:/Users/wahsonleung/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.6.2.jar:/Users/wahsonleung/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.6.0.jar:/Users/wahsonleung/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.6.2.jar:/Users/wahsonleung/.ivy2/cache/io.netty/netty-all/jars/netty-all-4.1.6.Final.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/common/util/CallerFrom.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/common/util/RequestHeader.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/common/util/TPageRequest.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/common/util/TPageResponse.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/common/util/TreeNode.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/common/util/serializer/TPageRequestSerializer.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/common/util/serializer/TPageResponseSerializer.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/TaskAdminServiceClient.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/TaskAdminServiceCodec.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/TaskBusinessTypeServiceClient.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/TaskBusinessTypeServiceCodec.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/TaskSuggestionServiceClient.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/TaskSuggestionServiceCodec.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TAttachment.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TBusinessType.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TBusinessTypeRequest.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TBusinessTypeResponse.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TCreateTaskAttachment.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TCreateTaskLog.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TCreateTaskRequest.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TSaveBusinessType.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TSaveSuggestion.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TSaveTaskRemark.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TSuggestion.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TSuggestion4Picker.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TSuggestionRequest.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TSuggestionResponse.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TSumupTaskResult.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TSumupTotal.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TTask.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TTaskAttachment.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TTaskDetail.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TTaskItem.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TTaskItemRequest.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TTaskLog.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TTaskPickerContainer.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TTaskRemark.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TTaskRequest.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TTaskResponse.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TUpdateTaskRequest.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TAttachmentSerializer.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TBusinessTypeRequestSerializer.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TBusinessTypeResponseSerializer.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TBusinessTypeSerializer.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TCreateTaskAttachmentSerializer.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TCreateTaskLogSerializer.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TCreateTaskRequestSerializer.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TSaveBusinessTypeSerializer.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TSaveSuggestionSerializer.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TSaveTaskRemarkSerializer.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TSuggestion4PickerSerializer.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TSuggestionRequestSerializer.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TSuggestionResponseSerializer.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TSuggestionSerializer.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TSumupTaskResultSerializer.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TSumupTotalSerializer.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TTaskAttachmentSerializer.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TTaskDetailSerializer.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TTaskItemRequestSerializer.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TTaskItemSerializer.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TTaskLogSerializer.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TTaskPickerContainerSerializer.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TTaskRemarkSerializer.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TTaskRequestSerializer.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TTaskResponseSerializer.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TTaskSerializer.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TUpdateTaskRequestSerializer.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/enums/SuggestionType.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/enums/TaskCommunicationStyle.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/enums/TaskPriority.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/enums/TaskStatus.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/enums/TaskType.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/service/TaskAdminService.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/service/TaskBusinessTypeService.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/service/TaskSuggestionService.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/common/util/CallerFrom.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/common/util/RequestHeader.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/common/util/TPageRequest.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/common/util/TPageResponse.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/common/util/TreeNode.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/common/util/serializer/TPageRequestSerializer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/common/util/serializer/TPageResponseSerializer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceAsyncClient.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceClient.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceCodec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceAsyncClient.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceClient.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceCodec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskSuggestionServiceAsyncClient.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskSuggestionServiceClient.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskSuggestionServiceCodec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TAttachment.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TBusinessType.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TBusinessTypeRequest.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TBusinessTypeResponse.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TCreateTaskAttachment.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TCreateTaskLog.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TCreateTaskRequest.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TSaveBusinessType.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TSaveSuggestion.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TSaveTaskRemark.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TSuggestion.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TSuggestion4Picker.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TSuggestionRequest.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TSuggestionResponse.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TSumupTaskResult.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TSumupTotal.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TTask.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TTaskAttachment.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TTaskDetail.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TTaskItem.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TTaskItemRequest.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TTaskLog.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TTaskPickerContainer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TTaskRemark.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TTaskRequest.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TTaskResponse.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TUpdateTaskRequest.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TAttachmentSerializer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TBusinessTypeRequestSerializer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TBusinessTypeResponseSerializer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TBusinessTypeSerializer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TCreateTaskAttachmentSerializer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TCreateTaskLogSerializer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TCreateTaskRequestSerializer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TSaveBusinessTypeSerializer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TSaveSuggestionSerializer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TSaveTaskRemarkSerializer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TSuggestion4PickerSerializer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TSuggestionRequestSerializer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TSuggestionResponseSerializer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TSuggestionSerializer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TSumupTaskResultSerializer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TSumupTotalSerializer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TTaskAttachmentSerializer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TTaskDetailSerializer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TTaskItemRequestSerializer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TTaskItemSerializer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TTaskLogSerializer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TTaskPickerContainerSerializer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TTaskRemarkSerializer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TTaskRequestSerializer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TTaskResponseSerializer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TTaskSerializer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TUpdateTaskRequestSerializer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/enums/SuggestionType.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/enums/TaskCommunicationStyle.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/enums/TaskPriority.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/enums/TaskStatus.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/enums/TaskType.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/service/TaskAdminService.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/service/TaskBusinessTypeService.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/service/TaskSuggestionService.scala[0m
+[0m[[0m[33mwarn[0m] [0m[0mthere were 14 deprecation warnings (since 2.11.0); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TAttachmentSerializer.java:12:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TBusinessTypeRequestSerializer.java:12:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TBusinessTypeResponseSerializer.java:12:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TBusinessTypeSerializer.java:12:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TCreateTaskAttachmentSerializer.java:12:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TCreateTaskLogSerializer.java:12:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TCreateTaskRequestSerializer.java:12:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TSaveBusinessTypeSerializer.java:12:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TSaveSuggestionSerializer.java:12:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TSaveTaskRemarkSerializer.java:12:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TSuggestion4PickerSerializer.java:12:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TSuggestionRequestSerializer.java:12:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TSuggestionResponseSerializer.java:12:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TSuggestionSerializer.java:12:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TSumupTaskResultSerializer.java:12:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TSumupTotalSerializer.java:12:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TTaskAttachmentSerializer.java:12:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TTaskDetailSerializer.java:12:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TTaskItemRequestSerializer.java:12:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TTaskItemSerializer.java:12:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TTaskLogSerializer.java:12:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TTaskPickerContainerSerializer.java:12:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TTaskRemarkSerializer.java:12:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TTaskRequestSerializer.java:12:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TTaskResponseSerializer.java:12:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TTaskSerializer.java:12:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/serializer/TUpdateTaskRequestSerializer.java:12:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/service/TaskAdminService.java:10:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/service/TaskBusinessTypeService.java:10:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/service/TaskSuggestionService.java:10:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TAttachmentSerializer.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TBusinessTypeRequestSerializer.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TBusinessTypeResponseSerializer.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TBusinessTypeSerializer.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TCreateTaskAttachmentSerializer.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TCreateTaskLogSerializer.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TCreateTaskRequestSerializer.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TSaveBusinessTypeSerializer.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TSaveSuggestionSerializer.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TSaveTaskRemarkSerializer.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TSuggestion4PickerSerializer.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TSuggestionRequestSerializer.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TSuggestionResponseSerializer.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TSuggestionSerializer.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TSumupTaskResultSerializer.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TSumupTotalSerializer.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TTaskAttachmentSerializer.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TTaskDetailSerializer.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TTaskItemRequestSerializer.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TTaskItemSerializer.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TTaskLogSerializer.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TTaskPickerContainerSerializer.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TTaskRemarkSerializer.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TTaskRequestSerializer.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TTaskResponseSerializer.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TTaskSerializer.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/serializer/TUpdateTaskRequestSerializer.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TAttachment.scala:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TBusinessType.scala:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TBusinessTypeRequest.scala:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TBusinessTypeResponse.scala:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TCreateTaskAttachment.scala:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TCreateTaskLog.scala:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TCreateTaskRequest.scala:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TSaveBusinessType.scala:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TSaveSuggestion.scala:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TSaveTaskRemark.scala:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TSuggestion.scala:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TSuggestion4Picker.scala:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TSuggestionRequest.scala:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TSuggestionResponse.scala:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TSumupTaskResult.scala:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TSumupTotal.scala:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TTask.scala:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TTaskAttachment.scala:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TTaskDetail.scala:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TTaskItem.scala:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TTaskItemRequest.scala:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TTaskLog.scala:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TTaskPickerContainer.scala:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TTaskRemark.scala:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TTaskRequest.scala:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TTaskResponse.scala:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/domain/TUpdateTaskRequest.scala:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/common/util/CallerFrom.java:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/common/util/RequestHeader.java:5:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/common/util/TPageRequest.java:5:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/common/util/TPageResponse.java:5:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/common/util/TreeNode.java:5:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/service/TaskAdminService.scala:7:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/service/TaskBusinessTypeService.scala:7:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/service/TaskSuggestionService.scala:7:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/common/util/serializer/TPageRequestSerializer.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/common/util/serializer/TPageResponseSerializer.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/common/util/serializer/TPageRequestSerializer.java:12:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/common/util/serializer/TPageResponseSerializer.java:12:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/common/util/CallerFrom.scala:5:7: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m      /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m      ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/common/util/RequestHeader.scala:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/common/util/TPageRequest.scala:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/common/util/TPageResponse.scala:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/common/util/TreeNode.scala:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TAttachment.java:5:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TBusinessType.java:5:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TBusinessTypeRequest.java:5:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TBusinessTypeResponse.java:5:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TCreateTaskAttachment.java:5:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TCreateTaskLog.java:5:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TCreateTaskRequest.java:5:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TSaveBusinessType.java:5:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TSaveSuggestion.java:5:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TSaveTaskRemark.java:5:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TSuggestion.java:5:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TSuggestion4Picker.java:5:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TSuggestionRequest.java:5:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TSuggestionResponse.java:5:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TSumupTaskResult.java:5:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TSumupTotal.java:5:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TTask.java:5:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TTaskAttachment.java:5:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TTaskDetail.java:5:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TTaskItem.java:5:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TTaskItemRequest.java:5:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TTaskLog.java:5:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TTaskPickerContainer.java:5:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TTaskRemark.java:5:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TTaskRequest.java:5:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TTaskResponse.java:5:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/domain/TUpdateTaskRequest.java:5:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/TaskAdminServiceClient.java:10:7: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m      /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m      ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/TaskAdminServiceCodec.java:15:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/TaskBusinessTypeServiceClient.java:10:7: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m      /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m      ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/TaskBusinessTypeServiceCodec.java:15:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/TaskSuggestionServiceClient.java:10:7: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m      /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m      ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/TaskSuggestionServiceCodec.java:15:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/enums/SuggestionType.scala:5:7: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m      /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m      ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/enums/TaskCommunicationStyle.scala:5:7: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m      /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m      ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/enums/TaskPriority.scala:5:7: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m      /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m      ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/enums/TaskStatus.scala:5:7: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m      /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m      ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/enums/TaskType.scala:5:7: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m      /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m      ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/enums/SuggestionType.java:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/enums/TaskCommunicationStyle.java:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/enums/TaskPriority.java:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/enums/TaskStatus.java:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/java/com/isuwang/soa/task/enums/TaskType.java:3:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceAsyncClient.scala:10:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceClient.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskAdminServiceCodec.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceAsyncClient.scala:10:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceClient.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskBusinessTypeServiceCodec.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskSuggestionServiceAsyncClient.scala:10:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskSuggestionServiceClient.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wahsonleung/IdeaProjects/isuwang/task-admin/task-admin-api/src/main/scala/com/isuwang/soa/scala/task/TaskSuggestionServiceCodec.scala:8:9: Tag '@generated' is not recognised[0m
+[0m[[0m[33mwarn[0m] [0m[0m        /**[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m154 warnings found[0m
+[0m[[0m[0minfo[0m] [0m[0mMain Scala API documentation successful.[0m
