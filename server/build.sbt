@@ -25,7 +25,6 @@ lazy val task_admin_api = (project in file("task-admin-api"))
     libraryDependencies ++= Seq(
       "com.isuwang" % "dapeng-remoting-api" % "1.3.0",
       "com.isuwang" % "dapeng-remoting-netty" % "1.3.0"
-      // "com.isuwang" % "common-library" % "1.2.1"
     )
   ).enablePlugins(ThriftGeneratorPlugin)
 

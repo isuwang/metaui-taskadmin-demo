@@ -4,4 +4,4 @@
 target/
 task-admin-api/target/
 task-admin-service/target/
-*.log
+logs/
