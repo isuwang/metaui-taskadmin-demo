@@ -1,0 +1,150 @@
+<link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="h2-input.html">
+
+<!--
+
+```javascript
+
+<h2-input-date></h2-input-date>
+```
+-->
+<!--日期选择框-->
+<dom-module id="h2-input-date">
+    <template>
+        <h2-input
+                id="input"
+                value="{{value}}"
+                label=[[label]]
+                placeholder="[[placeholder]]"
+                required=[[required]]
+                min="[[min]]"
+                max="[[max]]"
+                readonly="[[readonly]]"
+                type="date">
+        </h2-input>
+    </template>
+    <script>
+        /**
+         * `h2-input-date`
+         *
+         * @customElement
+         * @polymer
+         * @demo demo/h2-input-date/index.html
+         */
+        class H2InputDate extends Polymer.Element {
+            static get properties() {
+                return {
+                    /**
+                     * 组件返回的时间字符串，默认格式yyyy-MM-dd
+                     */
+                    value: {
+                        type: String,
+                        notify: true,
+                        observer: "_valueChange"
+                    },
+                    /**
+                     * 根据时间字符串返回的时间戳,long型
+                     * （建议用time属性进行初始化赋值和取值）
+                     */
+                    time: {
+                        type: Number,
+                        notify: true,
+                        observer:"_timeChange"
+                    },
+                    /**
+                     * 组件标签名
+                     */
+                    label: {
+                        type: String
+                    },
+                    /**
+                     * 组件占位符
+                     */
+                    placeholder: {
+                        type: String
+                    },
+                    /**
+                     * 是否必填
+                     */
+                    required: {
+                        type: Boolean
+                    },
+                    /**
+                     * 是否只读
+                     */
+                    readonly: {
+                        type: Boolean
+                    },
+                    /**
+                     * 最小输入值(数字或日期时间)
+                     */
+                    min: {
+                        type: String
+                    },
+                    /**
+                     * 最大输入值(数字或日期时间)
+                     */
+                    max: {
+                        type: String
+                    }
+                };
+            }
+
+            static get is() {
+                return "h2-input-date";
+            }
+
+            /**
+             * 返回的时间字符串改变时，设置time为对应的long型的时间戳
+             * @param value
+             * @private
+             */
+            _valueChange(value) {
+                if (!this.value) {
+                    this.set("time", undefined);
+                    return;
+                }
+                let time = new Date(`${value} 00:00:00`).getTime();
+                this.set("time", time);
+            }
+
+            /**
+             * long型时间戳改变时，设置value为对应的yyyy-MM-dd格式的时间字符串
+             * @param time
+             * @private
+             */
+            _timeChange(time) {
+                if (!time) {
+                    this.set("value", undefined);
+                    return;
+                }
+                const date = new Date(time);
+                this.set("value", `${date.getFullYear()}-${this._preReplenish(date.getMonth() + 1, 2, "0")}-${this._preReplenish(date.getDate(), 2, "0")}`);
+            }
+
+            /**
+             * 前置填充
+             * @param {*} str
+             * @param {number} totalLen 填充后的长度
+             * @param {string} replenisher 填充的字符
+             */
+            _preReplenish(str, totalLen = 0, replenisher = "") {
+              return `${String(replenisher).repeat(Number(totalLen) - String(str).length)}${String(str)}`;
+            }
+            /**
+             * 获取输入框焦点
+             */
+            doFocus() {
+                this.root.querySelector("h2-input").doFocus();
+            }
+
+            /**
+             * 校验
+             */
+            validate(){
+                return this.$.input.validate();
+            }
+        }
+        window.customElements.define(H2InputDate.is, H2InputDate);
+    </script>
+</dom-module>

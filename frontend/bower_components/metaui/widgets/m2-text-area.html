@@ -1,0 +1,41 @@
+<link rel="import" href="../../polymer/polymer.html">
+<link rel="import" href="../../h2-elements/h2-textarea.html">
+<link rel="import" href="./m2-widget-base.html">
+<dom-module id="m2-text-area">
+  <template>
+    <style>
+      :host {
+        width: 100%;
+      }
+
+      h2-textarea {
+        width:100%;
+      }
+    </style>
+    <h2-textarea id="textArea"
+                 value="{{ value }}"
+                 rows="3"
+                 label="[[ metadata.label ]]"
+                 required="[[ metadata.required ]]"
+                 readonly="[[ !metadata.editable ]]"
+                 error-message="[[ metadata.prompt ]]"
+                 minlength="[[ metadata.minLength ]]"
+                 maxlength="[[ metadata.maxLength ]]"></h2-textarea>
+
+
+  </template>
+  <script>
+    class M2TextArea extends M2WidgetBase {
+      static get is() {
+        return "m2-text-area";
+      }
+
+      validate() {
+        // TODO
+        return this.$.textArea.validate();
+      }
+
+    }
+    customElements.define(M2TextArea.is, M2TextArea);
+  </script>
+</dom-module>

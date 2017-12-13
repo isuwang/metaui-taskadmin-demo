@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+
+  <title>meta-constructor demo</title>
+
+  <script>
+    if(!window.location.href.endsWith("?mock=mockData.js")) {
+      window.location.href = window.location.href + "?mock=mockData.js";
+    }
+  </script>
+
+  <script type="text/javascript" src="../../../h2-elements/utils/mock_setup.js"></script>
+
+  <script src="../../../webcomponentsjs/webcomponents-lite.js"></script>
+
+  <link rel="import" href="../../utils/meta-constructor.html">
+  <link rel="import" href="demo-all.html">
+  <link rel="import" href="../../../iron-demo-helpers/demo-snippet.html">
+  <link rel="import" href="../../../iron-demo-helpers/demo-pages-shared-styles.html">
+  <custom-style>
+    <style is="custom-style" include="demo-pages-shared-styles">
+      .centered {
+        max-width: 1500px;
+      }
+
+      demo-snippet {
+        --demo-snippet-code: {
+          max-height: 500px;
+        }
+      }
+    </style>
+  </custom-style>
+
+</head>
+
+<body unresolved class="centered">
+<h3>Demo</h3>
+<demo-snippet>
+  <template>
+    <demo-all></demo-all>
+    <script>
+    </script>
+  </template>
+</demo-snippet>
+</body>
+
+</html>
