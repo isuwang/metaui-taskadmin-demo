@@ -1,0 +1,27 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="task-admin-index.html">
+
+<dom-module id="task-admin-app">
+    <template>
+        <style>
+            :host {
+                display: block;
+            }
+        </style>
+        <task-admin-index></task-admin-index>
+    </template>
+
+    <script>
+        /**
+         * @customElement
+         * @polymer
+         */
+        class TaskAdminApp extends Polymer.Element {
+            static get is() {
+                return 'task-admin-app';
+            }
+        }
+
+        window.customElements.define(TaskAdminApp.is, TaskAdminApp);
+    </script>
+</dom-module>

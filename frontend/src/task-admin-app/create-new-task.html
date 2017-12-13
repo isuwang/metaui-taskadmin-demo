@@ -1,0 +1,187 @@
+<!--新建任务-->
+<link rel="import" href="./../../platform/custom-element/behaviors/common/o-base-behavior.html">
+<link rel="import" href="../../platform/custom-element/widgets/m2-company-picker.html">
+<link rel="import" href="../../platform/custom-element/widgets/m2-staff-picker.html">
+<link rel="import" href="../../platform/custom-element/widgets/m2-task-picker.html">
+<link rel="import" href="../../platform/custom-element/widgets/m2-question-input.html">
+<link rel="import" href="../../platform/custom-element/widgets/m2-improvement-input.html">
+<link rel="import" href="../../platform/custom-element/widgets/m2-task-business-type-picker.html">
+<link rel="import" href="../../platform/custom-element/widgets/m2-date.html">
+<link rel="import" href="../../platform/custom-element/widgets/m2-file.html">
+<link rel="import" href="../../bower_components/metaui/utils/meta-constructor.html">
+<link rel="import" href="../../bower_components/h2-elements/behaviors/tip-behavior.html">
+<link rel="import" href="../../bower_components/h2-elements/behaviors/ajax-behavior.html">
+<link rel="import" href="./../../bower_components/metaui/m2-form.html">
+<link rel="import" href="./widgets/widget-resources.html">
+<dom-module id="create-new-task">
+    <template>
+        <style>
+            :host {
+                /*为了label对齐，调整宽度*/
+                --h2-label: {
+                    width: 140px;
+                };
+            }
+        </style>
+        <div class="container">
+            <div>
+                <meta-constructor src="/dapeng/metadata"
+                                  metadata="{{ metadata }}"
+                                  meta-type="form"
+                                  option="[[ option ]]"
+                                  on-return="[[ onReturn() ]]"></meta-constructor>
+                <m2-form metadata="[[ metadata ]]"
+                         context="[[ context ]]"
+                         on-success="{{onFormSuccess()}}"
+                         on-error="{{onFormError()}}"></m2-form>
+            </div>
+        </div>
+    </template>
+    <script>
+        /**
+         * `task-tabs`
+         *
+         * @customElement
+         * @polymer
+         */
+        class CreateNewTask extends Polymer.mixinBehaviors([TipBehavior, OBaseBehavior,AjaxBehavior], Polymer.Element) {
+            static get properties() {
+                return {
+                    option: {
+                        type: Object,
+                        value: function () {
+                            return {
+                                serviceName: "com.isuwang.soa.task.service.TaskAdminService",
+                                version: "1.0.0",
+                                methodName: "createTask"
+                            }
+                        }
+                    },
+                    context: {
+                      type: Object,
+                    },
+                    initContext: {
+                         type: Object
+                    }
+                };
+            }
+
+            static get is() {
+                return "create-new-task";
+            }
+
+            onFormSuccess() {
+              return (data) => {
+                  this.hTip.success("保存成功");
+                  this.context = Object.assign({}, this.initContext);
+              }
+            }
+
+            onFormError() {
+              return (err) => {
+                this.hTip.success(`保存失败:${err}`);
+              }
+            }
+            onReturn() {
+                return (metadata) => {
+                    metadata.style =
+                        `
+
+                        h2{/*让标题居中*/
+                            text-align:center;
+                        }
+
+                        div.btns{/*控制保存按钮位置*/
+                            width: 81%;
+                        }
+
+                        .container {
+                            grid-template-columns: 30% 30%;
+                            grid-column-gap: 10%;
+                            grid-row-gap: 15px;
+                            justify-content: center;
+                        }
+
+                        #m2-form-taskSubject-editor {
+                            grid-row-start: 3;
+                            grid-column-end: span 2
+                        }
+                        #m2-form-problemDesc-editor {
+                            grid-row-start: 6;
+                            grid-column-end: span 2
+                        }
+                        #m2-form-resultDesc-editor {
+                            grid-row-start: 7;
+                            grid-column-end: span 2
+                        }
+                        #m2-form-questions-editor {
+                            grid-row-start: 8;
+                            grid-column-end: span 2
+                        }
+                        #m2-form-improvements-editor {
+                            grid-row-start: 9;
+                            grid-column-end: span 2
+                        }
+                        #m2-form-attachment-editor {
+                            grid-row-start: 10;
+                            grid-column-end: span 2
+                        }
+                        #m2-form-remark-editor {
+                            grid-row-start: 11;
+                            grid-column-end: span 2
+                        }
+                    `;
+
+                    metadata.fields.forEach((field) => {
+                        if (field.name == "planAt")
+                            field.onAttached = (element, root) => {
+                                root.watch(['type'], ({type}) => {
+                                    switch (type){
+                                      case 1:element.disabled=false;break;
+                                      case 2:
+                                      case 3:
+                                      default:
+                                        element.disabled = true;
+                                        element.value = undefined;
+                                        break;
+                                    }
+                                });
+                            };
+                        if (field.name == "status")
+                            field.onAttached = (element, root) => {
+                                root.watch(['type'], ({type}) => {
+                                    switch (type){
+                                        case 1:
+                                        case 2:element.value=1;break;
+                                        case 3:element.value=3;break;
+                                    }
+                                });
+                            };
+
+                        if (field.name == "problemDesc")
+                            field.onAttached = (element, root) => {
+                                root.watch(['businessTypeId'], ({businessTypeId}) => {
+                                    if(businessTypeId){
+                                        this.query({url:"/task/taskadmin/findBusinessTypes.do",data:{businessTypeId:businessTypeId}},(data)=>{
+                                            element.value=data.rows[0].suggestionContent
+                                        })
+                                    }
+
+                                });
+                            };
+                    });
+                    return metadata;
+                }
+            }
+          ready() {
+            super.ready();
+            const parentTaskId = this.getTabParam()['parentTaskId'];
+            const currUser = window.parent.uc.biz.currUser;
+            this.context = {parentTaskId,handlerId:currUser.id};
+            this.initContext = {parentTaskId,handlerId:currUser.id};
+          }
+        }
+
+        window.customElements.define(CreateNewTask.is, CreateNewTask);
+    </script>
+</dom-module>

@@ -1,0 +1,6 @@
+{
+  "name": "task-admin",
+  "short_name": "task-admin",
+  "start_url": "/",
+  "display": "standalone"
+}

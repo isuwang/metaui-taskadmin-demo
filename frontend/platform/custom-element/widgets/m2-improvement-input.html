@@ -1,0 +1,69 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/metaui/widgets/m2-widget-base.html">
+<link rel="import" href="../../../bower_components/h2-elements/o2-more-input.html">
+<link rel="import" href="../../../bower_components/h2-elements/h2-fetch.html">
+<link rel="import" href="../../../bower_components/h2-elements/behaviors/ajax-behavior.html">
+<dom-module id="m2-improvement-input">
+    <template>
+        <style>
+            :host {
+                width: 100%;
+            }
+        </style>
+        <h2-fetch request="[[ suggestionRequest ]]" response-body="{{ response }}"></h2-fetch>
+        <o2-more-input label="{{metadata.label}}"
+                       attr-for-label="suggestionContent"
+                       attr-for-more-value="suggestionId"
+                       attr-for-input-value="suggestionRemark"
+                       display-fields="{{displayFields}}"
+                       more-items="{{response.content}}"
+                       value="{{value}}"
+        ></o2-more-input>
+    </template>
+    <script>
+      class M2ImprovementInput extends M2WidgetBase {
+        static get is() {
+          return "m2-improvement-input";
+        }
+
+        static get properties() {
+          return {
+            suggestionRequest: {
+              type: Object,
+              value: {
+                url: "/task/taskadmin/findAllSuggestions4PickerByType.do?type=2",
+                credentials: "include"
+              }
+            },
+            value:{
+              type: Array,
+              value: function() {
+                return [];
+              }
+            },
+            moreItems: {
+              type: Array
+            },
+
+            displayFields: {
+              type: Array,
+              value: [{field: 'suggestionContent', label: '改进措施'}]
+            },
+              response:{
+                  type:Object
+              }
+
+          }
+
+        }
+
+
+        validate() {
+          return this.metadata.required ? !!this.value : true;
+        }
+
+      }
+
+      customElements.define(M2ImprovementInput.is, M2ImprovementInput);
+    </script>
+</dom-module>

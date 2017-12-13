@@ -1,0 +1,88 @@
+<!--任务操作日志列表-->
+<link rel="import" href="./../../platform/custom-element/behaviors/common/o-format-behavior.html">
+<link rel="import" href="./../../bower_components/h2-elements/h2-grid.html">
+<dom-module id="show-task-logs">
+    <template>
+        <style>
+            :host {
+                overflow-y: auto;
+            }
+        </style>
+        <div>
+            <m2-grid metadata="[[ logGridMetadata ]]" value="[[ taskLogs ]]"></m2-grid>
+        </div>
+    </template>
+    <script>
+        /**
+         * `task-tabs`
+         *
+         * @customElement
+         * @polymer
+         */
+        class ShowTaskLogs extends Polymer.mixinBehaviors([OFormatBehavior], Polymer.Element) {
+            static get properties() {
+                return {
+                    logGridMetadata: {
+                        type: Object,
+                        value: function () {
+                            return {
+                                grids: [
+                                    {
+                                        label: "操作记录号",
+                                        name: "taskId"
+                                    },
+                                    {
+                                        label: "操作名",
+                                        name: "operation"
+                                    },
+                                    {
+                                        label: "字段",
+                                        name: "operField"
+                                    },
+                                    {
+                                        label: "原值",
+                                        name: "oldValue"
+                                    },
+                                    {
+                                        label: "修改后值",
+                                        name: "newValue"
+                                    },
+                                    {
+                                        label: "操作人",
+                                        name: "updatedBy"
+                                    },
+                                    {
+                                        label: "操作时间",
+                                        name: "updatedAt",
+                                        render: (model) => {
+                                            return this.formatDate(model.updatedAt, 'yyyy-MM-dd HH:mm:ss')
+                                        }
+                                    },
+                                ]
+                            }
+                        }
+                    },
+                    taskLogs: {
+                        type: Array,
+                        value: [],
+                        observer: "__taskLogsChanged"
+                    }
+                };
+            }
+
+            static get is() {
+                return "show-task-logs";
+            }
+
+            __taskLogsChanged(taskLogs) {
+                if (!taskLogs || taskLogs.length == 0) {
+
+                }
+            }
+
+
+        }
+
+        window.customElements.define(ShowTaskLogs.is, ShowTaskLogs);
+    </script>
+</dom-module>

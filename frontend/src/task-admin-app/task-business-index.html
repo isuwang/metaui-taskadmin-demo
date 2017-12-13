@@ -1,0 +1,123 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/metaui/utils/meta-constructor.html">
+<link rel="import" href="../../bower_components/metaui/m2-crud.html">
+<link rel="import" href="../../platform/custom-element/widgets/m2-task-business-type-picker.html">
+<link rel="import" href="../../platform/custom-element/widgets/m2-improvement.html">
+<link rel="import" href="../../platform/custom-element/widgets/m2-question.html">
+<link rel="import" href="./../../platform/custom-element/behaviors/common/o-format-behavior.html">
+<link rel="import" href="./widgets/widget-resources.html">
+
+<dom-module id="task-business-index">
+  <template>
+    <style>
+
+    </style>
+      <h2-fetch request="[[ suggestionRequest ]]" response-body="{{ suggestions }}"></h2-fetch>
+    <meta-constructor src="/dapeng/metadata"
+                      metadata="{{ metadata }}"
+                      option="[[ option ]]"
+                      on-return="[[ onReturn() ]]"></meta-constructor>
+    <m2-crud metadata="[[ metadata ]]"
+             key-for-page-result="pageResponse.results"
+             result-decorator="[[ _resultChange() ]]"></m2-crud>
+  </template>
+  <script>
+    /**
+     * `task-business-index`
+     *
+     * @customElement
+     * @polymer
+     */
+    class TaskBusinessIndex extends Polymer.mixinBehaviors([OFormatBehavior], Polymer.Element) {
+      static get properties() {
+        return {
+          option: {
+            type: Object,
+            value: function () {
+              return {
+                serviceName: "com.isuwang.soa.task.service.TaskBusinessTypeService",
+                version: "1.0.0",
+                methodName: "findBusinessTypes"
+              }
+            }
+          },
+            suggestionRequest: {
+                type: Object,
+                value: {
+                    url: "/task/taskadmin/findAllBusinessTypes4Picker.do",
+                    credentials: "include"
+                }
+            },
+            suggestions:{
+              type:Object
+            }
+        };
+      }
+
+      static get is() {
+        return "task-business-index";
+      }
+
+      _resultChange() {
+        return (result) => {
+          result.rows = result.rows.map(row => {
+            row.actions = ["business_edit", "business_delete"];
+            return row;
+          });
+
+          return result;
+        }
+      }
+
+      onReturn() {
+        return (metadata) => {
+
+          metadata.actions.filter((item) => {
+            return item.actionId == "business_add"
+          })[0].formMeta.style =
+            `
+                        .container {
+	                        grid-template-columns: 100%;
+
+                        }
+                        .container__item {
+                             width: 500px;
+                        }
+                    `;
+
+          metadata.result.actions['business_edit'].formMeta.style =
+            `
+                        .container {
+	                        grid-template-columns: 100%;
+
+                        }
+                        .container__item {
+                             width: 500px;
+                        }
+                    `;
+
+          //翻译列表字段
+          metadata.result.grids.forEach(item => {
+            if (item.name == "updatedAt") {
+              item.render = ({updatedAt}) => {
+                return updatedAt ? this.formatDate(updatedAt, 'yyyy-MM-dd HH:mm:ss') : ""
+              }
+            }
+              if (item.name == "createdAt") {
+                  item.render = ({createdAt}) => {
+                      return createdAt ? this.formatDate(createdAt, 'yyyy-MM-dd HH:mm:ss') : ""
+                  }
+              }
+
+          });
+
+
+          return metadata;
+        }
+      }
+
+    }
+
+    window.customElements.define(TaskBusinessIndex.is, TaskBusinessIndex);
+  </script>
+</dom-module>

@@ -1,0 +1,106 @@
+<!--任务备注-->
+<link rel="import" href="./../../platform/custom-element/behaviors/common/o-format-behavior.html">
+<link rel="import" href="./../../bower_components/h2-elements/behaviors/ajax-behavior.html">
+<link rel="import" href="./../../bower_components/h2-elements/h2-button.html">
+<link rel="import" href="./../../platform/custom-element/O2/o2-textarea.html">
+<dom-module id="show-task-remark">
+    <template>
+        <style>
+            :host .remark-border {
+                border-bottom: 1px dashed;
+            }
+        </style>
+        <div id="remark-content">
+            <template is="dom-repeat" items="{{taskRemarks}}">
+                <div class="remark-border">
+                    <div>{{item.updaterName}} [[formatDate(item.updatedAt,'yyyy-MM-dd HH:mm:ss')]]</div>
+                    <o2-textarea metadata="[[textareaMeta]]" value="{{item.content}}"
+                                 context="{{item}}"></o2-textarea>
+                </div>
+            </template>
+        </div>
+        <div>
+            <h2-button on-click="addRemark">添加备注</h2-button>
+        </div>
+    </template>
+    <script>
+        /**
+         * `task-tabs`
+         *
+         * @customElement
+         * @polymer
+         */
+        class ShowTaskRemark extends Polymer.mixinBehaviors([OFormatBehavior, AjaxBehavior], Polymer.Element) {
+            static get properties() {
+                return {
+                    textareaMeta: {
+                        type: Object,
+                        value: {
+                            editable: true,
+                            element: "o2-textarea",
+                            label: "",
+                            name: "content"
+                        }
+                    },
+                    taskRemarks: {
+                        type: Array,
+                        notify: true
+                    },
+                    context: {
+                        type: Object,
+                        notify: true,
+                        value: function () {
+                            return {};
+                        }
+                    },
+                    taskId: {
+                        type: Number
+                    }
+                };
+            }
+
+            static get is() {
+                return "show-task-remark";
+            }
+
+
+            ready() {
+                super.ready();
+                this.addEventListener("o2-value-changed", (e) => {
+                    e.stopPropagation();
+                    let context = e.detail.context;
+                    let content = e.detail.value;
+                    if (context && context.id) {
+                        this.post({
+                            url: "/task/taskadmin/updateTaskRemark.do",
+                            data: {id: context.id, taskId: this.taskId, content: content}
+                        }, () => {
+                            alert("更新成功！");
+                        });
+                    } else {
+                        this.post({
+                            url: "/task/taskadmin/createTaskRemark.do",
+                            data: {taskId: this.taskId, content: content}
+                        }, () => {
+                            alert("保存成功！");
+                        });
+                    }
+
+                });
+                console.log("remark 初始化好了");
+            }
+
+            addRemark() {
+                if (!this.taskRemarks) {
+                    this.set("taskRemarks", []);
+                }
+                this.taskRemarks.push({updatedAt: new Date().getTime()});
+                this.notifyPath("taskRemarks.splice");
+            }
+
+
+        }
+
+        window.customElements.define(ShowTaskRemark.is, ShowTaskRemark);
+    </script>
+</dom-module>

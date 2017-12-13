@@ -1,0 +1,137 @@
+<link rel="import" href="../../../../bower_components/iron-selector/iron-selector.html">
+<dom-module id="o-status-select">
+    <template>
+        <style include="o-style">
+            :host {
+                /*vertical-align: middle;*/
+                /*height: 36px;*/
+                display: inline-block;
+                margin-top: 5px;
+            }
+            :host iron-selector{
+                display: inline-block;
+            }
+
+            :host iron-selector > * {
+                padding: 5px;
+                font-size: 12px;
+                cursor: pointer;
+                color: #337ab7;
+                margin-right: 5px;
+            }
+
+            /*hover*/
+            :host .status:hover {
+                background-color: #70A8CB;
+                color: #fff;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                border-radius: 5px;
+            }
+            :host iron-selector > .iron-selected{
+                color: #fff;
+            }
+            /*选中*/
+            :host .iron-selected {
+                background-color: #70A8CB;
+                color: #fff;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                border-radius: 5px;
+            }
+
+        </style>
+        <template is="dom-if" if="{{!noLabel}}">
+            <label>[[label]]</label>：
+        </template>
+        <iron-selector selected="{{selectedData}}" attr-for-selected="status-item">
+            <template is="dom-repeat" items="{{statusItems}}">
+                <span class="status" status-item="{{item.value}}">
+                    <span>{{item.label}}</span>
+                    <template is="dom-if" if="{{!noCount}}">
+                        (<span>{{item.count}}</span>)
+                    </template>
+                </span>
+            </template>
+        </iron-selector>
+    </template>
+    <script>
+        Polymer({
+            is: "o-status-select",
+            properties: {
+                /**
+                 *
+                 * 标签名字
+                 * eg：1
+                 *
+                 * @attribute label
+                 * @type {String}
+                 */
+                label: {
+                    type: String
+                },
+                noLabel:{
+                    type: Boolean,
+                    value:false
+                },
+                noCount:{
+                    type: Boolean,
+                    value:false
+                },
+
+                /**
+                 *
+                 * 初始选择项和statusItems的value值相对应
+                 * eg：1
+                 *
+                 * @attribute selected
+                 * @type {String}
+                 */
+                selectedData: {
+                    type: String,
+                    reflectToAttribute: true,
+                    notify: true
+                },
+                /**
+                 *
+                 * 需要展示的数据项
+                 * eg：[{value:1,label:"全部",count:"19"}]
+                 *
+                 * @attribute statusItems
+                 * @type {Array}
+                 */
+                statusItems: {
+                    type: Array,
+                    notify:true,
+                    value: function () {
+                        return []
+                    }
+                }
+            },
+            listeners: {
+                "tap": "itemSelected"
+            },
+//            observers: [
+//                'statusItemsChanged(statusItems.*)'
+//            ],
+            itemSelected: function () {
+                //点击的时候触发一个事件，给调用者捕获。事件名："on-item-selected"
+                this.fire("status-selected", {"status": this.selectedData}, {bubbles: false});
+            }
+//            statusItemsChanged: function (changeRecord) {
+//                debugger;
+//                var self = this;
+//                console.log(changeRecord,typeof changeRecord);
+//                if (Array.isArray(changeRecord.base)&&changeRecord.length>0) {
+//                    changeRecord.value.forEach(function (e, i) {
+//                        console.log(e.count, i);
+//                        self.set('statusItems.'+i+'.count', e.count);
+//                    });
+//
+//                }
+
+//            }
+
+        })
+    </script>
+</dom-module>

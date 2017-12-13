@@ -1,0 +1,58 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/metaui/widgets/m2-widget-base.html">
+<link rel="import" href="../../../bower_components/h2-elements/h2-mask.html">
+<link rel="import" href="../../../bower_components/h2-elements/h2-textarea.html">
+<dom-module id="o2-textarea">
+    <template>
+        <style>
+            :host {
+                width: 100%;
+            }
+        </style>
+        <h2-mask id="mask" label="[[metadata.label]]">
+            <h2-textarea id="textarea"
+                         placeholder="[[metadata.label]]"
+                         readonly="{{!metadata.editable}}"
+                         rows="3"
+                         required="[[metadata.required]]"
+                         value="{{value}}"></h2-textarea>
+        </h2-mask>
+    </template>
+    <script>
+        class O2Textarea extends M2WidgetBase {
+            static get is() {
+                return "o2-textarea";
+            }
+
+            static get properties() {
+                return {}
+
+            }
+
+
+            validate() {
+                return this.$.textarea.validate();
+            }
+
+            ready() {
+                super.ready();
+                this.$.mask.addEventListener("value-changed", (e) => {
+                    e.stopPropagation();
+                    this.dispatchEvent(new CustomEvent('o2-value-changed', {
+                        composed: true,
+                        bubbles: true,
+                        detail: {
+                            value: e.detail.value,
+                            name: this.metadata.name,
+                            context: this.context
+                        }
+                    }));
+                })
+            }
+
+
+        }
+
+        customElements.define(O2Textarea.is, O2Textarea);
+    </script>
+</dom-module>

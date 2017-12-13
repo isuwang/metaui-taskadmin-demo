@@ -1,0 +1,36 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../../bower_components/h2-elements/h2-input.html">
+<link rel="import" href="../../../bower_components/metaui/widgets/m2-widget-base.html">
+<dom-module id="m2-file">
+    <template>
+        <h2-input
+                value="{{ value }}"
+                label="[[ metadata.label ]]"
+                required="[[ metadata.required]]"
+                error-message="[[ metadata.prompt ]]"
+                type="file"
+                disabled="[[ metadata.disabled]]"
+                readonly="[[ !metadata.editable ]]">
+
+        </h2-input>
+    </template>
+    <script>
+        class M2File extends M2WidgetBase {
+            static get is() {
+                return "m2-file";
+            }
+
+            validate() {
+                return this.metadata.required && this.root.querySelector("#innerInput").files.length > 0
+            }
+
+            ready() {
+                super.ready();
+
+            }
+        }
+
+        window.customElements.define(M2File.is, M2File);
+    </script>
+</dom-module>

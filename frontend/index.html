@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+  <title>task-admin</title>
+  <meta name="description" content="task-admin description">
+
+  <!-- See https://goo.gl/OOhYW5 -->
+  <link rel="manifest" href="/manifest.json">
+
+  <script>
+      if (!window.location.href.endsWith("?mock=./src/task-admin-app/mock/mockData.js")) {
+          window.location.href = window.location.href + "?mock=./src/task-admin-app/mock/mockData.js";
+      }
+  </script>
+  <script type="text/javascript" src="bower_components/h2-elements/utils/mock_setup.js"></script>
+
+  <script src="/bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+  <link rel="import" href="/src/task-admin-app/task-admin-app.html">
+</head>
+<body>
+<task-admin-app></task-admin-app>
+</body>
+</html>

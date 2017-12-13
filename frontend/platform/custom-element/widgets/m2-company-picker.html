@@ -1,0 +1,66 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/metaui/widgets/m2-widget-base.html">
+<link rel="import" href="../../../bower_components/h2-elements/h2-mask.html">
+<link rel="import" href="../../../bower_components/h2-elements/h2-picker.html">
+<dom-module id="m2-company-picker">
+    <template>
+        <style>
+            :host {
+                width: 100%;
+            }
+        </style>
+        <h2-picker id="input"
+                   label="[[metadata.label]]"
+                   placeholder="[[metadata.label]]"
+                   readonly="{{!metadata.editable}}"
+                   required="[[metadata.required]]"
+                   multi="[[metadata.mutil]]"
+                   attr-for-value="id"
+                   attr-for-label="name"
+                   display-fields="[[displayFields]]"
+                   items-init-query-url="/crm/complete/findCompanyListByIds.do"
+                   items-query-url="/crm/complete/findCompaniesByKeyword.do"
+                   items-query-params="[[itemsQueryParams]]"
+                   value="{{value}}"></h2-picker>
+    </template>
+    <script>
+        class M2CompanyPicker extends M2WidgetBase {
+            static get is() {
+                return "m2-company-picker";
+            }
+
+            static get properties() {
+                return {
+                    itemsInitQueryUrl: {
+                        type: String,
+                    },
+                    displayFields: {
+                        type: Array,
+                        value: [{field: 'name', label: '公司名称'},
+                            {field: 'customerPhone', label: '联系电话'},
+                            {field: 'customerName', label: '联系人'}
+                        ]
+                    },
+                    itemsQueryParams: {
+                        type: Object,
+                        value: {
+                            limit: 10,
+                            type: 3,
+                            credited: 0
+                        }
+                    }
+
+                }
+
+            }
+
+            validate() {
+                return this.$.input.validate();
+            }
+
+
+        }
+
+        customElements.define(M2CompanyPicker.is, M2CompanyPicker);
+    </script>
+</dom-module>

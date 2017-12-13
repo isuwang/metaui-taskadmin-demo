@@ -1,0 +1,59 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/metaui/widgets/m2-widget-base.html">
+<link rel="import" href="../../../bower_components/h2-elements/h2-fetch.html">
+<link rel="import" href="../../../bower_components/h2-elements/h2-select.html">
+<link rel="import" href="../../../bower_components/h2-elements/behaviors/ajax-behavior.html">
+<dom-module id="m2-improvement">
+    <template>
+        <style>
+            :host {
+                width: 100%;
+            }
+        </style>
+        <h2-fetch request="[[ suggestionRequest ]]" response-body="{{ response }}"></h2-fetch>
+        <h2-select
+                id="select"
+                label="{{metadata.label}}"
+                items="{{response.content}}"
+                attr-for-value="suggestionId"
+                attr-for-label="suggestionContent"
+                multi="{{metadata.multi}}"
+                value="{{value}}"></h2-select>
+    </template>
+    <script>
+        class M2Improvement extends M2WidgetBase {
+            static get is() {
+                return "m2-improvement";
+            }
+
+            static get properties() {
+                return {
+                    suggestionRequest: {
+                        type: Object,
+                        value: {
+                            url: "/task/taskadmin/findAllSuggestions4PickerByType.do?type=2",
+                            credentials: "include"
+                        }
+                    },
+                    value: {
+                        type: String,
+                        notify: true
+                    },
+                    response:{
+                        type:Object
+                    }
+                }
+
+            }
+
+
+            validate() {
+                return this.$.select.validate();
+            }
+
+
+        }
+
+        customElements.define(M2Improvement.is, M2Improvement);
+    </script>
+</dom-module>

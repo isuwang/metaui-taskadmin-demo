@@ -1,0 +1,206 @@
+<!--编辑任务-->
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="./../../platform/custom-element/behaviors/common/o-base-behavior.html">
+<link rel="import" href="../../platform/custom-element/O2/o2-input.html">
+<link rel="import" href="../../platform/custom-element/O2/o2-select.html">
+<link rel="import" href="../../platform/custom-element/O2/o2-textarea.html">
+<link rel="import" href="../../platform/custom-element/O2/o2-company-picker.html">
+<link rel="import" href="../../platform/custom-element/O2/o2-staff-picker.html">
+<link rel="import" href="../../platform/custom-element/O2/o2-task-picker.html">
+<link rel="import" href="../../platform/custom-element/O2/o2-input-date.html">
+<link rel="import" href="../../platform/custom-element/O2/o2-question-input.html">
+<link rel="import" href="../../platform/custom-element/O2/o2-improvement-input.html">
+<link rel="import" href="../../platform/custom-element/O2/o2-task-business-type-picker.html">
+<link rel="import" href="../../bower_components/metaui/utils/meta-constructor.html">
+<link rel="import" href="./../../bower_components/metaui/m2-form.html">
+<link rel="import" href="./../../bower_components/h2-elements/h2-tip.html">
+<link rel="import" href="./../../bower_components/h2-elements/h2-fetch.html">
+<link rel="import" href="./task-tabs.html">
+<dom-module id="task-edit">
+  <template>
+    <style>
+      :host {
+        /*为了label对齐，调整宽度*/
+        --h2-label: {
+          width: 140px;
+        };
+      }
+    </style>
+    <div class="container">
+      <div>
+        <meta-constructor src="/dapeng/metadata"
+                          metadata="{{ metadata }}"
+                          meta-type="form"
+                          option="[[ option ]]"
+                          on-return="[[ onReturn() ]]"></meta-constructor>
+        <m2-form id="form" metadata="[[ metadata ]]"
+                 context="[[ taskDetail ]]"
+                 on-success="{{onFormSuccess()}}">
+        </m2-form>
+        <h2-tip id="tip" type="error"></h2-tip>
+        <h2-fetch id="fetchIt"></h2-fetch>
+      </div>
+    </div>
+  </template>
+  <script>
+    /**
+     * `task-tabs`
+     *
+     * @customElement
+     * @polymer
+     */
+    class TaskEdit extends Polymer.mixinBehaviors([OBaseBehavior], Polymer.Element) {
+      static get properties() {
+        return {
+          taskId: {
+            type: String
+          },
+          taskDetail: {
+            type: Object
+          },
+          option: {
+            type: Object,
+            value: function () {
+              return {
+                serviceName: "com.isuwang.soa.task.service.TaskAdminService",
+                version: "1.0.0",
+                methodName: "updateTask"
+              }
+            }
+          },
+          oldTaskDetail: {
+            type: Object
+          }
+        };
+      }
+
+      static get is() {
+        return "task-edit";
+      }
+
+      onReturn() {
+        return (metadata) => {
+
+          metadata.fields.push({
+            "name": "tabs",
+            "label": "tabs",
+            "required": true,
+            "element": "task-tabs",
+            "editable": true,
+            "visible": true
+          });
+          metadata.style =
+            `
+              h2{/*让标题居中*/
+                  text-align:center;
+              }
+
+              div.btns{/*控制保存按钮位置*/
+                  width: 81%;
+              }
+
+              .container {
+                  display: grid;
+                  grid-template-columns: 30% 30%;
+                  grid-column-gap: 10%;
+                  grid-row-gap: 15px;
+                  justify-content: center;
+              }
+              #m2-form-taskSubject-editor {
+                  grid-row-start: 3;
+                  grid-column-end: span 2
+              }
+              #m2-form-problemDesc-editor {
+                  grid-row-start: 6;
+                  grid-column-end: span 2
+              }
+              #m2-form-resultDesc-editor {
+                  grid-row-start: 7;
+                  grid-column-end: span 2
+              }
+              #m2-form-questions-editor {
+                  grid-row-start: 8;
+                  grid-column-end: span 2
+              }
+              #m2-form-improvements-editor {
+                  grid-row-start: 9;
+                  grid-column-end: span 2
+              }
+              #m2-form-tabs-editor {
+                  grid-row-start: 10;
+                  grid-column-end: span 2
+              }
+           `;
+          return metadata;
+        }
+      }
+
+      onFormSuccess() {
+        return (data) => {
+          console.log(data);
+          this._fetchTaskDetail();
+        }
+      }
+
+      _fetchTaskDetail() {
+        const searchParams = new URLSearchParams();
+        searchParams.append("taskId", this.taskId);
+        const request = {
+          url: "/task/taskadmin/findTaskDetailById.do",
+          method: "POST",
+          body: searchParams,
+          credentials: "include"
+        };
+
+        /*this.$.fetchIt.fetchIt(request).then(res => res.json())
+          .then(data => {
+            this.oldTaskDetail = JSON.parse(JSON.stringify(data));
+            // 注意：最后才给taskDetail赋值，taskDetail变更会引起一系列的数据联动
+            this.taskDetail = data;
+          }).catch(err => console.log(err));*/
+      }
+
+      ready() {
+        super.ready();
+
+        this.taskId = this.getTabParam()['taskId'];
+
+        this._fetchTaskDetail();
+
+        const tidy = (arr = []) => {
+          return arr.map(item => `${item.suggestionId}/${item.suggestionRemark}`)
+            .sort().join(";");
+        };
+
+        this.addEventListener("o2-value-changed", (e) => {
+          const {name, value} = e.detail;
+
+          let shouldUpdate = false;
+
+          // 数据比对，避免错误触发请求
+          if (name === "questions" || name === "improvements") {
+
+            shouldUpdate = tidy(this.oldTaskDetail[name]) !== tidy(value);
+          } else {
+            shouldUpdate = !Object.is(JSON.stringify(this.oldTaskDetail[name]), JSON.stringify(value));
+          }
+
+           shouldUpdate && this.__throttle(this.$.form.submit.bind(this.$.form));
+        });
+
+      }
+
+
+      __throttle(fn, args = [], timeout = 200) {
+        if (this.__throttle.id) {
+          clearTimeout(this.__throttle.id);
+        }
+        this.__throttle.id = setTimeout(() => {
+          Function.prototype.isPrototypeOf(fn) && fn.apply(null, args);
+        }, timeout);
+      }
+    }
+
+    window.customElements.define(TaskEdit.is, TaskEdit);
+  </script>
+</dom-module>

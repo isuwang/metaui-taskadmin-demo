@@ -1,0 +1,40 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/metaui/widgets/m2-widget-base.html">
+<link rel="import" href="../../../bower_components/h2-elements/h2-radio.html">
+<dom-module id="m2-radio">
+    <template>
+        <h2-radio
+                id="radio"
+                value="{{value}}"
+                label=[[metadata.label]]
+                items="[[ metadata.candidates ]]"
+                attr-for-label="[[ metadata.candidateLabel ]]"
+                attr-for-value="[[ metadata.candidateValue ]]"
+                required=[[required]]
+                readonly="{{!metadata.editable}}"></h2-radio>
+    </template>
+    <script>
+        class M2Radio extends M2WidgetBase {
+            static get is() {
+                return "m2-radio";
+            }
+
+            static get properties() {
+                return {
+                    value: {
+                        type: String,
+                        notify: true
+                    }
+                }
+
+            }
+
+            validate() {
+                return this.$.radio.validate();
+            }
+
+        }
+
+        customElements.define(M2Radio.is, M2Radio);
+    </script>
+</dom-module>

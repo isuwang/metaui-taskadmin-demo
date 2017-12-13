@@ -1,0 +1,46 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/metaui/widgets/m2-widget-base.html">
+<link rel="import" href="../../../bower_components/h2-elements/h2-input-date.html">
+<dom-module id="m2-date">
+    <template>
+        <style>
+            :host {
+                width: 100%;
+            }
+        </style>
+        <h2-input-date
+                id="input"
+                time="{{value}}"
+                label=[[metadata.label]]
+                placeholder="[[metadata.label]]"
+                required=[[metadata.required]]
+                min="[[metadata.min]]"
+                max="[[metadata.max]]"
+                readonly="{{!metadata.editable}}"></h2-input-date>
+    </template>
+    <script>
+        class M2Date extends M2WidgetBase {
+            static get is() {
+              return "m2-date";
+            }
+
+            static get properties(){
+                return {
+                    value: {
+                        type: String,
+                        notify: true
+                    }
+                }
+
+            }
+
+
+            validate() {
+              return this.$.input.validate();
+            }
+
+        }
+
+        customElements.define(M2Date.is, M2Date);
+    </script>
+</dom-module>

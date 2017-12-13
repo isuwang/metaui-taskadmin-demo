@@ -1,0 +1,147 @@
+<!--父/子任务列表-->
+<link rel="import" href="./../../platform/custom-element/behaviors/common/o-base-behavior.html">
+<link rel="import" href="./../../bower_components/h2-elements/h2-grid.html">
+<link rel="import" href="./../../bower_components/h2-elements/h2-button.html">
+<link rel="import" href="./create-new-task.html">
+<dom-module id="show-parent-child-task-list">
+  <template>
+    <style>
+      :host .container {
+        display: flex;
+        justify-content: flex-end;
+        flex-flow: row wrap;
+      }
+
+      :host .grid {
+        margin-top: 5px;
+      }
+    </style>
+    <div class="container">
+      <!--<h2-button on-click="addSubTask">新增子任务</h2-button>-->
+      <m2-grid class="grid" metadata="[[ taskGridMetadata ]]" value="[[ taskList ]]"></m2-grid>
+    </div>
+  </template>
+  <script>
+    /**
+     * `task-tabs`
+     *
+     * @customElement
+     * @polymer
+     */
+    class ShowParentChildTaskList extends Polymer.mixinBehaviors([OBaseBehavior], Polymer.Element) {
+      static get properties() {
+        return {
+          taskGridMetadata: {
+            type: Object,
+            value: function () {
+              return {
+                actions: {
+                  unbindSubTask: {
+                    actionId: 'unbindSubTask',
+                    actionName: "解绑",
+                    operType: 1,
+                    formMeta: {
+                      confirm: "确认解绑？",
+                      formUrl: "/task/taskadmin/unbindSubTask.do",
+                      sendAsSearchParams: true,
+                      fields: [
+                        {
+                          name: "id",
+                          required: true
+                        }
+                      ]
+                    }
+                  }
+                },
+                grids: [
+                  {
+                    label: "任务编号",
+                    name: "taskNo"
+                  },
+                  {
+                    label: "父/子任务",
+                    name: "operation"
+                  },
+                  {
+                    label: "公司名",
+                    name: "companyName"
+                  },
+                  {
+                    label: "主题",
+                    name: "taskSubject"
+                  },
+                  {
+                    label: "状态",
+                    name: "status"
+                  },
+                  {
+                    label: "优先级",
+                    name: "priority"
+                  },
+                  {
+                    label: "业务类型",
+                    name: "businessTypeId"
+                  },
+                  {
+                    label: "计划日期",
+                    name: "planAt"
+                  },
+                  {
+                    label: "更新时间",
+                    name: "updatedAt"
+                  },
+                  {
+                    label: "经办人",
+                    name: "updatedBy"
+                  },
+                  {
+                    label: "操作",
+                    metaType: {
+                      type: "ACTION"
+                    },
+                    name: "actions"
+                  },
+                ]
+              }
+            }
+          },
+          taskChildren: {
+            type: Array
+          },
+          taskId:{
+            type:Number
+          },
+          taskList: {
+            type: Array,
+            computed: "computeTaskList(taskChildren)",
+//            value: [{
+//              taskType: "待办事项",
+//              taskNo: 1032234234234234234,
+//              companyName: "快速网有限公司",
+//              taskSubject: "这个主题",
+//              planAt: "2017-10-11至2017-10-12",
+//              actions: ["unbindSubTask"]
+//            }],
+
+          }
+        };
+      }
+
+      computeTaskList(taskChildren) {
+        return taskChildren.map(child => Object.assign(child, {actions: ["unbindSubTask"]}));
+      }
+
+      static get is() {
+        return "show-parent-child-task-list";
+      }
+
+      /*addSubTask() {
+        this.addTabar(`task-admin-add-sub-task`, "新增子任务", "/task/taskadmin/task_detail_add.jsp", {parentTaskId: this.taskId});
+      }*/
+
+
+    }
+
+    window.customElements.define(ShowParentChildTaskList.is, ShowParentChildTaskList);
+  </script>
+</dom-module>

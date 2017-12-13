@@ -1,0 +1,120 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/metaui/widgets/m2-widget-base.html">
+<link rel="import" href="./../../bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="./../../bower_components/paper-tabs/paper-tab.html">
+<link rel="import" href="../../bower_components/metaui/m2-crud.html">
+<link rel="import" href="show-task-logs.html">
+<link rel="import" href="show-task-attachment.html">
+<link rel="import" href="show-parent-child-task-list.html">
+<link rel="import" href="show-task-remark.html">
+<link rel="import" href="./widgets/widget-resources.html">
+
+<dom-module id="task-tabs">
+    <template>
+        <style>
+            :host {
+                display: table;
+                width:100%;
+
+                /*增加tab按钮样式*/
+                --paper-tabs: {
+                    padding-left: 10px;
+                    box-shadow: none;
+                    color: #666;
+                    font-weight: bold;
+                    font-weight: normal;
+                    height: 34px;
+                    font-size:0;
+                };
+
+                --paper-tab: {
+                    border-top-left-radius: 4px;
+                    border-top-right-radius: 4px;
+                    border-left: 1px solid #ddd;
+                    border-right: 1px solid #ddd;
+                    border-top: 1px solid #ddd;
+                    color: #666;
+                    background-color: #f0f0f0;
+                    width:80px;
+                    font-size:14px;
+                };
+            }
+
+            /*paper-tab选中样式*/
+            :host paper-tabs[noink][no-bar] paper-tab.iron-selected {
+                color: #337ab7;
+                font-weight: bold;
+                background-color: #ffffff;
+            }
+
+            :host * {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+
+            :host .container {
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                width:100%;
+                padding: 10px;
+                height: 300px;
+                overflow: auto;
+            }
+        </style>
+        <paper-tabs selected="{{tabindex}}" noink no-bar scrollable hide-scroll-buttons>
+            <paper-tab>父/子任务</paper-tab>
+            <paper-tab>附件</paper-tab>
+            <paper-tab>日志</paper-tab>
+            <paper-tab>备注</paper-tab>
+        </paper-tabs>
+        <div class="container">
+            <!--父/子任务-->
+            <template is="dom-if" if="{{showTabIndex(0,tabindex)}}">
+                <show-parent-child-task-list task-children="[[ context.children ]]" task-id="{{context.id}}"></show-parent-child-task-list>
+            </template>
+            <!--附件-->
+            <template is="dom-if" if="{{showTabIndex(1,tabindex)}}">
+                <show-task-attachment task-attachments="[[ context.taskAttachments ]]" task-id="{{context.id}}"></show-task-attachment>
+            </template>
+            <!--日志-->
+            <template is="dom-if" if="{{showTabIndex(2,tabindex)}}">
+                <show-task-logs task-logs="[[ context.taskLogs ]]"></show-task-logs>
+            </template>
+            <!--备注-->
+            <template is="dom-if" if="{{showTabIndex(3,tabindex)}}">
+                <show-task-remark task-remarks="[[ context.taskRemarks ]]" task-id="{{context.id}}"></show-task-remark>
+            </template>
+        </div>
+
+    </template>
+    <script>
+        /**
+         * `task-tabs`
+         *
+         * @customElement
+         * @polymer
+         */
+        class TaskTabs extends M2WidgetBase {
+            static get properties() {
+                return {
+                    tabindex:{
+                        type:Number,
+                        value:0
+                    }
+                };
+            }
+
+            static get is() {
+                return "task-tabs";
+            }
+
+            showTabIndex(index, tabindex) {
+                return index == tabindex;
+            }
+
+        }
+
+        window.customElements.define(TaskTabs.is, TaskTabs);
+    </script>
+</dom-module>
