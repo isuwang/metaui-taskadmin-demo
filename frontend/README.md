@@ -1,4 +1,4 @@
-# \<task-admin\>使用教程
+# \<metaui-taskadmin-demo\>前端部分使用教程
 
 ##1.安装npm
 ##2.安装bower
@@ -11,7 +11,7 @@ $ npm install -g polymer-cli
 ```
 ##4.进入项目根目录，下载组件库bower_components
 ```
-$ cd task-admin
+$ cd metaui-taskadmin-demo/frontend
 $ bower install --save
 ```
 ##5.启动项目
