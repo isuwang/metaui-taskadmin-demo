@@ -1,8 +1,8 @@
-<link rel="import" href="../../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../../bower_components/metaui/widgets/m2-widget-base.html">
-<link rel="import" href="../../../bower_components/h2-elements/o2-more-input.html">
-<link rel="import" href="../../../bower_components/h2-elements/h2-fetch.html">
-<link rel="import" href="../../../bower_components/h2-elements/behaviors/ajax-behavior.html">
+<link rel="import" href="../../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../../bower_components/metaui/widgets/m2-widget-base.html">
+<link rel="import" href="../../../../bower_components/h2-elements/o2-more-input.html">
+<link rel="import" href="../../../../bower_components/h2-elements/h2-fetch.html">
+<link rel="import" href="../../../../bower_components/h2-elements/behaviors/ajax-behavior.html">
 <dom-module id="m2-improvement-input">
     <template>
         <style>
@@ -35,9 +35,9 @@
                 credentials: "include"
               }
             },
-            value:{
+            value: {
               type: Array,
-              value: function() {
+              value: function () {
                 return [];
               }
             },
@@ -49,9 +49,9 @@
               type: Array,
               value: [{field: 'suggestionContent', label: '改进措施'}]
             },
-              response:{
-                  type:Object
-              }
+            response: {
+              type: Object
+            }
 
           }
 

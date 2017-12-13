@@ -1,7 +1,7 @@
-<link rel="import" href="../../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../../bower_components/metaui/widgets/m2-widget-base.html">
-<link rel="import" href="../../../bower_components/h2-elements/h2-mask.html">
-<link rel="import" href="../../../bower_components/h2-elements/h2-picker.html">
+<link rel="import" href="../../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../../bower_components/metaui/widgets/m2-widget-base.html">
+<link rel="import" href="../../../../bower_components/h2-elements/h2-mask.html">
+<link rel="import" href="../../../../bower_components/h2-elements/h2-picker.html">
 <dom-module id="o2-staff-picker">
     <template>
         <style>
@@ -25,58 +25,58 @@
         </h2-mask>
     </template>
     <script>
-        class O2StaffPicker extends M2WidgetBase {
-            static get is() {
-                return "o2-staff-picker";
-            }
-
-            static get properties() {
-                return {
-                    itemsInitQueryUrl: {
-                        type: String,
-                    },
-                    displayFields: {
-                        type: Array,
-                        value: [{field: 'name', label: '员工名称'}]
-                    },
-
-                    /**
-                     * useAuth:是否查询全部
-                     * filterDeleteStaff:是否过滤被删除的员工 0否 1是
-                     */
-                    itemsQueryParams: {
-                        type: Object,
-                        value: {
-                            limit: 10,
-                            useAuth: false,
-                            filterDeleteStaff: 0
-                        }
-                    }
-
-                }
-            }
-
-            validate() {
-                return this.$.input.validate();
-            }
-
-            ready() {
-                super.ready();
-                this.$.mask.addEventListener("value-changed", (e) => {
-                    e.stopPropagation();
-                    this.dispatchEvent(new CustomEvent('o2-value-changed', {
-                        composed: true,
-                        bubbles: true,
-                        detail: {
-                            value: e.detail.value,
-                            name: this.metadata.name,
-                            context: this.context
-                        }
-                    }));
-                });
-            }
+      class O2StaffPicker extends M2WidgetBase {
+        static get is() {
+          return "o2-staff-picker";
         }
 
-        customElements.define(O2StaffPicker.is, O2StaffPicker);
+        static get properties() {
+          return {
+            itemsInitQueryUrl: {
+              type: String,
+            },
+            displayFields: {
+              type: Array,
+              value: [{field: 'name', label: '员工名称'}]
+            },
+
+            /**
+             * useAuth:是否查询全部
+             * filterDeleteStaff:是否过滤被删除的员工 0否 1是
+             */
+            itemsQueryParams: {
+              type: Object,
+              value: {
+                limit: 10,
+                useAuth: false,
+                filterDeleteStaff: 0
+              }
+            }
+
+          }
+        }
+
+        validate() {
+          return this.$.input.validate();
+        }
+
+        ready() {
+          super.ready();
+          this.$.mask.addEventListener("value-changed", (e) => {
+            e.stopPropagation();
+            this.dispatchEvent(new CustomEvent('o2-value-changed', {
+              composed: true,
+              bubbles: true,
+              detail: {
+                value: e.detail.value,
+                name: this.metadata.name,
+                context: this.context
+              }
+            }));
+          });
+        }
+      }
+
+      customElements.define(O2StaffPicker.is, O2StaffPicker);
     </script>
 </dom-module>

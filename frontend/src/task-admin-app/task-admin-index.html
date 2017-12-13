@@ -1,153 +1,152 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
-<link rel="import" href="./../../platform/custom-element/behaviors/common/o-base-behavior.html">
-<link rel="import" href="./../../platform/custom-element/behaviors/common/o-format-behavior.html">
+<link rel="import" href="widgets/behaviors/common/o-base-behavior.html">
+<link rel="import" href="widgets/behaviors/common/o-format-behavior.html">
 <link rel="import" href="../../bower_components/metaui/utils/meta-constructor.html">
 <link rel="import" href="../../bower_components/metaui/m2-crud.html">
-<link rel="import" href="../../platform/custom-element/O2/o2-input.html">
-<link rel="import" href="../../platform/custom-element/O2/o2-select.html">
-<link rel="import" href="../../platform/custom-element/O2/o2-textarea.html">
-<link rel="import" href="../../platform/custom-element/O2/o2-company-picker.html">
-<link rel="import" href="../../platform/custom-element/O2/o2-staff-picker.html">
-<link rel="import" href="../../platform/custom-element/O2/o2-input-date.html">
-<link rel="import" href="../../platform/custom-element/widgets/m2-company-picker.html">
-<link rel="import" href="../../platform/custom-element/widgets/m2-staff-picker.html">
-<link rel="import" href="../../platform/custom-element/widgets/m2-task-picker.html">
-<link rel="import" href="../../platform/custom-element/widgets/m2-task-business-type-picker.html">
+<link rel="import" href="widgets/O2/o2-input.html">
+<link rel="import" href="widgets/O2/o2-select.html">
+<link rel="import" href="widgets/O2/o2-textarea.html">
+<link rel="import" href="widgets/O2/o2-company-picker.html">
+<link rel="import" href="widgets/O2/o2-staff-picker.html">
+<link rel="import" href="widgets/O2/o2-input-date.html">
+<link rel="import" href="widgets/m2/m2-company-picker.html">
+<link rel="import" href="widgets/m2/m2-task-picker.html">
+<link rel="import" href="widgets/m2/m2-task-business-type-picker.html">
 <link rel="import" href="task-tabs.html">
 <link rel="import" href="task-edit.html">
 
 <dom-module id="task-admin-index">
-  <template>
-    <style>
-      .tip-house {
-        margin: 10px 5px;
-        padding: 0px 15px;
-      }
+    <template>
+        <style>
+            .tip-house {
+                margin: 10px 5px;
+                padding: 0px 15px;
+            }
 
-      .tip-house > span {
-        padding: 0px 5px;
-      }
+            .tip-house > span {
+                padding: 0px 5px;
+            }
 
-      .sumup-block {
-        border: 1px dashed grey;
-        padding: 10px;
-        margin-bottom: 40px;
-      }
-    </style>
-    <!--<show-parent-child-task-list></show-parent-child-task-list>-->
-    <!-- 测试-->
-    <div class="sumup-block">
-      <div class="tip-house">
+            .sumup-block {
+                border: 1px dashed grey;
+                padding: 10px;
+                margin-bottom: 40px;
+            }
+        </style>
+        <!--<show-parent-child-task-list></show-parent-child-task-list>-->
+        <!-- 测试-->
+        <div class="sumup-block">
+            <div class="tip-house">
         <span>
           <span>今日待办事项：</span>
           <a href="javascript:void(0)" onclick="[[ _bindClickHandler('todo') ]]">任务数（[[result.todayTodo.taskCount]]）公司数（[[result.todayTodo.companyCount]]）</a>
         </span>
-        <span>
+                <span>
           <span>超时待办事项：</span>
           <a href="javascript:void(0)" onclick="[[ _bindClickHandler('expire') ]]">任务数（[[result.expiredTodo.taskCount]]）公司数（[[result.expiredTodo.companyCount]]）</a>
         </span>
-        <span>
+                <span>
           <span>未处理投诉：</span>
           <a href="javascript:void(0)" onclick="[[ _bindClickHandler('suspending') ]]">任务数（[[result.unhandleComplaint.taskCount]]）公司数（[[result.unhandleComplaint.companyCount]]）</a>
         </span>
-        <span>
+                <span>
           <span>处理中投诉：</span>
           <a href="javascript:void(0)" onclick="[[ _bindClickHandler('handling') ]]">任务数（[[result.handlingComplaint.taskCount]]）公司数（[[result.handlingComplaint.companyCount]]）</a>
         </span>
-      </div>
-      <m2-grid metadata="[[ sumUpMetadata ]]" value="[[ result.sumupTotal ]]"></m2-grid>
-    </div>
+            </div>
+            <m2-grid metadata="[[ sumUpMetadata ]]" value="[[ result.sumupTotal ]]"></m2-grid>
+        </div>
 
 
-    <meta-constructor src="/dapeng/metadata"
-                      metadata="{{ metadata }}"
-                      option="[[ option ]]"
-                      on-return="[[ onReturn() ]]"></meta-constructor>
-    <m2-crud class="main"
-             id="crud"
-             metadata="[[ metadata ]]"
-             context="[[context]]"
-             key-for-page-result="pageResponse.results"
-             result-decorator="[[ _getResultChangeHandler() ]]"></m2-crud>
-  </template>
-  <script>
-    /**
-     * `task-admin-index`
-     *
-     * @customElement
-     * @polymer
-     */
-    class TaskAdminIndex extends Polymer.mixinBehaviors([OBaseBehavior, OFormatBehavior], Polymer.Element) {
-      static get properties() {
-        return {
-          option: {
-            type: Object,
-            value: function () {
-              return {
-                serviceName: "com.isuwang.soa.task.service.TaskAdminService",
-                version: "1.0.0",
-                methodName: "findTasks"
+        <meta-constructor src="/dapeng/metadata"
+                          metadata="{{ metadata }}"
+                          option="[[ option ]]"
+                          on-return="[[ onReturn() ]]"></meta-constructor>
+        <m2-crud class="main"
+                 id="crud"
+                 metadata="[[ metadata ]]"
+                 context="[[context]]"
+                 key-for-page-result="pageResponse.results"
+                 result-decorator="[[ _getResultChangeHandler() ]]"></m2-crud>
+    </template>
+    <script>
+      /**
+       * `task-admin-index`
+       *
+       * @customElement
+       * @polymer
+       */
+      class TaskAdminIndex extends Polymer.mixinBehaviors([OBaseBehavior, OFormatBehavior], Polymer.Element) {
+        static get properties() {
+          return {
+            option: {
+              type: Object,
+              value: function () {
+                return {
+                  serviceName: "com.isuwang.soa.task.service.TaskAdminService",
+                  version: "1.0.0",
+                  methodName: "findTasks"
+                }
               }
+            },
+            sumUpMetadata: {
+              type: Object,
+              value: {
+                grids: [
+                  {
+                    label: "任务类型",
+                    name: "taskTypeName"
+                  },
+                  {
+                    label: "任务个数（个）",
+                    name: "taskCount"
+                  },
+                  {
+                    label: "公司数（家）",
+                    name: "companyCount"
+                  },
+                  {
+                    label: "计划日期",
+                    name: "planAtFromTo"
+                  },
+                  {
+                    label: "更新日期",
+                    name: "updatedAtFromTo"
+                  },
+                ]
+              }
+            },
+            context: {
+              type: Object
+            },
+            result: {
+              type: Object
             }
-          },
-          sumUpMetadata: {
-            type: Object,
-            value: {
-              grids: [
-                {
-                  label: "任务类型",
-                  name: "taskTypeName"
-                },
-                {
-                  label: "任务个数（个）",
-                  name: "taskCount"
-                },
-                {
-                  label: "公司数（家）",
-                  name: "companyCount"
-                },
-                {
-                  label: "计划日期",
-                  name: "planAtFromTo"
-                },
-                {
-                  label: "更新日期",
-                  name: "updatedAtFromTo"
-                },
-              ]
-            }
-          },
-          context: {
-            type: Object
-          },
-          result: {
-            type: Object
-          }
-        };
-      }
-
-      static get is() {
-        return "task-admin-index";
-      }
-
-      _getResultChangeHandler() {
-
-        return (result) => {
-          result.rows = result.rows.map(row => {
-            row.actions = ["task_update"];
-            return row;
-          });
-
-
-          this.set("result", result);
-          return result;
+          };
         }
-      }
+
+        static get is() {
+          return "task-admin-index";
+        }
+
+        _getResultChangeHandler() {
+
+          return (result) => {
+            result.rows = result.rows.map(row => {
+              row.actions = ["task_update"];
+              return row;
+            });
+
+
+            this.set("result", result);
+            return result;
+          }
+        }
 
 
         onReturn() {
-            return (metadata) => {
-                metadata.query.style = `
+          return (metadata) => {
+            metadata.query.style = `
                 .conditions {
                   grid-row-gap: 10px;
                   grid-column-gap: 30px;
@@ -173,18 +172,19 @@
                   grid-column-start: 4
                 }
               `;
-                metadata.result.actions['task_update']
-                    .formMeta.fields.push({
-                    "name": "tabs",
-                    "label": "tabs",
-                    "required": true,
-                    "element": "task-tabs",
-                    "editable": true,
-                    "visible": true
-                });
+            metadata.result.actions['task_update']
+              .formMeta.fields.push(
+              {
+                "name": "tabs",
+                "label": "tabs",
+                "required": true,
+                "element": "task-tabs",
+                "editable": true,
+                "visible": true
+              });
 
-                metadata.result.actions['task_update']
-                    .formMeta.style = `
+            metadata.result.actions['task_update']
+              .formMeta.style = `
                   h2{/*让标题居中*/
                   text-align:center;
               }
@@ -226,9 +226,9 @@
               }
                 `;
 
-                /*给新增弹窗增加样式*/
-                metadata.actions[0].formMeta.style =
-                    `
+              /*给新增弹窗增加样式*/
+            metadata.actions[0].formMeta.style =
+              `
                 h2{/*让标题居中*/
                             text-align:center;
                         }
@@ -274,123 +274,111 @@
                         }
                     `;
 
-                //翻译列表字段
-                metadata.result.grids.forEach(item => {
-                    if (item.name == "status") {
-                        item.render = (model) => {
-                            switch (model.status) {
-                                case 1:
-                                    return "待处理";
-                                    break;
-                                case 2:
-                                    return "处理中";
-                                    break;
-                                case 3:
-                                    return "已处理";
-                                    break;
-                                case 4:
-                                    return "无需处理";
-                                    break;
-                            }
-                        }
-                    }
-                    if (item.name == "type") {
-                        item.render = (model) => {
-                            switch (model.type) {
-                                case 1:
-                                    return "待办事项";
-                                    break;
-                                case 2:
-                                    return "投诉";
-                                    break;
-                                case 3:
-                                    return "回访记录";
-                                    break;
-                            }
-                        }
-                    }
-                    if (item.name == "priority") {
-                        item.render = (model) => {
-                            switch (model.priority) {
-                                case 1:
-                                    return "高";
-                                    break;
-                                case 2:
-                                    return "中";
-                                    break;
-                                case 3:
-                                    return "低";
-                                    break;
-                                default:
-                                    return "";
-                                    break;
-                            }
-                        }
-                    }
-                    if (item.name == "planAt") {
-                        item.render = ({planAt}) => {
-                            return planAt ? this.formatDate(planAt, 'yyyy-MM-dd HH:mm:ss') : ""
-                        }
-                    }
-                    if (item.name == "updatedAt") {
-                        item.render = ({updatedAt}) => {
-                            return updatedAt ? this.formatDate(updatedAt, 'yyyy-MM-dd HH:mm:ss', "") : ""
-                        }
-                    }
-                });
-                return metadata;
-            }
+            //翻译列表字段
+            metadata.result.grids.forEach(item => {
+              if (item.name == "status") {
+                item.render = (model) => {
+                  switch (model.status) {
+                    case 1:
+                      return "待处理";
+                    case 2:
+                      return "处理中";
+                    case 3:
+                      return "已处理";
+                    case 4:
+                      return "无需处理";
+                  }
+                }
+              }
+              if (item.name == "type") {
+                item.render = (model) => {
+                  switch (model.type) {
+                    case 1:
+                      return "待办事项";
+                    case 2:
+                      return "投诉";
+                    case 3:
+                      return "回访记录";
+                  }
+                }
+              }
+              if (item.name == "priority") {
+                item.render = (model) => {
+                  switch (model.priority) {
+                    case 1:
+                      return "高";
+                    case 2:
+                      return "中";
+                    case 3:
+                      return "低";
+                    default:
+                      return "";
+                  }
+                }
+              }
+              if (item.name == "planAt") {
+                item.render = ({planAt}) => {
+                  return planAt ? this.formatDate(planAt, 'yyyy-MM-dd HH:mm:ss') : ""
+                }
+              }
+              if (item.name == "updatedAt") {
+                item.render = ({updatedAt}) => {
+                  return updatedAt ? this.formatDate(updatedAt, 'yyyy-MM-dd HH:mm:ss', "") : ""
+                }
+              }
+            });
+            return metadata;
+          }
         }
 
-      _bindClickHandler(type) {
+        _bindClickHandler(type) {
 
-        return (e) => {
-          e.preventDefault();
-          console.log(type);
-          let curDate = new Date();
-          switch (type) {
-            case "todo":
-              const planAtStart = new Date(curDate.getFullYear(), curDate.getMonth(), curDate.getDate(), 0, 0, 0).getTime();
-              const planAtEnd = new Date(curDate.getFullYear(), curDate.getMonth(), curDate.getDate() + 1, 0, 0, 0).getTime();
-              this.context = {
-                type: 1,
-                status: 12,
-                planAtStart,
-                planAtEnd,
-                limit: 15
-              };
-              break;
-            case "expire":
-              this.context = {
-                type: 1,
-                status: 12,
-                planAtEnd: new Date(curDate.getFullYear(), curDate.getMonth(), curDate.getDate(), 0, 0, 0).getTime(),
-                limit: 15
-              };
-              break;
-            case "suspending":
-              this.context = {
-                taskType: 2,
-                status: 1,
-                type: 2,
-                limit: 15
-              };
-              break;
-            case "handling":
-              this.context = {
-                taskType: 2,
-                status: 2,
-                type: 2,
-                limit: 15
-              };
-              break;
+          return (e) => {
+            e.preventDefault();
+            let curDate = new Date();
+            switch (type) {
+              case "todo":
+                const planAtStart = new Date(curDate.getFullYear(), curDate.getMonth(), curDate.getDate(), 0, 0, 0).getTime();
+                const planAtEnd = new Date(curDate.getFullYear(), curDate.getMonth(), curDate.getDate() + 1, 0, 0, 0).getTime();
+                this.context = {
+                  type: 1,
+                  status: 12,
+                  planAtStart,
+                  planAtEnd,
+                  limit: 15
+                };
+                break;
+              case "expire":
+                this.context = {
+                  type: 1,
+                  status: 12,
+                  planAtEnd: new Date(curDate.getFullYear(), curDate.getMonth(), curDate.getDate(), 0, 0, 0).getTime(),
+                  limit: 15
+                };
+                break;
+              case "suspending":
+                this.context = {
+                  taskType: 2,
+                  status: 1,
+                  type: 2,
+                  limit: 15
+                };
+                break;
+              case "handling":
+                this.context = {
+                  taskType: 2,
+                  status: 2,
+                  type: 2,
+                  limit: 15
+                };
+                break;
+            }
+
+            this.$.crud.refresh();
           }
-
-          this.$.crud.refresh();
         }
       }
-    }
 
-    window.customElements.define(TaskAdminIndex.is, TaskAdminIndex);
-  </script>
+      window.customElements.define(TaskAdminIndex.is, TaskAdminIndex);
+    </script>
 </dom-module>

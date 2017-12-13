@@ -1,4 +1,4 @@
-<link rel="import" href="../../../../bower_components/iron-selector/iron-selector.html">
+<link rel="import" href="../../../../../bower_components/iron-selector/iron-selector.html">
 <dom-module id="o-status-select">
     <template>
         <style include="o-style">
@@ -8,7 +8,8 @@
                 display: inline-block;
                 margin-top: 5px;
             }
-            :host iron-selector{
+
+            :host iron-selector {
                 display: inline-block;
             }
 
@@ -28,9 +29,11 @@
                 -moz-border-radius: 5px;
                 border-radius: 5px;
             }
-            :host iron-selector > .iron-selected{
+
+            :host iron-selector > .iron-selected {
                 color: #fff;
             }
+
             /*选中*/
             :host .iron-selected {
                 background-color: #70A8CB;
@@ -56,82 +59,65 @@
         </iron-selector>
     </template>
     <script>
-        Polymer({
-            is: "o-status-select",
-            properties: {
-                /**
-                 *
-                 * 标签名字
-                 * eg：1
-                 *
-                 * @attribute label
-                 * @type {String}
-                 */
-                label: {
-                    type: String
-                },
-                noLabel:{
-                    type: Boolean,
-                    value:false
-                },
-                noCount:{
-                    type: Boolean,
-                    value:false
-                },
+      Polymer({
+        is: "o-status-select",
+        properties: {
+          /**
+           *
+           * 标签名字
+           * eg：1
+           *
+           * @attribute label
+           * @type {String}
+           */
+          label: {
+            type: String
+          },
+          noLabel: {
+            type: Boolean,
+            value: false
+          },
+          noCount: {
+            type: Boolean,
+            value: false
+          },
 
-                /**
-                 *
-                 * 初始选择项和statusItems的value值相对应
-                 * eg：1
-                 *
-                 * @attribute selected
-                 * @type {String}
-                 */
-                selectedData: {
-                    type: String,
-                    reflectToAttribute: true,
-                    notify: true
-                },
-                /**
-                 *
-                 * 需要展示的数据项
-                 * eg：[{value:1,label:"全部",count:"19"}]
-                 *
-                 * @attribute statusItems
-                 * @type {Array}
-                 */
-                statusItems: {
-                    type: Array,
-                    notify:true,
-                    value: function () {
-                        return []
-                    }
-                }
-            },
-            listeners: {
-                "tap": "itemSelected"
-            },
-//            observers: [
-//                'statusItemsChanged(statusItems.*)'
-//            ],
-            itemSelected: function () {
-                //点击的时候触发一个事件，给调用者捕获。事件名："on-item-selected"
-                this.fire("status-selected", {"status": this.selectedData}, {bubbles: false});
+          /**
+           *
+           * 初始选择项和statusItems的value值相对应
+           * eg：1
+           *
+           * @attribute selected
+           * @type {String}
+           */
+          selectedData: {
+            type: String,
+            reflectToAttribute: true,
+            notify: true
+          },
+          /**
+           *
+           * 需要展示的数据项
+           * eg：[{value:1,label:"全部",count:"19"}]
+           *
+           * @attribute statusItems
+           * @type {Array}
+           */
+          statusItems: {
+            type: Array,
+            notify: true,
+            value: function () {
+              return []
             }
-//            statusItemsChanged: function (changeRecord) {
-//                debugger;
-//                var self = this;
-//                console.log(changeRecord,typeof changeRecord);
-//                if (Array.isArray(changeRecord.base)&&changeRecord.length>0) {
-//                    changeRecord.value.forEach(function (e, i) {
-//                        console.log(e.count, i);
-//                        self.set('statusItems.'+i+'.count', e.count);
-//                    });
-//
-//                }
-
-//            }
-
-        })
+          }
+        },
+        listeners: {
+          "tap": "itemSelected"
+        },
+        itemSelected: function () {
+          //点击的时候触发一个事件，给调用者捕获。事件名："on-item-selected"
+          this.fire("status-selected", {"status": this.selectedData}, {bubbles: false});
+        }
+      })
     </script>
 </dom-module>

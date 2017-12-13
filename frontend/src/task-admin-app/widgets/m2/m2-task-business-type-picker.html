@@ -1,8 +1,8 @@
-<link rel="import" href="../../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../../bower_components/metaui/widgets/m2-widget-base.html">
-<link rel="import" href="../../../bower_components/h2-elements/h2-mask.html">
-<link rel="import" href="../../../bower_components/h2-elements/h2-picker.html">
-<link rel="import" href="../../../bower_components/h2-elements/h2-fetch.html">
+<link rel="import" href="../../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../../bower_components/metaui/widgets/m2-widget-base.html">
+<link rel="import" href="../../../../bower_components/h2-elements/h2-mask.html">
+<link rel="import" href="../../../../bower_components/h2-elements/h2-picker.html">
+<link rel="import" href="../../../../bower_components/h2-elements/h2-fetch.html">
 <dom-module id="m2-task-business-type-picker">
     <template>
         <style>
@@ -24,38 +24,38 @@
                    value="{{value}}"></h2-picker>
     </template>
     <script>
-        class M2TaskBusinessTypePicker extends M2WidgetBase {
-            static get is() {
-                return "m2-task-business-type-picker";
-            }
-
-            static get properties() {
-                return {
-                    taskRequest: {
-                        type: Object,
-                        value: {
-                            url: "/task/taskadmin/findAllBusinessTypes4Picker.do",
-                            credentials: "include"
-                        }
-                    },
-                    taskItems: {
-                        type: Array
-                    },
-                    displayFields: {
-                        type: Array,
-                        value: [{field: 'label', label: '业务类型'}]
-                    }
-
-                }
-            }
-
-            validate() {
-                return this.$.input.validate();
-            }
-
+      class M2TaskBusinessTypePicker extends M2WidgetBase {
+        static get is() {
+          return "m2-task-business-type-picker";
         }
 
+        static get properties() {
+          return {
+            taskRequest: {
+              type: Object,
+              value: {
+                url: "/task/taskadmin/findAllBusinessTypes4Picker.do",
+                credentials: "include"
+              }
+            },
+            taskItems: {
+              type: Array
+            },
+            displayFields: {
+              type: Array,
+              value: [{field: 'label', label: '业务类型'}]
+            }
 
-        customElements.define(M2TaskBusinessTypePicker.is, M2TaskBusinessTypePicker);
+          }
+        }
+
+        validate() {
+          return this.$.input.validate();
+        }
+
+      }
+
+
+      customElements.define(M2TaskBusinessTypePicker.is, M2TaskBusinessTypePicker);
     </script>
 </dom-module>

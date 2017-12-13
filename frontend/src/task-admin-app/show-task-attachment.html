@@ -1,5 +1,5 @@
 <!--附件-->
-<link rel="import" href="./../../platform/custom-element/behaviors/common/o-format-behavior.html">
+<link rel="import" href="widgets/behaviors/common/o-format-behavior.html">
 <link rel="import" href="./../../bower_components/h2-elements/behaviors/ajax-behavior.html">
 <link rel="import" href="./../../bower_components/h2-elements/h2-button.html">
 <link rel="import" href="./../../bower_components/h2-elements/h2-tip.html">
@@ -42,7 +42,8 @@
                             更新时间:{{formatDate(item.updatedAt,'yyyy-MM-dd HH:mm:ss')}}
                         </div>
                         <div>
-                            <a class="btn btn-primary" href="javascript:void(0)"  onclick="[[ sureDeleteTaskAttachment(item.id) ]]">删除</a>
+                            <a class="btn btn-primary" href="javascript:void(0)"
+                               onclick="[[ sureDeleteTaskAttachment(item.id) ]]">删除</a>
                             <a class="btn btn-primary" href="[[getAttachmentUrl(item.attachmentId)]]"
                                target="_self " download="[[item.attachmentName]]">下载</a>
                         </div>
@@ -54,75 +55,74 @@
         </div>
     </template>
     <script>
-        /**
-         * `task-tabs`
-         *
-         * @customElement
-         * @polymer
-         */
-        class ShowTaskAttachment extends Polymer.mixinBehaviors([OFormatBehavior, AjaxBehavior], Polymer.Element) {
-            static get properties() {
-                return {
-                    taskAttachments: {
-                        type: Array
-                    },
-                    taskId:{
-                        type:Number
-                    }
-                };
+      /**
+       * `task-tabs`
+       *
+       * @customElement
+       * @polymer
+       */
+      class ShowTaskAttachment extends Polymer.mixinBehaviors([OFormatBehavior, AjaxBehavior], Polymer.Element) {
+        static get properties() {
+          return {
+            taskAttachments: {
+              type: Array
+            },
+            taskId: {
+              type: Number
             }
+          };
+        }
 
-            static get is() {
-                return "show-task-attachment";
-            }
+        static get is() {
+          return "show-task-attachment";
+        }
 
-            sureDeleteTaskAttachment(id){
-                return ()=>{
-                    this.$.delteTip.open(()=>{
-                        this.deleteTaskAttachment(id);
-                    });
-                }
-
-            }
-
-            /**
-             * 删除附件
-             * @param id
-             * @returns {function(*)}
-             */
-            deleteTaskAttachment(id) {
-                this.post({
-                    url: "/task/taskadmin/deleteTaskAttachment.do",
-                    data: {id: id}
-                }, (data) => {
-                    let newTaskAttachments =this.taskAttachments.filter((item)=>item.id != id);
-                    this.set("taskAttachments",newTaskAttachments);
-                });
-            }
-
-            __choiceFile() {
-                this.$["load_file"].click();
-            }
-
-            __uploadFile() {
-                let myform = new FormData();
-                myform.append('file', this.$['load_file'].files[0]);
-                myform.append("taskId",this.taskId);
-                this.post({url: "/task/taskadmin/createTaskAttachment.do", data: myform}, (data) => {
-                    this.set("taskAttachments",[...this.taskAttachments,...data]);
-                });
-            }
-
-            getAttachmentUrl (aid) {
-                if(aid && aid != 0){
-                    var imageBaseUrl =  '/management/attachments/';
-                    return imageBaseUrl + aid + ".do"
-                }
-
-            }
+        sureDeleteTaskAttachment(id) {
+          return () => {
+            this.$.delteTip.open(() => {
+              this.deleteTaskAttachment(id);
+            });
+          }
 
         }
 
-        window.customElements.define(ShowTaskAttachment.is, ShowTaskAttachment);
+        /**
+         * 删除附件
+         * @param id id
+         */
+        deleteTaskAttachment(id) {
+          this.post({
+            url: "/task/taskadmin/deleteTaskAttachment.do",
+            data: {id: id}
+          }, () => {
+            let newTaskAttachments = this.taskAttachments.filter((item) => item.id != id);
+            this.set("taskAttachments", newTaskAttachments);
+          });
+        }
+
+        __choiceFile() {
+          this.$["load_file"].click();
+        }
+
+        __uploadFile() {
+          let myform = new FormData();
+          myform.append('file', this.$['load_file'].files[0]);
+          myform.append("taskId", this.taskId);
+          this.post({url: "/task/taskadmin/createTaskAttachment.do", data: myform}, (data) => {
+            this.set("taskAttachments", [...this.taskAttachments, ...data]);
+          });
+        }
+
+        getAttachmentUrl(aid) {
+          if (aid && aid != 0) {
+            let imageBaseUrl = '/management/attachments/';
+            return imageBaseUrl + aid + ".do"
+          }
+
+        }
+
+      }
+
+      window.customElements.define(ShowTaskAttachment.is, ShowTaskAttachment);
     </script>
 </dom-module>

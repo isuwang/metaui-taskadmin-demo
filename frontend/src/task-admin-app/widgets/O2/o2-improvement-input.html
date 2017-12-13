@@ -1,7 +1,7 @@
-<link rel="import" href="../../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../../bower_components/metaui/widgets/m2-widget-base.html">
-<link rel="import" href="../../../bower_components/h2-elements/o2-more-input.html">
-<link rel="import" href="../../../bower_components/h2-elements/behaviors/ajax-behavior.html">
+<link rel="import" href="../../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../../bower_components/metaui/widgets/m2-widget-base.html">
+<link rel="import" href="../../../../bower_components/h2-elements/o2-more-input.html">
+<link rel="import" href="../../../../bower_components/h2-elements/behaviors/ajax-behavior.html">
 <dom-module id="o2-improvement-input">
     <template>
         <style>
@@ -22,64 +22,64 @@
         </o2-more-input>
     </template>
     <script>
-        class O2ImprovementInput extends Polymer.mixinBehaviors([AjaxBehavior], M2WidgetBase) {
-            static get is() {
-                return "o2-improvement-input";
+      class O2ImprovementInput extends Polymer.mixinBehaviors([AjaxBehavior], M2WidgetBase) {
+        static get is() {
+          return "o2-improvement-input";
+        }
+
+        static get properties() {
+          return {
+            suggestionRequest: {
+              type: Object,
+              value: {
+                url: "/task/taskadmin/findAllSuggestions4PickerByType.do?type=2",
+                credentials: "include"
+              }
+            },
+            moreItems: {
+              type: Array,
+              value: []
+            },
+            value: {
+              type: Array,
+              value: []
+            },
+            displayFields: {
+              type: Array,
+              value: [{field: 'suggestionContent', label: '改进措施'}]
+            },
+            response: {
+              type: Object
             }
 
-            static get properties() {
-                return {
-                    suggestionRequest: {
-                        type: Object,
-                        value: {
-                          url: "/task/taskadmin/findAllSuggestions4PickerByType.do?type=2",
-                          credentials: "include"
-                        }
-                    },
-                    moreItems: {
-                        type: Array,
-                        value: []
-                    },
-                    value: {
-                        type: Array,
-                        value: []
-                    },
-                    displayFields: {
-                        type: Array,
-                        value: [{field: 'suggestionContent', label: '改进措施'}]
-                    },
-                    response:{
-                        type:Object
-                    }
-
-                }
-
-            }
-
-
-            validate() {
-                return this.metadata.required ? !!this.value : true;
-            }
-
-            ready() {
-                super.ready();
-                this.addEventListener("value-changed", (e) => {
-                    e.stopPropagation();
-                    this.dispatchEvent(new CustomEvent('o2-value-changed', {
-                        composed: true,
-                        bubbles: true,
-                        detail: {
-                            value: e.detail.value,
-                            name: this.metadata.name,
-                            context: this.context
-                        }
-                    }));
-                });
-            }
-
+          }
 
         }
 
-        customElements.define(O2ImprovementInput.is, O2ImprovementInput);
+
+        validate() {
+          return this.metadata.required ? !!this.value : true;
+        }
+
+        ready() {
+          super.ready();
+          this.addEventListener("value-changed", (e) => {
+            e.stopPropagation();
+            this.dispatchEvent(new CustomEvent('o2-value-changed', {
+              composed: true,
+              bubbles: true,
+              detail: {
+                value: e.detail.value,
+                name: this.metadata.name,
+                context: this.context
+              }
+            }));
+          });
+        }
+
+
+      }
+
+      customElements.define(O2ImprovementInput.is, O2ImprovementInput);
     </script>
 </dom-module>

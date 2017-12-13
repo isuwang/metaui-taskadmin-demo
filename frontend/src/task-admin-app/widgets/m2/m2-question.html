@@ -1,8 +1,8 @@
-<link rel="import" href="../../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../../bower_components/metaui/widgets/m2-widget-base.html">
-<link rel="import" href="../../../bower_components/h2-elements/h2-fetch.html">
-<link rel="import" href="../../../bower_components/h2-elements/h2-select.html">
-<link rel="import" href="../../../bower_components/h2-elements/behaviors/ajax-behavior.html">
+<link rel="import" href="../../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../../bower_components/metaui/widgets/m2-widget-base.html">
+<link rel="import" href="../../../../bower_components/h2-elements/h2-fetch.html">
+<link rel="import" href="../../../../bower_components/h2-elements/h2-select.html">
+<link rel="import" href="../../../../bower_components/h2-elements/behaviors/ajax-behavior.html">
 <dom-module id="m2-question">
     <template>
         <style>
@@ -21,38 +21,38 @@
                 value="{{value}}"></h2-select>
     </template>
     <script>
-        class M2Question extends Polymer.mixinBehaviors([AjaxBehavior], M2WidgetBase) {
-            static get is() {
-                return "m2-question";
+      class M2Question extends Polymer.mixinBehaviors([AjaxBehavior], M2WidgetBase) {
+        static get is() {
+          return "m2-question";
+        }
+
+        static get properties() {
+          return {
+            suggestionRequest: {
+              type: Object,
+              value: {
+                url: "/task/taskadmin/findAllSuggestions4PickerByType.do?type=1",
+                credentials: "include"
+              }
+            },
+            value: {
+              type: String,
+              notify: true
+            },
+            response: {
+              type: Object
             }
 
-            static get properties() {
-                return {
-                    suggestionRequest: {
-                        type: Object,
-                        value: {
-                            url: "/task/taskadmin/findAllSuggestions4PickerByType.do?type=1",
-                            credentials: "include"
-                        }
-                    },
-                    value: {
-                        type: String,
-                        notify: true
-                    },
-                    response:{
-                        type:Object
-                    }
-
-                }
-
-            }
-
-            validate() {
-                return this.$.select.validate();
-            }
+          }
 
         }
 
-        customElements.define(M2Question.is, M2Question);
+        validate() {
+          return this.$.select.validate();
+        }
+
+      }
+
+      customElements.define(M2Question.is, M2Question);
     </script>
 </dom-module>

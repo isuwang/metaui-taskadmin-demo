@@ -1,86 +1,82 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../../bower_components/metaui/utils/meta-constructor.html">
 <link rel="import" href="../../bower_components/metaui/m2-crud.html">
-<link rel="import" href="./../../platform/custom-element/behaviors/common/o-format-behavior.html">
+<link rel="import" href="widgets/behaviors/common/o-format-behavior.html">
 
 <dom-module id="task-suggestion-index">
-  <template>
-    <style>
+    <template>
+        <style>
 
-    </style>
-    <meta-constructor src="/dapeng/metadata"
-                      metadata="{{ metadata }}"
-                      option="[[ option ]]"
-                      on-return="[[ onReturn() ]]"></meta-constructor>
-    <m2-crud metadata="[[ metadata ]]"
-             key-for-page-result="pageResponse.results"
-             result-decorator="[[ _resultChange() ]]"></m2-crud>
-  </template>
-  <script>
-    /**
-     * `task-admin-index`
-     *
-     * @customElement
-     * @polymer
-     */
-    class TaskSuggestionIndex extends Polymer.mixinBehaviors([OFormatBehavior], Polymer.Element) {
-      static get properties() {
-        return {
-          option: {
-            type:Object,
-            value: function() {
-              return {
-                serviceName: "com.isuwang.soa.task.service.TaskSuggestionService",
-                version: "1.0.0",
-                methodName: "findSuggestions"
+        </style>
+        <meta-constructor src="/dapeng/metadata"
+                          metadata="{{ metadata }}"
+                          option="[[ option ]]"
+                          on-return="[[ onReturn() ]]"></meta-constructor>
+        <m2-crud metadata="[[ metadata ]]"
+                 key-for-page-result="pageResponse.results"
+                 result-decorator="[[ _resultChange() ]]"></m2-crud>
+    </template>
+    <script>
+      /**
+       * `task-admin-index`
+       *
+       * @customElement
+       * @polymer
+       */
+      class TaskSuggestionIndex extends Polymer.mixinBehaviors([OFormatBehavior], Polymer.Element) {
+        static get properties() {
+          return {
+            option: {
+              type: Object,
+              value: function () {
+                return {
+                  serviceName: "com.isuwang.soa.task.service.TaskSuggestionService",
+                  version: "1.0.0",
+                  methodName: "findSuggestions"
+                }
               }
             }
-          }
-        };
-      }
-      
-      static get is() {
-        return "task-suggestion-index";
-      }
-      
-      _resultChange() {
-        return (result) => {
-          result.rows = result.rows.map(row => {
-            row.actions = ["suggestion_edit","suggestion_delete"];
-            return row;
-          });
-          return result;
+          };
         }
-      }
-      
-      onReturn() {
-        return (metadata) => {
+
+        static get is() {
+          return "task-suggestion-index";
+        }
+
+        _resultChange() {
+          return (result) => {
+            result.rows = result.rows.map(row => {
+              row.actions = ["suggestion_edit", "suggestion_delete"];
+              return row;
+            });
+            return result;
+          }
+        }
+
+        onReturn() {
+          return (metadata) => {
             //翻译列表字段
             metadata.result.grids.forEach(item => {
-                if (item.name == "type") {
-                    item.render = (model) => {
-                        switch (model.type) {
-                            case 1:
-                                return "问题";
-                                break;
-                            case 2:
-                                return "改进";
-                                break;
-                        }
-                    }
+              if (item.name == "type") {
+                item.render = (model) => {
+                  switch (model.type) {
+                  case 1:return "问题";
+                  case 2:return "改进";
+                  }
                 }
-                if (item.name == "updatedAt") {
-                    item.render = ({updatedAt}) => {
-                        return updatedAt ? this.formatDate(updatedAt, 'yyyy-MM-dd HH:mm:ss') : ""
-                    }
+              }
+              if (item.name == "updatedAt") {
+                item.render = ({updatedAt}) => {
+                  return updatedAt ? this.formatDate(updatedAt, 'yyyy-MM-dd HH:mm:ss') : ""
                 }
+              }
             });
 
             //设置新增页面样式
             metadata.actions.filter((item) => {
-                return item.actionId == "suggestion_add"
+              return item.actionId == "suggestion_add"
             })[0].formMeta.style =
-                `
+              `
                         .container {
 	                        grid-template-columns: 100%;
 
@@ -90,7 +86,7 @@
                         }
                     `;
             metadata.result.actions['suggestion_edit'].formMeta.style =
-                `
+              `
                         .container {
                             grid-template-columns: 100%;
                         }
@@ -98,11 +94,11 @@
                              width: 500px;
                         }
                     `;
-          return metadata;
+            return metadata;
+          }
         }
+
       }
-      
-    }
-    window.customElements.define(TaskSuggestionIndex.is, TaskSuggestionIndex);
-  </script>
+      window.customElements.define(TaskSuggestionIndex.is, TaskSuggestionIndex);
+    </script>
 </dom-module>

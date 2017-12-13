@@ -1,61 +1,61 @@
-<link rel="import" href="../../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../../bower_components/metaui/widgets/m2-widget-base.html">
-<link rel="import" href="../../../bower_components/h2-elements/h2-mask.html">
-<link rel="import" href="../../../bower_components/h2-elements/h2-picker.html">
-<link rel="import" href="../../../bower_components/h2-elements/h2-fetch.html">
+<link rel="import" href="../../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../../bower_components/metaui/widgets/m2-widget-base.html">
+<link rel="import" href="../../../../bower_components/h2-elements/h2-mask.html">
+<link rel="import" href="../../../../bower_components/h2-elements/h2-picker.html">
+<link rel="import" href="../../../../bower_components/h2-elements/h2-fetch.html">
 <dom-module id="m2-task-picker">
-  <template>
-    <style>
-      :host {
-        width: 100%;
-      }
-    </style>
-    <h2-fetch id="fetchIt" request="[[ taskRequest ]]" response-body="{{ taskResponse }}"></h2-fetch>
-    <h2-picker id="input"
-               label="[[metadata.label]]"
-               placeholder="[[metadata.label]]"
-               readonly="{{!metadata.editable}}"
-               required="[[metadata.required]]"
-               multi="[[metadata.multi]]"
-               attr-for-value="label"
-               attr-for-label="label"
-               display-fields="[[displayFields]]"
-               items="[[ taskResponse.content ]]"
-               value="{{value}}"></h2-picker>
-  </template>
-  <script>
-    class M2TaskPicker extends M2WidgetBase {
-      static get is() {
-        return "m2-task-picker";
-      }
-
-      static get properties() {
-        return {
-          taskRequest: {
-            type: Object,
-            value: {
-              url: "/task/taskadmin/findAllTaskNos4Picker.do",
-              credentials: "include"
+    <template>
+        <style>
+            :host {
+                width: 100%;
             }
-          },
-          taskResponse:{
-            type: Object
-          },
-          displayFields: {
-            type: Array,
-            value: [{field: 'label', label: '任务编号'}]
-          }
-
+        </style>
+        <h2-fetch id="fetchIt" request="[[ taskRequest ]]" response-body="{{ taskResponse }}"></h2-fetch>
+        <h2-picker id="input"
+                   label="[[metadata.label]]"
+                   placeholder="[[metadata.label]]"
+                   readonly="{{!metadata.editable}}"
+                   required="[[metadata.required]]"
+                   multi="[[metadata.multi]]"
+                   attr-for-value="label"
+                   attr-for-label="label"
+                   display-fields="[[displayFields]]"
+                   items="[[ taskResponse.content ]]"
+                   value="{{value}}"></h2-picker>
+    </template>
+    <script>
+      class M2TaskPicker extends M2WidgetBase {
+        static get is() {
+          return "m2-task-picker";
         }
+
+        static get properties() {
+          return {
+            taskRequest: {
+              type: Object,
+              value: {
+                url: "/task/taskadmin/findAllTaskNos4Picker.do",
+                credentials: "include"
+              }
+            },
+            taskResponse: {
+              type: Object
+            },
+            displayFields: {
+              type: Array,
+              value: [{field: 'label', label: '任务编号'}]
+            }
+
+          }
+        }
+
+        validate() {
+          return this.$.input.validate();
+        }
+
       }
 
-      validate() {
-        return this.$.input.validate();
-      }
 
-    }
-
-
-    customElements.define(M2TaskPicker.is, M2TaskPicker);
-  </script>
+      customElements.define(M2TaskPicker.is, M2TaskPicker);
+    </script>
 </dom-module>

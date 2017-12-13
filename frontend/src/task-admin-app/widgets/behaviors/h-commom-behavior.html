@@ -1,22 +1,22 @@
 <script>
-    HCommomBehavior = {
+  HCommomBehavior = {
 
-        setRowsAction(rows,actionList){
-            if(!actionList){
-                actionList = []
-            }
-            rows.forEach((row) => {
-                row.currentActions = row.actions;
-                row.actions = $.extend(true,[],actionList);
-                for (let i in row.currentActions) {
-                    if (row.currentActions[i]) {
-                        row.actions.push(i);
-                    }
-                }
-            })
-            return rows;
+    setRowsAction(rows, actionList){
+      if (!actionList) {
+        actionList = []
+      }
+      rows.forEach((row) => {
+        row.currentActions = row.actions;
+        row.actions = $.extend(true, [], actionList);
+        for (let i in row.currentActions) {
+          if (row.currentActions[i]) {
+            row.actions.push(i);
+          }
         }
-
-
+      })
+      return rows;
     }
+
+
+  }
 </script>

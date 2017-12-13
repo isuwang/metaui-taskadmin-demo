@@ -1,7 +1,7 @@
-<link rel="import" href="../../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../../bower_components/metaui/widgets/m2-widget-base.html">
-<link rel="import" href="../../../bower_components/h2-elements/h2-mask.html">
-<link rel="import" href="../../../bower_components/h2-elements/h2-input.html">
+<link rel="import" href="../../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../../bower_components/metaui/widgets/m2-widget-base.html">
+<link rel="import" href="../../../../bower_components/h2-elements/h2-mask.html">
+<link rel="import" href="../../../../bower_components/h2-elements/h2-input.html">
 <dom-module id="o2-input">
     <template>
         <style>
@@ -18,40 +18,40 @@
         </h2-mask>
     </template>
     <script>
-        class O2Input extends M2WidgetBase {
-            static get is() {
-                return "o2-input";
-            }
+      class O2Input extends M2WidgetBase {
+        static get is() {
+          return "o2-input";
+        }
 
-            static get properties() {
-                return {}
-
-            }
-
-            validate() {
-                return this.$.input.validate();
-            }
-
-            ready() {
-                super.ready();
-                this.$.mask.addEventListener("value-changed", (e) => {
-                    e.stopPropagation();
-                    this.dispatchEvent(new CustomEvent('o2-value-changed', {
-                        composed: true,
-                        bubbles: true,
-                        detail: {
-                            value: e.detail.value,
-                            name: this.metadata.name,
-                            context: this.context
-                        }
-                    }));
-                });
-
-            }
-
+        static get properties() {
+          return {}
 
         }
 
-        customElements.define(O2Input.is, O2Input);
+        validate() {
+          return this.$.input.validate();
+        }
+
+        ready() {
+          super.ready();
+          this.$.mask.addEventListener("value-changed", (e) => {
+            e.stopPropagation();
+            this.dispatchEvent(new CustomEvent('o2-value-changed', {
+              composed: true,
+              bubbles: true,
+              detail: {
+                value: e.detail.value,
+                name: this.metadata.name,
+                context: this.context
+              }
+            }));
+          });
+
+        }
+
+
+      }
+
+      customElements.define(O2Input.is, O2Input);
     </script>
 </dom-module>

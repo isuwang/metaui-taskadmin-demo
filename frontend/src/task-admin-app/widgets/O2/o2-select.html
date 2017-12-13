@@ -1,7 +1,7 @@
-<link rel="import" href="../../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../../bower_components/metaui/widgets/m2-widget-base.html">
-<link rel="import" href="../../../bower_components/h2-elements/h2-mask.html">
-<link rel="import" href="../../../bower_components/h2-elements/h2-select.html">
+<link rel="import" href="../../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../../bower_components/metaui/widgets/m2-widget-base.html">
+<link rel="import" href="../../../../bower_components/h2-elements/h2-mask.html">
+<link rel="import" href="../../../../bower_components/h2-elements/h2-select.html">
 <dom-module id="o2-select">
     <template>
         <style>
@@ -21,36 +21,36 @@
         </h2-mask>
     </template>
     <script>
-        class O2Select extends M2WidgetBase {
-            static get is() {
-                return "o2-select";
-            }
+      class O2Select extends M2WidgetBase {
+        static get is() {
+          return "o2-select";
+        }
 
 
-            validate() {
-                return this.$.select.validate();
-            }
+        validate() {
+          return this.$.select.validate();
+        }
 
-            ready() {
-                super.ready();
-                this.$.mask.addEventListener("value-changed", (e) => {
-                    e.stopPropagation();
-                    this.dispatchEvent(new CustomEvent('o2-value-changed', {
-                        composed: true,
-                        bubbles: true,
-                        detail: {
-                            value: e.detail.value,
-                            name: this.metadata.name,
-                            context: this.context
-                        }
-                    }));
-                });
-
-            }
-
+        ready() {
+          super.ready();
+          this.$.mask.addEventListener("value-changed", (e) => {
+            e.stopPropagation();
+            this.dispatchEvent(new CustomEvent('o2-value-changed', {
+              composed: true,
+              bubbles: true,
+              detail: {
+                value: e.detail.value,
+                name: this.metadata.name,
+                context: this.context
+              }
+            }));
+          });
 
         }
 
-        customElements.define(O2Select.is, O2Select);
+
+      }
+
+      customElements.define(O2Select.is, O2Select);
     </script>
 </dom-module>

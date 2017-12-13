@@ -1,8 +1,8 @@
-<link rel="import" href="../../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../../bower_components/metaui/widgets/m2-widget-base.html">
-<link rel="import" href="../../../bower_components/h2-elements/h2-mask.html">
-<link rel="import" href="../../../bower_components/h2-elements/h2-fetch.html">
-<link rel="import" href="../../../bower_components/h2-elements/h2-picker.html">
+<link rel="import" href="../../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../../bower_components/metaui/widgets/m2-widget-base.html">
+<link rel="import" href="../../../../bower_components/h2-elements/h2-mask.html">
+<link rel="import" href="../../../../bower_components/h2-elements/h2-fetch.html">
+<link rel="import" href="../../../../bower_components/h2-elements/h2-picker.html">
 <dom-module id="o2-task-picker">
     <template>
         <style>
@@ -25,53 +25,53 @@
         </h2-mask>
     </template>
     <script>
-        class O2TaskPicker extends M2WidgetBase {
-            static get is() {
-                return "o2-task-picker";
-            }
-
-            static get properties() {
-                return {
-                    taskRequest: {
-                        type: Object,
-                        value: {
-                            url: "/task/taskadmin/findAllTaskNos4Picker.do",
-                            credentials: "include"
-                        }
-                    },
-                    taskItems: {
-                        type: Array
-                    },
-                    displayFields: {
-                        type: Array,
-                        value: [{field: 'name', label: '任务编号'}]
-                    },
-
-                }
-            }
-
-            validate() {
-                return this.$.input.validate();
-            }
-
-            ready() {
-                super.ready();
-                this.$.mask.addEventListener("value-changed", (e) => {
-                    e.stopPropagation();
-                    this.dispatchEvent(new CustomEvent('o2-value-changed', {
-                        composed: true,
-                        bubbles: true,
-                        detail: {
-                            value: e.detail.value,
-                            name: this.metadata.name,
-                            context: this.context
-                        }
-                    }));
-                });
-
-            }
+      class O2TaskPicker extends M2WidgetBase {
+        static get is() {
+          return "o2-task-picker";
         }
 
-        customElements.define(O2TaskPicker.is, O2TaskPicker);
+        static get properties() {
+          return {
+            taskRequest: {
+              type: Object,
+              value: {
+                url: "/task/taskadmin/findAllTaskNos4Picker.do",
+                credentials: "include"
+              }
+            },
+            taskItems: {
+              type: Array
+            },
+            displayFields: {
+              type: Array,
+              value: [{field: 'name', label: '任务编号'}]
+            },
+
+          }
+        }
+
+        validate() {
+          return this.$.input.validate();
+        }
+
+        ready() {
+          super.ready();
+          this.$.mask.addEventListener("value-changed", (e) => {
+            e.stopPropagation();
+            this.dispatchEvent(new CustomEvent('o2-value-changed', {
+              composed: true,
+              bubbles: true,
+              detail: {
+                value: e.detail.value,
+                name: this.metadata.name,
+                context: this.context
+              }
+            }));
+          });
+
+        }
+      }
+
+      customElements.define(O2TaskPicker.is, O2TaskPicker);
     </script>
 </dom-module>

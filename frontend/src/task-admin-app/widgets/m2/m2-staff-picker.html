@@ -1,7 +1,7 @@
-<link rel="import" href="../../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../../bower_components/metaui/widgets/m2-widget-base.html">
-<link rel="import" href="../../../bower_components/h2-elements/h2-mask.html">
-<link rel="import" href="../../../bower_components/h2-elements/h2-picker.html">
+<link rel="import" href="../../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../../bower_components/metaui/widgets/m2-widget-base.html">
+<link rel="import" href="../../../../bower_components/h2-elements/h2-mask.html">
+<link rel="import" href="../../../../bower_components/h2-elements/h2-picker.html">
 <dom-module id="m2-staff-picker">
     <template>
         <style>
@@ -23,42 +23,42 @@
                    value="{{value}}"></h2-picker>
     </template>
     <script>
-        class M2StaffPicker extends M2WidgetBase {
-            static get is() {
-                return "m2-staff-picker";
-            }
-
-            static get properties() {
-                return {
-                    itemsInitQueryUrl: {
-                        type: String,
-                    },
-                    displayFields: {
-                        type: Array,
-                        value: [{field: 'name', label: '员工名称'}]
-                    },
-
-                    /**
-                     * useAuth:是否查询全部
-                     * filterDeleteStaff:是否过滤被删除的员工 0否 1是
-                     */
-                    itemsQueryParams: {
-                        type: Object,
-                        value: {
-                            limit: 10,
-                            useAuth: false,
-                            filterDeleteStaff: 0
-                        }
-                    }
-
-                }
-            }
-
-            validate() {
-                return this.$.input.validate();
-            }
+      class M2StaffPicker extends M2WidgetBase {
+        static get is() {
+          return "m2-staff-picker";
         }
 
-        customElements.define(M2StaffPicker.is, M2StaffPicker);
+        static get properties() {
+          return {
+            itemsInitQueryUrl: {
+              type: String,
+            },
+            displayFields: {
+              type: Array,
+              value: [{field: 'name', label: '员工名称'}]
+            },
+
+            /**
+             * useAuth:是否查询全部
+             * filterDeleteStaff:是否过滤被删除的员工 0否 1是
+             */
+            itemsQueryParams: {
+              type: Object,
+              value: {
+                limit: 10,
+                useAuth: false,
+                filterDeleteStaff: 0
+              }
+            }
+
+          }
+        }
+
+        validate() {
+          return this.$.input.validate();
+        }
+      }
+
+      customElements.define(M2StaffPicker.is, M2StaffPicker);
     </script>
 </dom-module>

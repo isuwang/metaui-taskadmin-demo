@@ -3,155 +3,156 @@
 BaseBehavior提供了构建组件的最基本属性和样式
 -->
 <script>
+  /**
+   * `Polymer.O2BaseBehavior`
+   *
+   * @demo demo/base-behavior-index.html
+   * @polymerBehavior Polymer.OBaseBehavior
+   */
+  OBaseBehavior = {
+    properties: {
+
+      /**
+       * Returns 项目根目录
+       *
+       * @attribute webRoot
+       * @type String
+       */
+      webRoot: {
+        type: String,
+        value: window.webRoot,
+        readyOnly: true
+      },
+      /**
+       * Returns 当前版本号
+       * @attribute version
+       * @type Number
+       */
+      version: {
+        type: Number,
+        value: window.version,
+        readyOnly: true
+      },
+      /**
+       * tab bar 之间的共享参数
+       */
+      tabParam: {
+        type: Object
+      },
+      openCounter: {
+        type: Object,
+        value: function () {
+          let counter = 1;
+          return {
+            getCounter: function () {
+              return counter++;
+            },
+            setCounter: function (num) {
+              counter = num;
+              return this;
+            }
+          }
+        }
+      }
+    },
     /**
-     * `Polymer.O2BaseBehavior`
-     *
-     * @demo demo/base-behavior-index.html
-     * @polymerBehavior Polymer.OBaseBehavior
+     * 获取项目跟路径
+     * @returns {*}
      */
-    OBaseBehavior = {
-        properties: {
+    getRoot: function () {
+      return (window.webRoot ? window.webRoot + '/' : null) || '';
+    },
+    getVersion: function () {
+      return window.version;
+    },
+    /**
+     * 是否为正整数
+     */
+    isPositiveNum: function (s) {
+      let re = /^[0-9]*[1-9][0-9]*$/;
+      return re.test(s)
+    },
+    /**
+     * 判断对象是否为空对象｛｝
+     * @param obj 对象
+     */
+    isEmptyObject: function (obj) {
+      if (obj == undefined) { // null undefined 返回true
+        return true;
+      }
+      if (!obj) {
+        return false;
+      }
+      for (let n in obj) {
+        return false
+      }
+      return true;
+    },
+    /**
+     * 判断空字符串
+     * @param str 字符串
+     */
+    isStringEmpty: function (str) {
+      if (typeof str === 'string') {
+        return !str || str == null || str == '';
+      } else {
+        return false;
+      }
+    },
+    /**
+     * 判断是否是数字类型
+     * @param num 数字
+     */
+    isNumberEmpty: function (num) {
+      if (typeof num === 'number') {
+        return true;
+      } else {
+        return false;
+      }
+    },
 
-            /**
-             * Returns 项目根目录
-             *
-             * @attribute webRoot
-             * @type String
-             */
-            webRoot: {
-                type: String,
-                value: window.webRoot,
-                readyOnly: true
-            },
-            /**
-             * Returns 当前版本号
-             * @attribute version
-             * @type Number
-             */
-            version: {
-                type: Number,
-                value: window.version,
-                readyOnly: true
-            },
-            /**
-             * tab bar 之间的共享参数
-             */
-            tabParam: {
-                type: Object
-            },
-            openCounter: {
-                type: Object,
-                value: function () {
-                    var counter = 1;
-                    return {
-                        getCounter: function () {
-                            return counter++;
-                        },
-                        setCounter: function (num) {
-                            counter = num;
-                            return this;
-                        }
-                    }
-                }
-            }
-        },
-        /**
-         * 获取项目跟路径
-         * @returns {*}
-         */
-        getRoot: function () {
-            return (window.webRoot ? window.webRoot + '/' : null) || '';
-        },
-        getVersion: function () {
-            return window.version;
-        },
-        /**
-         * 是否为正整数
-         */
-        isPositiveNum: function (s) {
-            var re = /^[0-9]*[1-9][0-9]*$/;
-            return re.test(s)
-        },
-        /**
-         * 判断对象是否为空对象｛｝
-         * @param obj 对象
-         */
-        isEmptyObject: function (obj) {
-            if (obj == undefined) { // null undefined 返回true
-                return true;
-            }
-            if (!obj) {
-                return false;
-            }
-            for (var n in obj) {
-                return false
-            }
-            return true;
-        },
-        /**
-         * 判断空字符串
-         * @param str 字符串
-         */
-        isStringEmpty: function (str) {
-            if (typeof str === 'string') {
-                return !str || str == null || str == '';
-            } else {
-                return false;
-            }
-        },
-        /**
-         * 判断是否是数字类型
-         * @param num 数字
-         */
-        isNumberEmpty: function (num) {
-            if (typeof num === 'number') {
-                return true;
-            } else {
-                return false;
-            }
-        },
-
-        /**
-         * 布尔值取反
-         * @param boolVal 布尔值
-         **/
-        boolReverse: function (boolVal) {
-            return !boolVal;
-        },
-        /**
-         * 移除已经存在的dialog 防止内存泄露
-         */
-        removeOldDialog: function (contentElement) {
-            var contentElement = document.querySelector(contentElement);
-            if (contentElement) {
-                var parentNode = contentElement.parentNode;
-                while (parentNode && (parentNode.tagName != "PAPER-DIALOG")) {
-                    parentNode = parentNode.parentNode;
-                }
-                if (parentNode) {
-                    parentNode.remove();
-                }
-            }
-        },
-        /**
-         * @param contentElement dialog内容标签
-         * @param dialogParams dialog内容标签参数
-         * @param mode dialog模式（View|Edit）
-         * @param width dialog宽度
-         */
-        openDialog: function (contentElement, dialogParam, mode, width, parentNode) {
-            this.openDialogByConfig({
-                contentElement: contentElement,
-                dialogParam: dialogParam,
-                mode: mode,
-                width: width || '900px',
-                parentNode: parentNode
-            });
-        },
-        /**
-         * 根据配置创建一个模态窗口
-         * {contentElement:String, dialogParam:Object, mode:String, width:'900px', height:'475px', parentNode:node}
-         * config:{
+    /**
+     * 布尔值取反
+     * @param boolVal 布尔值
+     **/
+    boolReverse: function (boolVal) {
+      return !boolVal;
+    },
+    /**
+     * 移除已经存在的dialog 防止内存泄露
+     * @param {string} contentElementName
+     */
+    removeOldDialog: function (contentElementName) {
+      let contentElement = document.querySelector(contentElementName);
+      if (contentElement) {
+        let parentNode = contentElement.parentNode;
+        while (parentNode && (parentNode.tagName != "PAPER-DIALOG")) {
+          parentNode = parentNode.parentNode;
+        }
+        if (parentNode) {
+          parentNode.remove();
+        }
+      }
+    },
+    /**
+     * @param contentElement dialog内容标签
+     * @param dialogParams dialog内容标签参数
+     * @param mode dialog模式（View|Edit）
+     * @param width dialog宽度
+     */
+    openDialog: function (contentElement, dialogParam, mode, width, parentNode) {
+      this.openDialogByConfig({
+        contentElement: contentElement,
+        dialogParam: dialogParam,
+        mode: mode,
+        width: width || '900px',
+        parentNode: parentNode
+      });
+    },
+    /**
+     * 根据配置创建一个模态窗口
+     * {contentElement:String, dialogParam:Object, mode:String, width:'900px', height:'475px', parentNode:node}
+     * config:{
          *          contentElement:String,  //dialog内容标签
          *          dialogParam:Object,     //dialog内容标签参数
          *          mode:String,            //dialog模式（View|Edit）
@@ -159,616 +160,610 @@ BaseBehavior提供了构建组件的最基本属性和样式
          *          height:'475px',         //dialog高度
          *          parentNode:node         //dialog依附的结点
          *        }
-         */
-        openDialogByConfig: function (config) {
-            var contentElement = config.contentElement;
-            var dialogParam = config.dialogParam;
-            var mode = config.mode || "Edit";
-            var width = config.width || "900px";
-            var height = config.height || "475Px";
-            var parentNode = config.parentNode;
-            var entity = config.entity;
+     */
+    openDialogByConfig: function (config) {
+      let contentElement = config.contentElement;
+      let dialogParam = config.dialogParam;
+      let mode = config.mode || "Edit";
+      let width = config.width || "900px";
+      let height = config.height || "475Px";
+      let parentNode = config.parentNode;
+      let entity = config.entity;
 
-            this.removeOldDialog(contentElement);
-            var dialog = document.createElement("paper-dialog");
-            if (Polymer.dom(this.root).querySelector('paper-dialog')) {
-                var temp = Polymer.dom(this.root).querySelector('paper-dialog');
-                temp.innerHTML = "";
-                Polymer.dom(this.root).removeChild(temp);
-            }
-            var container = document.createElement("div");
+      this.removeOldDialog(contentElement);
+      let dialog = document.createElement("paper-dialog");
+      if (Polymer.dom(this.root).querySelector('paper-dialog')) {
+        let temp = Polymer.dom(this.root).querySelector('paper-dialog');
+        temp.innerHTML = "";
+        Polymer.dom(this.root).removeChild(temp);
+      }
+      let container = document.createElement("div");
 
-            var contElement = document.createElement(contentElement);
+      let contElement = document.createElement(contentElement);
 
-            //添加到容器里面
-            Polymer.dom(container).appendChild(contElement);
-            Polymer.dom(dialog).appendChild(container);
-            Polymer.dom(dialog).classList.add('paper-dialog');
-            dialog.style.maxWidth = window.screen.width + 'px';
-            dialog.style.width = width;
-            dialog.style.paddingTop = '15px';
-            dialog.style.paddingLeft = '15px';
-            dialog.style.paddingRight = '15px';
-            dialog.style.paddingBottom = '15px';
-            dialog.style.margin = '0px';
-            // 屏蔽此行代码，可以实现垂直（上下）居中
-            // --注意：不可以屏蔽，dialog内容超过一页,里面内容未加载完成会有bug,不能下拉
-            dialog.style.position = 'fixed';
-            dialog.style.top = '6px';
-            //左右居中
-            dialog.style.left = '50%';
-            dialog.style.marginLeft = -parseInt(width)/2+'px';
+      //添加到容器里面
+      Polymer.dom(container).appendChild(contElement);
+      Polymer.dom(dialog).appendChild(container);
+      Polymer.dom(dialog).classList.add('paper-dialog');
+      dialog.style.maxWidth = window.screen.width + 'px';
+      dialog.style.width = width;
+      dialog.style.paddingTop = '15px';
+      dialog.style.paddingLeft = '15px';
+      dialog.style.paddingRight = '15px';
+      dialog.style.paddingBottom = '15px';
+      dialog.style.margin = '0px';
+      // 屏蔽此行代码，可以实现垂直（上下）居中
+      // --注意：不可以屏蔽，dialog内容超过一页,里面内容未加载完成会有bug,不能下拉
+      dialog.style.position = 'fixed';
+      dialog.style.top = '6px';
+      //左右居中
+      dialog.style.left = '50%';
+      dialog.style.marginLeft = -parseInt(width) / 2 + 'px';
 
-            dialog.style.minHeight = height;
-//            dialog.style.height = 'auto';
-            dialog.style.overflow = 'auto';
-            dialog.style.cursor = 'default';
+      dialog.style.minHeight = height;
+      dialog.style.overflow = 'auto';
+      dialog.style.cursor = 'default';
 
-            Polymer.dom(container).classList.add('dialog-container');
-            dialog.set('withBackdrop', true);
-            Polymer.dom(dialog).setAttribute('entry-animation', 'scale-up-animation');
-            Polymer.dom(dialog).setAttribute('exit-animation', 'fade-out-animation');
-            Polymer.dom(dialog).setAttribute('id', 'dialog');
-            //把dialog作为当前宿主页面的子节点，以确保dialog抛出来的事件能被宿主页面监听到。
-            if (parentNode) {
-                Polymer.dom(parentNode).node.appendChild(dialog);
-            } else {
-                document.body.appendChild(dialog);
-            }
-            /*if (parentNode) {
-                Polymer.dom(parentNode).node.appendChild(dialog);
-            } else {
-                Polymer.dom(this).node.domHost.appendChild(dialog);
-            }*/
-            Polymer.dom.flush();
+      Polymer.dom(container).classList.add('dialog-container');
+      dialog.set('withBackdrop', true);
+      Polymer.dom(dialog).setAttribute('entry-animation', 'scale-up-animation');
+      Polymer.dom(dialog).setAttribute('exit-animation', 'fade-out-animation');
+      Polymer.dom(dialog).setAttribute('id', 'dialog');
+      //把dialog作为当前宿主页面的子节点，以确保dialog抛出来的事件能被宿主页面监听到。
+      if (parentNode) {
+        Polymer.dom(parentNode).node.appendChild(dialog);
+      } else {
+        document.body.appendChild(dialog);
+      }
+      Polymer.dom.flush();
 
-            contElement.set("mode", mode);
-            //绑定编辑对象初始值
-            if (!this.isEmptyObject(entity)) {
-                contElement.set("entity", entity);
-            }
+      contElement.set("mode", mode);
+      //绑定编辑对象初始值
+      if (!this.isEmptyObject(entity)) {
+        contElement.set("entity", entity);
+      }
 
-            //绑定dialog自身参数
-            if (!this.isEmptyObject(dialogParam)) {
-                contElement.set("dialogParam", dialogParam);
-            }
-            var hInput = contElement.root.querySelectorAll("h-form-input");
+      //绑定dialog自身参数
+      if (!this.isEmptyObject(dialogParam)) {
+        contElement.set("dialogParam", dialogParam);
+      }
+      let hInput = contElement.root.querySelectorAll("h-form-input");
 
-            for (var i = 0; i < hInput.length; i++) {
-                var e = hInput.item(i);
-                e.mode = (e.mode) ? e.mode : this.mode;
-            }
+      for (let i = 0; i < hInput.length; i++) {
+        let e = hInput.item(i);
+        e.mode = (e.mode) ? e.mode : this.mode;
+      }
 
-            dialog.open();
-        },
-        /**
-         * 下拉按钮组打开弹窗事件（给UI工程师小伟使用）
-         */
-        openDia: function (e) {
-            this.openDialog(e.detail.selectedData.contentElement);
-        },
+      dialog.open();
+    },
+    /**
+     * 下拉按钮组打开弹窗事件（给UI工程师小伟使用）
+     */
+    openDia: function (e) {
+      this.openDialog(e.detail.selectedData.contentElement);
+    },
 
-        /**
-         * 打开子项事件
-         */
-        openSubItem: function (e) {
-            var warp = e.target;
-            while (warp.tagName != 'H-SIMPLE-GRID-ROW') {
-                warp = warp.parentElement;
-            }
-            if (warp) {
-                warp.openSubItem.open();
-            }
-        },
-        /**
-         * 关闭多层弹窗的子窗口
-         */
-        cancel: function () {
-            var warp = this;
-            while (warp.tagName != "PAPER-DIALOG") {
-                warp = warp.parentElement;
-            }
-            if (warp) {//关闭并移除当前结点
-                warp.cancel();
-                setTimeout(removeDialog, 1000);
-                function removeDialog() {//1s钟之后移除这个dialog
-                    warp.remove();
-                }
-            }
-        },
-        /**
-         * 获取权限
-         * @param code
-         * @returns {*|boolean}
-         */
-        hasRole: function (code) {
-            return (window.parent.uc.biz || window.parent.parent.uc.biz).hasRole(code);
+    /**
+     * 打开子项事件
+     */
+    openSubItem: function (e) {
+      let warp = e.target;
+      while (warp.tagName != 'H-SIMPLE-GRID-ROW') {
+        warp = warp.parentElement;
+      }
+      if (warp) {
+        warp.openSubItem.open();
+      }
+    },
+    /**
+     * 关闭多层弹窗的子窗口
+     */
+    cancel: function () {
+      let warp = this;
+      while (warp.tagName != "PAPER-DIALOG") {
+        warp = warp.parentElement;
+      }
+      if (warp) {//关闭并移除当前结点
+        warp.cancel();
+        setTimeout(removeDialog, 1000);
+        function removeDialog() {//1s钟之后移除这个dialog
+          warp.remove();
+        }
+      }
+    },
+    /**
+     * 获取权限
+     * @param code
+     * @returns {*|boolean}
+     */
+    hasRole: function (code) {
+      return (window.parent.uc.biz || window.parent.parent.uc.biz).hasRole(code);
 //            return window.parent.uc.biz.hasRole(code)
-        },
-        /**
-         * 添加一个tabar
-         * @param id tab id
-         * @param name tab 名字
-         * @param url tab 地址
-         * @param param tab 参数
-         * @param reOpen  是否重新打开（true:如果是原来已打开该tab页【id相同】，则关闭原来的，再重新打开）
-         */
-        addTabar: function (id, name, url, param, reOpen) {
-            var config = {
-                id: id,
-                text: name,
-                src: this.getRoot() + url
-            };
-            if (param) {
-                window.top.tabParam = param;
-            }
-            var tabBar = window.top.uc.tabbar;
-            if (reOpen) {
-                tabBar.removeTab(id);
-            }
-            tabBar.addTab(config);
-        },
+    },
+    /**
+     * 添加一个tabar
+     * @param id tab id
+     * @param name tab 名字
+     * @param url tab 地址
+     * @param param tab 参数
+     * @param reOpen  是否重新打开（true:如果是原来已打开该tab页【id相同】，则关闭原来的，再重新打开）
+     */
+    addTabar: function (id, name, url, param, reOpen) {
+      let config = {
+        id: id,
+        text: name,
+        src: this.getRoot() + url
+      };
+      if (param) {
+        window.top.tabParam = param;
+      }
+      let tabBar = window.top.uc.tabbar;
+      if (reOpen) {
+        tabBar.removeTab(id);
+      }
+      tabBar.addTab(config);
+    },
 
-        /**
-         * 移除一个tabbar
-         * @param tabId 窗口id
-         */
-        removeTab:function(tabId){
-            var tabBar = window.top.uc.tabbar;
-            tabBar.removeTab(tabId);
-        },
-        /**
-         * 打开一个新的tabar,里面包含的是polymer组件内容
-         * @param id tab id
-         * @param name tab 名字
-         * @param contentElement tab 内容
-         * @param param tab 参数
-         * @param mode tab 模式 View | Edit | Add
-         */
-        openNewTab: function (id, name, contentElement, param, mode) {
-            var contElement = document.createElement(contentElement);
-            if (!mode) mode = "Edit";
-            contElement.set("mode", mode);
+    /**
+     * 移除一个tabbar
+     * @param tabId 窗口id
+     */
+    removeTab: function (tabId) {
+      let tabBar = window.top.uc.tabbar;
+      tabBar.removeTab(tabId);
+    },
+    /**
+     * 打开一个新的tabar,里面包含的是polymer组件内容
+     * @param id tab id
+     * @param name tab 名字
+     * @param contentElement tab 内容
+     * @param param tab 参数
+     * @param mode tab 模式 View | Edit | Add
+     */
+    openNewTab: function (id, name, contentElement, param, mode) {
+      let contElement = document.createElement(contentElement);
+      if (!mode) mode = "Edit";
+      contElement.set("mode", mode);
 
-            //绑定编辑对象初始值
-            if (!this.isEmptyObject(param)) {
-                contElement.set("tabParam", param);
-            }
-            var hInput = contElement.querySelectorAll("h-form-input");
+      //绑定编辑对象初始值
+      if (!this.isEmptyObject(param)) {
+        contElement.set("tabParam", param);
+      }
+      let hInput = contElement.querySelectorAll("h-form-input");
 
-            for (var i = 0; i < hInput.length; i++) {
-                var e = hInput.item(i);
-                e.mode = (e.mode) ? e.mode : this.mode;
-            }
-            var config = {
-                id: id,
-                text: name,
-                contElement: contElement
-            };
-            var tabBar = window.parent.uc.tabbar || window.parent.parent.uc.tabbar;
-            tabBar.addTab(config);
-        },
-        /**
-         * 获取tabar参数
-         * @returns {*|{}}
-         */
-        getTabParam: function () {
-            return window.top.tabParam || {};
-        },
-        /**
-         * 判断当前这个e是不是我自己感兴趣的事件
-         * @param e 事件
-         * @param eventType 事件的type
-         * @param elementId 事件宿主id
-         * @returns {boolean}
-         */
-        isInterestedEvent: function (e, eventType, elementId) {
-            var flag = false;
-            if (eventType) {
-                flag = e.type == eventType;
-            }
-            if (elementId) {
-                flag = Polymer.dom(e.target).node.domHost.id == elementId;
-            }
-            return flag;
-        },
-        /**
-         * 加操作
-         * @returns {*}
-         */
-        addOperate: function () {
-            var args = arguments;
-            if (args && args.length > 0) {
-                for (var i = 0, sum = 0; i < args.length; i++) {
-                    sum += args[i];
-                    if (i == args.length - 1) {
-                        return sum;
-                    }
-                }
-            }
-        },
-        /**
-         *两整数之差
-         */
-        diffInt: function (a, b) {
-            var arg1 = parseInt(a, 10);
-            var arg2 = parseInt(b, 10);
-            if (isNaN(arg1) || isNaN(arg2)) {
-                return;
-            }
-            return arg1 - arg2;
-        },
-        /**
-         *两浮点数之差
-         */
-        diffFloat: function (a, b) {
-            var arg1 = parseFloat(a);
-            var arg2 = parseFloat(b);
-            if (isNaN(arg1) || isNaN(arg2)) {
-                return;
-            }
-            return arg1 - arg2;
-        },
-        /**
-         *两浮点数之和
-         */
-        addFloat: function (a, b) {
-            var arg1 = parseFloat(a);
-            var arg2 = parseFloat(b);
-            if (isNaN(arg1) || isNaN(arg2)) {
-                return;
-            }
-            return arg1 +arg2;
-        },
-        /**
-         *三个浮点数之差
-         */
-        diffThreeFloat: function (a, b, c) {
-            var arg1 = parseFloat(a);
-            var arg2 = parseFloat(b);
-            var arg3 = parseFloat(c);
-            if (isNaN(arg1) || isNaN(arg2) || isNaN(arg3)) {
-                return;
-            }
-            return arg1 - arg2 - arg3;
-        },
+      for (let i = 0; i < hInput.length; i++) {
+        let e = hInput.item(i);
+        e.mode = (e.mode) ? e.mode : this.mode;
+      }
+      let config = {
+        id: id,
+        text: name,
+        contElement: contElement
+      };
+      let tabBar = window.parent.uc.tabbar || window.parent.parent.uc.tabbar;
+      tabBar.addTab(config);
+    },
+    /**
+     * 获取tabar参数
+     * @returns {*|{}}
+     */
+    getTabParam: function () {
+      return window.top.tabParam || {};
+    },
+    /**
+     * 判断当前这个e是不是我自己感兴趣的事件
+     * @param e 事件
+     * @param eventType 事件的type
+     * @param elementId 事件宿主id
+     * @returns {boolean}
+     */
+    isInterestedEvent: function (e, eventType, elementId) {
+      let flag = false;
+      if (eventType) {
+        flag = e.type == eventType;
+      }
+      if (elementId) {
+        flag = Polymer.dom(e.target).node.domHost.id == elementId;
+      }
+      return flag;
+    },
+    /**
+     * 加操作
+     * @returns {*}
+     */
+    addOperate: function () {
+      let args = arguments;
+      if (args && args.length > 0) {
+        for (let i = 0, sum = 0; i < args.length; i++) {
+          sum += args[i];
+          if (i == args.length - 1) {
+            return sum;
+          }
+        }
+      }
+    },
+    /**
+     *两整数之差
+     */
+    diffInt: function (a, b) {
+      let arg1 = parseInt(a, 10);
+      let arg2 = parseInt(b, 10);
+      if (isNaN(arg1) || isNaN(arg2)) {
+        return;
+      }
+      return arg1 - arg2;
+    },
+    /**
+     *两浮点数之差
+     */
+    diffFloat: function (a, b) {
+      let arg1 = parseFloat(a);
+      let arg2 = parseFloat(b);
+      if (isNaN(arg1) || isNaN(arg2)) {
+        return;
+      }
+      return arg1 - arg2;
+    },
+    /**
+     *两浮点数之和
+     */
+    addFloat: function (a, b) {
+      let arg1 = parseFloat(a);
+      let arg2 = parseFloat(b);
+      if (isNaN(arg1) || isNaN(arg2)) {
+        return;
+      }
+      return arg1 + arg2;
+    },
+    /**
+     *三个浮点数之差
+     */
+    diffThreeFloat: function (a, b, c) {
+      let arg1 = parseFloat(a);
+      let arg2 = parseFloat(b);
+      let arg3 = parseFloat(c);
+      if (isNaN(arg1) || isNaN(arg2) || isNaN(arg3)) {
+        return;
+      }
+      return arg1 - arg2 - arg3;
+    },
 
-        //计算两时间相差天数 time0,time1为时间毫秒数
-        diffDays: function (time0, time1) {
-            var d0 = new Date(Number(time0));
-            d0.setSeconds(0);
-            d0.setMinutes(0);
-            d0.setHours(0);
-            d0.setMilliseconds(0);
-            var d1 = new Date(Number(time1));
-            d1.setSeconds(0);
-            d1.setMinutes(0);
-            d1.setHours(0);
-            d1.setMilliseconds(0);
-            return (d0.getTime() - d1.getTime()) / 1000 / 60 / 60 / 24
-        },
-        /**
-         * 或操作
-         * @returns {number}
-         */
-        orOperate: function () {
-            var args = arguments;
-            if (args && args.length > 0) {
-                for (var i = 0, sum = 0; i < args.length; i++) {
-                    sum = sum || args[i];
-                    if (i == args.length - 1) {
-                        return sum;
-                    }
-                }
-            }
-        },
-        /**
-         * 打印预览
-         * @param num
-         */
-        preview: function (num) {
-            var bdHtml = this.$["all"].innerHTML;
-            var printHtml = new Array();
-            for (var i = 1; i <= num; i++) {
-                var sPrintStr = "<!--startprint" + i + "-->";
-                var ePrintStr = "<!--endprint" + i + "-->";
-                var printHtmlStr = bdHtml.substr(bdHtml.indexOf(sPrintStr) + 18);
-                var printContent = printHtmlStr.substring(0, printHtmlStr.indexOf(ePrintStr));
-                printHtml.push(printContent);
-            }
-            var openWindow = window.open("", "newwin");
-            var styleLink = "<link rel=stylesheet type='text/css' href='" + this.getRoot() + "/mall/kuaisuordernew/assets/css/print.css'>";
-            openWindow.document.write(styleLink);
-            openWindow.document.write(printHtml.toString());
-            function callBack() {
-                openWindow.print();
-                openWindow.close();
-            }
+    //计算两时间相差天数 time0,time1为时间毫秒数
+    diffDays: function (time0, time1) {
+      let d0 = new Date(Number(time0));
+      d0.setSeconds(0);
+      d0.setMinutes(0);
+      d0.setHours(0);
+      d0.setMilliseconds(0);
+      let d1 = new Date(Number(time1));
+      d1.setSeconds(0);
+      d1.setMinutes(0);
+      d1.setHours(0);
+      d1.setMilliseconds(0);
+      return (d0.getTime() - d1.getTime()) / 1000 / 60 / 60 / 24
+    },
+    /**
+     * 或操作
+     * @returns {number}
+     */
+    orOperate: function () {
+      let args = arguments;
+      if (args && args.length > 0) {
+        for (let i = 0, sum = 0; i < args.length; i++) {
+          sum = sum || args[i];
+          if (i == args.length - 1) {
+            return sum;
+          }
+        }
+      }
+    },
+    /**
+     * 打印预览
+     * @param num
+     */
+    preview: function (num) {
+      let bdHtml = this.$["all"].innerHTML;
+      let printHtml = new Array();
+      for (let i = 1; i <= num; i++) {
+        let sPrintStr = "<!--startprint" + i + "-->";
+        let ePrintStr = "<!--endprint" + i + "-->";
+        let printHtmlStr = bdHtml.substr(bdHtml.indexOf(sPrintStr) + 18);
+        let printContent = printHtmlStr.substring(0, printHtmlStr.indexOf(ePrintStr));
+        printHtml.push(printContent);
+      }
+      let openWindow = window.open("", "newwin");
+      let styleLink = "<link rel=stylesheet type='text/css' href='" + this.getRoot() + "/mall/kuaisuordernew/assets/css/print.css'>";
+      openWindow.document.write(styleLink);
+      openWindow.document.write(printHtml.toString());
+      function callBack() {
+        openWindow.print();
+        openWindow.close();
+      }
 
-            setTimeout(callBack, 1000);
-        },
-        /**
-         * 获取相关数据组的值
-         * @param statusEnums
-         * @param key
-         * @returns {*}
-         */
-        showStatusValue: function (statusEnums, key) {
-            return statusEnums[key] || "无";
-        },
-        /**
-         * 获取类似[{label:xxx,value:xxxx}]数组中value对应的label值
-         */
-        showRadioLabel: function(radioArray, value) {
-            var label = "";
-            radioArray.forEach(function(e){
-                if (value == e.value) {
-                    label = e.label;
-                }
-            });
-            return label;
-        },
-        /**
-         *  @param status 传入数据 values 操作权限的集合 mode 与或运算 roles角色权限
-         *
-         *  */
-        getPatternStatus: function (status, values, mode, roles) {
-            var result = false;
-            if ((values + "").indexOf(":") < 0) {//单个匹配
-                if (status == values) {
-                    result = true;
-                }
+      setTimeout(callBack, 1000);
+    },
+    /**
+     * 获取相关数据组的值
+     * @param statusEnums
+     * @param key
+     * @returns {*}
+     */
+    showStatusValue: function (statusEnums, key) {
+      return statusEnums[key] || "无";
+    },
+    /**
+     * 获取类似[{label:xxx,value:xxxx}]数组中value对应的label值
+     */
+    showRadioLabel: function (radioArray, value) {
+      let label = "";
+      radioArray.forEach(function (e) {
+        if (value == e.value) {
+          label = e.label;
+        }
+      });
+      return label;
+    },
+    /**
+     *  @param status 传入数据 values 操作权限的集合 mode 与或运算 roles角色权限
+     *
+     *  */
+    getPatternStatus: function (status, values, mode, roles) {
+      let result = false;
+      if ((values + "").indexOf(":") < 0) {//单个匹配
+        if (status == values) {
+          result = true;
+        }
+      }
+      else {
+        values = values.split(":");//分割前后
+        for (let i = 0; i < values.length; i++) {
+          if (status == values[i]) {
+            result = true;
+          }
+        }
+      }
+      if (roles && mode) {
+        if ((roles + "").indexOf(":") < 0) {
+          if ((mode + "").indexOf("||") < 0) {
+            result = roles && result;
+          }
+          else {
+            result = roles || result;
+          }
+        }
+        else {
+          roles = roles.split(":");//分割前后
+          for (let i = 0; i < roles.length; i++) {
+
+            if ((mode + "").indexOf("||") < 0) {
+              result = roles[i] && result;
             }
             else {
-                values = values.split(":");//分割前后
-                for (var i = 0; i < values.length; i++) {
-                    if (status == values[i]) {
-                        result = true;
-                    }
-                }
+              result = roles[i] || result;
             }
-            if (roles && mode) {
-                if ((roles + "").indexOf(":") < 0) {
-                    if ((mode + "").indexOf("||") < 0) {
-                        result = roles && result;
-                    }
-                    else {
-                        result = roles || result;
-                    }
-                }
-                else {
-                    roles = roles.split(":");//分割前后
-                    for (var i = 0; i < roles.length; i++) {
-
-                        if ((mode + "").indexOf("||") < 0) {
-                            result = roles[i] && result;
-                        }
-                        else {
-                            result = roles[i] || result;
-                        }
-                    }
-                }
-            }
-            return result;
-        },
-        /*
-         *打开对话框加载标题title
-         */
-        getDialogTitle: function (title,entity) {
-            return {"title": title,"entity":entity}
-        },
-        //根据图片id获取图片返回到列表<img>的src
-        getPicture: function (suburl, imgId) {
-            if (imgId && imgId != "undefined") {
-                return this.getRoot() + suburl + imgId + ".do";
-            }
-            else return "";
-        },
-        /*
-         *  替换时间里面的T内容datetime-local
-         */
-        changeDateT: function (date) {
-            return date.replace("T", " ");
-        },
-        /*
-         * param (列表名，请求url)
-         下拉<h-input-select>从数据字典中获取数据的方法
-         */
-        getDate: function (listName, url) {
-            var self = this;
-            result = $.ajax({
-                type: "GET",
-                url: url,
-                dataType: "json",
-                success: function (msg) {
-                    var newJson = [];
-                    msg.forEach(function (json) {
-                        newJson.push({value: json.value, label: json.name});
-                    });
-                    self.set(listName, newJson);
-                },
-                error: function () {
-                    alert("获取下拉列表字典数据错误");
-                }
-            });
-        },
-        /*
-         *@params currentDate，num
-         *获取num天后的日期
-         */
-        date2str: function (currentDate, num) {
-            var newDate, d, t, t2;
-            t = new Date(currentDate).getTime();
-            t2 = num * 1000 * 3600 * 24;
-            t += t2;
-            d = new Date(t);
-            newDate = d.getUTCFullYear() + "-";
-            newDate += ("00" + (d.getUTCMonth() + 1)).slice(-2) + "-";
-            newDate += ("00" + d.getUTCDate()).slice(-2);
-            return newDate;
-        },
-        /**
-         * 获取最大高度
-         * @param win
-         * @returns {*}
-         * @private
-         */
-        _getMaxHeight: function (win) {
-            var h1 = win.document.body.clientHeight; //网页可见区域宽
-            var h2 = win.screen.availHeight; //屏幕可用工作区宽度
-            var h3 = win.document.body.scrollHeight; //网页正文全文宽
-            return (h1 > h2 ? ( h1 > h3 ? h1 : h3) : (h2 > h3 ? h2 : h3)) + 'px';
-        },
-        /**
-         * 如果val1 == val2 那么返回targetVal
-         * @param val1
-         * @param val2
-         * @param targetVal
-         * @returns {String}
-         * @private
-         */
-        getTargetVal: function (val1, val2, targetVal) {
-            if (val1 == val2) {
-                return targetVal;
-            } else {
-                return "";
-            }
-        },
-        /**
-         * 判断两个字符串是否相等
-         * @param val1
-         * @param val2
-         * @returns {boolean}
-         */
-        strEqual: function (val1, val2) {
-            if (val1 === val2) {
-                return true;
-            } else {
-                return false;
-            }
-        },
-        /**
-         * 判断两个字符串是否不等
-         * @param val1
-         * @param val2
-         * @returns {boolean}
-         */
-        strNoEqual: function (val1, val2) {
-            if (val1 !== val2) {
-                return true;
-            } else {
-                return false;
-            }
-        },
-        /**
-         * 完全拷贝一个对象
-         * @param item
-         * @param val2
-         * @returns {*}
-         */
-        copyObj:function(obj){
-            if(obj == null ){
-                return null;
-            }
-            var result={};
-            for (var key in obj) {
-                result[key] = typeof obj[key]==='object'? this.copyObj(obj[key]): obj[key];
-            }
-            return result;
-        },
-
-        /**
-         * 移除字符串中所有的空格
-         * @param str
-         * @returns {*}
-         */
-        trimStr: function(str) {
-            if(str == null){
-                return "";
-            }
-            return str.replace(/\s/g, '');
-        },
-
-        /**
-         * 校验传入的值是否合法
-         * 非法输入：屏蔽null undefined 只含空白的字符串 NaN function
-         * @param val
-         */
-        vaildVal: function(val) {
-            var type;
-            if (val == undefined || val == null) {
-                return false;
-            }
-            type = typeof val;
-            switch (type) {
-                case 'string':
-                    if (this.trimStr(val) == '') {
-                        return false;
-                    }
-                    break;
-                case 'number':
-                    return !isNaN(val);
-                case 'function':
-                    return false;
-                case 'object':
-                    return this.isEmptyObject();
-            }
-            return true;
-        },
-
-        /**
-         * 对象相等：规则认定 具有相同的属性，且属性值也相同
-         * @param a
-         * @param b
-         * @returns {boolean}
-         */
-        isEqualValue :function(a,b) {
-            if(typeof a != 'object' || typeof b != 'object'){
-                return false;
-            }
-            var aProp = Object.getOwnPropertyNames(a);
-            var bProp = Object.getOwnPropertyNames(b);
-            if(aProp.length != bProp.length) {
-                return false;
-            }
-            for(var i = 0; i < aProp.length; i++){
-                var propName = aProp[i];
-                if(a[propName] != b[propName]){
-                    return false;
-                }
-            }
-            return true;
-        },
-
-        /**
-         * 查看对象元素是否在对象数组中
-         * @param list
-         * @param ele
-         */
-        containObj: function(list, ele) {
-            var flag = false;
-            for(var i = 0; i < list.length; i++) {
-                if (this.isEqualValue(list[i], ele)) {
-                    flag = true;
-                    break;
-                }
-            }
-            return flag;
-        },
-
-        /**
-         * 去重 对象数组
-         * @param arr
-         */
-        uniqueArray: function(arr) {
-            var r = [];
-            for (var i = 0; i < arr.length; i++) {
-                if(!this.containObj(r,arr[i])) {
-                    r.push(arr[i]);
-                }
-            }
-            return r;
+          }
         }
+      }
+      return result;
+    },
+      /*
+       *打开对话框加载标题title
+       */
+    getDialogTitle: function (title, entity) {
+      return {"title": title, "entity": entity}
+    },
+    //根据图片id获取图片返回到列表<img>的src
+    getPicture: function (suburl, imgId) {
+      if (imgId && imgId != "undefined") {
+        return this.getRoot() + suburl + imgId + ".do";
+      }
+      else return "";
+    },
+      /*
+       *  替换时间里面的T内容datetime-local
+       */
+    changeDateT: function (date) {
+      return date.replace("T", " ");
+    },
+      /*
+       * param (列表名，请求url)
+       下拉<h-input-select>从数据字典中获取数据的方法
+       */
+    getDate: function (listName, url) {
+      let self = this;
+      result = $.ajax({
+        type: "GET",
+        url: url,
+        dataType: "json",
+        success: function (msg) {
+          let newJson = [];
+          msg.forEach(function (json) {
+            newJson.push({value: json.value, label: json.name});
+          });
+          self.set(listName, newJson);
+        },
+        error: function () {
+          alert("获取下拉列表字典数据错误");
+        }
+      });
+    },
+      /*
+       *@params currentDate，num
+       *获取num天后的日期
+       */
+    date2str: function (currentDate, num) {
+      let newDate, d, t, t2;
+      t = new Date(currentDate).getTime();
+      t2 = num * 1000 * 3600 * 24;
+      t += t2;
+      d = new Date(t);
+      newDate = d.getUTCFullYear() + "-";
+      newDate += ("00" + (d.getUTCMonth() + 1)).slice(-2) + "-";
+      newDate += ("00" + d.getUTCDate()).slice(-2);
+      return newDate;
+    },
+    /**
+     * 获取最大高度
+     * @param win
+     * @returns {*}
+     * @private
+     */
+    _getMaxHeight: function (win) {
+      let h1 = win.document.body.clientHeight; //网页可见区域宽
+      let h2 = win.screen.availHeight; //屏幕可用工作区宽度
+      let h3 = win.document.body.scrollHeight; //网页正文全文宽
+      return (h1 > h2 ? ( h1 > h3 ? h1 : h3) : (h2 > h3 ? h2 : h3)) + 'px';
+    },
+    /**
+     * 如果val1 == val2 那么返回targetVal
+     * @param val1
+     * @param val2
+     * @param targetVal
+     * @returns {String}
+     * @private
+     */
+    getTargetVal: function (val1, val2, targetVal) {
+      if (val1 == val2) {
+        return targetVal;
+      } else {
+        return "";
+      }
+    },
+    /**
+     * 判断两个字符串是否相等
+     * @param val1
+     * @param val2
+     * @returns {boolean}
+     */
+    strEqual: function (val1, val2) {
+      if (val1 === val2) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+    /**
+     * 判断两个字符串是否不等
+     * @param val1
+     * @param val2
+     * @returns {boolean}
+     */
+    strNoEqual: function (val1, val2) {
+      if (val1 !== val2) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+    /**
+     * 完全拷贝一个对象
+     * @param item
+     * @param val2
+     * @returns {*}
+     */
+    copyObj: function (obj) {
+      if (obj == null) {
+        return null;
+      }
+      let result = {};
+      for (let key in obj) {
+        result[key] = typeof obj[key] === 'object' ? this.copyObj(obj[key]) : obj[key];
+      }
+      return result;
+    },
 
-    };
+    /**
+     * 移除字符串中所有的空格
+     * @param str
+     * @returns {*}
+     */
+    trimStr: function (str) {
+      if (str == null) {
+        return "";
+      }
+      return str.replace(/\s/g, '');
+    },
+
+    /**
+     * 校验传入的值是否合法
+     * 非法输入：屏蔽null undefined 只含空白的字符串 NaN function
+     * @param val
+     */
+    vaildVal: function (val) {
+      let type;
+      if (val == undefined || val == null) {
+        return false;
+      }
+      type = typeof val;
+      switch (type) {
+        case 'string':
+          if (this.trimStr(val) == '') {
+            return false;
+          }
+          break;
+        case 'number':
+          return !isNaN(val);
+        case 'function':
+          return false;
+        case 'object':
+          return this.isEmptyObject();
+      }
+      return true;
+    },
+
+    /**
+     * 对象相等：规则认定 具有相同的属性，且属性值也相同
+     * @param a
+     * @param b
+     * @returns {boolean}
+     */
+    isEqualValue: function (a, b) {
+      if (typeof a != 'object' || typeof b != 'object') {
+        return false;
+      }
+      let aProp = Object.getOwnPropertyNames(a);
+      let bProp = Object.getOwnPropertyNames(b);
+      if (aProp.length != bProp.length) {
+        return false;
+      }
+      for (let i = 0; i < aProp.length; i++) {
+        let propName = aProp[i];
+        if (a[propName] != b[propName]) {
+          return false;
+        }
+      }
+      return true;
+    },
+
+    /**
+     * 查看对象元素是否在对象数组中
+     * @param list
+     * @param ele
+     */
+    containObj: function (list, ele) {
+      let flag = false;
+      for (let i = 0; i < list.length; i++) {
+        if (this.isEqualValue(list[i], ele)) {
+          flag = true;
+          break;
+        }
+      }
+      return flag;
+    },
+
+    /**
+     * 去重 对象数组
+     * @param arr
+     */
+    uniqueArray: function (arr) {
+      let r = [];
+      for (let i = 0; i < arr.length; i++) {
+        if (!this.containObj(r, arr[i])) {
+          r.push(arr[i]);
+        }
+      }
+      return r;
+    }
+
+  };
 </script>

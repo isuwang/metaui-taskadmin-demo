@@ -13,7 +13,7 @@
         <style>
             :host {
                 display: table;
-                width:100%;
+                width: 100%;
 
                 /*增加tab按钮样式*/
                 --paper-tabs: {
@@ -23,7 +23,7 @@
                     font-weight: bold;
                     font-weight: normal;
                     height: 34px;
-                    font-size:0;
+                    font-size: 0;
                 };
 
                 --paper-tab: {
@@ -34,8 +34,8 @@
                     border-top: 1px solid #ddd;
                     color: #666;
                     background-color: #f0f0f0;
-                    width:80px;
-                    font-size:14px;
+                    width: 80px;
+                    font-size: 14px;
                 };
             }
 
@@ -55,7 +55,7 @@
             :host .container {
                 border: 1px solid #ccc;
                 border-radius: 4px;
-                width:100%;
+                width: 100%;
                 padding: 10px;
                 height: 300px;
                 overflow: auto;
@@ -70,11 +70,13 @@
         <div class="container">
             <!--父/子任务-->
             <template is="dom-if" if="{{showTabIndex(0,tabindex)}}">
-                <show-parent-child-task-list task-children="[[ context.children ]]" task-id="{{context.id}}"></show-parent-child-task-list>
+                <show-parent-child-task-list task-children="[[ context.children ]]"
+                                             task-id="{{context.id}}"></show-parent-child-task-list>
             </template>
             <!--附件-->
             <template is="dom-if" if="{{showTabIndex(1,tabindex)}}">
-                <show-task-attachment task-attachments="[[ context.taskAttachments ]]" task-id="{{context.id}}"></show-task-attachment>
+                <show-task-attachment task-attachments="[[ context.taskAttachments ]]"
+                                      task-id="{{context.id}}"></show-task-attachment>
             </template>
             <!--日志-->
             <template is="dom-if" if="{{showTabIndex(2,tabindex)}}">
@@ -88,32 +90,32 @@
 
     </template>
     <script>
-        /**
-         * `task-tabs`
-         *
-         * @customElement
-         * @polymer
-         */
-        class TaskTabs extends M2WidgetBase {
-            static get properties() {
-                return {
-                    tabindex:{
-                        type:Number,
-                        value:0
-                    }
-                };
+      /**
+       * `task-tabs`
+       *
+       * @customElement
+       * @polymer
+       */
+      class TaskTabs extends M2WidgetBase {
+        static get properties() {
+          return {
+            tabindex: {
+              type: Number,
+              value: 0
             }
-
-            static get is() {
-                return "task-tabs";
-            }
-
-            showTabIndex(index, tabindex) {
-                return index == tabindex;
-            }
-
+          };
         }
 
-        window.customElements.define(TaskTabs.is, TaskTabs);
+        static get is() {
+          return "task-tabs";
+        }
+
+        showTabIndex(index, tabindex) {
+          return index == tabindex;
+        }
+
+      }
+
+      window.customElements.define(TaskTabs.is, TaskTabs);
     </script>
 </dom-module>

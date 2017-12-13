@@ -17,41 +17,41 @@ MockDataPool.when("GET", "/task/taskadmin/findTasks.do?limit=15")
   .responseWith({status: 200, body: JSON.stringify(taskdata)});
 
 MockDataPool.when("GET", "/task/taskadmin/findSuggestions.do?limit=15")
-    .responseWith({status: 200, body: JSON.stringify(suggestionsData)});
+  .responseWith({status: 200, body: JSON.stringify(suggestionsData)});
 
 MockDataPool.when("GET", "/task/taskadmin/findBusinessTypes.do?limit=15")
-    .responseWith({status: 200, body: JSON.stringify(businessData)});
+  .responseWith({status: 200, body: JSON.stringify(businessData)});
 
 MockDataPool.when("GET", "/task/taskadmin/findAllTaskNos4Picker.do")
-    .responseWith({status: 200, body: JSON.stringify(tasks)});
+  .responseWith({status: 200, body: JSON.stringify(tasks)});
 
 MockDataPool.when("GET", "/task/taskadmin/findAllBusinessTypes4Picker.do")
-    .responseWith({status: 200, body: JSON.stringify(businessTypes)});
+  .responseWith({status: 200, body: JSON.stringify(businessTypes)});
 
 /*今日待办事项*/
 MockDataPool.when("GET", "/task/taskadmin/findTasks.do?type=1&status=12&planAtStart=1512662400000&planAtEnd=1512748800000&start=0&limit=15")
-    .responseWith({status: 200, body: JSON.stringify(todayTotoTasks)});
+  .responseWith({status: 200, body: JSON.stringify(todayTotoTasks)});
 
 /*超时待办事项*/
 MockDataPool.when("GET", "/task/taskadmin/findTasks.do?type=1&status=12&planAtEnd=1512662400000&start=0&limit=15")
-    .responseWith({status: 200, body: JSON.stringify(timeoutTodoTasks)});
+  .responseWith({status: 200, body: JSON.stringify(timeoutTodoTasks)});
 
 /*未处理投诉*/
 MockDataPool.when("GET", "/task/taskadmin/findTasks.do?type=2&status=1&start=0&limit=15")
-    .responseWith({status: 200, body: JSON.stringify(complaints)});
+  .responseWith({status: 200, body: JSON.stringify(complaints)});
 
 /*处理中投诉*/
 MockDataPool.when("GET", "/task/taskadmin/findTasks.do?type=2&status=2&start=0&limit=15")
-    .responseWith({status: 200, body: JSON.stringify(dealingComplaints)});
+  .responseWith({status: 200, body: JSON.stringify(dealingComplaints)});
 
 /*所有tasks*/
 MockDataPool.when("GET", "/task/taskadmin/findTasks.do?start=0&limit=15")
-    .responseWith({status: 200, body: JSON.stringify(allTasks)});
+  .responseWith({status: 200, body: JSON.stringify(allTasks)});
 
 /*问题*/
 MockDataPool.when("GET", "/task/taskadmin/findAllSuggestions4PickerByType.do?type=1")
-    .responseWith({status: 200, body: JSON.stringify(questions)});
+  .responseWith({status: 200, body: JSON.stringify(questions)});
 
 /*改进措施*/
 MockDataPool.when("GET", "/task/taskadmin/findAllSuggestions4PickerByType.do?type=2")
-    .responseWith({status: 200, body: JSON.stringify(measures)});
+  .responseWith({status: 200, body: JSON.stringify(measures)});
