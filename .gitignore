@@ -1,7 +1,8 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea
-*/target
+*/target/*
 */logs
 /server/target
-/server/task-admin-api/target/
-/server/task-admin-service/target/
+/server/task-admin-api/target/*
+/server/task-admin-service/target/*
+/server/project/target/*
