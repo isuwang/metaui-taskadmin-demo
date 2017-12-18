@@ -32,8 +32,11 @@ class TaskSuggestionServiceImpl extends TaskSuggestionService{
       request.`type`.optional(sql" AND `type`= ${request.`type`.get}") +
       (sql" AND updated_at BETWEEN ${updateAtStart} AND ${updateAtEnd}") +
       request.labels.optional(sql" AND " + labelSql)
+
+    val sqlLimit = sql" limit ${request.pageRequest.start}, ${request.pageRequest.limit}"
+
     val counts = dataSource.queryInt(sql" SELECT COUNT(*) FROM `suggestion` " + sqlWhere)
-    val result = dataSource.rows[Suggestion](sql" SELECT * FROM `suggestion` " + sqlWhere)
+    val result = dataSource.rows[Suggestion](sql" SELECT * FROM `suggestion` " + sqlWhere + sqlLimit)
 
     val rows: List[TSuggestion] = result.map { db =>
       BeanBuilder.build[TSuggestion](db)(

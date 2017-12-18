@@ -2,4 +2,6 @@
 .idea
 */target
 */logs
-/frontend/bower_components
+/server/target
+/server/task-admin-api/target/
+/server/task-admin-service/target/

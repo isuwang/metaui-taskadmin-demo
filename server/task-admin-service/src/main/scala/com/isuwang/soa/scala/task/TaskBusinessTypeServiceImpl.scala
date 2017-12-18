@@ -28,8 +28,10 @@ class TaskBusinessTypeServiceImpl extends TaskBusinessTypeService {
       request.businessTypeId.optional(sql" AND id= ${request.businessTypeId}") +
       (sql" AND updated_at BETWEEN ${updateAtStart} AND ${updateAtEnd}")
 
+    val sqlLimit = sql" limit ${request.pageRequest.start}, ${request.pageRequest.limit}"
+
     val counts = dataSource.queryInt(sql" SELECT COUNT(*) FROM `business_type` " + sqlWhere)
-    val result = dataSource.rows[BusinessType](sql" SELECT * FROM `business_type` " + sqlWhere)
+    val result = dataSource.rows[BusinessType](sql" SELECT * FROM `business_type` " + sqlWhere + sqlLimit)
 
     val suggestions: Map[Int, Suggestion] = dataSource.rows[Suggestion](sql"SELECT * FROM suggestion").map(row => row.id -> row).toMap
 
