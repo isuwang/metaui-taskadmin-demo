@@ -8,19 +8,36 @@
 ### 启动mysql
 ### 启动zookeeper
 ### 修改连接配置
-#### 1. 修改scala-sql sql语法检查数据库配置
+#### 1. 修改scala-sql的sql语法检查数据库配置
 ```
 cd server
 vi scala-sql.properties
 ```
-修改 ``${your-mysql-host}``：
+修改 ``${your-mysql-host}`` 、``username`` 和 ``password``：
 ```
 default.driver=com.mysql.jdbc.Driver
 default.url=jdbc:mysql://${your-mysql-host}/taskdb?useUnicode=true&characterEncoding=utf8
-default.user=iplastest
-default.password=123456
+default.user=${username}
+default.password=${password}
 ```
-#### 2. 修改容器启动连接配置
+#### 2. 修改数据库连接配置
+```
+vi task-admin-service/src/main/resources/config_task-admin.properties
+```
+修改 ``${your-mysql-host}`` 、``username`` 和 ``password``：
+```
+DB_TASKDB_URL=jdbc:mysql://${your-mysql-host}:3306/taskdb?useUnicode=true&characterEncoding=utf8
+DB_TASKDB_USER=${username}
+DB_TASKDB_PASSWD=${password}
+
+DB_SLAVE_TASKDB_URL=jdbc:mysql://${your-mysql-host}:3306/taskdb?useUnicode=true&characterEncoding=utf8
+DB_SLAVE_TASKDB_USER=${username}
+DB_SLAVE_TASKDB_PASSWD=${password}
+
+FORCE_DO_THROUGH=false
+
+```
+#### 3. 修改容器启动连接配置
 ```
 cd task-admin-service
 vi dapeng.properties
