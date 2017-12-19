@@ -1,5 +1,9 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea/
 .idea/libraries/*.xml
-target/
+target
+task-admin-api/target
+task-admin-service/target
+project/target
+project/project
 logs/
