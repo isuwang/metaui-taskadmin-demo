@@ -3,6 +3,7 @@
 - mysql
 - zookeeper
 - scala 2.12.4
+- jdk 1.8
 
 ## 启动步骤
 ### 启动mysql
