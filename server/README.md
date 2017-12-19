@@ -13,7 +13,7 @@
 cd server
 vi scala-sql.properties
 ```
-修改 ``${your-mysql-host}`` 、``username`` 和 ``password``：
+修改 ``${your-mysql-host}``、``${username}`` 和 ``${password}``：
 ```
 default.driver=com.mysql.jdbc.Driver
 default.url=jdbc:mysql://${your-mysql-host}/taskdb?useUnicode=true&characterEncoding=utf8
@@ -24,7 +24,7 @@ default.password=${password}
 ```
 vi task-admin-service/src/main/resources/config_task-admin.properties
 ```
-修改 ``${your-mysql-host}`` 、``username`` 和 ``password``：
+修改 ``${your-mysql-host}``、``${username}`` 和 ``${password}``：
 ```
 DB_TASKDB_URL=jdbc:mysql://${your-mysql-host}:3306/taskdb?useUnicode=true&characterEncoding=utf8
 DB_TASKDB_USER=${username}
