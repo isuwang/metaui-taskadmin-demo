@@ -6,3 +6,7 @@
 /server/task-admin-api/target/*
 /server/task-admin-service/target/*
 /server/project/target/*
+.DS_Store
+server/task-admin-api/src/main/.DS_Store
+server/task-admin-api/src/main/resources/.DS_Store
+server/task-admin-api/src/main/scala/com/isuwang/soa/scala/.DS_Store

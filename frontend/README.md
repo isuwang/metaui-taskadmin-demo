@@ -1,31 +1,17 @@
-# \<metaui-taskadmin-demo\>前端部分使用教程
-
-##1.安装npm
-##2.安装bower
+# frontend启动
+### 修改连接配置
 ```
-$ npm install -g bower
+vi frontend/src/main/resources/init.properties
 ```
-##3.安装polymer CLI
+修改 ``${your-mysql-host}``：
 ```
-$ npm install -g polymer-cli
+DB_METADB_URL=jdbc:mysql://${your-mysql-host}:3306/metadb?useUnicode=true&characterEncoding=utf8
+DB_METADB_USER=root
+DB_METADB_PASSWD=root
 ```
-##4.进入项目根目录，下载组件库bower_components
+### 添加tomcat配置
+VM options添加参数， 修改 ``${your-zookeeper-host}``
 ```
-$ cd metaui-taskadmin-demo/frontend
-$ bower install --save
+-Dsoa.zookeeper.host=${your-zookeeper-host}:2181 -Dfile.encoding=UTF-8
 ```
-##5.启动项目
-```
-$ polymer serve
-```
-在浏览器地址栏输入applications的地址
-例如我本地显示：
-```
-$ polymer serve
-$ info:    Files in this directory are available under the following URLs
-$      applications: http://127.0.0.1:8081
-$      reusable components: http://127.0.0.1:8081/components/task-admin/
-```
-那么就在浏览器地址栏输入http://127.0.0.1:8081，启动项目
-
-
+### 启动tomcat
