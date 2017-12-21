@@ -1,0 +1,17 @@
+/**/target
+/**/.DS_Store
+/**/*.iml
+/*.idea/
+/*.iml
+/.classpath
+/.project
+/.settings/
+/docker/apps/
+/bin/
+/classes/
+/logs/
+
+*.iml
+/.idea/
+**/target/
+**/*.iml
