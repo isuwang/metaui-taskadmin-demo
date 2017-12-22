@@ -1,7 +1,7 @@
 {
   "name": "h2-elements",
   "description": "Polymer components for building web apps.",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "main": [
     "h2-grid.html",
     "h2-tip.html"
@@ -52,13 +52,13 @@
     "test",
     "tests"
   ],
-  "_release": "0.3.0",
+  "_release": "0.4.0",
   "_resolution": {
     "type": "version",
-    "tag": "v0.3.0",
-    "commit": "8e98220d27a124bd80792c907689c026fda49c72"
+    "tag": "v0.4.0",
+    "commit": "456af265ee41c98f6382d46d52794f85033aaa25"
   },
   "_source": "https://github.com/isuwang/h2-elements.git",
-  "_target": "^0.3.0",
+  "_target": "^0.4.0",
   "_originalSource": "isuwang/h2-elements"
 }

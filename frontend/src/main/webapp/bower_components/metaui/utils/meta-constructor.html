@@ -235,6 +235,7 @@ option = {
         this.request = {
           url: this.src,
           method: "POST",
+          credentials: "include",
           body: searchParams
         };
 
@@ -455,6 +456,8 @@ option = {
             `);
             fieldMeta.candidates = [];
           }
+          fieldMeta.candidateLabel = fieldMeta.candidateLabel || "label";
+          fieldMeta.candidateValue = fieldMeta.candidateValue || "value";
         }
 
         rawFieldMeta.annotations && rawFieldMeta.annotations.forEach(an => {

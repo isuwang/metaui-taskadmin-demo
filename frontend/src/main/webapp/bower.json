@@ -4,13 +4,11 @@
   "dependencies": {
     "polymer": "Polymer/polymer#^2.0.0",
     "paper-tabs": "PolymerElements/paper-tabs#^2.0.0",
-    "h2-elements": "isuwang/h2-elements#^0.3.0",
-    "metaui": "isuwang/metaui#^0.1.0"
+    "h2-elements": "git://github.com/isuwang/h2-elements.git#0.4.0",
+    "metaui": "git://github.com/isuwang/metaui.git#v0.1.1"
   },
   "devDependencies": {
     "web-component-tester": "Polymer/web-component-tester#^6.0.0",
-    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0",
-    "paper-tabs": "PolymerElements/paper-tabs#2.0.0",
-    "h2-elements": "isuwang/h2-elements#^0.3.0"
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0"
   }
 }

@@ -30,17 +30,17 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <dependency>
-            <groupId>com.isuwang</groupId>
-            <artifactId>dapeng-metaui-servlet-for-debug</artifactId>
-            <version>1.0.0</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>javax.servlet</groupId>
-                    <artifactId>servlet-api</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.isuwang</groupId>-->
+            <!--<artifactId>dapeng-metaui-servlet-for-debug</artifactId>-->
+            <!--<version>1.0.0</version>-->
+            <!--<exclusions>-->
+                <!--<exclusion>-->
+                    <!--<groupId>javax.servlet</groupId>-->
+                    <!--<artifactId>servlet-api</artifactId>-->
+                <!--</exclusion>-->
+            <!--</exclusions>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>com.isuwang</groupId>
@@ -126,7 +126,7 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>frontend1</finalName>
+        <finalName>frontend</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
