@@ -38,12 +38,12 @@
     </appender>  
       
     <root level="info">
-        <!--<if condition='property("logMode").equals("dev")'>-->
-            <!--<then>-->
+        <if condition='property("logMode").equals("dev")'>
+            <then>
                 <appender-ref ref="STDOUT"/>
-            <!--</then>-->
-        <!--</if>-->
-        <!--<appender-ref ref="fileLog" />-->
+            </then>
+        </if>
+        <appender-ref ref="fileLog" />
     </root>  
       
     <logger name="com.kuaisu" level="DEBUG">  
