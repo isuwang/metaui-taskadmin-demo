@@ -13,7 +13,7 @@ struct TFieldMeta {
     /**
     * 字段名，如“订单号”
     **/
-    5: optional string label,
+    5: string label,
     /**
     * 是否必填，true | false
     **/
