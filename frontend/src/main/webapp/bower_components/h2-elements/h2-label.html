@@ -2,70 +2,68 @@
 
 <!--
 
-```javascript
+`h2-label`
 
-<h2-label></h2-label>
+Example:
+```html
+<h2-label value="标签"></h2-label>
 ```
+
+## Styling
+
+The following custom properties and mixins are available for styling:
+
+|Custom property | Description | Default|
+|----------------|-------------|----------|
+|`--h2-label` | Mixin applied to the label | {}
+
 -->
-<!--标签组件-->
 <dom-module id="h2-label">
-    <template>
-        <style>
-            :host * {
-                -webkit-box-sizing: border-box;
-                -moz-box-sizing: border-box;
-                box-sizing: border-box;
-            }
+  <template>
+    <style>
+      :host {
+        display: flex;
+        align-items: center;
+      }
 
-            :host label {
-                min-width: 80px;
-                display: inline-block;
-                text-align: right;
-                line-height: 34px;
-                font-size: 14px;
-                height: 34px;
-                white-space: nowrap;
-                @apply (--h2-label);
-            }
+      :host div {
+        display: block;
+        width: inherit;
+        font-size: inherit;
+        text-align: right;
+        vertical-align: center;
+        white-space: nowrap;
+        @apply --h2-label;
+      }
 
-            :host .color-red {
-                color: rgb(255, 100, 100);
-            }
-        </style>
-        <template is="dom-if" if="[[value]]">
-            <label><span>[[value]]</span>
-                <template is="dom-if" if="[[required]]">
-                    <span class="color-red">*</span>
-                </template>
-                ：
-            </label>
-        </template>
+    </style>
+    <template is="dom-if" if="[[value]]">
+      <div>[[value]]：</div>
     </template>
-    <script>
-        /**
-         * `h2-label`
-         *
-         * @customElement
-         * @polymer
-         * @demo demo/h2-label/index.html
-         */
-        class H2Label extends Polymer.Element {
-            static get properties() {
-                return {
-                    value: {
-                        type: String
-                    },
-                    required: {
-                        type: Boolean,
-                        value: false
-                    }
-                };
-            }
+  </template>
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     * @demo demo/h2-label/index.html
+     */
+    class H2Label extends Polymer.mixinBehaviors([], Polymer.Element) {
+      static get properties() {
+        return {
+          /**
+           * Text of the label.
+           */
+          value: {
+            type: String
+          }
+        };
+      }
 
-            static get is() {
-                return "h2-label";
-            }
-        }
-        window.customElements.define(H2Label.is, H2Label);
-    </script>
+      static get is() {
+        return "h2-label";
+      }
+    }
+
+    window.customElements.define(H2Label.is, H2Label);
+  </script>
 </dom-module>

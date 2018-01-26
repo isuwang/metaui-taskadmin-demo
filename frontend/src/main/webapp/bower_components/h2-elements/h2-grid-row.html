@@ -1,166 +1,59 @@
 <link rel="import" href="../polymer/polymer-element.html">
-<link rel="import" href="../iron-collapse/iron-collapse.html">
-
 <!--
 
-```javascript
-
+```html
 <h2-grid-row></h2-grid-row>
 ```
 -->
 
 <dom-module id="h2-grid-row">
-    <template>
-        <style>
-            :host {
-                display: block;
-                /*去掉影响偶数行的背景颜色*/
-            }
+  <template>
+    <style>
+      :host {
+        display: table-row;
+        padding: 0;
+        margin: 0;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+      }
 
-            :host .row:hover {
-                background: #CAF1FF;
-            }
+      :host(:hover) {
+        background: #CAF1FF !important;
+      }
 
-            .row {
-                padding: 0;
-                margin: 0;
-                border-bottom: 1px solid #ddd;
-                line-height: 40px;
-            }
+      :host(:nth-of-type(odd)) {
+        background: #ffffff;
+      }
 
-            .flex-box {
-                display: -webkit-flex; /* Safari */
-                display: flex;
-            }
+      :host(:nth-of-type(even)) {
+        background: #efefef;
+      }
 
-            :host ::slotted(h2-grid-cell:not(:last-of-type)) {
-                flex: 1;
-            }
+      ::slotted([slot=subItem]) {
+        padding: 10px;
+      }
 
-            :host ::slotted(h2-grid-cell:last-of-type) {
-                width: var(--operation-column-width, 120px);
-            }
-        </style>
-        <div class="row flex-box">
-            <slot></slot>
-        </div>
-        <iron-collapse id="sub-row" ></iron-collapse>
-    </template>
-    <script>
-        /**
-         * `h2-grid-row`
-         *
-         * @customElement
-         * @polymer
-         * @demo demo/h2-grid-row/index.html
-         */
-        class H2GridRow extends Polymer.Element {
-            static get properties() {
-                return {
-                    /**
-                     * 子页面
-                     * */
-                    subItem: String,
-                    /**
-                     * 子页面参数
-                     * */
-                    subParam: {
-                        type: Object,
-                        value: function () {
-                            return {};
-                        }
-                    },
+    </style>
 
-                    /**
-                     * 子页面是否默认开启
-                     * */
-                    open: {
-                        type: Boolean,
-                        value: false,
-                        observer: "__defaultOpenChange"
-                    },
-                    subItemDoc: {
-                        type: Object,
-                        value: function () {
-                            return {};
-                        }
-                    },
-                    /**
-                     * 当前子页面是否已经加载
-                     * */
-                    loadItem: {
-                        type: Boolean,
-                        value: true
-                    }
-                };
-            }
+    <slot></slot>
 
-            static get observers() {
-                return [
-                    'addSubItems(subItemDoc, subParam)',
-                ];
-            }
+  </template>
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class H2GridRow extends Polymer.Element {
+      static get properties() {
+        return {};
+      }
 
-            static get is() {
-                return "h2-grid-row";
-            }
+      static get is() {
+        return "h2-grid-row";
+      }
+    }
 
-
-            openChangeItem() {
-                this.$["sub-row"].toggle();
-            }
-
-            __defaultOpenChange(open) {
-                if (open) {
-                    this.querySelectorAll("h2-grid-cell").forEach((item) => item.setAttribute("is-open", true));
-                    this.openSubItem();
-                }
-            }
-
-            /**
-             * 向子页面传递参数
-             * @param subItemDoc
-             * @param subParam
-             */
-            addSubItems(subItemDoc, subParam) {
-                if (!this.isEmptyObject(subItemDoc) && !this.isEmptyObject(subParam)) {
-                    this.set("subItemDoc.subParam", this.subParam)
-                }
-            }
-
-            isEmptyObject(obj) {
-                if (typeof obj == "object") {
-                    for (let n in obj) {
-                        return false
-                    }
-                } else {
-                    return !obj;
-                }
-                return true;
-            }
-
-            /**
-             * 打开子页面
-             */
-            openSubItem() {
-                if (this.loadItem) {
-                    if (this.subItem) {
-                        this.subItemDoc = document.createElement(this.subItem);
-                        this.$["sub-row"].appendChild(this.subItemDoc);
-                    }
-                    this.addSubItems(this.subItemDoc, this.subParam);
-                    this.set("loadItem", false);
-                }
-                setTimeout(this.openChangeItem.bind(this), 100);
-            }
-
-            ready() {
-                super.ready();
-                this.addEventListener('open-sub-item', (e) => {
-                    this.openSubItem();
-                });
-            }
-        }
-        window.customElements.define(H2GridRow.is, H2GridRow);
-    </script>
+    window.customElements.define(H2GridRow.is, H2GridRow);
+  </script>
 </dom-module>

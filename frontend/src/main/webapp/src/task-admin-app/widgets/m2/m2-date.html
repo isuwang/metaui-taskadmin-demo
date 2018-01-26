@@ -5,12 +5,16 @@
     <template>
         <style>
             :host {
-                width: 100%;
+                display: block;
+            }
+            #input {
+                width: inherit;
+                height: inherit;
             }
         </style>
         <h2-input-date
                 id="input"
-                time="{{value}}"
+                timestamp="{{value}}"
                 label=[[metadata.label]]
                 placeholder="[[metadata.label]]"
                 required=[[metadata.required]]

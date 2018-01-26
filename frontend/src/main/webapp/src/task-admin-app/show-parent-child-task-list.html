@@ -6,13 +6,15 @@
 <dom-module id="show-parent-child-task-list">
     <template>
         <style>
+            :host {
+                display: block;
+            }
             :host .container {
                 display: flex;
-                justify-content: flex-end;
-                flex-flow: row wrap;
             }
 
             :host .grid {
+                flex: 1;
                 margin-top: 5px;
             }
         </style>

@@ -148,12 +148,15 @@
           return (metadata) => {
             metadata.query.style = `
                 .conditions {
-                  grid-row-gap: 10px;
-                  grid-column-gap: 30px;
+                  grid-row-gap: 20px;
+                  grid-column-gap: 1%;
                   grid-template-columns: 19% 19% 19% 19% auto;
+
                 }
                 .conditions__item {
-                  width: 238px;
+                  width: 300px;
+                  height: 34px;
+                  --h2-label-width: 100px;
                 }
                 #m2-crud-query-planAtStart-editor {
                   grid-row-start: 2;
@@ -246,31 +249,34 @@
 
                         #m2-form-taskSubject-editor {
                             grid-row-start: 3;
-                            grid-column-end: span 2
+                            grid-column-end: span 2;
+                            height: 60px;
                         }
                         #m2-form-problemDesc-editor {
                             grid-row-start: 6;
-                            grid-column-end: span 2
+                            grid-column-end: span 2;
                         }
                         #m2-form-resultDesc-editor {
                             grid-row-start: 7;
-                            grid-column-end: span 2
+                            grid-column-end: span 2;
+                            height: 60px;
                         }
                         #m2-form-questions-editor {
                             grid-row-start: 8;
-                            grid-column-end: span 2
+                            grid-column-end: span 2;
                         }
                         #m2-form-improvements-editor {
                             grid-row-start: 9;
-                            grid-column-end: span 2
+                            grid-column-end: span 2;
                         }
                         #m2-form-attachment-editor {
                             grid-row-start: 10;
-                            grid-column-end: span 2
+                            grid-column-end: span 2;
                         }
                         #m2-form-remark-editor {
                             grid-row-start: 11;
-                            grid-column-end: span 2
+                            grid-column-end: span 2;
+                            height: 60px;
                         }
                     `;
 

@@ -3,6 +3,15 @@
 <link rel="import" href="../../../../bower_components/h2-elements/h2-radio.html">
 <dom-module id="m2-radio">
     <template>
+        <style>
+            :host {
+                display: block;
+            }
+            #radio {
+                width: inherit;
+                height: inherit;
+            }
+        </style>
         <h2-radio
                 id="radio"
                 value="{{value}}"

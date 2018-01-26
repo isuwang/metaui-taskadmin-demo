@@ -79,8 +79,7 @@ metadata1 = {
   <template>
     <style>
       :host {
-        display: inline-block;
-        overflow: visible;
+        display: block;
       }
 
       :host paper-button {
@@ -151,7 +150,7 @@ metadata1 = {
           data: data
         }, (data) => {
           this._refreshContext(data);
-        }, (err) => this.hTip.error(JSON.stringify(err)));
+        }, (err) => this.h2Tip.error(JSON.stringify(err)));
 
       }
 

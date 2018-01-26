@@ -4,7 +4,17 @@
 <link rel="import" href="../../../../bower_components/metaui/widgets/m2-widget-base.html">
 <dom-module id="m2-file">
     <template>
+        <style>
+            :host {
+                display: block;
+            }
+            #input {
+                width: inherit;
+                height: inherit;
+            }
+        </style>
         <h2-input
+                id="input"
                 value="{{ value }}"
                 label="[[ metadata.label ]]"
                 required="[[ metadata.required]]"

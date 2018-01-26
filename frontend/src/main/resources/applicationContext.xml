@@ -15,5 +15,6 @@
 
         http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.0.xsd">
 
+    <annotation-driven/>
     <context:component-scan base-package="com.isuwang.task.ctrl"/>
 </beans:beans>
