@@ -1,0 +1,60 @@
+{
+  "name": "metaui",
+  "version": "1.0.0-rc.1",
+  "description": "meta ui",
+  "authors": [
+    "WahsonLeung  <hsliang1@163.com>"
+  ],
+  "keywords": [
+    "web-components",
+    "polymer",
+    "metaui"
+  ],
+  "main": [
+    "m2-crud.html",
+    "m2-crud-query.html",
+    "m2-grid.html",
+    "m2-form.html",
+    "m2-action.html",
+    "m2-dialog",
+    "m2-field.html"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/isuwang/metaui.git"
+  },
+  "license": "https://github.com/isuwang/metaui/blob/master/LICENSE",
+  "homepage": "https://github.com/isuwang/metaui",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.2",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0",
+    "paper-button": "PolymerElements/paper-button#1 - 2",
+    "paper-dialog": "PolymerElements/paper-dialog#1 - 2",
+    "paper-dropdown-menu": "PolymerElements/paper-dropdown-menu#1 - 2",
+    "web-animations-js": "web-animations/web-animations-js#^2.2.0",
+    "h2-elements": "isuwang/h2-elements#v1.0.0-rc.2"
+  },
+  "devDependencies": {
+    "web-component-tester": "^6.0.0",
+    "iron-component-page": "^3.0.1",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#1 - 2",
+    "iron-test-helpers": "PolymerElements/iron-test-helpers#1 - 2"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "1.0.0-rc.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.0-rc.1",
+    "commit": "512506f8f33ab8f80172164ca63c21256985c858"
+  },
+  "_source": "https://github.com/isuwang/metaui.git",
+  "_target": "v1.0.0-rc.1",
+  "_originalSource": "isuwang/metaui",
+  "_direct": true
+}

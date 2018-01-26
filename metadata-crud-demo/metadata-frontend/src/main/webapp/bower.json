@@ -1,0 +1,14 @@
+{
+  "name": "metadata-frontend",
+  "homepage": "https://github.com/isuwang/metaui-taskadmin-demo/metadata-crud-demo/metadata-frontend/",
+  "authors": [
+    "WahsonLeung <hsliang1@163.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "dependencies": {
+    "metaui": "isuwang/metaui#v1.0.0-rc.1",
+    "h2-elements": "v1.0.0-rc.1"
+  }
+}

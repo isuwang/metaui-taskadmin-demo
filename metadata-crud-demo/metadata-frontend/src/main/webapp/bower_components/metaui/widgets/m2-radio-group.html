@@ -1,0 +1,52 @@
+<link rel="import" href="../../polymer/polymer.html">
+<link rel="import" href="../../h2-elements/behaviors/base-behavior.html">
+<link rel="import" href="../../h2-elements/h2-radio.html">
+<link rel="import" href="./m2-widget-base.html">
+<dom-module id="m2-radio-group">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      #radio {
+        width: inherit;
+        height: inherit;
+      }
+    </style>
+    <h2-radio
+            id = "radio"
+            label="[[ metadata.label ]] "
+            items="[[ metadata.candidates ]]"
+            attr-for-label="[[ metadata.candidateLabel ]]"
+            attr-for-value="[[ metadata.candidateValue ]]"
+            value="{{ value }}">
+    </h2-radio>
+  </template>
+  <script>
+    class M2RadioGroup extends Polymer.mixinBehaviors([BaseBehavior], M2WidgetBase) {
+      static get is() {
+        return "m2-radio-group";
+      }
+
+      static get properties() {
+        return {
+          noLabelFloat: {
+            type: Boolean,
+            value: false
+          }
+        };
+      }
+
+      validate() {
+        return this.$.radio.validate();
+      }
+
+      reset() {
+        this.value = undefined;
+      }
+
+    }
+
+    window.customElements.define(M2RadioGroup.is, M2RadioGroup);
+  </script>
+</dom-module>

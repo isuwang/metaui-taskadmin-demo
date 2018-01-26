@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+  <title>h2-grid demo</title>
+
+  <script src="../../../webcomponentsjs/webcomponents-lite.js"></script>
+
+  <link rel="import" href="../../../iron-demo-helpers/demo-pages-shared-styles.html">
+  <link rel="import" href="../../../iron-demo-helpers/demo-snippet.html">
+  <link rel="import" href="../../../paper-button/paper-button.html">
+  <link rel="import" href="../../../paper-input/paper-input.html">
+  <link rel="import" href="../../h2-grid.html">
+  <link rel="import" href="../../h2-grid-header.html">
+  <link rel="import" href="../../h2-grid-header-cell.html">
+  <link rel="import" href="../../h2-grid-body.html">
+  <link rel="import" href="../../h2-grid-row.html">
+  <link rel="import" href="../../h2-grid-cell.html">
+  <link rel="import" href="../../h2-button.html">
+  <link rel="import" href="../../h2-pagination.html">
+
+  <custom-style>
+    <style is="custom-style" include="demo-pages-shared-styles">
+      .centered {
+        min-width: 800px;
+      }
+
+      demo-snippet {
+        --demo-snippet-code: {
+          max-height: 500px;
+        }
+      }
+
+    </style>
+  </custom-style>
+</head>
+<body>
+<div class="vertical-section-container centered">
+  <h3>Basic h2-grid with subItem demo</h3>
+  <demo-snippet>
+    <template>
+      <custom-style>
+        <style>
+          #grid {
+            width: 100%;
+          }
+        </style>
+      </custom-style>
+      <h2-grid id="grid">
+        <h2-grid-header>
+          <h2-grid-header-cell>Name</h2-grid-header-cell>
+          <h2-grid-header-cell>Age</h2-grid-header-cell>
+          <h2-grid-header-cell>Sex</h2-grid-header-cell>
+        </h2-grid-header>
+
+        <h2-grid-body>
+          <h2-grid-row>
+            <h2-grid-cell>zhang san</h2-grid-cell>
+            <h2-grid-cell>20</h2-grid-cell>
+            <h2-grid-cell>Female</h2-grid-cell>
+          </h2-grid-row>
+
+          <h2-grid-row id="row">
+            <h2-grid-cell>zhang san</h2-grid-cell>
+            <h2-grid-cell>21</h2-grid-cell>
+            <h2-grid-cell>Male</h2-grid-cell>
+          </h2-grid-row>
+        </h2-grid-body>
+      </h2-grid>
+      <script>
+      </script>
+    </template>
+  </demo-snippet>
+</div>
+
+<div class="vertical-section-container centered">
+  <h3>Basic h2-grid demo</h3>
+  <demo-snippet>
+    <template>
+      <custom-style>
+        <style>
+          #grid1 {
+            width: 100%;
+          }
+        </style>
+      </custom-style>
+      <h2-grid id="grid1">
+        <h2-grid-header>
+          <h2-grid-header-cell>Name</h2-grid-header-cell>
+          <h2-grid-header-cell>Age</h2-grid-header-cell>
+          <h2-grid-header-cell>Sex</h2-grid-header-cell>
+          <h2-grid-header-cell>操作</h2-grid-header-cell>
+        </h2-grid-header>
+        <h2-grid-body>
+          <h2-grid-row>
+            <h2-grid-cell>zhang san</h2-grid-cell>
+            <h2-grid-cell>25</h2-grid-cell>
+            <h2-grid-cell>Female</h2-grid-cell>
+            <h2-grid-cell>
+              <h2-button raised>测试按钮1</h2-button>
+              <h2-button raised>测试按钮2</h2-button>
+              <h2-button raised>测试按钮3</h2-button>
+            </h2-grid-cell>
+          </h2-grid-row>
+          <h2-grid-row>
+            <h2-grid-cell>li si</h2-grid-cell>
+            <h2-grid-cell>26</h2-grid-cell>
+            <h2-grid-cell>Male</h2-grid-cell>
+            <h2-grid-cell>
+              <h2-button>测试按钮1</h2-button>
+              <h2-button>测试按钮2</h2-button>
+              <h2-button>测试按钮3</h2-button>
+            </h2-grid-cell>
+          </h2-grid-row>
+        </h2-grid-body>
+      </h2-grid>
+      <script>
+      </script>
+    </template>
+  </demo-snippet>
+</div>
+
+<div class="vertical-section-container centered">
+  <h3>Basic h2-grid with paging demo</h3>
+  <demo-snippet>
+    <template>
+      <custom-style>
+        <style>
+          #grid2 {
+            width: 100%;
+          }
+          #page {
+            margin-top: 10px;
+          }
+        </style>
+      </custom-style>
+      <h2-grid id="grid2">
+        <h2-grid-header>
+          <h2-grid-header-cell>Name</h2-grid-header-cell>
+          <h2-grid-header-cell>Age</h2-grid-header-cell>
+          <h2-grid-header-cell>Sex</h2-grid-header-cell>
+        </h2-grid-header>
+        <h2-grid-body>
+          <h2-grid-row>
+            <h2-grid-cell>zhang san</h2-grid-cell>
+            <h2-grid-cell>25</h2-grid-cell>
+            <h2-grid-cell>Female</h2-grid-cell>
+          </h2-grid-row>
+          <h2-grid-row>
+            <h2-grid-cell>li si</h2-grid-cell>
+            <h2-grid-cell>26</h2-grid-cell>
+            <h2-grid-cell>Male</h2-grid-cell>
+          </h2-grid-row>
+        </h2-grid-body>
+      </h2-grid>
+      <h2-pagination id="page" total="2" limit="5"></h2-pagination>
+    </template>
+  </demo-snippet>
+</div>
+
+</body>
+</html>

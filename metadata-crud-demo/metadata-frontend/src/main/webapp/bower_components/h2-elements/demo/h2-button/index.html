@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+  <title>h2-button demo</title>
+
+  <script src="../../../webcomponentsjs/webcomponents-lite.js"></script>
+
+  <link rel="import" href="../../../iron-demo-helpers/demo-pages-shared-styles.html">
+  <link rel="import" href="../../../iron-demo-helpers/demo-snippet.html">
+  <link rel="import" href="../../../iron-icons/iron-icons.html">
+  <link rel="import" href="../../../paper-styles/color.html">
+  <link rel="import" href="../../h2-button.html">
+
+  <custom-style>
+    <style is="custom-style" include="demo-pages-shared-styles">
+      .centered {
+        min-width: 800px;
+      }
+
+      demo-snippet {
+        --demo-snippet-code: {
+          max-height: 500px;
+        }
+      }
+    </style>
+  </custom-style>
+</head>
+<body>
+<div class="vertical-section-container centered">
+  <h3>Basic h2-button demo</h3>
+  <demo-snippet>
+    <template>
+      <custom-style>
+        <style>
+          h2-button {
+            margin: 10px;
+          }
+
+          #btn2 {
+            --h2-button: {
+              background-color: red;
+            };
+          }
+        </style>
+      </custom-style>
+
+      <h2-button onclick='javascript:alert("click")'>Enable</h2-button>
+      <h2-button disabled>Disabled</h2-button>
+      <h2-button id="btn1">Click</h2-button>
+      <h2-button>
+        <iron-icon icon="check"></iron-icon>
+        Link
+      </h2-button>
+      <h2-button id="btn2">Button</h2-button>
+    </template>
+  </demo-snippet>
+</div>
+</body>
+</html>

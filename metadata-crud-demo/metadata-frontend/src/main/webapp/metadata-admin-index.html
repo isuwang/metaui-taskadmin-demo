@@ -1,0 +1,85 @@
+<link rel="import" href="./bower_components/polymer/polymer-element.html">
+<link rel="import" href="./bower_components/metaui/utils/meta-constructor.html">
+<link rel="import" href="./bower_components/metaui/m2-crud.html">
+<link rel="import" href="./bower_components/metaui/widgets/m2-radio-group.html">
+
+<!--
+
+```javascript
+
+<metadata-admin-index></metadata-admin-index>
+```
+-->
+
+<dom-module id="metadata-admin-index">
+  <template>
+    <style>
+    </style>
+    <m2-crud metadata="[[ metadata ]]" result-decorator="[[ getResultDecorator() ]]"
+             key-for-page-result="pageResponse.results"></m2-crud>
+    <meta-constructor src="/dapeng/metadata"
+                      metadata="{{ metadata }}"
+                      option="[[ option ]]"
+                      on-return="[[ onReturn()]]">
+    </meta-constructor>
+  </template>
+  <script>
+    /**
+     * `metadata-admin-index`
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/metadata-admin-index/index.html
+     */
+    class MetadataAdminIndex extends Polymer.Element {
+      static get properties() {
+        return {
+          metadata: {
+            type: Object
+          },
+          option: {
+            type: Object,
+            value: function () {
+              return {
+                serviceName: "com.isuwang.soa.meta.service.MetadataService",
+                version: "1.0.0",
+                methodName: "queryFieldMetas"
+              };
+            }
+          }
+        };
+      }
+
+      getResultDecorator() {
+        return (result) => {
+          result.rows = result.rows.map(row => Object.assign(row, {actions: ['field_meta_udpate', 'field_meta_delete','test1','test2']}));
+          return result;
+        }
+      }
+      onReturn() {
+        return (metadata) => {
+          metadata.result.actions["field_meta_udpate"].formMeta.style = `
+            .container {
+              grid-template-columns: 45% 45%;
+              grid-column-gap: 10%;
+              grid-row-gap: 20px;
+            }
+
+            #m2-form-structName-editor {
+              grid-column-start: 1;
+              grid-column-end: 3;
+            }
+          `;
+          metadata.result.actions.test1 = {actionId: "test1", actionName:"test1", operType: "1", group: "test"}
+          metadata.result.actions.test2 = {actionId: "test2", actionName:"test2", operType: "1", group: "test"}
+          return metadata;
+        }
+      }
+      static get is() {
+        return "metadata-admin-index";
+      }
+    }
+
+    window.customElements.define(MetadataAdminIndex.is, MetadataAdminIndex);
+  </script>
+</dom-module>

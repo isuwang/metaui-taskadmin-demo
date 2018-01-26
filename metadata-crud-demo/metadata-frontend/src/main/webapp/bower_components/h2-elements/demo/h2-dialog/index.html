@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+  <title>h2-dialog demo</title>
+
+  <script src="../../../webcomponentsjs/webcomponents-lite.js"></script>
+
+  <link rel="import" href="../../../iron-demo-helpers/demo-pages-shared-styles.html">
+  <link rel="import" href="../../../iron-demo-helpers/demo-snippet.html">
+  <link rel="import" href="../../h2-dialog.html">
+
+  <custom-style>
+    <style is="custom-style" include="demo-pages-shared-styles">
+      .centered {
+        min-width: 800px;
+      }
+
+      demo-snippet {
+        --demo-snippet-code: {
+          max-height: 500px;
+        }
+      }
+    </style>
+  </custom-style>
+</head>
+<body>
+<div class="vertical-section-container centered">
+  <h3>Basic h2-dialog demo</h3>
+  <demo-snippet>
+    <template>
+      <style is="custom-style">
+        div[slot=container] {
+          font-size: 20px;
+        }
+
+        #dialog {
+          --h2-dialog-width: 400px;
+          --h2-dialog-height: 500px;
+        }
+      </style>
+      <h2-dialog id="dialog">
+        <div slot="container">
+          Put your Content here inside an element which with [slot=container]
+        </div>
+      </h2-dialog>
+      <button id="btn" onclick="javascript:dialog.open();">Click to open the Dialog</button>
+    </template>
+  </demo-snippet>
+</div>
+
+<div class="vertical-section-container centered">
+  <h3>One more</h3>
+  <demo-snippet>
+    <template>
+      <style is="custom-style">
+        div[slot=container] {
+          font-size: 20px;
+        }
+        [slot=container] > p {
+          margin: 0 0 10px;
+        }
+      </style>
+      <h2-dialog id="dialog2" stop-auto-dismiss title="Dialog demo">
+        <div slot="container">
+          <p>It was all very well to say 'Drink me,' but the wise little
+            Alice was not going to do <i>that</i> in a hurry. 'No, I'll look
+            first,' she said, 'and see whether it's marked "<i>poison</i>" or
+            not'; for she had read several nice little histories about
+            children who had got burnt, and eaten up by wild beasts and other
+            unpleasant things, all because they <i>would</i> not remember the
+            simple rules their friends had taught them: such as, that a
+            red-hot poker will burn you if you hold it too long; and that if
+            you cut your finger <i>very</i> deeply with a knife, it usually
+            bleeds; and she had never forgotten that, if you drink much from
+            a bottle marked '<i>poison</i>,' it is almost certain to disagree
+            with you, sooner or later.</p>
+          <p>It was all very well to say 'Drink me,' but the wise little
+            Alice was not going to do <i>that</i> in a hurry. 'No, I'll look
+            first,' she said, 'and see whether it's marked "<i>poison</i>" or
+            not'; for she had read several nice little histories about
+            children who had got burnt, and eaten up by wild beasts and other
+            unpleasant things, all because they <i>would</i> not remember the
+            simple rules their friends had taught them: such as, that a
+            red-hot poker will burn you if you hold it too long; and that if
+            you cut your finger <i>very</i> deeply with a knife, it usually
+            bleeds; and she had never forgotten that, if you drink much from
+            a bottle marked '<i>poison</i>,' it is almost certain to disagree
+            with you, sooner or later.</p>
+          <p>It was all very well to say 'Drink me,' but the wise little
+            Alice was not going to do <i>that</i> in a hurry. 'No, I'll look
+            first,' she said, 'and see whether it's marked "<i>poison</i>" or
+            not'; for she had read several nice little histories about
+            children who had got burnt, and eaten up by wild beasts and other
+            unpleasant things, all because they <i>would</i> not remember the
+            simple rules their friends had taught them: such as, that a
+            red-hot poker will burn you if you hold it too long; and that if
+            you cut your finger <i>very</i> deeply with a knife, it usually
+            bleeds; and she had never forgotten that, if you drink much from
+            a bottle marked '<i>poison</i>,' it is almost certain to disagree
+            with you, sooner or later.</p>
+          <p>It was all very well to say 'Drink me,' but the wise little
+            Alice was not going to do <i>that</i> in a hurry. 'No, I'll look
+            first,' she said, 'and see whether it's marked "<i>poison</i>" or
+            not'; for she had read several nice little histories about
+            children who had got burnt, and eaten up by wild beasts and other
+            unpleasant things, all because they <i>would</i> not remember the
+            simple rules their friends had taught them: such as, that a
+            red-hot poker will burn you if you hold it too long; and that if
+            you cut your finger <i>very</i> deeply with a knife, it usually
+            bleeds; and she had never forgotten that, if you drink much from
+            a bottle marked '<i>poison</i>,' it is almost certain to disagree
+            with you, sooner or later.</p>
+        </div>
+      </h2-dialog>
+      <button id="btn2" onclick="dialog2.open();">Click to open the Dialog</button>
+
+    </template>
+  </demo-snippet>
+</div>
+</body>
+</html>

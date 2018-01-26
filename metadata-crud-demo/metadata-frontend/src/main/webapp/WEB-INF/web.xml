@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+        version="3.0"
+        xmlns="http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/javaee/index.html"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <display-name>Archetype Created Web Application</display-name>
+  <session-config>
+    <session-timeout>60</session-timeout>
+  </session-config>
+
+  <mime-mapping>
+    <extension>ico</extension>
+    <mime-type>image/x-icon</mime-type>
+  </mime-mapping>
+
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>
+      classpath:applicationContext.xml
+    </param-value>
+  </context-param>
+
+  <filter>
+    <filter-name>characterEncodingFilter</filter-name>
+    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+    <init-param>
+      <param-name>forceEncoding</param-name>
+      <param-value>true</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>characterEncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+
+  <servlet>
+    <servlet-name>appServlet</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath:applicationContext.xml</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>appServlet</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>metadataServlet</servlet-name>
+    <servlet-class>com.isuwang.dapeng.metadata.servlet.MetadataServlet4Debug</servlet-class>
+    <init-param>
+      <param-name>driverClassName</param-name>
+      <param-value>com.mysql.jdbc.Driver</param-value>
+    </init-param>
+
+    <init-param>
+      <param-name>thriftIn</param-name>
+      <param-value>/Users/wahsonleung/IdeaProjects/isuwang/meta-api/src/main/resources/thrift</param-value>
+    </init-param>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>metadataServlet</servlet-name>
+    <url-pattern>/dapeng/metadata</url-pattern>
+  </servlet-mapping>
+
+  <!--<servlet>-->
+    <!--<servlet-name>soaClientInvokeServlet</servlet-name>-->
+    <!--<servlet-class>com.isuwang.dapeng.metadata.servlet.SoaClientInvokeServlet</servlet-class>-->
+  <!--</servlet>-->
+
+  <!--<servlet-mapping>-->
+    <!--<servlet-name>soaClientInvokeServlet</servlet-name>-->
+    <!--<url-pattern>/dapeng/invoke</url-pattern>-->
+  <!--</servlet-mapping>-->
+
+  <listener>
+    <listener-class>
+      org.springframework.web.context.ContextLoaderListener
+    </listener-class>
+  </listener>
+
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  <mime-mapping>
+    <extension>woff</extension>
+    <mime-type>application/x-font-woff</mime-type>
+  </mime-mapping>
+  <mime-mapping>
+    <extension>ttf</extension>
+    <mime-type>application/octet-stream</mime-type>
+  </mime-mapping>
+  <mime-mapping>
+    <extension>otf</extension>
+    <mime-type>application/octet-stream</mime-type>
+  </mime-mapping>
+
+</web-app>
