@@ -52,7 +52,7 @@
 
       getResultDecorator() {
         return (result) => {
-          result.rows = result.rows.map(row => Object.assign(row, {actions: ['field_meta_udpate', 'field_meta_delete','test1','test2']}));
+          result.rows = result.rows.map(row => Object.assign(row, {actions: ['field_meta_udpate', 'field_meta_delete']}));
           return result;
         }
       }
@@ -70,8 +70,7 @@
               grid-column-end: 3;
             }
           `;
-          metadata.result.actions.test1 = {actionId: "test1", actionName:"test1", operType: "1", group: "test"}
-          metadata.result.actions.test2 = {actionId: "test2", actionName:"test2", operType: "1", group: "test"}
+          
           return metadata;
         }
       }
